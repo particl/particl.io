@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "particl-icons";
+	src: url('../fonts/particl-icons.eot');
+	src: url('../fonts/particl-icons.eot?#iefix') format('eot'),
+		url('../fonts/particl-icons.woff2') format('woff2'),
+		url('../fonts/particl-icons.woff') format('woff'),
+		url('../fonts/particl-icons.ttf') format('truetype'),
+		url('../fonts/particl-icons.svg#particl-icons') format('svg');
+}
+
+.ico:before {
+	font-family: "particl-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.ico-_link-ext:before {
+	content: "\E001";
+}
+
+.ico-alert:before {
+	content: "\E002";
+}
+
+.ico-chat:before {
+	content: "\E003";
+}
+
+.ico-check:before {
+	content: "\E004";
+}
+
+.ico-close:before {
+	content: "\E005";
+}
+
+.ico-dropdown:before {
+	content: "\E006";
+}
+
+.ico-email:before {
+	content: "\E007";
+}
+
+.ico-facebook:before {
+	content: "\E008";
+}
+
+.ico-github:before {
+	content: "\E009";
+}
+
+.ico-linkedin:before {
+	content: "\E00A";
+}
+
+.ico-login:before {
+	content: "\E00B";
+}
+
+.ico-menu:before {
+	content: "\E00C";
+}
+
+.ico-newsletter:before {
+	content: "\E00D";
+}
+
+.ico-play:before {
+	content: "\E00E";
+}
+
+.ico-reddit-alt:before {
+	content: "\E00F";
+}
+
+.ico-reddit:before {
+	content: "\E010";
+}
+
+.ico-twitter:before {
+	content: "\E011";
+}

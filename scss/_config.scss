@@ -1,0 +1,35 @@
+
+// Colors
+$primary: #03E8B0; // PART turquoise
+$secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
+$success: #98C807 !default; // greens
+$alert: #D13814 !default; // reds
+$warning: #EF9421 !default; // oranges :)
+$black: #212727; // PART black
+$white: #fff !default;
+
+$bg: #fff;
+$bg-muted: #F1F1F1; // slightly darker bg
+
+$text: $black;
+$text-muted: lighten($black, 20%);
+
+// Breakpoints
+$break-s: 25rem !default; // small
+$break-m: 35rem !default; // medium
+$break-t: 45rem !default; // tablet
+$break-l: 60rem !default; // large (desktop)
+$break-xl: 75rem !default; // extra-large
+
+// Grid
+$row-width: 75rem !default; // 64rem
+$gutter-width: 0.6rem !default;
+$block-grid-spacing: 0.7rem !default;
+
+// UI
+$border-radius: 4px !default;
+
+// Typography
+$font: "OpenSans", "Helvetica", "Arial", sans-serif;
+$font-titles: "NexaB", "Open Sans", sans-serif;
+$line-height: 1.4 !default;
