@@ -376,7 +376,7 @@ button, .button { // default, full buttons
 
 .subscribe-form {
 	@extend %clearfix;
-	max-width: 40rem; margin: 1.5rem auto;
+	max-width: 40rem; margin: 0 auto;
 	& > .input {
 		@extend .tfx;
 		@include break(s) {
@@ -425,7 +425,25 @@ button, .button { // default, full buttons
 
 // ------------[  PLUG-INS  ]------------ //
 
-
+// Sendinblue newsletter sign-up
+#sib_embed_signup {
+	.forms-builder-wrapper { position: relative; }
+	#sib_loading_gif_area {
+		position: absolute; z-index: 9999;
+		& > img {
+			display: block; margin-left: auto; margin-right: auto;
+			position: relative; top: 40%;
+		}
+	}
+	.sib-container {
+		@extend %clearfix;
+		.message_area {
+			width: 100%; max-width: 40rem; margin: 0.5rem auto !important; padding: 0.7rem 1rem;
+			border-radius: 4px;
+			& > .close { display: none; }
+		}
+	}
+}
 
 
 // -------------[  HELPER  ]------------- //

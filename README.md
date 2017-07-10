@@ -1,16 +1,5 @@
 # Particl.io
 
-## TODO
-
-* [ ] decently animate illustrations (?)
-* [ ] "learn more" buttons to each section in mobile (toggle content)
-* [ ] favicons
-* [ ] graphs for PART Token > Distribution
-* [~] missing links in footer: FB, Careers, FAQ, Terms
-
-=> https://paper.dropbox.com/doc/PAR-38-Website-Design-Update-8ntIfvpLSudnVJYpmoJku
-
-
 ## Info
 
 * use `gulp`!
@@ -32,5 +21,16 @@
 ### FYI
 
 * site is mobile-first
-* works without JS => final checks
+* basic site functionality works w/o JavaScript (well, obviously except that newsletter sign-up form)
 * local links should have `scroll` class (for smooth scrolling); external `ext` class
+
+
+## TODO
+
+* [ ] decently animate illustrations (?)
+* [ ] "learn more" buttons to each section in mobile (toggle content)
+* [ ] favicons
+* [ ] graphs for PART Token > Distribution
+* [~] missing links in footer: FB, Careers, FAQ, Terms
+
+=> https://paper.dropbox.com/doc/PAR-38-Website-Design-Update-8ntIfvpLSudnVJYpmoJku
