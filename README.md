@@ -32,5 +32,10 @@
 * [ ] favicons
 * [ ] graphs for PART Token > Distribution
 * [~] missing links in footer: FB, Careers, FAQ, Terms
+* [ ] missing illustrations from crz
+* [x] needs to implement newsletter sign-up
+* [ ] pop-up or something for video
+* [ ] convert it all to Jekyll (now it's just plain ol' HTML)
+* [ ] Piwik/Analytics?
 
 => https://paper.dropbox.com/doc/PAR-38-Website-Design-Update-8ntIfvpLSudnVJYpmoJku
