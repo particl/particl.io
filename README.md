@@ -21,7 +21,7 @@
 ### FYI
 
 * site is mobile-first
-* basic site functionality works w/o JavaScript (well, obviously except that newsletter sign-up form)
+* basic site functionality works w/o JavaScript (well, obviously except that newsletter sign-up form.. so far)
 * local links should have `scroll` class (for smooth scrolling); external `ext` class
 
 
@@ -31,10 +31,9 @@
 * [ ] "learn more" buttons to each section in mobile (toggle content)
 * [ ] favicons
 * [ ] graphs for PART Token > Distribution
-* [~] missing links in footer: FB, Careers, FAQ, Terms
-* [ ] missing illustrations from crz
-* [x] needs to implement newsletter sign-up
+* [~] missing links in footer: FB, Careers
 * [ ] pop-up or something for video
+* [ ] add <noscript> to newsletter (with link to separate sign-up page)
 * [ ] convert it all to Jekyll (now it's just plain ol' HTML)
 * [ ] Piwik/Analytics?
 

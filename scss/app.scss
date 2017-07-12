@@ -230,7 +230,7 @@ button, .button { // default, full buttons
 	@include break(xl) { padding: 12rem 1.5rem; }
 	&::after { // semi-transparent background hack
 		content: ""; opacity: 0.25;
-		background: url(../img/city-illustration.png) no-repeat 50% 40%;
+		background: url(../img/illustrations/city-illustration.png) no-repeat 50% 40%;
 		position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
 		@include break(l) { opacity: 1; background-position: 95% 0; background-size: contain; }
 	}
