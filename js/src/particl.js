@@ -9,19 +9,19 @@ $( document ).ready(function() {
 	/* ------------ MOBILE MENU ------------ */
 
 	// Hide menu by default
-	$('#nav').addClass('hide');
+	$('nav').addClass('hide');
 
 	// Mobile menu toggle
 	$('button#menu-toggle').click(function() {
 		$(this).find('i.ico').toggleClass('ico-menu ico-close');
-		$('#nav').toggleClass('hide');
+		$('nav').toggleClass('hide');
 	});
 
 	// Hide menu when clicked elsewhere on page
 	$('#page').click(function() {
-		if ( !$('#nav').hasClass("hide") ) {
+		if ( !$('nav').hasClass("hide") ) {
 			$('button#menu-toggle').find('i.ico').toggleClass('ico-menu ico-close');
-			$('#nav').addClass('hide');
+			$('nav').addClass('hide');
 		}
 	});
 

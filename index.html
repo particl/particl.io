@@ -18,7 +18,7 @@
 
 <div id="top">
 
-	<div id="header" role="banner">
+	<header role="banner">
 		<div class="row expand">
 			<div class="column">
 				<button id="menu-toggle">
@@ -29,9 +29,9 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- #header -->
+	</header><!-- header -->
 
-	<div id="nav" role="navigation">
+	<nav role="navigation">
 		<ul>
 			<li><a class="scroll" href="#intro">Home</a></li>
 			<li><a class="scroll" href="#about">About</a></li>
@@ -43,28 +43,33 @@
 			<li><a class="ext" href="https://particl.news">Blog</a></li>
 			<li><a class="ext" href="#">Account</a></li>
 		</ul>
-	</div><!-- #nav -->
+	</nav><!-- nav -->
 
 </div><!-- #top -->
 
 
 <div id="page" role="main">
 	
-	<div id="intro" class="section">
+	<section id="intro">
 		<div class="row">
 			<div class="column">
 				<h1 class="title">Shop your local world</h1>
 				<p>Particl is an <strong>open source</strong>, <strong>decentralized</strong> privacy platform. Built for global <strong>person to person</strong> and <strong>business to person</strong> eCommerce.</p>
 				<div class="actions">
-					<a href="#" class="watch-video button"><i class="ico ico-play"></i>Watch video</a>
-					<a href="https://paper.dropbox.com/doc/Particl-Testnet-Getting-Started-d9yhExvCaW6vCp3qLUwuW" class="secondary button ext">Join Particl Testnet</a>
+					<!--a href="#" class="watch-video button"><i class="ico ico-play"></i>Watch video</a-->
+					<a href="https://paper.dropbox.com/doc/Particl-Testnet-Getting-Started-d9yhExvCaW6vCp3qLUwuW" class="button ext">Join Particl Testnet</a>
 				</div>
 			</div>
 		</div>
-	</div><!-- #intro -->
+	</section><!-- #intro -->
 
+	<div id="video">
+		<div class="video-intro">
+			<iframe src="https://www.youtube-nocookie.com/embed/PRxmGh24ILU?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
 
-	<div id="subscribe" class="section">
+	<section id="subscribe">
 		<div class="row">
 			<div class="column">
 				<i class="ico ico-newsletter"></i>
@@ -143,10 +148,10 @@
 				<small>We promise not to spam you or share your address. For immediate news about Particl as it is announced we encourage you to <a href="https://particl.news">subscribe to our blog</a>.</small>
 			</div>
 		</div>
-	</div><!-- #subscribe -->
+	</section><!-- #subscribe -->
 
 	
-	<div id="about" class="feature section">
+	<section id="about" class="feature">
 		<div class="row">
 			<div class="large-6 columns">
 				<h2>Particl is a privacy platform by design</h2>
@@ -161,9 +166,9 @@
 				<img src="img/illustrations/particl-is-a-privacy-platform-by-design.png" alt="Particl is a privacy platform by design" class="illustration">
 			</div>
 		</div>
-	</div><!-- .feature -->
+	</section><!-- .feature -->
 
-	<div class="feature section">
+	<section class="feature">
 		<div class="row">
 			<div class="large-6 columns">
 				<img src="img/illustrations/confidential-transactions.png" alt="Confidential Transactions" class="illustration">
@@ -180,9 +185,9 @@
 				</p>
 			</div>
 		</div>
-	</div><!-- .feature -->
+	</section><!-- .feature -->
 
-	<div class="feature section">
+	<section class="feature">
 		<div class="row">
 			<div class="large-6 columns">
 				<h2>End-to-End Encrypted Chat</h2>
@@ -197,9 +202,9 @@
 				<img src="img/illustrations/end-to-end-encrypted-chat.png" alt="End-to-End Encrypted Chat" class="illustration">
 			</div>
 		</div>
-	</div><!-- .feature -->
+	</section><!-- .feature -->
 
-	<div class="feature section">
+	<section class="feature">
 		<div class="row">
 			<div class="large-6 columns">
 				<img src="img/illustrations/particl-market.png" alt="Particl Market" class="illustration">
@@ -214,9 +219,9 @@
 				</p>
 			</div>
 		</div>
-	</div><!-- .feature -->
+	</section><!-- .feature -->
 
-	<div class="feature section">
+	<section class="feature">
 		<div class="row">
 			<div class="large-6 columns">
 				<h2>Passive Income</h2>
@@ -231,10 +236,10 @@
 				<img src="img/illustrations/passive-income.png" alt="Passive Income" class="illustration">
 			</div>
 		</div>
-	</div><!-- .feature -->
+	</section><!-- .feature -->
 
 
-	<div id="wallet" class="multiple feature section">
+	<section id="wallet" class="multiple feature">
 		<div class="row">
 
 			<div class="part large-4 columns">
@@ -286,10 +291,10 @@
 				<img class="wallet-screen" src="img/wallet-preview.png" alt="Particl Client Preview">
 			</div>
 		</div>
-	</div><!-- #wallet -->
+	</section><!-- #wallet -->
 
 
-	<div id="team" class="section">
+	<section id="team">
 		<div class="row">
 			<div class="column">
 
@@ -517,10 +522,10 @@
 
 			</div>
 		</div>
-	</div><!-- #team -->
+	</section><!-- #team -->
 
 
-	<div id="part-token" class="section">
+	<section id="part-token">
 		<div class="row">
 			<div class="column">
 
@@ -553,13 +558,13 @@
 				</ul>
 			</div>
 		</div>
-	</div><!-- #part-token -->
+	</section><!-- #part-token -->
 
 
 </div><!-- #page -->
 
 
-<div id="footer" class="section">
+<footer>
 	<div class="row">
 
 		<div class="logo large-4 columns">
@@ -618,7 +623,7 @@
 		</div><!-- .copyright -->
 
 	</div>
-</div><!-- #footer -->
+</footer><!-- footer -->
 
 
 <div class="respo">

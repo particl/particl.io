@@ -81,7 +81,7 @@ button, .button { // default, full buttons
 	i.ico { margin-right: 0.3rem; }
 }
 
-.section { // full-width sections of content
+section { // full-width sections of content
 	padding: 4rem 1rem;
 	&:nth-of-type(2n) { background: $bg-muted; }
 }
@@ -107,19 +107,19 @@ button, .button { // default, full buttons
 		position: fixed; top: 0; z-index: 1500;
 		width: 100%;
 		&.sticky {
-			#header {
+			header {
 				padding: 0.7rem 0 0.5rem;
 				.logo {
 					margin: 0 0 0 1rem;
 					img { max-width: 5rem; }
 				}
 			}
-			#nav ul li a { padding: 1.25rem 1.5rem; }
+			nav ul li a { padding: 1.25rem 1.5rem; }
 		}
 	}
 }
 
-#header {
+header {
 	background: $black;
 	color: white;
 	width: 100%; padding: 0.7rem 0;
@@ -149,12 +149,12 @@ button, .button { // default, full buttons
 	}
 }
 
-#nav {
+nav {
 	background: lighten($black, 2%);
 	position: fixed; top: 4rem; z-index: 1500;
 	width: 100%;
 	@include break(l) {
-		float: right; display: block; width: auto; margin-right: 0.7rem;
+		float: right; display: block !important; width: auto; margin-right: 0.7rem;
 		background: none;
 		position: static;
 	}
@@ -170,7 +170,7 @@ button, .button { // default, full buttons
 				color: $white; font-weight: bold; font-size: 0.75rem;
 				text-transform: uppercase;
 				border-bottom: 1px solid $black; border-right: 1px solid $black;
-				&:hover, &:focus { background: lighten($black, 5%); }
+				&:hover, &:focus { color: $white; background: lighten($black, 5%); }
 			}
 			&:nth-of-type(2n+2) > a {
 				border-right-color: transparent;
@@ -227,7 +227,7 @@ button, .button { // default, full buttons
 	position: relative;
 	@include break(s) { padding: 7rem 1.5rem; }
 	@include break(l) { padding: 10rem 1.5rem; text-align: left; }
-	@include break(xl) { padding: 12rem 1.5rem; }
+	@include break(xl) { padding: 10rem 1.5rem 20rem; }
 	&::after { // semi-transparent background hack
 		content: ""; opacity: 0.25;
 		background: url(../img/illustrations/city-illustration.png) no-repeat 50% 40%;
@@ -244,16 +244,36 @@ button, .button { // default, full buttons
 		@include break(l) { margin: 0; }
 	}
 	.actions { margin-top: 1.5rem; }
-	.button.watch-video {
+	.button {
 		@include break(l) { margin-left: 0; }
+	}
+}
+
+#video {
+	max-width: 45rem; margin: 0 auto;
+	@include break(t) { margin: -2rem auto -3.5rem; }
+	@include break(l) { margin: -2rem auto -4rem; }
+	@include break(xl) { margin: -12rem auto -4rem; }
+	.video-intro {
+		width: 100%;
+		box-shadow: 0 3px 20px -7px rgba($text, 0.5);
+		position: relative; z-index: 100;
+		// fluid width video - https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+		padding-bottom: 56.25%; // padding-top: 25px;
+		height: 0;
+		iframe {
+			position: absolute; top: 0; left: 0;
+			width: 100%; height: 100%;
+			@include break(l) { max-width: 720px; }
+		}
 	}
 }
 
 #subscribe {
 	text-align: center;
 	padding: 2rem 1rem;
-	@include break(m) { padding: 3rem 1rem; }
-	@include break(l) { background: url(../img/newsletter-bg.png) no-repeat 50% 50% $bg-muted; }
+	@include break(m) { padding: 6rem 1rem 3rem; }
+	@include break(l) { background: url(../img/newsletter-bg.png) no-repeat 50% 100% $bg-muted; }
 	i.ico {
 		color: $primary; font-size: 3rem;
 		@include break(l) { font-size: 3.7rem; }
@@ -312,7 +332,7 @@ button, .button { // default, full buttons
 	hr { margin: 2rem 0 3.5rem; border-top: 5px dotted darken($bg-muted, 3%); }
 }
 
-#footer {
+footer {
 	padding: 3rem 1rem;
 	text-align: center;
 	background: url(../img/footer-bg.png) no-repeat 100% 100% #fafafa;
@@ -399,7 +419,7 @@ button, .button { // default, full buttons
 
 
 .no-js { // for browsers with JS disabled
-	#header {
+	header {
 		position: static;
 		@include break(l) { padding: 1rem 0 0; }
 		#menu-toggle { display: none; }
@@ -410,7 +430,7 @@ button, .button { // default, full buttons
 			}
 		}
 	}
-	#nav {
+	nav {
 		position: static;
 		ul li a {
 			@include break(l) { padding: 1.8rem 1.5rem; }

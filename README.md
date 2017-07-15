@@ -20,20 +20,25 @@
 
 ### FYI
 
+* site works without JavaScript (newsletter sign-up suprisingly as well)
 * site is mobile-first
-* basic site functionality works w/o JavaScript (well, obviously except that newsletter sign-up form.. so far)
 * local links should have `scroll` class (for smooth scrolling); external `ext` class
 
 
 ## TODO
 
-* [ ] decently animate illustrations (?)
+* Fixes
+    - [ ] favicons
+    - [ ] remove respo~ infobox (bottom right)
+    - [x] pop-up or something for video
+
+* Tweaks
+    - [ ] illustrations to SVG
+    - [ ] decently animate them
+    - [ ] graphs for PART Token > Distribution
+
 * [ ] "learn more" buttons to each section in mobile (toggle content)
-* [ ] favicons
-* [ ] graphs for PART Token > Distribution
-* [~] missing links in footer: FB, Careers
-* [ ] pop-up or something for video
-* [ ] add <noscript> to newsletter (with link to separate sign-up page)
+* [ ] missing links in footer: FB, Careers
 * [ ] convert it all to Jekyll (now it's just plain ol' HTML)
 * [ ] Piwik/Analytics?
 
