@@ -28,7 +28,7 @@
 ## TODO
 
 * Fixes
-    - [ ] favicons
+    - [x] favicons
     - [ ] remove respo~ infobox (bottom right)
     - [x] pop-up or something for video
 
