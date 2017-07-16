@@ -79,6 +79,13 @@ button, .button { // default, full buttons
 	}
 	// icons in buttons
 	i.ico { margin-right: 0.3rem; }
+	&.ext:not(.secondary) {
+		&::after {
+			opacity: 1; // fix arrows singaling external links in main buttons
+			top: -4px; font-size: 0.5rem; margin-left: 0.4rem;
+		} 
+		&:hover::after { color: $white; }
+	}
 }
 
 section { // full-width sections of content
@@ -226,8 +233,8 @@ nav {
 	text-align: center;
 	position: relative;
 	@include break(s) { padding: 7rem 1.5rem; }
-	@include break(l) { padding: 10rem 1.5rem; text-align: left; }
-	@include break(xl) { padding: 10rem 1.5rem 20rem; }
+	@include break(l) { padding: 10rem 1.5rem 16rem; text-align: left; }
+	@include break(xl) { padding: 10rem 1.5rem 28rem; }
 	&::after { // semi-transparent background hack
 		content: ""; opacity: 0.25;
 		background: url(../img/illustrations/city-illustration.png) no-repeat 50% 40%;
@@ -252,8 +259,8 @@ nav {
 #video {
 	max-width: 45rem; margin: 0 auto;
 	@include break(t) { margin: -2rem auto -3.5rem; }
-	@include break(l) { margin: -2rem auto -4rem; }
-	@include break(xl) { margin: -12rem auto -4rem; }
+	@include break(l) { margin: -10rem auto -4rem; }
+	@include break(xl) { margin: -21.5rem auto -4rem; }
 	.video-intro {
 		width: 100%;
 		box-shadow: 0 3px 20px -7px rgba($text, 0.5);
@@ -309,7 +316,7 @@ nav {
 			border-radius: 50%; overflow: hidden;
 		}
 		.name {
-			margin: 1.3rem 0 0.5rem;
+			margin: 1.3rem 0 0;
 			font-family: "OpenSans", sans-serif; font-weight: bold; font-size: 0.9rem;
 		}
 		.title {
