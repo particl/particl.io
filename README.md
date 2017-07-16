@@ -28,18 +28,12 @@
 ## TODO
 
 * Fixes
-    - [x] favicons
-    - [ ] remove respo~ infobox (bottom right)
-    - [x] pop-up or something for video
+    - [ ] missing links in footer: FB, Careers
 
 * Tweaks
     - [ ] illustrations to SVG
     - [ ] decently animate them
     - [ ] graphs for PART Token > Distribution
-
-* [ ] "learn more" buttons to each section in mobile (toggle content)
-* [ ] missing links in footer: FB, Careers
-* [ ] convert it all to Jekyll (now it's just plain ol' HTML)
-* [ ] Piwik/Analytics?
-
-=> https://paper.dropbox.com/doc/PAR-38-Website-Design-Update-8ntIfvpLSudnVJYpmoJku
+    - [ ] "learn more" buttons to each section in mobile (toggle content)
+    - [ ] convert it all to Jekyll (now it's just plain ol' HTML)
+    - [ ] Piwik/Analytics?
