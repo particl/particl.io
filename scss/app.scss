@@ -475,7 +475,6 @@ footer {
 
 // -------------[  HELPER  ]------------- //
 
-
 .respo {
   position: fixed; bottom: 0; right: 0; width: 1.5rem;
   background: black; color: white; padding: 3px 0;
@@ -504,5 +503,13 @@ footer {
   @include break(xl) {
     .size { display: none; }
     .xl { display: block; }
+  }
+}
+
+
+// MSIE 10+ fix for badly scaled SVGs
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; 
   }
 }
