@@ -99,6 +99,9 @@ iframe { display: block; max-width: 100%; }
   &::after { clear: both; }
 }
 
+// Quick floats
+.pull-left { float: left; }
+.pull-right { float: right; }
 
 .show-grid { // inspired by https://sassline.com
   background-image: linear-gradient(to bottom, #0ff 0px, rgba(255, 255, 255, 0) 1px);

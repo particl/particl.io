@@ -1,4 +1,4 @@
-/* BRICKst - grid */
+/* BRICKst - Grid */
 
 .row { // shamelessly inspired by Foundation
   width: 100%; max-width: $row-width; margin: 0 auto;
@@ -17,167 +17,100 @@
   &.end { float: right; }
 }
 
-// Small Grid
-.small-11 { width: (100%/12*11); }
-.small-10 { width: (100%/12*10); }
-.small-9 { width: (100%/12*9); }
-.small-8 { width: (100%/12*8); }
-.small-7 { width: (100%/12*7); }
-.small-6 { width: (100%/12*6); }
-.small-5 { width: (100%/12*5); }
-.small-4 { width: (100%/12*4); }
-.small-3 { width: (100%/12*3); }
-.small-2 { width: (100%/12*2); }
-.small-1 { width: (100%/12*1); }
+
+// ----- SMALL GRID ----- //
+
+// Small classic Grid
+@for $i from 1 through 11 {
+  // Classic Grid
+  .small-#{$i} { width: (100% / 12 * $i); }
+
+  // Column Offsets
+  .small-offset-#{$i} { margin-left: (100% / 12 * $i); }
+
+  // Source Ordering
+  .small-push-#{$i} { left: (100% / 12 * $i); }
+  .small-pull-#{$i} { right: (100% / 12 * $i); }
+}
 
 .small-centered { float: none; margin: 0 auto; }
 .small-uncentered { float: left; margin: 0; }
 
-
-// Block grid (https://css-tricks.com/attribute-selectors/)
+// Small Block Grid
 [class*="block-grid"] {
   @extend %clearfix;
   margin: 0 (-$block-grid-spacing); padding: 0;
   & > * { display: block; float: left; padding: 0 $block-grid-spacing; }
 }
-.small-block-grid-1 > * {
-  width: 100%; clear: both;
-}
-.small-block-grid-2 > * {
-  width: (100%/2);
-  &:nth-of-type(2n+1) { clear: both; }
-}
-.small-block-grid-3 > * {
-  width: (100%/3);
-  &:nth-of-type(3n+1) { clear: both; }
-}
-.small-block-grid-4 > * {
-  width: (100%/4);
-  &:nth-of-type(4n+1) { clear: both; }
-}
-.small-block-grid-5 > * {
-  width: (100%/5);
-  &:nth-of-type(5n+1) { clear: both; }
-}
-.small-block-grid-6 > * {
-  width: (100%/6);
-  &:nth-of-type(6n+1) { clear: both; }
-}
-.small-block-grid-7 > * {
-  width: (100%/7);
-  &:nth-of-type(7n+1) { clear: both; }
-}
-.small-block-grid-8 > * {
-  width: (100%/8);
-  &:nth-of-type(8n+1) { clear: both; }
+@for $i from 1 through 8 {
+  .small-block-grid-#{$i} > * {
+    width: (100% / $i);
+    &:nth-of-type(#{$i}n+1) { clear: both; }
+  }
 }
 
 
-// Medium Grid
+// ----- MEDIUM GRID ----- //
+
 @include break(m) {
-  .large-1, .large-2, .large-3, .large-4, .large-5, .large-6, .large-7, .large-8, .large-9, .large-10, .large-11, .large-12 { width: 100%; }
-  .medium-11 { width: (100%/12*11); }
-  .medium-10 { width: (100%/12*10); }
-  .medium-9 { width: (100%/12*9); }
-  .medium-8 { width: (100%/12*8); }
-  .medium-7 { width: (100%/12*7); }
-  .medium-6 { width: (100%/12*6); }
-  .medium-5 { width: (100%/12*5); }
-  .medium-4 { width: (100%/12*4); }
-  .medium-3 { width: (100%/12*3); }
-  .medium-2 { width: (100%/12*2); }
-  .medium-1 { width: (100%/12*1); }
+  [class*="large-"] { width: 100%; }
+
+  // Medium classic Grid
+  @for $i from 1 through 11 {
+    // Classic Grid
+    .medium-#{$i} { width: (100% / 12 * $i); }
+
+    // Column Offsets
+    .medium-offset-#{$i} { margin-left: (100% / 12 * $i); }
+
+    // Source Ordering
+    .medium-push-#{$i} { left: (100% / 12 * $i); }
+    .medium-pull-#{$i} { right: (100% / 12 * $i); }
+  }
 
   .medium-centered { float: none; margin: 0 auto; }
   .medium-uncentered { float: left; margin: 0; }
 
-  // reset clearfixes from smaller grids
+  // Medium block Grid
   [class*="small-block-grid"][class*="medium-block-grid"] > * { clear: none; }
 
-  .medium-block-grid-1 > * {
-    width: 100%; clear: both;
+  @for $i from 1 through 8 {
+    .medium-block-grid-#{$i} > * {
+      width: (100% / $i);
+      &:nth-of-type(#{$i}n+1) { clear: both; }
+    }
   }
-  .medium-block-grid-2 > * {
-    width: (100%/2);
-    &:nth-of-type(2n+1) { clear: both; }
-  }
-  .medium-block-grid-3 > * {
-    width: (100%/3);
-    &:nth-of-type(3n+1) { clear: both; }
-  }
-  .medium-block-grid-4 > * {
-    width: (100%/4);
-    &:nth-of-type(4n+1) { clear: both; }
-  }
-  .medium-block-grid-5 > * {
-    width: (100%/5);
-    &:nth-of-type(5n+1) { clear: both; }
-  }
-  .medium-block-grid-6 > * {
-    width: (100%/6);
-    &:nth-of-type(6n+1) { clear: both; }
-  }
-  .medium-block-grid-7 > * {
-    width: (100%/7);
-    &:nth-of-type(7n+1) { clear: both; }
-  }
-  .medium-block-grid-8 > * {
-    width: (100%/8);
-    &:nth-of-type(8n+1) { clear: both; }
-  }
-}
+} // break(m)
 
 
-// Large Grid
+// ----- LARGE GRID ----- //
+
 @include break(l) {
-  .large-11 { width: (100%/12*11); }
-  .large-10 { width: (100%/12*10); }
-  .large-9 { width: (100%/12*9); }
-  .large-8 { width: (100%/12*8); }
-  .large-7 { width: (100%/12*7); }
-  .large-6 { width: (100%/12*6); }
-  .large-5 { width: (100%/12*5); }
-  .large-4 { width: (100%/12*4); }
-  .large-3 { width: (100%/12*3); }
-  .large-2 { width: (100%/12*2); }
-  .large-1 { width: (100%/12*1); }
+
+  @for $i from 1 through 11 {
+    // Classic Grid
+    .large-#{$i} { width: (100% / 12 * $i); }
+
+    // Column Offsets
+    .large-offset-#{$i} { margin-left: (100% / 12 * $i); }
+
+    // Source Ordering
+    .large-push-#{$i} { left: (100% / 12 * $i); }
+    .large-pull-#{$i} { right: (100% / 12 * $i); }
+  }
 
   .large-centered { float: none; margin: 0 auto; }
   .large-uncentered { float: left; margin: 0; }
-
-  // reset clearfixes from smaller grids
+  
+  // Large Block Grid
   [class*="small-block-grid"][class*="large-block-grid"] > * { clear: none; }
   [class*="medium-block-grid"][class*="large-block-grid"] > * { clear: none; }
 
-  .large-block-grid-1 > * {
-    width: 100%; clear: both;
+  @for $i from 1 through 8 {
+    .large-block-grid-#{$i} > * {
+      width: (100% / $i);
+      &:nth-of-type(#{$i}n+1) { clear: both; }
+    }
   }
-  .large-block-grid-2 > * {
-    width: (100%/2);
-    &:nth-of-type(2n+1) { clear: both; }
-  }
-  .large-block-grid-3 > * {
-    width: (100%/3);
-    &:nth-of-type(3n+1) { clear: both; }
-  }
-  .large-block-grid-4 > * {
-    width: (100%/4);
-    &:nth-of-type(4n+1) { clear: both; }
-  }
-  .large-block-grid-5 > * {
-    width: (100%/5);
-    &:nth-of-type(5n+1) { clear: both; }
-  }
-  .large-block-grid-6 > * {
-    width: (100%/6);
-    &:nth-of-type(6n+1) { clear: both; }
-  }
-  .large-block-grid-7 > * {
-    width: (100%/7);
-    &:nth-of-type(7n+1) { clear: both; }
-  }
-  .large-block-grid-8 > * {
-    width: (100%/8);
-    &:nth-of-type(8n+1) { clear: both; }
-  }
-}
+
+} // break(l)
