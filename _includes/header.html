@@ -10,7 +10,7 @@
           <i class="ico ico-menu"></i>
         </button>
         <div class="logo">
-          <a href="{{ "/" | relative_url }}"><img src="{{ "/img/particl-logo-light.svg" | relative_url }}" alt="Particl.io"></a>
+          <a href="{{ "/" | relative_url }}"><img src="{{ "/assets/img/particl-logo-light.svg" | relative_url }}" alt="Particl.io"></a>
         </div>
       </div>
     </div>
@@ -19,17 +19,15 @@
   {% if page_paths %}
   <nav role="navigation">
     <ul>
-      <li><a class="scroll" href="{{ "/" | relative_url }}">Home</a></li>
-      <li><a class="scroll" href="{{ "#about" | relative_url }}">About</a></li>
-      <li><a class="scroll" href="{{ "#team" | relative_url }}">Team</a></li>
+      <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#intro" | relative_url }}">Home</a></li>
+      <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#about" | relative_url }}">About</a></li>
+      <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#team" | relative_url }}">Team</a></li>
       {% for path in page_paths %}
         {% assign my_page = site.pages | where: "path", path | first %}
         {% if my_page.title %}
         <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
         {% endif %}
       {% endfor %}
-      <!--li><a href="careers.html">Career</a></li-->
-      <!--li><a class="scroll" href="#part-token">Part Token</a></li-->
       <li><a class="scroll" href="{{ "#footer" | relative_url }}">Contact</a></li>
       <li><a class="ext" href="https://github.com/particl/whitepaper/blob/master/decentralized-private-marketplace-draft-0.1.pdf">Whitepaper</a></li>
       <li><a class="ext" href="https://particl.news">Blog</a></li>

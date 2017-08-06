@@ -1,3 +1,7 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
 @import '_brickst';
 @import '_particl-icons';
 @import '_fonts';
@@ -237,7 +241,7 @@ nav {
 	@include break(xl) { padding: 10rem 1.5rem 28rem; }
 	&::after { // semi-transparent background hack
 		content: ""; opacity: 0.25;
-		background: url(../img/illustrations/city-illustration.png) no-repeat 50% 40%;
+		background: url(/assets/img/illustrations/city-illustration.png) no-repeat 50% 40%;
 		position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
 		@include break(l) { opacity: 1; background-position: 95% 0; background-size: contain; }
 	}
@@ -280,7 +284,7 @@ nav {
 	text-align: center;
 	padding: 2rem 1rem;
 	@include break(m) { padding: 6rem 1rem 3rem; }
-	@include break(l) { background: url(../img/newsletter-bg.png) no-repeat 50% 100% $bg-muted; }
+	@include break(l) { background: url(/assets/img/newsletter-bg.png) no-repeat 50% 100% $bg-muted; }
 	i.ico {
 		color: $primary; font-size: 3rem;
 		@include break(l) { font-size: 3.7rem; }
@@ -299,7 +303,7 @@ nav {
 #wallet { // wallet preview/screen
 	background: #fafafa;
 	padding-bottom: 0;
-	@include break(l) { background: url(../img/wallet-bg.png) no-repeat 50% 100% #fafafa; }
+	@include break(l) { background: url(/assets/img/wallet-bg.png) no-repeat 50% 100% #fafafa; }
 	.wallet-screen {
 		display: block; width: 100%; max-width: 1210px; margin: 2rem auto 0;
 		@include break(l) { width: 90%; }
@@ -342,7 +346,7 @@ nav {
 footer {
 	padding: 3rem 1rem;
 	text-align: center;
-	background: url(../img/footer-bg.png) no-repeat 100% 100% #fafafa;
+	background: url(/assets/img/footer-bg.png) no-repeat 100% 100% #fafafa;
 	@include break(l) { text-align: left; }
 	.part {
 		.title {
