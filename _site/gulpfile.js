@@ -65,7 +65,7 @@ const paths = {
 /* ------------------------------------ *\
     Tasks
 \* ------------------------------------ */
-/*
+
 // Compile Sass to CSS (and minify) + feed updates to BrowserSync
 gulp.task('sass', function (cb) {
   pump([
@@ -83,7 +83,7 @@ gulp.task('sass', function (cb) {
     }),
   ], cb );
 });
-*/
+
 
 // Concatenate JavaScript and uglify
 gulp.task('scripts', function (cb) {
@@ -133,7 +133,7 @@ gulp.task('webfont', ['optimize'], function (cb) {
     gulp.src(paths.ico_input),
     iconfontCss({
       fontName: fontName,
-      fontPath: '/assets/fonts/',
+      fontPath: '../fonts/',
       targetPath: '../scss/_particl-icons.scss',
       cssClass: 'ico'
     }),
@@ -151,16 +151,16 @@ gulp.task('webfont', ['optimize'], function (cb) {
 
 
 // Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch', ['browserSync', /*'sass',*/ 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
 //gulp.task('watch', ['sass', 'scripts'], function () {
-  //gulp.watch(paths.scss, ['sass']);
+  gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.js_in, ['scripts']);
   gulp.watch(paths.ico_input, ['webfont']);
   gulp.watch(paths.template, browserSync.reload); 
 });
 
 // Manual build (Sass compiling, JS concat/uglify)
-gulp.task('build', [/*'sass',*/ 'scripts', 'webfont'], function (){
+gulp.task('build', ['sass', 'scripts', 'webfont'], function (){
   console.log('-- Building files');
 });
 
