@@ -8,9 +8,9 @@
     <div class="navigation part small-6 medium-4 large-2 columns">
       <h4 class="title">Navigation</h4>
       <ul>
-        <li><a class="scroll" href="#about">About</a></li>
-        <li><a class="scroll" href="#team">Team</a></li>
-        <li><a class="scroll" href="#part-token">Part Token</a></li>
+        <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="/#about">About</a></li>
+        <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="/#team">Team</a></li>
+        <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="/#part-token">Part Token</a></li>
         <li><a class="ext" href="https://github.com/particl/whitepaper/blob/master/decentralized-private-marketplace-draft-0.1.pdf">Whitepaper</a></li>
       </ul>
     </div><!-- .navigation -->
@@ -19,7 +19,7 @@
       <h4 class="title">Links</h4>
       <ul>
         <li><a class="ext" href="https://particl.news">Blog</a></li>
-        <li><a href="careers.html">Careers</a></li>
+        <li><a href="{{ "/careers/" | relative_url }}">Careers</a></li>
         <li><a class="ext" href="https://www.reddit.com/r/Particl/wiki/faq">FAQ</a></li>
         <li><a class="ext" href="https://github.com/particl">GitHub</a></li>
         <li><a class="ext" href="https://explorer.particl.io">Block Explorer</a></li>
