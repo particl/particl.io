@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "particl-icons";
-	src: url('../fonts/particl-icons.eot');
-	src: url('../fonts/particl-icons.eot?#iefix') format('eot'),
-		url('../fonts/particl-icons.woff2') format('woff2'),
-		url('../fonts/particl-icons.woff') format('woff'),
-		url('../fonts/particl-icons.ttf') format('truetype'),
-		url('../fonts/particl-icons.svg#particl-icons') format('svg');
+	src: url('/assets/fonts/particl-icons.eot');
+	src: url('/assets/fonts/particl-icons.eot?#iefix') format('eot'),
+		url('/assets/fonts/particl-icons.woff2') format('woff2'),
+		url('/assets/fonts/particl-icons.woff') format('woff'),
+		url('/assets/fonts/particl-icons.ttf') format('truetype'),
+		url('/assets/fonts/particl-icons.svg#particl-icons') format('svg');
 }
 
 .ico:before {

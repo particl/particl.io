@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="no-js">
+
+  {% include head.html %}
+
+  <body class="no-js">
+
+    {% include header.html %}
+
+    <div id="page" role="main">
+      {{ content }}
+    </div><!-- #page -->
+
+    {% include footer.html %}
+
+  <script src="{{ "/assets/js/all.js" | relative_url }}"></script>
+</body>
+</html>

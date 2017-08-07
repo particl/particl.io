@@ -2,4 +2,7 @@
 *.sublime-workspace
 
 # NPM
-node_modules/*
+*/node_modules/*
+
+# Jekyll
+.sass-cache/*
