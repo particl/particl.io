@@ -25,8 +25,14 @@ github_username:  particl
 
 # Build settings
 markdown: kramdown
-plugins:
+
+whitelist:
+  - jekyll-redirect-from
+plugins_dir:
 #  - jekyll-feed
+  - jekyll-redirect-from
+
+gems:
   - jekyll-redirect-from
 
 # Exclude from processing.
