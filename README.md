@@ -1,5 +1,7 @@
 # Particl.io
 
+    Don't edit files in `_site/` directory directly! Those files are automatically generated. Any changes manually edited there will be overwritten. Edit files in root dir (or `_layouts/`, depending on your change) instead!
+
 ## Info
 
 * use `gulp`!
@@ -27,13 +29,9 @@
 
 ## TODO
 
-* Fixes
-    - [ ] missing links in footer: FB, Careers
-
 * Tweaks
     - [ ] illustrations to SVG
     - [ ] decently animate them
     - [ ] graphs for PART Token > Distribution
     - [ ] "learn more" buttons to each section in mobile (toggle content)
-    - [ ] convert it all to Jekyll (now it's just plain ol' HTML)
     - [ ] Piwik/Analytics?
