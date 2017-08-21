@@ -1,6 +1,6 @@
 # Particl.io
 
-    Don't edit files in `_site/` directory directly! Those files are automatically generated. Any changes manually edited there will be overwritten. Edit files in root dir (or `_layouts/`, depending on your change) instead!
+> Don't edit files in `_site/` directory directly! Those files are automatically generated. Any changes manually edited there will be overwritten. Edit files in root dir (or `_layouts/`, depending on your change) instead!
 
 ## Info
 
