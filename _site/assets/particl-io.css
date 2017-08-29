@@ -553,6 +553,10 @@ button.ext:not(.secondary):hover::after, .button.ext:not(.secondary):hover::afte
 section { padding: 4rem 1rem; }
 section:nth-of-type(2n) { background: #F1F1F1; }
 
+.icon-title .ico { display: none; }
+@media only screen and (min-width: 35rem) { .icon-title .ico { display: inline-block; margin: 0 1rem 0 0; position: relative; top: 14px; } }
+.icon-title .title { display: inline-block; }
+
 @media only screen and (min-width: 75rem) { .feature { padding: 6rem 1rem; } }
 .feature.multiple { background: #fafafa; }
 .feature.multiple .part { margin-bottom: 2.5rem; }

@@ -20,7 +20,6 @@
   <nav role="navigation">
     <ul>
       <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#intro" | relative_url }}">Home</a></li>
-      <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#about" | relative_url }}">About</a></li>
       <li><a class="{% if page.url == "/" %}scroll{% endif %}" href="{{ "/#team" | relative_url }}">Team</a></li>
       {% for path in page_paths %}
         {% assign my_page = site.pages | where: "path", path | first %}
@@ -29,7 +28,7 @@
         {% endif %}
       {% endfor %}
       <li><a class="scroll" href="{{ "#footer" | relative_url }}">Contact</a></li>
-      <li><a class="ext" href="https://github.com/particl/whitepaper/blob/master/decentralized-private-marketplace-draft-0.1.pdf">Whitepaper</a></li>
+      <!--li><a class="ext" href="https://github.com/particl/whitepaper/blob/master/decentralized-private-marketplace-draft-0.1.pdf">Whitepaper</a></li-->
       <li><a class="ext" href="https://particl.news">Blog</a></li>
       <li><a class="ext" href="https://portal.particl.io/login">Account</a></li>
     </ul>

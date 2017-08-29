@@ -97,6 +97,19 @@ section { // full-width sections of content
 	&:nth-of-type(2n) { background: $bg-muted; }
 }
 
+.icon-title { // nice titles with icons (eg. Status Report)
+	.ico {
+		display: none;
+		@include break(m) {
+			display: inline-block; margin: 0 1rem 0 0;
+			position: relative; top: 14px;
+		}
+	}
+	.title {
+		display: inline-block;
+	}
+}
+
 .feature { // feature section
 	@include break(xl) { padding: 6rem 1rem; }
 	&.multiple { // multiple side-by-side features

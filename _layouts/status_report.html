@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<section id="page-title">
+	<div class="row">
+		<div class="column">
+			<h1 class="title">Particl Project Status Report</h1>
+			<p>{{ content }}</p>
+	</div>
+</section><!-- #page-title -->
+
+
+<section class="feature">
+	<div class="row">
+		<div class="large-6 columns">
+
+			<div class="icon-title">
+				<img class="ico" src="{{ "/assets/img/ico/status-report/busy-with.svg" | relative_url }}" alt="">
+				<h2 class="title">What are we busy with</h2>
+			</div>
+			{% capture busyWith %}{% include_relative _status-report/busy-with.md %}{% endcapture %}
+			{{ busyWith | markdownify }}
+
+		</div>
+		<div class="large-6 columns">
+
+			<div class="icon-title">
+				<img class="ico" src="{{ "/assets/img/ico/status-report/under-review.svg" | relative_url }}" alt="">
+				<h2 class="title">Waiting for review</h2>
+			</div>
+			{% capture waitingReview %}{% include_relative _status-report/waiting-review.md %}{% endcapture %}
+			{{ waitingReview | markdownify }}
+
+		</div>
+	</div>
+</section><!-- .feature -->
+
+<section class="feature">
+	<div class="row">
+		<div class="large-6 column">
+
+			<div class="icon-title">
+				<img class="ico" src="{{ "/assets/img/ico/status-report/wrapped-up.svg" | relative_url }}" alt="">
+				<h2 class="title">Wrapped up</h2>
+			</div>
+			{% capture wrappedUp %}{% include_relative _status-report/wrapped-up.md %}{% endcapture %}
+			{{ wrappedUp | markdownify }}
+
+		</div>
+		<div class="large-6 column">
+			
+			<div class="icon-title">
+				<img class="ico" src="{{ "/assets/img/ico/status-report/on-horizon.svg" | relative_url }}" alt="">
+				<h2 class="title">What's on the Horizon</h2>
+			</div>
+			{% capture onHorizon %}{% include_relative _status-report/on-horizon.md %}{% endcapture %}
+			{{ onHorizon | markdownify }}
+
+		</div>
+	</div>
+</section><!-- .feature -->
