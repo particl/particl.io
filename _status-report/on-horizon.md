@@ -2,7 +2,6 @@
     + Marketplace Categories
         * Initial Categories (Building and Import)
         * Additional Categories
-    + Estabilish Marketplace Codebase
     + Database Design
     + Messaging (Daemon/Core) &ndash; Paid messages / Listing fee
     + Functions (Backend)
@@ -22,6 +21,4 @@
         * Negotiation page integration
     + P2P Marketplace Governance
         * Consensus on removal of products (Voting)
-
-
-
+- **Third Party Integration**
