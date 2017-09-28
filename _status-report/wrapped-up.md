@@ -1,20 +1,32 @@
 - **Release of GUI Testnet**
-    + UI Integration
-        * Migration to BTC 0.14 and GUI RPC Integration
     + GUI Components
-        * GUI Review &ndash; Look and Feel
-        * App-Password/Unlock modal
         * GUI Testnet Bugs (Existing functionality)
-            - Balance transfer to reflect own address
-            - Design changes to Private Address
-            - Address book search function not working
-            - Tooltip to Show Version Info
-            - Show QR code
-            - Electron Bug
-            - GUI Modal bugs
-            - Menu Animations
-        * Create Flash notification service
-- **Particl style/branding guidelines**
+            - Address book page error modal
+            - GUI functionality Bugs
+            - Wallet encrypt option
+            - Wallet Unlock, message show unsuccessful
+            - Processing enhancements
+            - App-Password / unlock modal enhancements
+        * GUI page designs
+            - Multiwallet UX
+            - Cold Staking UX 
+- **Release of Particl-Copay App** (Third Party Integration)
+    + App released
+    + Setup Copay servers
+    + Settings and appearance changes
+    + Design and release screenshots for Playstore
 - **Particl Market Place**
+    + Current Bootstrap to Material migration
+        * Convert Wallet - Receive page into Material
+        * Receive and send page responsive design
+        * Refactor wallet - Send section design
+        * Wallet
+            - Address book page redesign
+            - History page redesign
+            - Add account
+        * Mobile menu in material
+        * Add QR code model box
+        * Address lookup model box for send payment
     + Initial category listing
-- **Public Status Report template**
+- **Particl Core**
+    + Backend conversion from Bitcoin 0.14 to Bitcoin 0.15 investigation
