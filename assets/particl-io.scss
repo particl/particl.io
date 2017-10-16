@@ -280,7 +280,7 @@ nav {
 	@include break(xl) { margin: -21.5rem auto -4rem; }
 	.video-intro {
 		width: 100%;
-		box-shadow: 0 3px 20px -7px rgba($text, 0.5);
+		box-shadow: 0 3px 20px -7px rgba($text, 0.5); background: $black;
 		position: relative; z-index: 100;
 		// fluid width video - https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 		padding-bottom: 56.25%; // padding-top: 25px;
@@ -320,6 +320,23 @@ nav {
 	.wallet-screen {
 		display: block; width: 100%; max-width: 1210px; margin: 2rem auto 0;
 		@include break(l) { width: 90%; }
+	}
+}
+
+#in-the-press {
+	text-align: center;
+	.title {
+		margin: 0 0 1.5rem;
+		&::before { content: none; }
+	}
+	.press-logos {
+		.logo {
+			@extend .tfx;
+			width: auto; height: 2.5rem; margin: 1rem 1.5rem;
+			-webkit-filter: grayscale(100%); filter: grayscale(100%);
+			opacity: 0.5;
+			&:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); opacity: 1; }
+		}
 	}
 }
 
@@ -417,6 +434,28 @@ footer {
 
 
 // ------------[  SPECIFIC  ]------------ //
+
+// Press page
+.press-items {
+	.item {
+		margin-bottom: 3rem;
+		@include break(xl) { margin-bottom: 5rem; }
+		&:last-of-type { margin-bottom: 0; }
+		.image {
+			margin-bottom: 1rem;
+			@include break(xl) { margin-bottom: 1.5rem; }
+			img { display: block; }
+		}
+		.title {
+			font-size: 1.3rem; line-height: 1.25;
+			margin: 0 0 0.5rem;
+			&::before { content: none; }
+		}
+		.meta {
+			font-size: 0.85rem; color: lighten($text, 30%);
+		}
+	}
+}
 
 .subscribe-form {
 	@extend %clearfix;
