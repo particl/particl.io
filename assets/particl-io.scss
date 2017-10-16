@@ -323,13 +323,13 @@ nav {
 	}
 }
 
-#in-the-press {
+.logo-listing {
 	text-align: center;
 	.title {
 		margin: 0 0 1.5rem;
 		&::before { content: none; }
 	}
-	.press-logos {
+	.logos {
 		.logo {
 			@extend .tfx;
 			width: auto; height: 2.5rem; margin: 1rem 1.5rem;

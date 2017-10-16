@@ -431,7 +431,7 @@ iframe { display: block; max-width: 100%; }
 
 .text-center { text-align: center; }
 
-.tfx, .button, button, a.ext::after, header .logo, header .logo img, #in-the-press .press-logos .logo, .subscribe-form > .input, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
+.tfx, .button, button, a.ext::after, header .logo, header .logo img, .logo-listing .logos .logo, .subscribe-form > .input, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
 
 .zoom { -webkit-transform: scale(1.1); transform: scale(1.1); }
 
@@ -645,11 +645,11 @@ nav ul li:nth-of-type(2n+2) > a { border-right-color: transparent; }
 #wallet .wallet-screen { display: block; width: 100%; max-width: 1210px; margin: 2rem auto 0; }
 @media only screen and (min-width: 60rem) { #wallet .wallet-screen { width: 90%; } }
 
-#in-the-press { text-align: center; }
-#in-the-press .title { margin: 0 0 1.5rem; }
-#in-the-press .title::before { content: none; }
-#in-the-press .press-logos .logo { width: auto; height: 2.5rem; margin: 1rem 1.5rem; -webkit-filter: grayscale(100%); filter: grayscale(100%); opacity: 0.5; }
-#in-the-press .press-logos .logo:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); opacity: 1; }
+.logo-listing { text-align: center; }
+.logo-listing .title { margin: 0 0 1.5rem; }
+.logo-listing .title::before { content: none; }
+.logo-listing .logos .logo { width: auto; height: 2.5rem; margin: 1rem 1.5rem; -webkit-filter: grayscale(100%); filter: grayscale(100%); opacity: 0.5; }
+.logo-listing .logos .logo:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); opacity: 1; }
 
 #team li.team-member { text-align: center; margin-bottom: 1.5rem; }
 #team li.team-member::before { content: none; }
