@@ -1,27 +1,25 @@
-- **Release of GUI TestNet**
-    + UI Integration
-        * Identify RPC and API changes needed around UI Integration
-        * Headless browser
-            - Setup electron test
-            - Daemon tests
-            - RPC Queuing &ndash; ZMQ
-        * API Service and Consuming
+- **Release of GUI TestNet Ver 0.1.1**
     + GUI Components
-        * Daemon startup error handling
-        * Splash screen display time
-        * Create wallet modal on first use
-        * Tray menus not working on Windows
-        * Wallet Unlocking bugs
+        * Adjustment to receive and send arrows
+        * History first and last page access buttons
+        * Number of confirmations doesn't update in "Overview" tab
+        * Bug Fixing (UAT Testing)
+            - Pinning and Un-Pinning of Side menu
+			- Uncaught exception on close : object has been destroyed [win]
+			- After update, -reindex flag not working automatically
+			- syncing modal broken for the first seconds of sync
+			- Wallet creation fails with mnemonic-related errors
+			- OSX menu should have a fixed width
+			- Splash Screen stuck in wallet startup process
+			- Can't paste address in "Add new address to Address book" (osx)
+			- Only 24 words seeds are allowed - allow 12, 15 and 18 words too
+			- Cannot make a balance transfer from blind to public
 - **Particl Market Place**
     + Current Bootstrap to Material migration
-        * Create Mobile menu in Material
-        * Development clean-up for merge
+        * Resolve issues picked up in testing Material - Electron GUI
     + Market Place GUI Designs
         * Categories - UX/UI Design
         * GUI Design - Seller Side
         * GUI Design - Buyer Side
-    + Estabilish Marketplace Codebase
-- **Third Party Integration**
-    + Bisq Integration
-- **Particl Core**
-    + API to filter transactions
+    + Messaging (Daemon / Core) - Paid messages / Listing fee
+    + Functions (Backend)
