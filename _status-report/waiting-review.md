@@ -1,4 +1,4 @@
-- **Release of GUI Testnet**
+- **Release of GUI TestNet Ver 0.1.1**
     + GUI Components
         * Refactor main JS architecture
 		* Add missing flash notification on copy address
