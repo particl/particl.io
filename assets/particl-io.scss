@@ -271,6 +271,28 @@ nav {
 	.button {
 		@include break(l) { margin-left: 0; }
 	}
+	.wallet-download {
+		@extend .tfx;
+		display: none; // hide for mobiles, doesn't make sense there
+		@include break(l) {
+			display: block; padding-bottom: 1rem;
+			text-align: center;
+			background: $bg; box-shadow: 0 4px 12px -5px rgba($text, 0.3);
+			border-bottom: 4px solid transparent;
+		}
+		&:hover {
+			border-bottom: 4px solid $primary;
+			.tag { background: darken($bg, 40%); }
+		}
+		& > .title { margin: 0.3rem 0 0.3rem; font-size: 1.15rem; }
+		& > .version { font-size: 0.85rem; color: lighten($text, 30%); }
+		.tag {
+			@extend .tfx;
+			background: darken($bg, 30%); border-radius: 999px;
+			padding: 0.1rem 0.6rem;
+			font-size: 0.65rem; color: $bg;
+	  	}
+	}
 }
 
 #video {
@@ -323,7 +345,7 @@ nav {
 	}
 }
 
-.logo-listing {
+.logo-listing { // partners & press mentions
 	text-align: center;
 	.title {
 		margin: 0 0 1.5rem;
