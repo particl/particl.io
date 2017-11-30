@@ -1,5 +1,5 @@
 # Qt
-core: 0.15.0.2
+core: 0.15.1.0
 
 # GUI wallet
-wallet: 0.1.0
+wallet: 1.0.0
