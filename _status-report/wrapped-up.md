@@ -23,7 +23,7 @@
 		* Auto locking wallet
 		* Blind balance display
 		* Various other bugs
-	+ Upgraded partilcd to latest 15.1.1
+	+ Upgraded particld to latest 15.1.1
 - **Particl Market Place**
 	+ Market Place Functions
 		* MP: Functions (RPC API) – Bid
