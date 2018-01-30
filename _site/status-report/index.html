@@ -26,7 +26,7 @@
   <meta name="author" content="Martin Allien <martin@particl.io> (https://allien.work)">
   <meta name="wot-verification" content="ec725cb978b636515980"/> 
   <!-- styles & scripts -->
-  <link rel="stylesheet" href="/assets/particl-io.css?1517070422219977271">
+  <link rel="stylesheet" href="/assets/particl-io.css?1517313323673373648">
 </head>
 
   <body class="no-js">
@@ -104,7 +104,7 @@
 	<div class="row">
 		<div class="column">
 			<h1 class="title">Particl Project Status Report</h1>
-			<p><p>Updated 18 Jan 2017 by Henk Swardt</p>
+			<p><p>Updated 30 Jan 2017 by Henk Swardt</p>
 </p>
 	</div>
 </section><!-- #page-title -->
@@ -120,13 +120,19 @@
 			</div>
 			
 			<ul>
-  <li><strong>Release of GUI Testnet 1.1.0</strong>
+  <li><strong>Release of GUI TestNet Ver 1.1.0</strong>
     <ul>
-      <li>Finalization of ZAP functionality</li>
-      <li>Modal text misaligned on certain OS</li>
+      <li>GUI TestNet – Internal UAT (RC4)
+        <ul>
+          <li>Upgrade partilcd to latest 15.1.2</li>
+          <li>Overview transaction order incorrect</li>
+          <li>Modal layout on Mac and Linux miss aligned</li>
+          <li>Codesign GUI</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><strong>Preparation of GUI 1.2.0</strong></li>
+  <li><strong>Preparation of GUI Ver 1.2.0</strong></li>
   <li><strong>Particl Market Place</strong>
     <ul>
       <li>GUI Design
@@ -139,17 +145,20 @@
       <li>GUI Categories Design</li>
       <li>Market Place Functions
         <ul>
-          <li><code class="highlighter-rouge">getitemimages</code> command and remove image metadata</li>
-          <li><code class="highlighter-rouge">postitem</code></li>
-          <li><code class="highlighter-rouge">updateitem</code></li>
+          <li>MessagingInformationCommand</li>
+          <li>ListingItemTemplateSearchCommand</li>
+          <li>ListingItemTemplateCreateCommand</li>
+          <li>ItemInformationGetCommand</li>
+          <li>ItemInformationCreateCommand</li>
+          <li>ItemInformationUpdateCommand</li>
+          <li>ItemInformationCommand</li>
+          <li>ListingItemPostCommand</li>
         </ul>
       </li>
       <li>Market Place Backend
         <ul>
           <li>Restructure blackbox tests</li>
           <li>Add CI to build and run blackbox tests against the RPC API on each commit</li>
-          <li>Create message processor</li>
-          <li>Replace the Country Enum with a library</li>
         </ul>
       </li>
     </ul>
@@ -170,7 +179,8 @@
     <ul>
       <li>GUI Components
         <ul>
-          <li>Wallet creation not proceeding to end of flow</li>
+          <li>Copy and Paste issue on OSX using shortcut keys</li>
+          <li>Crash while downloading – Daemon timeout</li>
         </ul>
       </li>
     </ul>
@@ -192,9 +202,9 @@
 			</div>
 			
 			<ul>
-  <li><strong>Release of GUI Testnet 0.1.0</strong>
+  <li><strong>Release of GUI TestNet Ver 0.1.0</strong>
     <ul>
-      <li>Features
+      <li>Features (As per Status Update 18/01/2018)
         <ul>
           <li>Cold staking widget</li>
           <li>ZAP functionality for fast cold staking activation</li>
@@ -210,112 +220,93 @@
           <li>Pagination - Choose how many transactions to display per page</li>
         </ul>
       </li>
+      <li>Maintenance
+        <ul>
+          <li>Test and finalize Zap feature</li>
+          <li>Update ng2-logger to the latest version</li>
+          <li>Add takeWhile and OnDestroy hook in all state.observe calls</li>
+          <li>Update packages</li>
+          <li>Added RPC calls to console</li>
+          <li>Added checksums for build process</li>
+          <li>Merge dev -&gt; Branch 1.1.0</li>
+          <li>Send Page: Updated icons and alignment tweaks</li>
+          <li>Redefine logging levels</li>
+          <li>Update Electron to the latest version</li>
+        </ul>
+      </li>
       <li>Bugs fixed
         <ul>
-          <li>Balance transfer blind -&gt; public</li>
-          <li>Blank modals</li>
-          <li>Diverse length seeds importing</li>
-          <li>Confirmations updating</li>
-          <li>Mac tray icon</li>
-          <li>Daemon messages</li>
-          <li>Daemon restart (encrypting wallet)</li>
-          <li>Auto locking wallet</li>
-          <li>Blind balance display</li>
+          <li>Added background image for Mac DMG</li>
+          <li>App not quitting when daemon start before the GUI</li>
+          <li>Fixed preceding issue on creation of wallet, due to passwords.</li>
+          <li>Sign and Verify modal refactoring</li>
+          <li>Remove arm command not working in builds</li>
+          <li>Changed save button name on address book</li>
+          <li>Fixed success flash message not aligned</li>
+          <li>Fix error on creation screen if no password entered</li>
+          <li>App title update</li>
+          <li>Fix wallet detection</li>
+          <li>Fix daemon error messages</li>
+          <li>Resolve create wallet without recovery passphrase</li>
+          <li>Fix Mac build issues</li>
           <li>Various other bugs</li>
         </ul>
       </li>
-      <li>Upgraded particld to latest 15.1.1</li>
     </ul>
   </li>
   <li><strong>Particl Market Place</strong>
     <ul>
       <li>Market Place Functions
         <ul>
-          <li>MP: Functions (RPC API) – Bid
+          <li>MP: Functions (RPC API) – Listing Item
             <ul>
-              <li><code class="highlighter-rouge">acceptbid</code>, <code class="highlighter-rouge">cancelbid</code>, <code class="highlighter-rouge">rejectbid</code>, <code class="highlighter-rouge">sendbid</code>, <code class="highlighter-rouge">findbids</code></li>
+              <li>ListingItemGetCommand, CategoryCommand</li>
             </ul>
           </li>
-          <li>MP: Functions (RPC API) – Favorites
+          <li>MP: Functions (RPC API) – Item Category
             <ul>
-              <li><code class="highlighter-rouge">addfavorite</code>, <code class="highlighter-rouge">removefavorite</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item
-            <ul>
-              <li><code class="highlighter-rouge">additemimage</code>, <code class="highlighter-rouge">additemlocation</code>, <code class="highlighter-rouge">finditems</code>, <code class="highlighter-rouge">findownitems</code>, <code class="highlighter-rouge">getitem</code>, <code class="highlighter-rouge">removeitemimage</code>, <code class="highlighter-rouge">removeitemlocation</code>, <code class="highlighter-rouge">updateiteminformation</code>, <code class="highlighter-rouge">updateitemlocation</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Add Market
-            <ul>
-              <li><code class="highlighter-rouge">addmarket</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Shipping Destination
-            <ul>
-              <li><code class="highlighter-rouge">addshippingdestination</code>, <code class="highlighter-rouge">removeshippingdestination</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Category
-            <ul>
-              <li><code class="highlighter-rouge">createcategory</code>, <code class="highlighter-rouge">findcategory</code>, <code class="highlighter-rouge">getcategories</code>, <code class="highlighter-rouge">removecategory</code>, <code class="highlighter-rouge">updatecategory</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Escrow
-            <ul>
-              <li><code class="highlighter-rouge">createescrow</code>, <code class="highlighter-rouge">lockescrow</code>, <code class="highlighter-rouge">refundescrow</code>, <code class="highlighter-rouge">removeescrow</code>, <code class="highlighter-rouge">releaseescrow</code>, <code class="highlighter-rouge">updateescrow</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item Template
-            <ul>
-              <li><code class="highlighter-rouge">createitemtemplate</code>, <code class="highlighter-rouge">finditemtemplate</code>, <code class="highlighter-rouge">getitemtemplate</code>, <code class="highlighter-rouge">removelistingitemtemplate</code></li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Profile
-            <ul>
-              <li><code class="highlighter-rouge">createprofile</code>, <code class="highlighter-rouge">getprofile</code>, <code class="highlighter-rouge">removeprofile</code></li>
+              <li>ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand</li>
             </ul>
           </li>
           <li>MP: Functions (RPC API) – Address
             <ul>
-              <li><code class="highlighter-rouge">removeaddress</code></li>
+              <li>AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand</li>
             </ul>
           </li>
-          <li>MP: Functions (RPC API) – Message
+          <li>MP: Functions (RPC API) – Profile
             <ul>
-              <li><code class="highlighter-rouge">updatemessaginginformation</code></li>
+              <li>ProfileCommand, ProfileListCommand</li>
             </ul>
           </li>
-          <li>MP: Functions (RPC API) – Payment
+          <li>MP: Functions (RPC API) – Market
             <ul>
-              <li><code class="highlighter-rouge">updatepaymentinformation</code></li>
+              <li>MarketCommand, MarketListCommand</li>
             </ul>
           </li>
-          <li>MP: Functions (RPC API) – Receive new message
+          <li>MP: Functions (RPC API) – Data
             <ul>
-              <li><code class="highlighter-rouge">acceptbidmessage</code>, <code class="highlighter-rouge">bidmessage</code>, <code class="highlighter-rouge">cancelbidmessage</code>, <code class="highlighter-rouge">listingitemmessage</code>, <code class="highlighter-rouge">rejectbidmessage</code></li>
+              <li>DataCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Listing Item
+            <ul>
+              <li>ListingItemService, ListingItemTemplateService</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Item
+            <ul>
+              <li>postitem, updateitem</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>Market Place integration tests
+      <li>Market Place Backend
         <ul>
-          <li>Added integration tests, create testapp supporting Inversify
-            <ul>
-              <li>Tests include: <code class="highlighter-rouge">bid</code>, <code class="highlighter-rouge">biddata</code>, <code class="highlighter-rouge">bidmessageprocessor</code>, <code class="highlighter-rouge">escro</code>, <code class="highlighter-rouge">escrowratio</code>, <code class="highlighter-rouge">favoriteitem</code>, <code class="highlighter-rouge">itemcategry</code>, <code class="highlighter-rouge">itemimage</code>, <code class="highlighter-rouge">itemcategory</code>, <code class="highlighter-rouge">itemimage</code>, <code class="highlighter-rouge">itemdata</code>, <code class="highlighter-rouge">itemlocation</code>, <code class="highlighter-rouge">itemprice</code>, <code class="highlighter-rouge">locationmarker</code>, <code class="highlighter-rouge">itemprice</code>, <code class="highlighter-rouge">shippingdestination</code>, <code class="highlighter-rouge">shippingprice</code> and <code class="highlighter-rouge">testdata</code></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Market Place GUI
-        <ul>
-          <li>RPC Module</li>
-          <li>Created a RPC Command Class</li>
-          <li>json Object handling changes</li>
-          <li>Default profile creation</li>
-          <li>Cryptocurrency address table</li>
-          <li>Bid Model</li>
-          <li>Include address zip code</li>
+          <li>Design final RPC API</li>
+          <li>Rename blackbox test files to match the commands being tested</li>
+          <li>Replace the Country Enum with a library</li>
+          <li>Particl docker startup options</li>
+          <li>Remove image Metadata</li>
         </ul>
       </li>
     </ul>
