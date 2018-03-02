@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Status Report ∘ Particl.io</title>
+  <meta name="description" content="Particl is an open source, decentralized privacy platform. Built for global person to person and business to person eCommerce.">
+  <link rel="canonical" href="http://localhost:4000/">
+  <!-- open:graph -->
+  <meta property="og:title" content="Status Report" />
+  <meta property="og:description" content="Particl is an open source, decentralized privacy platform. Built for global person to person and business to person eCommerce." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:image" content="http://localhost:4000/assets/img/particl-opengraph-sharing.jpg" />
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#03e8b0">
+  <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#212727">
+  <meta name="author" content="Martin Allien <martin@particl.io> (https://allien.work)">
+  <meta name="wot-verification" content="ec725cb978b636515980"/> 
+  <!-- styles & scripts -->
+  <link rel="stylesheet" href="/assets/css/particl-io.css?1517313323673373648">
+</head>
+
+  <body class="no-js">
+
+    <div id="top" class="check">
+
+  
+  
+
+  <header role="banner">
+    <div class="row expand">
+      <div class="column">
+        <button id="menu-toggle">
+          <i class="ico ico-menu"></i>
+        </button>
+        <div class="logo">
+          <a href="/"><img src="/assets/img/particl-logo-light.svg" alt="Particl.io"></a>
+        </div>
+        <div class="header-chart-container">
+          <span>1 part = $26,34</span>
+          <img src="/assets/img/favicons/header_chart.png" width="45px" />
+          <span>-15,48%</span>
+        </div>
+      </div>
+    </div>
+  </header><!-- header -->
+
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="/why-particl/">Why Particl</a></li>
+      <li><a href="/about-us/">About us</a></li>
+      <li><a href="/careers/">Download Particl Desktop</a></li>
+      <!--<li><a class="scroll" href="/#intro">Home</a></li>
+      <li><a class="scroll" href="/#team">Team</a></li>
+      <li><a href="/careers/">Careers</a></li>
+      <li><a href="/claims/">Claims</a></li>
+      <li><a href="/press/">Press</a></li>
+      <li><a href="/roadmap/">Roadmap</a></li>
+      <li><a href="/status-report/">Status Report</a></li>
+      <li><a class="scroll" href="/#footer">Contact</a></li>
+      <li><a class="ext" href="https://github.com/particl/whitepaper/blob/master/decentralized-private-marketplace-draft-0.1.pdf">Whitepaper</a></li>
+      <li><a class="ext" href="https://particl.news">Blog</a></li>
+      <li><a class="ext" href="https://portal.particl.io/login">Account</a></li>-->
+    </ul>
+  </nav><!-- nav -->
+  
+
+</div><!-- #top -->
+
+    <div id="page" role="main">
+      <section id="page-title">
+	<div class="row">
+		<div class="column">
+			<h1 class="title text-center">Particl Project<br />Status Report</h1>
+	</div>
+</section><!-- #page-title -->
+
+
+<section class="">
+	<div class="row">
+		<div class="large-6 columns">
+
+			<div class="icon-title">
+				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
+				<h2 class="title">What are we busy with</h2>
+			</div>
+			
+			<ul>
+  <li><strong>Release of GUI TestNet Ver 1.1.0</strong>
+    <ul>
+      <li>GUI TestNet – Internal UAT (RC4)
+        <ul>
+          <li>Upgrade partilcd to latest 15.1.2</li>
+          <li>Overview transaction order incorrect</li>
+          <li>Modal layout on Mac and Linux miss aligned</li>
+          <li>Codesign GUI</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Preparation of GUI Ver 1.2.0</strong></li>
+  <li><strong>Particl Market Place</strong>
+    <ul>
+      <li>GUI Design
+        <ul>
+          <li>Market Management</li>
+          <li>Seller interface</li>
+          <li>Buyer interface</li>
+        </ul>
+      </li>
+      <li>GUI Categories Design</li>
+      <li>Market Place Functions
+        <ul>
+          <li>MessagingInformationCommand</li>
+          <li>ListingItemTemplateSearchCommand</li>
+          <li>ListingItemTemplateCreateCommand</li>
+          <li>ItemInformationGetCommand</li>
+          <li>ItemInformationCreateCommand</li>
+          <li>ItemInformationUpdateCommand</li>
+          <li>ItemInformationCommand</li>
+          <li>ListingItemPostCommand</li>
+        </ul>
+      </li>
+      <li>Market Place Backend
+        <ul>
+          <li>Restructure blackbox tests</li>
+          <li>Add CI to build and run blackbox tests against the RPC API on each commit</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+		</div>
+		<div class="large-6 columns">
+
+			<div class="icon-title">
+				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
+				<h2 class="title">Waiting for review</h2>
+			</div>
+			
+			<ul>
+  <li><strong>Release of GUI Testnet 1.1.0</strong>
+    <ul>
+      <li>GUI Components
+        <ul>
+          <li>Copy and Paste issue on OSX using shortcut keys</li>
+          <li>Crash while downloading – Daemon timeout</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+		</div>
+	</div>
+</section><!-- .feature -->
+
+<section class="">
+	<div class="row">
+		<div class="large-6 column">
+
+			<div class="icon-title">
+				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
+				<h2 class="title">Wrapped up</h2>
+			</div>
+			
+			<ul>
+  <li><strong>Release of GUI TestNet Ver 0.1.0</strong>
+    <ul>
+      <li>Features (As per Status Update 18/01/2018)
+        <ul>
+          <li>Cold staking widget</li>
+          <li>ZAP functionality for fast cold staking activation</li>
+          <li>Debug window console</li>
+          <li>History filters</li>
+          <li>Syncing progress bar in left side menu</li>
+          <li>Notifications for a new release</li>
+          <li>OS notifications for stakes and incoming transactions</li>
+          <li>Display client and daemon versions</li>
+          <li>Paste button in address add</li>
+          <li>Paste an address anywhere in send page and address book</li>
+          <li>Display narrations on transactions</li>
+          <li>Pagination - Choose how many transactions to display per page</li>
+        </ul>
+      </li>
+      <li>Maintenance
+        <ul>
+          <li>Test and finalize Zap feature</li>
+          <li>Update ng2-logger to the latest version</li>
+          <li>Add takeWhile and OnDestroy hook in all state.observe calls</li>
+          <li>Update packages</li>
+          <li>Added RPC calls to console</li>
+          <li>Added checksums for build process</li>
+          <li>Merge dev -&gt; Branch 1.1.0</li>
+          <li>Send Page: Updated icons and alignment tweaks</li>
+          <li>Redefine logging levels</li>
+          <li>Update Electron to the latest version</li>
+        </ul>
+      </li>
+      <li>Bugs fixed
+        <ul>
+          <li>Added background image for Mac DMG</li>
+          <li>App not quitting when daemon start before the GUI</li>
+          <li>Fixed preceding issue on creation of wallet, due to passwords.</li>
+          <li>Sign and Verify modal refactoring</li>
+          <li>Remove arm command not working in builds</li>
+          <li>Changed save button name on address book</li>
+          <li>Fixed success flash message not aligned</li>
+          <li>Fix error on creation screen if no password entered</li>
+          <li>App title update</li>
+          <li>Fix wallet detection</li>
+          <li>Fix daemon error messages</li>
+          <li>Resolve create wallet without recovery passphrase</li>
+          <li>Fix Mac build issues</li>
+          <li>Various other bugs</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Particl Market Place</strong>
+    <ul>
+      <li>Market Place Functions
+        <ul>
+          <li>MP: Functions (RPC API) – Listing Item
+            <ul>
+              <li>ListingItemGetCommand, CategoryCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Item Category
+            <ul>
+              <li>ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Address
+            <ul>
+              <li>AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Profile
+            <ul>
+              <li>ProfileCommand, ProfileListCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Market
+            <ul>
+              <li>MarketCommand, MarketListCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Data
+            <ul>
+              <li>DataCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Listing Item
+            <ul>
+              <li>ListingItemService, ListingItemTemplateService</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Item
+            <ul>
+              <li>postitem, updateitem</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Market Place Backend
+        <ul>
+          <li>Design final RPC API</li>
+          <li>Rename blackbox test files to match the commands being tested</li>
+          <li>Replace the Country Enum with a library</li>
+          <li>Particl docker startup options</li>
+          <li>Remove image Metadata</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+		</div>
+		<div class="large-6 column">
+			
+			<div class="icon-title">
+				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
+				<h2 class="title">What's on the Horizon</h2>
+			</div>
+			
+			<ul>
+  <li><strong>Release of GUI Mainnet 1.1.0</strong>
+    <ul>
+      <li>Features to be included
+        <ul>
+          <li>Cold staking widget</li>
+          <li>ZAP functionality for fast cold staking activation</li>
+          <li>Debug window console</li>
+          <li>History filters</li>
+          <li>Syncing progress bar in left side menu</li>
+          <li>Notifications for a new release</li>
+          <li>OS notifications for stakes and incoming transactions</li>
+          <li>Display client and daemon versions</li>
+          <li>Paste button in address add</li>
+          <li>Paste an address anywhere in send page and address book</li>
+          <li>Display narrations on transactions</li>
+          <li>Pagination - Choose how many transactions to display per page</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Release of GUI Testnet 1.2.0</strong>
+    <ul>
+      <li>Features to be included
+        <ul>
+          <li>Multi-wallet</li>
+          <li>Settings page</li>
+          <li>Message Pop-up for Daemon loading</li>
+          <li>Optional user’s memos for transaction</li>
+          <li>Display fees when sending transactions</li>
+          <li>More detailed connection and network information</li>
+          <li>Connect to remote daemon</li>
+          <li>Automatically ZAP incoming transactions</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Particl Marketplace</strong>
+    <ul>
+      <li>GUI Integration (API Service + Consuming)
+        <ul>
+          <li>Market Management</li>
+          <li>Share URI / Open URI to view marketplace item</li>
+          <li>Add item</li>
+          <li>Add Item Image</li>
+          <li>Full list</li>
+          <li>View Items (Search View)</li>
+          <li>View item</li>
+          <li>View “My Item(s)”</li>
+          <li>View Escrowed item</li>
+          <li>Checkout View</li>
+          <li>Negotiation page integration</li>
+        </ul>
+      </li>
+      <li>P2P Marketplace Governance
+        <ul>
+          <li>Consensus on removal of products (Voting)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Further Third Party Integration</strong></li>
+</ul>
+
+
+		</div>
+	</div>
+</section><!-- .feature -->
+
+<section class="feature mac">
+	<div class="row">
+		<div class="large-4 columns">
+			<h2>Particl Desktop for Mac</h2>
+			<p class="lead">
+				Wallet, secure messaging, marketplace and many more all in one platform
+			</p>
+			<a href="#" class="button center btn-mac-download">Download Particl Desktop <span class="mac-subtext">V 2.0.1</span></a>
+                        <div class="mac-links">
+				<a href="#" class="">What's new?</a>
+				<a href="#" class="">All Wallets</a>
+			</div>
+		</div>
+		<div class="large-8 columns">
+			<img src="/assets/img/illustrations/passive-income.png" alt="Passive Income" class="illustration">
+		</div>
+	</div>
+</section><!-- .feature -->
+
+    </div><!-- #page -->
+
+<footer id="footer">
+  <div class="row">
+
+    <div class="navigation part small-6 medium-4 large-2 columns">
+      <h4 class="title">Product</h4>
+      <ul>
+        <li><a class="scroll" href="#">Product Overview</a></li>
+        <li><a class="scroll" href="/user-guide/">User Guides</a></li>
+        <li><a class="scroll" href="#">Privacy Coin (PART)</a></li>
+        <li><a href="#">Particl Marketplace</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Platform Roadmap</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </div><!-- .navigation -->
+
+    <div class="links part small-6 medium-4 large-2 columns">
+      <h4 class="title">Get PART</h4>
+      <ul>
+        <li><a class="ext" href="#">Wallets</a></li>
+        <li><a class="ext" href="#">Buy PART</a></li>
+        <li><a class="ext" href="#">Exchange Markets</a></li>
+      </ul>
+    </div><!-- .links -->
+
+    <div class="social-links part small-6 medium-4 large-2 columns">
+      <h4 class="title">Contribute</h4>
+      <ul>
+        <li><a class="ext" href="#">Earn Passive Income</a></li>
+        <li><a class="ext" href="#">Improvement Proposals (PIP)</a></li>
+        <li><a class="ext" href="#">Opportunity Proposals (POP)</a></li>
+        <li><a class="ext" href="#">Request For Proposals (RFP)</a></li>
+        <li><a class="ext" href="#">Communities</a></li>
+        <li><a class="ext" href="#">Setup a Staking Node</a></li>
+        <li><a class="ext" href="#">Setup a Wallet</a></li>
+      </ul>
+    </div><!-- .social-links -->
+
+    <div class="contact part small-6 medium-4 large-2 columns">
+      <h4 class="title">Network</h4>
+      <ul>
+        <li><a class="ext" href="#">Governance</a></li>
+        <li><a class="ext" href="#">Block Explorer</a></li>
+        <li><a class="ext" href="#">Status Report</a></li>
+      </ul>
+    </div><!-- .contact -->
+
+    <div class="contact part small-6 medium-4 large-2 columns">
+      <h4 class="title">Resources</h4>
+      <ul>
+        <li><a class="ext" href="#">Whitepaper</a></li>
+        <li><a class="ext" href="#">Academic Review</a></li>
+        <li><a class="ext" href="#">FAQ</a></li>
+        <li><a class="ext" href="#">Particl Wiki</a></li>
+        <li><a class="ext" href="#">Source Code</a></li>
+      </ul>
+    </div><!-- .contact -->
+
+    <div class="contact part small-6 medium-4 large-2 columns">
+      <h4 class="title">About Particl</h4>
+      <ul>
+        <li><a class="ext" href="#">Our Mission</a></li>
+        <li><a class="ext" href="#">Core Values</a></li>
+        <li><a class="ext" href="#">Foundation</a></li>
+        <li><a class="ext" href="#">Team</a></li>
+        <li><a class="ext" href="#">Careers</a></li>
+        <li><a class="ext" href="#">Media</a></li>
+        <li><a class="ext" href="#">News</a></li>
+        <li><a class="ext" href="#">Contact</a></li>
+      </ul>
+    </div><!-- .contact -->
+    
+    <div class="large-12"><span>© 2017–2018 Particl</span></div>
+
+  </div>
+
+  <div class="row social-icons-container">
+    <div class="logo medium-4 large-2 columns">
+      <img src="/assets/img/particl-logo-dark.svg" alt="Particl.io">
+    </div><!-- .logo -->
+
+    <div class="social-buttons">
+      <ul>
+        <li><a href="https://twitter.com/particlproject" class="button"><i class="ico ico-email"></i></a></li>
+        <li><a href="https://twitter.com/particlproject" class="button"><i class="ico ico-twitter"></i></a></li>
+        <li><a href="https://reddit.com/r/particl" class="button"><i class="ico ico-reddit-alt"></i></a></li>
+        <li><a href="https://bitcointalk.org/index.php?topic=1835782.0" class="button"><i class="ico ico-bitcoin"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCnuttPuAY6AOenTz2GGMnbg" class="button"><i class="ico"></i></a></li>
+        <li><a href="http://slack.particl.io" class="button"><i class="ico"></i></a></li>
+        <li><a class="ext" href="https://riot.im/app/#/room/#particl:matrix.org">RIOT</a></li>
+        <li><a class="ext" href="https://discord.gg/2tVJaZ9">Discord</a></li>
+
+        <li><a href="https://particl.news">Wallets</a></li>
+        <li><a class="ext" href="https://particl.wiki">Buy PART</a></li>
+        <li><a class="ext" href="https://github.com/particl">Exchange Markets</a></li>
+        <li><a class="ext" href="https://explorer.particl.io">Block Explorer</a></li>
+
+        <!--li><a class="ext" href="#">Facebook</a></li-->
+
+        <li><a class="ext" href="https://plus.google.com/b/108803931280926365728/108803931280926365728">Google+</a></li>
+
+
+        <li><a class="ext" href="https://t.me/particlproject">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer><!-- footer -->
+
+
+<!--div class="respo">
+  <div class="size xs">xs</div>
+  <div class="size s">s</div>
+  <div class="size m">m</div>
+  <div class="size t">t</div>
+  <div class="size l">l</div>
+  <div class="size xl">xl</div>
+</div-->
+
+
+  <script src="/assets/js/all.js"></script>
+</body>
+</html>

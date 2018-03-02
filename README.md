@@ -5,7 +5,7 @@
 ## Howto
 
 * **Update wallet version numbers:** edit `_data/versions.yml`
-
+* `TODO` grab version numbers directly from GitHub
 
 ## Info
 
@@ -23,6 +23,7 @@
     - Sass => CSS autocompiling when changed
     - concat/minify & uglify JS
     - start local BrowserSync server with realtime reloading
+5. or just `gulp watch-sass` for styles only
 
 
 ### FYI
@@ -35,8 +36,4 @@
 ## TODO
 
 * Tweaks
-    - [ ] illustrations to SVG
-    - [ ] decently animate them
-    - [ ] graphs for PART Token > Distribution
-    - [ ] "learn more" buttons to each section in mobile (toggle content)
-    - [ ] Piwik/Analytics?
+    - [ ] Piwik/Analytics

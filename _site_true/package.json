@@ -1,0 +1,31 @@
+{
+  "name": "particl.io",
+  "version": "1.0.0",
+  "description": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/martin.allien/particl.io.git"
+  },
+  "author": "Martin Allien <martin@particl.io> (https://allien.work)",
+  "license": "ISC",
+  "homepage": "https://gitlab.com/martin.allien/particl.io",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-uglify": "^2.0.1",
+    "pump": "^1.0.2"
+  },
+  "browserslist": [
+    "> 0.01%"
+  ]
+}

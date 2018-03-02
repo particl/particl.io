@@ -2,4 +2,7 @@
 core: 0.15.1.2
 
 # Particl Desktop
-wallet: 1.0.0
+wallet: 1.1.0
+
+# Particl Copay
+copay: 3.7.1.2
