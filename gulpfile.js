@@ -35,12 +35,16 @@ var iconfont = require('gulp-iconfont');
 // Iconfont CSS - https://github.com/backflip/gulp-iconfont-css
 var iconfontCss = require('gulp-iconfont-css');
 
+var cp = require('child_process');
+
 
 /* ------------------------------------ *\
     Variables
 \* ------------------------------------ */
 
 var fontName = 'particl-icons';
+
+var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 
 /* ------------------------------------ *\
     Paths
@@ -49,12 +53,14 @@ var fontName = 'particl-icons';
 const paths = {
   template: '*.html',
   // CSS
-  scss: 'scss/**/*.scss',
-  css: 'css',
+  //scss: 'scss/**/*.scss',
+  scss: './_sass/**/*.scss',
+  //css: 'css',
+  css: './assets/css',
   // JS
-  js: 'js/src/',
-  js_in: 'js/src/**/*.js',
-  js_out: 'js',
+  js: './assets/js/src/',
+  js_in: './assets/js/src/*.js',
+  js_out: './assets/js',
   // iconfont
   ico_input: 'img/ico/**/*.svg',
   ico_output: 'img/ico/',
@@ -69,7 +75,7 @@ const paths = {
 // Compile Sass to CSS (and minify) + feed updates to BrowserSync
 gulp.task('sass', function (cb) {
   pump([
-    gulp.src(paths.scss),
+    gulp.src('./_sass/particl-io.scss'),
     sourcemaps.init(),
     sass({outputStyle: 'compressed'}).on('error', sass.logError),
     autoprefixer({
@@ -78,11 +84,14 @@ gulp.task('sass', function (cb) {
     }),
     sourcemaps.write(''),
     gulp.dest(paths.css),
+    gulp.dest('./_site/assets/css'),
     browserSync.reload({
       stream: true
     }),
   ], cb );
 });
+
+
 
 
 // Concatenate JavaScript and uglify
@@ -91,6 +100,7 @@ gulp.task('scripts', function (cb) {
     gulp.src([
       paths.js + 'jquery-1.11.2.min.js',
       paths.js + 'modernizr.min.js',
+      paths.js + 'owl.carousel.min.js',
       paths.js + 'particl.js',
     ]),
     sourcemaps.init(),
@@ -98,18 +108,38 @@ gulp.task('scripts', function (cb) {
     uglify(),
     sourcemaps.write(''),
     gulp.dest(paths.js_out),
+    gulp.dest('./_site/assets/js'),
     browserSync.reload({
       stream: true
     }),
   ], cb );
 });
 
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify('Building Jekyll');
+    return cp.spawn(jekyll, ['build'], {stdio: 'inherit'}).on('close', done);
+});
+
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+
 
 // Launch BrowserSync server
-gulp.task('browserSync', function() {
+gulp.task('browserSync', ['jekyll-build'], function() {
   browserSync.init({
     server: {
-      baseDir: ''
+      baseDir: '_site/',
+      index: 'index.html'
+    },
+  })
+});
+
+gulp.task('browserSync_clean', function() {
+  browserSync.init({
+    server: {
+      baseDir: '_site/',
+      index: 'index.html'
     },
   })
 });
@@ -151,7 +181,17 @@ gulp.task('webfont', ['optimize'], function (cb) {
 
 
 // Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'jekyll-rebuild', 'sass', 'scripts'], function () {
+//gulp.task('watch', ['sass', 'scripts'], function () {
+  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
+  gulp.watch(paths.scss, ['sass']);
+  gulp.watch(paths.js_in, ['scripts']);
+  gulp.watch(paths.ico_input, ['webfont']);
+  gulp.watch(paths.template, browserSync.reload); 
+});
+
+// Without Jekyll compiling
+gulp.task('watch_clean', ['browserSync_clean', 'sass', 'scripts'], function () {
 //gulp.task('watch', ['sass', 'scripts'], function () {
   gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.js_in, ['scripts']);

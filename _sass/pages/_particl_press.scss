@@ -1,0 +1,50 @@
+section.general-press {
+  padding: 5.813rem 1rem 0.438rem;
+}
+
+.press-items.general-press {
+  padding: 5.813rem 0rem 0.438rem;  
+
+  .column {
+    padding: 0rem;
+  } 
+}
+
+.press-header {
+  h1 {
+    margin-bottom: 0px;
+  }
+}
+
+.press-items {
+
+  [class*="block-grid"]>* {
+    padding: 0rem 0.91rem;
+  }
+
+  .item {
+    margin-bottom: 3rem;
+    @include break(xl) { margin-bottom: 3.813rem; }
+    &:last-of-type { margin-bottom: 0; }
+
+    .image {
+      margin-bottom: 1rem;
+      @include break(xl) { margin-bottom: 1.125rem; }
+      img { display: block; }
+    }
+
+    .title {
+      margin: 0 0 0.5rem;
+
+      &::before { content: none; }
+    }
+
+    .meta {
+      font-size: 0.625rem;
+      font-weight: 500;
+      color: $general-op-5;
+      text-transform: uppercase;
+    }
+  }
+
+}

@@ -1,0 +1,209 @@
+.header nav {
+
+  &.medium-7 {
+    @include between_minlg_maxlg {
+      padding-left: 14%;  
+    }
+  }
+
+  &.column {
+    @include before_md { 
+      background-color: $header-background;
+      position: fixed;
+      top: 3.375rem;
+      z-index: 1;
+      padding: 0px;
+    }
+  }
+  
+  &.column {
+    @include md { 
+      position: relative;
+    }
+
+    &.hide {
+
+      @include before_md {
+        display: none;
+      }
+
+      @include md {
+        display: block;
+      }
+
+    }
+  }
+
+  @include lg {
+    display: block !important;
+    position: static;
+  }
+
+  ul {
+    @extend %clearfix;
+    list-style: none;
+    margin: 0rem;
+    padding: 0rem;
+
+    li {
+      float: left;
+      display: block;
+      width: 50%;
+
+      @include before_md {
+        width: 100%;
+
+        border-top: 1px solid $black-op-4;  
+
+        &:last-child {
+          border-bottom: 1px solid $black-op-4;
+        }
+      }
+
+      @include between_m_lg {
+        width: 27%;
+      }
+
+      &:last-child {
+        @include between_m_lg {
+          width: 46%;
+        }         
+      }
+
+      a { // menu items
+        display: block;
+        color: $black;
+        font-size: 0.81rem;
+        font-family: 'GraphikLCGSemiBold';
+        line-height: 26px;
+        text-transform: none;
+        padding: 0.875rem 0.73rem;
+
+        @include before_md {
+          color: $white;
+          font-size: 1.125rem;
+        }
+
+
+        &:hover, &:focus {
+          color: $nav_hover;
+          background: $nav_hover_bg;
+        }
+
+        &.home-download-btn {
+          color: $btn-text-color;
+        }
+      }
+
+      &:nth-of-type(2n+2) > a {
+        border-right-color: transparent;
+      }
+
+      @include break(m) {
+        &:nth-of-type(4n+4) > a { border-right-color: transparent; }
+      }
+
+      @include break(l) { // desktop menu
+        width: auto;
+        a { border: none !important; }
+      }
+
+
+    }
+
+  }
+}
+
+.header .mobile-header-footer {
+  display: none;
+
+  .title {
+    color: $white;
+
+    @include before_md {
+      font-size: 0.8125rem;
+      margin: 2.375rem 0rem 0rem;
+    }
+  }
+
+  .links-container {
+    @include before_md {
+      border-bottom: 2px solid $black-op-4;
+    }
+
+    .copyright {
+      color: $white-op-6;
+      font-size: 0.6875rem;
+      line-height: 2.09;
+      padding: 5px 0px;
+      letter-spacing: -0.3px;
+      font-family: 'GraphikLCG';
+    }
+  }
+
+  ul {
+    li{
+      @include before_md {
+        border-top: 0px;
+
+        &:last-child {
+          border-bottom: 0px;
+        }
+      }
+    }
+
+    a {
+      color: $white-op-6;
+      border: 0px;
+
+      @include before_md {
+        font-size: 0.6875rem;
+        line-height: 2.09;
+        padding: 5px 0px;
+        font-family: 'GraphikLCG';
+      }
+    }    
+  }
+
+  @include before_md {
+    display: block;
+
+    .row [class*='col-'] {
+      background-clip: content-box;
+      min-height: 120px;
+      margin-bottom: 30px;
+    }
+
+    padding-top: 24px;
+  }
+}
+
+body.menu-opened {
+  @include before_md {
+    overflow: hidden;
+  }
+
+  nav {
+    @include before_md {
+      overflow-y: scroll;
+      height: 100%;
+    }
+  }
+}
+
+/* SPECIAL ORDER */
+@include before_md {
+  .mobile-header-footer .links-container, footer .links-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .mobile-header-footer .links-container {
+    height: 900px;
+  }
+
+  footer .links-container {
+    height: 1100px;
+  }
+}

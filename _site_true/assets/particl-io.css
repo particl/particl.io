@@ -745,3 +745,119 @@ footer .copyright hr { margin: 2.5rem 0 1rem; border-color: #d8d8d8; }
   .respo .xl { display: block; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { img[src$=".svg"] { width: 100%; } }
+
+
+/* PUSHIK CODE */
+/*Colors*/
+/*Colors*/
+
+/*Font-family*/
+@font-face {
+	font-family: 'GraphikLCG';
+	src: url('/assets/fonts/GraphikLCG-Regular.woff2') format('woff2'), 
+             url('/assets/fonts/GraphikLCG-Regular.woff') format('woff'),
+	     url('/assets/fonts/GraphikLCG-Regular.ttf')  format('truetype'),
+             url('/assets/fonts/GraphikLCG-Regular.eot'),
+             url('/assets/fonts/GraphikLCG-Regular.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GraphikLCGMedium';
+	src: url('/assets/fonts/GraphikLCG-Medium.woff2') format('woff2'), 
+             url('/assets/fonts/GraphikLCG-Medium.woff') format('woff'),
+	     url('/assets/fonts/GraphikLCG-Medium.ttf')  format('truetype'),
+             url('/assets/fonts/GraphikLCG-Medium.eot'),
+             url('/assets/fonts/GraphikLCG-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GraphikLCGSemiBold';
+	src: url('/assets/fonts/GraphikLCG-SemiBold.woff2') format('woff2'), 
+             url('/assets/fonts/GraphikLCG-SemiBold.woff') format('woff'),
+	     url('/assets/fonts/GraphikLCG-SemiBold.ttf')  format('truetype'),
+             url('/assets/fonts/GraphikLCG-SemiBold.eot'),
+             url('/assets/fonts/GraphikLCG-SemiBold.eot?#iefix') format('embedded-opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+nav ul li a {
+	font-family: 'GraphikLCGSemiBold';
+	font-size: 0.81rem;
+	line-height: 26px;
+	text-transform: none;
+}
+
+.banner-header {
+	font-family: 'GraphikLCGSemiBold';
+	font-size: 2.375rem;
+	text-align: center;
+	width: 696px;
+	margin: auto;
+	color: #222727;
+	line-height: 51px;
+}
+/*Font-family*/
+
+/*Header*/
+header {
+	background: #fafafa;
+}
+
+header .logo img {
+	height: 36px;
+}
+
+#top {
+	background: #fafafa;
+}
+
+nav ul li a {
+	color: #000;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+	color: #04e8b0;
+	background: transparent;
+}
+
+@media only screen and (min-width: 75rem) {
+	nav ul li a {
+		padding: 0.875rem 1.06rem;
+	}
+
+	header .logo {
+		margin: 0.625rem 0rem 0rem 1.2rem;
+	}
+}
+
+@media only screen and (min-width: 60rem) {
+	header {
+		padding: 0px;
+	}
+
+	#top.sticky nav ul li a {
+		padding: 0.875rem 1.06rem;
+	}
+
+	#top.sticky header .logo {
+		margin: 0.625rem 0rem 0rem 1.2rem;
+	}
+
+	#top.sticky header .logo img {
+		max-width: 8rem;
+	}
+
+	#top.sticky header {
+		padding: 0rem;
+	}
+
+	#page {
+		margin-top: 3.5rem;
+	}
+}
+/*Header*/

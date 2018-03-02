@@ -5,6 +5,7 @@
 @import '_config';
 @import '_mixins';
 @import '_grid';
+@import 'base/_colors';
 
 
 // ------ GENERAL ------ //
@@ -58,6 +59,7 @@ iframe { display: block; max-width: 100%; }
 // ------ HELPER CLASSES ------ //
 
 // Visibility
+
 .hide { display: none; }
 .hide-for-small {
   display: none !important;
@@ -89,6 +91,9 @@ iframe { display: block; max-width: 100%; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 
+// Header line-height
+.header-line-height { line-height: $header-line-height; }
+
 // Effects
 .tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
 .zoom { -webkit-transform: scale(1.1); transform: scale(1.1); }
@@ -112,44 +117,6 @@ iframe { display: block; max-width: 100%; }
 
 // ------ UI ELEMENTS ------ //
 
-.button, button {
-  font-weight: bold; text-decoration: none; color: $white;
-  display: inline-block; padding: 0.7rem 1.2rem;
-  background: $primary; border-radius: $border-radius; border: none;
-  @extend .tfx;
-  &:hover { background: darken($primary, 7%); color: $white; }
-  &.toggled { background: darken($primary, 10%); box-shadow: 0 3px darken($primary, 24%) inset; }
-
-  // Button Sizes
-  &.tiny { padding: 0.3rem 0.7rem; font-size: 0.65rem; }
-  &.small { padding: 0.5rem 0.95rem; font-size: 0.825rem; }
-  &.large { padding: 0.9rem 1.45rem; font-size: 1.125rem; }
-  &.expand { width: 100%; }
-
-  // Button Variants/Mods
-  &.secondary {
-    color: $black;
-    background: $secondary;
-    &:hover { background: darken($secondary, 7%); }
-    &.toggled { background: darken($secondary, 10%); box-shadow: 0 3px darken($secondary, 24%) inset; }
-  }
-  &.success {
-    background: $success;
-    &:hover { background: darken($success, 7%); }
-    &.toggled { background: darken($success, 10%); box-shadow: 0 3px darken($success, 24%) inset; }
-  }
-  &.alert {
-    background: $alert;
-    &:hover { background: darken($alert, 7%); }
-    &.toggled { background: darken($alert, 10%); box-shadow: 0 3px darken($alert, 24%) inset; }
-  }
-  &.warning {
-    background: $warning;
-    &:hover { background: darken($warning, 7%); }
-    &.toggled { background: darken($warning, 10%); box-shadow: 0 3px darken($warning, 24%) inset; }
-  }
-}
-
 .panel {
   background: $secondary;
   padding: 0.1rem 1.4rem; margin: 1rem 0;
@@ -168,7 +135,7 @@ table {
   &.expand { width: 100%; }
 }
 
-hr { margin: 2rem 0; border: 0; border-top: 1px solid $secondary; }
+hr { margin: 0rem; border: 0; border-top: 1px solid $hr-color; }
 
 code, kbd, pre, samp {
   background: lighten($secondary, 5%);

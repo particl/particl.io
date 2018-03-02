@@ -1,0 +1,608 @@
+#page {
+  margin-top: 3.563rem;
+
+  @include before_md {
+    margin-top: 0px;
+  }
+
+  ul { // fancy lists
+    list-style: none;
+    line-height: 1.7;
+    color: $text-muted;
+
+    @include break(s) { line-height: 2; }
+
+    li {
+      display: block;
+      margin: 0.2rem 0rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -2rem;
+        top: 0.2rem;
+        display: block;
+        width: 0.625rem;
+        height: 0.625rem;
+        border: 4px solid darken($primary, 3%);
+        border-radius: 50%;
+      }
+    }
+
+    ul { // 2nd level lists
+      li::before {
+        background: lighten($text-muted, 40%);
+        border: none;
+        border-radius: 0;
+        top: 1rem;
+        left: -1.6rem;
+        width: 0.9rem;
+        height: 2px;
+      }
+    }
+  }
+
+}
+
+.banner-header {
+  margin: auto;
+  height: 102px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  @include before_md {
+    height: 168px;
+    line-height: 1.4;
+  }
+}
+
+.banner-btn-container {
+  text-align: center;
+}
+
+.logo-listing { // partners & press mentions
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    margin: 0rem 0rem 1.5rem;
+
+    &::before { content: none; }
+  }
+
+  .logos {
+    display: flex;
+    min-height: 86px;
+    
+    .logo {
+      @extend .tfx;
+      height: auto;
+      margin: 1rem 1.22rem;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.5;
+
+      &:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      &:first-child {
+        margin-left: 0.93rem;
+      }
+    }
+  }
+
+  a {
+    flex-direction: column;
+    display: flex;
+    align-self: center;
+  }
+
+}
+
+#intro {
+  text-align: center;
+  position: relative;
+  background-color: $part-token-bg;
+  height: 755px;
+
+  padding: 0px !important;
+
+  .bg-img {
+    background-image: url('/assets/img/illustrations/intro_banner_background.png');
+    background-position: center center;
+    background-size: contain;
+    height: 519px;
+    width: 696px;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: auto;
+
+    @include before_md {
+      width: 100%;
+      height: 469px;
+      background-size: cover;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-family: 'GraphikLCGMedium';
+    color: $intro-logo-title;
+    text-transform: uppercase;
+
+    @include break(l) { font-size: 0.7rem; }
+    @include break(xl) { font-size: 0.625rem; }
+  }
+
+  p {
+    @include break(m) {
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    @include break(l) { margin: 0; }
+  }
+
+  .actions { margin-top: 1.5rem; }
+
+  .button {
+    @include break(l) { margin-left: 0; }
+  }
+
+  .wallet-download {
+    @extend .tfx;
+    display: none; // hide for mobiles, doesn't make sense there
+    
+    @include break(l) {
+      display: block;
+      padding-bottom: 1rem;
+      text-align: center;
+      background: $bg;
+      box-shadow: 0 4px 12px -5px rgba($text, 0.3);
+      border-bottom: 4px solid transparent;
+    }
+
+    &:hover {
+      border-bottom: 4px solid $primary;
+      .tag { background: darken($bg, 40%); }
+    }
+
+    & > .title {
+      margin: 0.3rem 0 0.3rem;
+      font-size: 1.15rem;
+    }
+
+    & > .version {
+      font-size: 0.85rem;
+      color: lighten($text, 30%);
+    }
+
+    .tag {
+      @extend .tfx;
+      background: darken($bg, 30%);
+      border-radius: 999px;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.65rem;
+      color: $bg;
+    }
+  }
+
+}
+
+.feature {
+  &.multiple { // multiple side-by-side features
+    .part {
+      margin-bottom: 2.5rem;
+      @include break(l) { margin-bottom: 0; }
+      @include before_md { margin-bottom:0px; float:none; }
+      &:last-of-type { margin-bottom: 0; }
+    }
+  }
+
+}
+
+#page section.feature {
+  background-color: $feature-bg;
+
+  h5 {
+    color: $feature-header;
+    line-height: normal;
+    width: 159px;
+    text-transform: uppercase;
+    margin-left: 8.33333%;
+    padding: 0 0.6rem;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 2.125rem;
+    color: $white-op-9;
+
+    @include before_md { margin-bottom: 0px; }
+  }
+}
+
+#page section.blockchain {
+  padding: 4rem 0rem 5.063rem;
+
+  @include before_md {
+    padding: 2.5rem 0rem 3rem;
+  }
+
+  .blockchain-header {
+
+    @include before_md {
+      margin-bottom: 10px;
+    }
+  }
+
+  h5 {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  p {
+    max-width: 360px;
+    width: 100%;
+
+    @include before_md {
+      margin-top: 0px;
+      max-width: 100%;
+    }
+  }
+}
+
+section#architecture {
+  padding: 6.97rem 0rem 9.06rem 0rem;
+
+  @include before_md {
+    padding: 0.9375rem 0rem 3.1875rem 0rem;
+  }
+
+  .row {
+    max-width: 100%;
+  }
+
+  .slider-container {
+    margin-top: 3rem;
+  }
+}
+
+.join-section {
+  padding: 2.556rem 0rem 3.25rem;
+
+  h2 {
+    margin: 2.75rem 0rem 2.813rem;
+    color: $white;
+  }
+
+  .button {
+    font-weight: 600;
+    position: relative;
+
+    @include before_md {
+      display: block;
+      width: 175px;
+      margin: 20px auto;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 0px;
+      margin: auto;
+      height: 100%;
+    }
+  }
+
+
+  .riot-btn {
+    padding: 0.5rem 2.688rem 0.5rem 4rem;
+    font-size: 0.91rem;
+
+    &:before {
+      background-image: url('/assets/img/ico/new/reddit-icon.svg');
+      width: 21px;
+      left: 39px;
+      top: 7px;
+
+      @include before_md {
+        width: 175px;
+        height: 30px;
+        top: 0px;
+        bottom: 0px;
+        left: 39px;
+        right: 0px;
+        margin: auto;
+        background-size: 12%;
+        background-position: left center;
+      }
+    }
+  }
+
+  .discard-btn {
+    padding: 0.55rem 2.063rem 0.55rem 3.5rem;
+    font-size: 0.81rem;
+
+    &:before {
+      background-image: url('/assets/img/ico/new/discord-icon.svg');
+      width: 15px;
+      left: 31px;
+      top: 8px;
+
+      @include before_md {
+        width: 175px;
+        height: 30px;
+        top: 0px;
+        bottom: 0px;
+        left: 31px;
+        right: 0px;
+        margin: auto;
+        background-size: 8%;
+        background-position: left center;
+      }
+    }
+  }
+
+  .telegram-btn {
+    padding: 0.563rem 1.75rem 0.563rem 3.188rem;
+    font-size: 0.81rem;
+  
+    &:before {
+      background-image: url('/assets/img/ico/new/telegram-icon.svg');
+      width: 35px;
+      left: 20px;
+      top: 0px;
+
+      @include before_md {
+        width: 175px;
+        height: 30px;
+        top: 0px;
+        bottom: 0px;
+        left: 20px;
+        right: 0px;
+        margin: auto;
+        background-size: 24%;
+        background-position: left center;
+      }
+    }
+  }
+}
+
+#about {
+  padding: 8.373rem 0rem;
+
+  @include before_md {
+    padding: 0px;
+  }
+
+  h5 {
+    margin-top: 2.063rem;
+    margin-bottom: 1.438rem;
+  }
+
+  h2 {
+    margin: 0rem 0rem 1.063rem;
+    max-width: 425px;
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    max-width: 524px;
+    width: 100%;
+  }
+
+  .button {
+    font-size: 0.813rem;
+    font-weight: 600;
+  }
+
+  .about-img-container {
+    text-align: center;
+    margin-top: 2.063rem;
+
+    @include before_md() {
+      &:nth-child(even) {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  img {
+    width: 360px;
+  }
+
+  hr {
+    color: $about-hr-color;
+    margin: 5rem 0rem;
+
+    @include before_md() {
+      margin: 3rem 0rem;
+    }
+  }
+
+  .btn-about-part {
+    padding: 0.56rem 1.71rem;
+  }
+
+  .btn-about-more {
+    padding: 0.56rem 1.07rem;
+  }
+
+  .btn-about-platform {
+    padding: 0.56rem 1.81rem;
+  }
+
+  @include before_md() {
+    & > .row:nth-of-type(odd) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    & > .row:nth-last-child(1) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+#page section.feature.mac {
+  padding: 6.813rem 0rem 0rem;
+
+  @include before_md {
+    padding: 0px;
+  }
+
+  @include before_md() {
+    & > .row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  h2 {
+    color: $white;
+    margin: 1.75rem 0rem 1rem;
+  }
+
+  .btn-mac-download {
+    padding: 0.56rem 3.91rem  0.56rem 1.03rem;
+    position: relative;
+    color: $button-color;
+    font-family: 'GraphikLCGSemiBold';
+    line-height: 2;
+    letter-spacing: 0;
+    text-decoration: none;
+
+    .mac-subtext {
+      font-size: 0.625rem;
+      color: $white-op-8;
+      font-weight: 600;
+      position: absolute;
+      top: 6px;
+      right: 15px;
+      text-align: right;
+    }
+  }
+
+  .mac-links {
+    margin-top: 1.2rem;
+
+    a {
+      color: $white-op-8;
+      text-decoration: underline;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .mac-container-text {
+    @include before_md {
+      text-align: center;
+      margin-bottom: 5rem;
+
+      p.large {
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  .mac-container-img {
+    height: 100%;
+    text-align: center;
+
+    @include before_md { 
+      margin-top: 104px;
+      margin-bottom: 59px;
+    }
+
+    img {
+      height: 323px;
+
+      @include before_md { height: auto; }
+    }
+  }
+
+}
+
+#part-token {
+  padding: 6.938rem 0rem 5.875rem;
+  background-color: $part-token-bg;
+
+  h2 {
+
+    &:before {
+      content:'';
+      position: absolute;
+      bottom: -1.5rem;
+      display: block;
+      width: 2.5rem;     
+      height: 2px;
+      background: $part-token-hr-color;
+    }
+  }
+
+  h3 {
+    margin-top: 3.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    max-width: 326px;
+    font-size: 0.813rem;
+    color: $text-color;
+    line-height: 1.77;
+    width: 100%;
+  }
+
+  .first-row p {
+    min-height: 68px;
+  }
+
+  .second-row p {
+    min-height: 23px;
+  }
+
+  .more-btn {
+    font-size: 0.813rem;
+    color: $black-op-8;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.particl-partners {
+  .title {
+    @include before_xl {
+      display: none;
+    }
+  }
+}
+
+.particl-press {
+  @include before_xl {
+    display: none;
+  }
+}

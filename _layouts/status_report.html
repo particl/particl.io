@@ -2,61 +2,293 @@
 layout: default
 ---
 
-<section id="page-title">
+      <section id="page-title">
 	<div class="row">
 		<div class="column">
-			<h1 class="title">Particl Project Status Report</h1>
-			<p>{{ content }}</p>
+			<h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
 	</div>
 </section><!-- #page-title -->
 
 
-<section class="feature">
+<section class="report-busy">
 	<div class="row">
 		<div class="large-6 columns">
 
 			<div class="icon-title">
-				<img class="ico" src="{{ "/assets/img/ico/status-report/busy-with.svg" | relative_url }}" alt="">
+				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
 				<h2 class="title">What are we busy with</h2>
 			</div>
-			{% capture busyWith %}{% include_relative _status-report/busy-with.md %}{% endcapture %}
-			{{ busyWith | markdownify }}
+			
+			<ul>
+  <li><strong>Release of GUI TestNet Ver 1.1.0</strong>
+    <ul>
+      <li>GUI TestNet – Internal UAT (RC4)
+        <ul>
+          <li>Upgrade partilcd to latest 15.1.2</li>
+          <li>Overview transaction order incorrect</li>
+          <li>Modal layout on Mac and Linux miss aligned</li>
+          <li>Codesign GUI</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Preparation of GUI Ver 1.2.0</strong></li>
+  <li><strong>Particl Market Place</strong>
+    <ul>
+      <li>GUI Design
+        <ul>
+          <li>Market Management</li>
+          <li>Seller interface</li>
+          <li>Buyer interface</li>
+        </ul>
+      </li>
+      <li>GUI Categories Design</li>
+      <li>Market Place Functions
+        <ul>
+          <li>MessagingInformationCommand</li>
+          <li>ListingItemTemplateSearchCommand</li>
+          <li>ListingItemTemplateCreateCommand</li>
+          <li>ItemInformationGetCommand</li>
+          <li>ItemInformationCreateCommand</li>
+          <li>ItemInformationUpdateCommand</li>
+          <li>ItemInformationCommand</li>
+          <li>ListingItemPostCommand</li>
+        </ul>
+      </li>
+      <li>Market Place Backend
+        <ul>
+          <li>Restructure blackbox tests</li>
+          <li>Add CI to build and run blackbox tests against the RPC API on each commit</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 
 		</div>
 		<div class="large-6 columns">
 
 			<div class="icon-title">
-				<img class="ico" src="{{ "/assets/img/ico/status-report/under-review.svg" | relative_url }}" alt="">
+				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
 				<h2 class="title">Waiting for review</h2>
 			</div>
-			{% capture waitingReview %}{% include_relative _status-report/waiting-review.md %}{% endcapture %}
-			{{ waitingReview | markdownify }}
+			
+			<ul>
+  <li><strong>Release of GUI Testnet 1.1.0</strong>
+    <ul>
+      <li>GUI Components
+        <ul>
+          <li>Copy and Paste issue on OSX using shortcut keys</li>
+          <li>Crash while downloading – Daemon timeout</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 
 		</div>
 	</div>
 </section><!-- .feature -->
 
-<section class="feature">
+<section class="">
 	<div class="row">
 		<div class="large-6 column">
 
 			<div class="icon-title">
-				<img class="ico" src="{{ "/assets/img/ico/status-report/wrapped-up.svg" | relative_url }}" alt="">
+				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
 				<h2 class="title">Wrapped up</h2>
 			</div>
-			{% capture wrappedUp %}{% include_relative _status-report/wrapped-up.md %}{% endcapture %}
-			{{ wrappedUp | markdownify }}
+			
+			<ul>
+  <li><strong>Release of GUI TestNet Ver 0.1.0</strong>
+    <ul>
+      <li>Features (As per Status Update 18/01/2018)
+        <ul>
+          <li>Cold staking widget</li>
+          <li>ZAP functionality for fast cold staking activation</li>
+          <li>Debug window console</li>
+          <li>History filters</li>
+          <li>Syncing progress bar in left side menu</li>
+          <li>Notifications for a new release</li>
+          <li>OS notifications for stakes and incoming transactions</li>
+          <li>Display client and daemon versions</li>
+          <li>Paste button in address add</li>
+          <li>Paste an address anywhere in send page and address book</li>
+          <li>Display narrations on transactions</li>
+          <li>Pagination - Choose how many transactions to display per page</li>
+        </ul>
+      </li>
+      <li>Maintenance
+        <ul>
+          <li>Test and finalize Zap feature</li>
+          <li>Update ng2-logger to the latest version</li>
+          <li>Add takeWhile and OnDestroy hook in all state.observe calls</li>
+          <li>Update packages</li>
+          <li>Added RPC calls to console</li>
+          <li>Added checksums for build process</li>
+          <li>Merge dev -&gt; Branch 1.1.0</li>
+          <li>Send Page: Updated icons and alignment tweaks</li>
+          <li>Redefine logging levels</li>
+          <li>Update Electron to the latest version</li>
+        </ul>
+      </li>
+      <li>Bugs fixed
+        <ul>
+          <li>Added background image for Mac DMG</li>
+          <li>App not quitting when daemon start before the GUI</li>
+          <li>Fixed preceding issue on creation of wallet, due to passwords.</li>
+          <li>Sign and Verify modal refactoring</li>
+          <li>Remove arm command not working in builds</li>
+          <li>Changed save button name on address book</li>
+          <li>Fixed success flash message not aligned</li>
+          <li>Fix error on creation screen if no password entered</li>
+          <li>App title update</li>
+          <li>Fix wallet detection</li>
+          <li>Fix daemon error messages</li>
+          <li>Resolve create wallet without recovery passphrase</li>
+          <li>Fix Mac build issues</li>
+          <li>Various other bugs</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Particl Market Place</strong>
+    <ul>
+      <li>Market Place Functions
+        <ul>
+          <li>MP: Functions (RPC API) – Listing Item
+            <ul>
+              <li>ListingItemGetCommand, CategoryCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Item Category
+            <ul>
+              <li>ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Address
+            <ul>
+              <li>AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Profile
+            <ul>
+              <li>ProfileCommand, ProfileListCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Market
+            <ul>
+              <li>MarketCommand, MarketListCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Data
+            <ul>
+              <li>DataCommand</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Listing Item
+            <ul>
+              <li>ListingItemService, ListingItemTemplateService</li>
+            </ul>
+          </li>
+          <li>MP: Functions (RPC API) – Item
+            <ul>
+              <li>postitem, updateitem</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Market Place Backend
+        <ul>
+          <li>Design final RPC API</li>
+          <li>Rename blackbox test files to match the commands being tested</li>
+          <li>Replace the Country Enum with a library</li>
+          <li>Particl docker startup options</li>
+          <li>Remove image Metadata</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 
 		</div>
 		<div class="large-6 column">
 			
 			<div class="icon-title">
-				<img class="ico" src="{{ "/assets/img/ico/status-report/on-horizon.svg" | relative_url }}" alt="">
+				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
 				<h2 class="title">What's on the Horizon</h2>
 			</div>
-			{% capture onHorizon %}{% include_relative _status-report/on-horizon.md %}{% endcapture %}
-			{{ onHorizon | markdownify }}
+			
+			<ul>
+  <li><strong>Release of GUI Mainnet 1.1.0</strong>
+    <ul>
+      <li>Features to be included
+        <ul>
+          <li>Cold staking widget</li>
+          <li>ZAP functionality for fast cold staking activation</li>
+          <li>Debug window console</li>
+          <li>History filters</li>
+          <li>Syncing progress bar in left side menu</li>
+          <li>Notifications for a new release</li>
+          <li>OS notifications for stakes and incoming transactions</li>
+          <li>Display client and daemon versions</li>
+          <li>Paste button in address add</li>
+          <li>Paste an address anywhere in send page and address book</li>
+          <li>Display narrations on transactions</li>
+          <li>Pagination - Choose how many transactions to display per page</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Release of GUI Testnet 1.2.0</strong>
+    <ul>
+      <li>Features to be included
+        <ul>
+          <li>Multi-wallet</li>
+          <li>Settings page</li>
+          <li>Message Pop-up for Daemon loading</li>
+          <li>Optional user’s memos for transaction</li>
+          <li>Display fees when sending transactions</li>
+          <li>More detailed connection and network information</li>
+          <li>Connect to remote daemon</li>
+          <li>Automatically ZAP incoming transactions</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Particl Marketplace</strong>
+    <ul>
+      <li>GUI Integration (API Service + Consuming)
+        <ul>
+          <li>Market Management</li>
+          <li>Share URI / Open URI to view marketplace item</li>
+          <li>Add item</li>
+          <li>Add Item Image</li>
+          <li>Full list</li>
+          <li>View Items (Search View)</li>
+          <li>View item</li>
+          <li>View “My Item(s)”</li>
+          <li>View Escrowed item</li>
+          <li>Checkout View</li>
+          <li>Negotiation page integration</li>
+        </ul>
+      </li>
+      <li>P2P Marketplace Governance
+        <ul>
+          <li>Consensus on removal of products (Voting)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Further Third Party Integration</strong></li>
+</ul>
+
 
 		</div>
 	</div>
 </section><!-- .feature -->
+
+{% include particl-desktop.html %}

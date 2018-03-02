@@ -1,0 +1,429 @@
+/*---
+# Only the main Sass file needs front matter (the dashes are enough)
+---*/
+@import 'base/_typography';
+
+@import 'utils/_variables';
+
+@import 'owl-carousel/owl.carousel.scss';
+@import 'owl-carousel/owl.theme.default.scss';
+
+@import '_brickst';
+@import '_particl-icons';
+@import '_fonts';
+
+@import 'base/_colors';
+
+@import 'layout/_navigation';
+@import 'layout/_grid';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_sidebar';
+@import 'layout/_forms';
+
+@import 'components/_buttons';
+@import 'components/_carousel';
+@import 'components/_dropdown';
+@import 'components/_icons';
+@import 'components/_search-form';
+@import 'components/_modal.scss';
+@import 'components/_download-table.scss';
+
+@import 'pages/_home';
+@import 'pages/_why_particl';
+@import 'pages/_about_us';
+@import 'pages/_careers';
+@import 'pages/_user_guide';
+@import 'pages/_project_road';
+@import 'pages/_status_report';
+@import 'pages/_particl_press';
+@import 'pages/_download';
+
+/*! particl.io v1.0 | Author: Martin Allien <martin@particl.io> */
+
+// -------------[  BASICS  ]------------- //
+
+body {
+  background: $bg;
+  color: $general-text-color;
+  font-family: 'GraphikLCG';
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: 'GraphikLCGSemiBold';
+  font-size: 2.375rem;
+  color: $general-text-color;
+  letter-spacing: -0.9px;
+
+  @include before_md {
+    font-size: 1.875rem;
+    letter-spacing: -0.7px;
+    line-height: 1.4;
+  }
+}
+
+h2 {
+  font-family: 'GraphikLCGSemiBold';
+  font-size: 1.75rem;
+  color: $general-text-color;
+  letter-spacing: -0.8px;
+  line-height: 34px;
+  margin: 0 0 3rem;
+}
+
+h3 {
+  font-family: 'GraphikLCGSemiBold';
+  font-size: 1.375rem;
+  color: $general-text-color;
+  letter-spacing: -0.6px;
+  line-height: 34px;
+}
+
+h4 {
+  font-family: 'GraphikLCGSemiBold';
+  font-size: 1.1875rem;
+  color: $general-text-color;
+  letter-spacing: -0.5px;
+  line-height: 27px;
+  margin: 0px;
+}
+
+h5 {
+  font-family: 'GraphikLCGMedium';
+  font-size: 0.75rem;  
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  &.lead2 {
+    color: $general-op-7;
+  }
+}
+
+p {
+  color: $general-op-6;
+  font-family: 'GraphikLCG';
+  letter-spacing: -0.3px;
+
+  &.large {
+    font-size: 0.9375rem;  
+    line-height: 1.87;
+  }
+
+  &.small {
+    font-size: 0.8125rem;      
+    line-height: 1.77;
+  }
+}
+
+a {
+  font-size: 0.8125rem;
+  font-family: 'GraphikLCGMedium';
+  line-height: normal;
+  letter-spacing: 0.1px;
+
+  &.link-small-dark {
+    color: $black-op-8;
+  }
+
+  &.link-small-grey {
+    color: $black-op-5;
+  }
+}
+
+td.type-name, td.platform-name {
+  font-size: 0.9375rem;  
+  letter-spacing: -0.3px;
+  color: $general-op-6;
+  line-height: 1.87;
+  font-family: 'GraphikLCG';
+}
+
+small {
+	font-size: 70%; color: lighten($text-muted, 20%); line-height: 1.4;
+}
+// Forms
+form {
+	margin: 1.5rem 0;
+}
+input {
+	border: none; border-radius: $border-radius;
+	padding: 0.7rem 1.4rem; margin-bottom: 0.2rem;
+	font-size: 0.9rem;
+}
+
+// ---------------[  UI  ]--------------- //
+
+a.ext { // arrows signaling external links
+	&::after {
+		@extend .tfx;
+		content: "\E001"; opacity: 0.5;
+		font-family: "particl-icons"; font-size: 0.4rem;
+		position: relative; top: -3px;
+		margin-left: 0.2rem;
+	}
+	&:hover, &:focus {
+		&::after { color: $primary; opacity: 1; }
+	}
+}
+
+section { // full-width sections of content
+	padding: 4rem 1rem;
+	&:nth-of-type(2n) { background: $section-bg1; }
+}
+
+.icon-title { // nice titles with icons (eg. Status Report)
+	.ico {
+		display: none;
+		@include break(m) {
+			display: inline-block; margin: 0 1rem 0 0;
+			position: relative; top: 14px;
+		}
+	}
+	.title {
+		display: inline-block;
+	}
+}
+
+
+// -------------[  LAYOUT  ]------------- //
+#video {
+	max-width: 45rem; margin: 0 auto;
+	@include break(t) { margin: -2rem auto -3.5rem; }
+	@include break(l) { margin: -10rem auto -4rem; }
+	@include break(xl) { margin: -21.5rem auto -4rem; }
+	.video-intro {
+		width: 100%;
+		box-shadow: 0 3px 20px -7px rgba($text, 0.5); background: $black;
+		position: relative; z-index: 100;
+		// fluid width video - https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+		padding-bottom: 56.25%; // padding-top: 25px;
+		height: 0;
+		iframe {
+			position: absolute; top: 0; left: 0;
+			width: 100%; height: 100%;
+			@include break(l) { max-width: 720px; }
+		}
+	}
+}
+
+#subscribe {
+	text-align: center;
+	padding: 2rem 1rem;
+	@include break(m) { padding: 6rem 1rem 3rem; }
+	@include break(l) { background: url(/assets/img/newsletter-bg.png) no-repeat 50% 100% $bg-muted; }
+	i.ico {
+		color: $primary; font-size: 3rem;
+		@include break(l) { font-size: 3.7rem; }
+	}
+	h2 {
+		margin: 0.5rem 0 0;
+		&::before { content: none; }
+	}
+	small {
+		display: block; max-width: 30rem; margin: 0 auto;
+		a { color: lighten($text-muted, 10%); font-weight: bold; }
+		a:hover, a:focus { color: darken($text-muted, 10%); }
+	}
+}
+
+#wallet { // wallet preview/screen
+	background: #fafafa;
+	padding-bottom: 0;
+	@include break(l) { background: url(/assets/img/wallet-bg.png) no-repeat 50% 100% #fafafa; }
+	.wallet-screen {
+		display: block; width: 100%; max-width: 1210px; margin: 2rem auto 0;
+		@include break(l) { width: 90%; }
+	}
+}
+
+#team {
+	li.team-member {
+		text-align: center;
+		margin-bottom: 1.5rem;
+		&::before { content: none; }
+		.photo {
+			width: 130px; height: 130px; margin: 0 auto;
+			border-radius: 50%; overflow: hidden;
+		}
+		.name {
+			margin: 1.3rem 0 0;
+			font-family: "OpenSans", sans-serif; font-weight: bold; font-size: 0.9rem;
+		}
+		.title {
+			font-size: 0.75rem; line-height: 1.6;
+			display: block; margin-bottom: 0.7rem;
+			@include break(l) { margin-bottom: 0.2rem; }
+		}
+		.link {
+			margin: 0 0.2rem;
+			color: lighten($text-muted, 40%);
+			@include break(l) { margin: 0 0.1rem; font-size: 0.85rem; }
+			&.nick { cursor: help; }
+			&.email:hover { color: $primary; }
+			&.reddit:hover { color: #FF4500; }
+			&.twitter:hover { color: #00A0D1; }
+			&.linkedin:hover { color: #4875B4; }
+			&.github:hover { color: $text; }
+		}
+	}
+	hr { margin: 2rem 0 3.5rem; border-top: 5px dotted darken($bg-muted, 3%); }
+}
+
+footer {
+	.part {
+		a {
+			&:hover, &:focus { color: $text-muted; }
+		}
+	}
+	.social-buttons {
+
+		i.ico { margin: 0; }
+		.button {
+			width: 2.7rem; height: 2.7rem; padding: 0; margin: 0 0.4rem;
+			font-size: 1rem; text-align: center; line-height: 2.35;
+			@include break(l) {
+				width: 2.4rem; height: 2.4rem; margin: 0 0 0 0.25rem;
+				font-size: 0.8rem; line-height: 2.65;
+			}
+			@include break(xl) {
+				width: 2.7rem; height: 2.7rem; margin: 0 0 0 0.7rem;
+				font-size: 1rem; line-height: 2.45;
+			}
+		}
+	}
+	.contact-email {
+		@include break(l) { text-align: right; font-size: 0.85rem; }
+		i.ico {
+			font-size: 0.7rem; color: lighten($text-muted, 40%);
+			margin-right: 0.7rem;
+			position: relative; top: -1px;
+		}
+		a {
+			color: $text-muted;
+			&:hover, &:focus { color: $text; }
+		}
+	}
+	.copyright {
+		hr { margin: 2.5rem 0 1rem; border-color: darken($bg-muted, 10%); }
+	}
+}
+
+
+
+// ------------[  SPECIFIC  ]------------ //
+
+// Press page
+
+.subscribe-form {
+	@extend %clearfix;
+	max-width: 40rem; margin: 0 auto;
+	& > .input {
+		@extend .tfx;
+		@include break(s) {
+			width: 75%; float: left;
+			border-top-right-radius: 0; border-bottom-right-radius: 0;
+		}
+		@include break(t) { width: 80%; }
+		@include break(l) { font-size: 1.05rem; padding: 0.85rem 1.6rem; }
+	}
+	& > .submit {
+		@include break(s) {
+			width: 25%; float: left; margin: 0; padding: 0.7rem 0;
+			border-radius: $border-radius; border-top-left-radius: 0; border-bottom-left-radius: 0;
+			text-align: center;
+		}
+		@include break(t) { width: 20%; }
+		@include break(l) { font-size: 1.05rem; padding: 0.85rem 1.6rem; border: none; }
+	}
+}
+
+
+.no-js { // for browsers with JS disabled
+	header {
+		position: static;
+		@include break(l) { padding: 1rem 0 0; }
+		#menu-toggle { display: none; }
+		.logo {
+			text-align: center; margin: 0;
+			img {
+				@include break(l) { max-width: 6rem; }
+			}
+		}
+	}
+	nav {
+		position: static;
+		ul li a {
+			@include break(l) { padding: 1.8rem 1.5rem; }
+		}
+	}
+	#page {
+		margin-top: 0;
+		@include break(l) { margin-top: 4.5rem; }
+	}
+}
+
+
+// ------------[  PLUG-INS  ]------------ //
+
+// Sendinblue newsletter sign-up
+#sib_embed_signup {
+	.forms-builder-wrapper { position: relative; }
+	#sib_loading_gif_area {
+		position: absolute; z-index: 9999;
+		& > img {
+			display: block; margin-left: auto; margin-right: auto;
+			position: relative; top: 40%;
+		}
+	}
+	.sib-container {
+		@extend %clearfix;
+		.message_area {
+			width: 100%; max-width: 40rem; margin: 0.5rem auto !important; padding: 0.7rem 1rem;
+			border-radius: 4px;
+			& > .close { display: none; }
+		}
+	}
+}
+
+
+// -------------[  HELPER  ]------------- //
+
+.respo {
+  position: fixed; bottom: 0; right: 0; width: 1.5rem;
+  background: black; color: white; padding: 3px 0;
+  font-size: 10px; text-align: center; text-transform: uppercase; font-weight: bold;
+  .size { display: none; }
+  @include break(xs) {
+    .size { display: none; }
+    .xs { display: block; }
+  }
+  @include break(s) {
+    .size { display: none; }
+    .s { display: block; }
+  }
+  @include break(m) {
+    .size { display: none; }
+    .m { display: block; }
+  }
+  @include break(t) {
+    .size { display: none; }
+    .t { display: block; }
+  }
+  @include break(l) {
+    .size { display: none; }
+    .l { display: block; }
+  }
+  @include break(xl) {
+    .size { display: none; }
+    .xl { display: block; }
+  }
+}
+
+
+// MSIE 10+ fix for badly scaled SVGs
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; 
+  }
+}

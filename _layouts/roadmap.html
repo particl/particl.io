@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<section id="page-title">
+      <section id="page-title" class="general-project-road">
 	<div class="row">
-		<div class="column">
-			<h1 class="title">Particl Project Roadmap</h1>
+		<div class="column project-road-header">
+			<h1 class="title text-center header-line-height">Particl Project<br />Roadmap</h1>
 		</div>
 	</div>
 
@@ -53,11 +53,13 @@ layout: default
 </section><!-- #page-title -->
 
 
-<section>
+<section id="particl-road-map">
 	<div class="row">
 		<div class="column">
 			<!--h2>Infographic</h2-->
-			<img src="{{ "/assets/img/roadmap/roadmap_v1.4.jpg" | relative_url }}" alt="Particl Project Roadmap" description="Infographic showing planned features for Particl Project, including cold staking, decentralized marketplace and more.">
+			<img src="/assets/img/roadmap/roadmap_v1.4.jpg" alt="Particl Project Roadmap" description="Infographic showing planned features for Particl Project, including cold staking, decentralized marketplace and more.">
 		</div>
 	</div>
 </section><!-- .feature -->
+
+{% include particl-desktop.html %}

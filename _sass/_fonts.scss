@@ -23,3 +23,36 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
+@font-face {
+  font-family: 'GraphikLCG';
+  src: url('/assets/fonts/GraphikLCG-Regular.woff2') format('woff2'), 
+       url('/assets/fonts/GraphikLCG-Regular.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Regular.ttf')  format('truetype'),
+       url('/assets/fonts/GraphikLCG-Regular.eot'),
+       url('/assets/fonts/GraphikLCG-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GraphikLCGMedium';
+  src: url('/assets/fonts/GraphikLCG-Medium.woff2') format('woff2'), 
+       url('/assets/fonts/GraphikLCG-Medium.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-Medium.ttf')  format('truetype'),
+       url('/assets/fonts/GraphikLCG-Medium.eot'),
+       url('/assets/fonts/GraphikLCG-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GraphikLCGSemiBold';
+  src: url('/assets/fonts/GraphikLCG-SemiBold.woff2') format('woff2'), 
+       url('/assets/fonts/GraphikLCG-SemiBold.woff') format('woff'),
+       url('/assets/fonts/GraphikLCG-SemiBold.ttf')  format('truetype'),
+       url('/assets/fonts/GraphikLCG-SemiBold.eot'),
+       url('/assets/fonts/GraphikLCG-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: normal;
+}

@@ -1,0 +1,79 @@
+section.general-careers {
+  padding: 3.813rem 1rem 5rem;
+}
+
+#page-title.general-careers {
+  padding-top: 5.813rem;
+
+  ul {
+    padding-left: 0px;
+
+    li {
+      a {
+        text-decoration: underline;
+      }
+
+      &:before { border: 0px; }
+    }
+  }
+
+  .career {
+    list-style: none;
+  }
+}
+
+.careers-header-container {
+  margin-top: 0.56rem;
+
+  h5 {
+    margin-bottom: 1.438rem;
+  }  
+
+  h2 {
+    margin-bottom: 0em;
+  }
+}
+
+#page .c-desc {
+  margin-top: 1.438rem;
+
+  &.devepoler-desc p {
+    max-width: 524px;
+  }
+
+  p:first-child {
+    margin-top: 0em;
+  }
+
+  p {
+    margin: 1.875rem 0rem;
+  }
+
+  h5 {
+   margin-top: 0.3125em;
+   min-height: 48px;
+  }
+
+  li {
+    margin-bottom: 0.563rem;
+  }
+
+}
+
+.careers-desc {
+  ul li {
+    color: $general-op-6;
+    font-family: 'GraphikLCG';
+    letter-spacing: -0.3px;
+    font-size: 0.8125rem;      
+    line-height: 1.77;
+  }
+
+  .careers-email {
+    font-family: 'GraphikLCGSemiBold';
+    line-height: 2;
+    letter-spacing: 0;
+    color: $button-color;
+    text-decoration: none;
+  }
+}
