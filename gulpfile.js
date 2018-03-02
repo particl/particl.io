@@ -190,6 +190,11 @@ gulp.task('watch', ['browserSync', 'jekyll-rebuild', 'sass', 'scripts'], functio
   gulp.watch(paths.template, browserSync.reload); 
 });
 
+// Watch for Sass/JS changes and compile + BrowserSync
+gulp.task('watch-sass', ['sass'], function () {
+  gulp.watch(paths.scss, ['sass']);
+});
+
 // Without Jekyll compiling
 gulp.task('watch_clean', ['browserSync_clean', 'sass', 'scripts'], function () {
 //gulp.task('watch', ['sass', 'scripts'], function () {

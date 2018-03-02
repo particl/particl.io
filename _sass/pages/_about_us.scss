@@ -52,8 +52,8 @@ section.general-about {
       left: 134px;
       margin: auto;
       width: 350px;
-      height: 60px;
       background-color: $white;
+      padding: 8px 0;
 
       @include before_md {
         width: auto;

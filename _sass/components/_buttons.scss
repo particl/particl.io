@@ -3,7 +3,6 @@ button, .button { // default, full buttons
   border: solid 1.5px $btn-border-color;
   background-color: transparent;
   color: $btn-text-color;
-
   &:hover, &:focus {
     background: darken($primary, 5%);
     border-color: darken($primary, 5%);
@@ -13,7 +12,6 @@ button, .button { // default, full buttons
     border: 2px solid $primary;
     background: rgba($bg, 0.9);
     color: $primary;
-
     &:hover, &:focus {
       border-color: darken($primary, 5%);
       background: rgba($bg, 0.9);
@@ -39,12 +37,10 @@ button, .button { // default, full buttons
 
 .button, button {
   @extend .tfx;
-
   &:hover {
     background: darken($primary, 7%);
     color: $white;
   }
-
   &.toggled {
     background: darken($primary, 10%);
     box-shadow: 0 3px darken($primary, 24%) inset;
@@ -55,26 +51,21 @@ button, .button { // default, full buttons
     padding: 0.3rem 0.7rem;
     font-size: 0.65rem;
   }
-
   &.small {
     padding: 0.5rem 0.95rem;
     font-size: 0.825rem;
   }
-
   &.large {
     padding: 0.9rem 1.45rem;
     font-size: 1.125rem;
   }
-
   &.expand { width: 100%; }
 
   // Button Variants/Mods
   &.secondary {
     color: $black;
     background: $secondary;
-
     &:hover { background: darken($secondary, 7%); }
-
     &.toggled {
       background: darken($secondary, 10%);
       box-shadow: 0px 3px darken($secondary, 24%) inset;
@@ -83,9 +74,7 @@ button, .button { // default, full buttons
 
   &.success {
     background: $success;
-
     &:hover { background: darken($success, 7%); }
-
     &.toggled {
       background: darken($success, 10%);
       box-shadow: 0 3px darken($success, 24%) inset;
@@ -94,9 +83,7 @@ button, .button { // default, full buttons
 
   &.alert {
     background: $alert;
-
     &:hover { background: darken($alert, 7%); }
-
     &.toggled {
       background: darken($alert, 10%);
       box-shadow: 0 3px darken($alert, 24%) inset;
@@ -105,9 +92,7 @@ button, .button { // default, full buttons
 
   &.warning {
     background: $warning;
-
     &:hover { background: darken($warning, 7%); }
-
     &.toggled {
       background: darken($warning, 10%);
       box-shadow: 0 3px darken($warning, 24%) inset;
@@ -117,16 +102,16 @@ button, .button { // default, full buttons
 }
 
 #intro {
-  button {
+  .button {
     font-family: 'GraphikLCGSemiBold';
     line-height: 2;
+    display: inline-block;
   }
 
   .btn-home-banner-left {
     padding: 0.19rem 1.39rem;
     margin-right: 7px;
     font-size: 0.81rem;
-
     @include before_md {
       margin-bottom: 10px;
       margin-right: 0px;
@@ -137,8 +122,4 @@ button, .button { // default, full buttons
     padding: 0.19rem 4.16rem;
     font-size: 0.81rem;
   }
-}
-
-.join-section button {
-  
 }
