@@ -15,7 +15,18 @@
   width: 100%; padding: 0 $gutter-width;
   position: relative;
   &.end { float: right; }
+
+  @include before_md {
+    padding: 0 0.8125rem;
+  }
 }
+
+@include lg {
+  .no-left-padding { padding-left: $no-left-padding; }
+  .no-right-padding { padding-right: $no-right-padding; }
+}
+
+.no-padding { padding: $no-padding; }
 
 
 // ----- SMALL GRID ----- //
@@ -52,7 +63,7 @@
 
 // ----- MEDIUM GRID ----- //
 
-@include break(m) {
+@include between_m_lg {
   [class*="large-"] { width: 100%; }
 
   // Medium classic Grid
@@ -85,7 +96,7 @@
 
 // ----- LARGE GRID ----- //
 
-@include break(l) {
+@include after_xl {
 
   @for $i from 1 through 11 {
     // Classic Grid

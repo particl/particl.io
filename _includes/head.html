@@ -6,11 +6,10 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <!-- open:graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
-  <meta property="og:image" content="{{ "/assets/img/particl-opengraph-sharing.jpg" | absolute_url }}" />
+  <meta property="og:title" content="Particl.io ∘ The Blockchain Privacy Platform" /> 
+  <meta property="og:description" content="Particl is an open source, decentralized privacy platform. Built for global person to person and business to person eCommerce." /> 
+  <meta property="og:type" content="website" /> <meta property="og:url" content="/" /> 
+  <meta property="og:image" content="/assets/img/particl-opengraph-sharing.jpg" />
   <!-- favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicons/apple-touch-icon.png" | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicons/favicon-32x32.png" | relative_url }}">
@@ -23,5 +22,5 @@
   <meta name="author" content="Martin Allien <martin@particl.io> (https://allien.work)">
   <meta name="wot-verification" content="ec725cb978b636515980"/> 
   <!-- styles & scripts -->
-  <link rel="stylesheet" href="{{ "/assets/particl-io.css" | relative_url }}?{{site.time | date: '%s%N'}}">
+  <link rel="stylesheet" href="{{ "/assets/css/particl-io.css" | relative_url }}?{{site.time | date: '%s%N'}}">
 </head>

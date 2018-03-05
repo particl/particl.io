@@ -1,13 +1,4 @@
-- **Release of GUI TestNet Ver 0.1.1**
+- **Release of GUI Testnet 1.1.0**
     + GUI Components
-        * Refactor main JS architecture
-		* Add missing flash notification on copy address
-		* Hide pagination if no transactions found
-		* Syncing with network progress bar in menu
-		* Refactor tx and filtertransactions
-		* Add paste button into Add new address modal
-		* OS notification implementation – Transactions
-		* Display client/daemon version
-		* Bug Fixing (UAT Testing)
-            - Errors on closing GUI
-    + Latest Website update and changes
+        * Copy and Paste issue on OSX using shortcut keys
+        * Crash while downloading – Daemon timeout

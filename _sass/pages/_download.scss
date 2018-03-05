@@ -1,0 +1,198 @@
+section.general-download {
+  padding: 3.875rem 0rem;
+}
+
+.wallets-header {
+  h1 {
+    margin-bottom: 0.875rem;
+  }
+}
+
+.desc-form {
+  max-width: 450px;
+  width: 100%;
+}
+
+.wallets-view {
+  margin-top: 2.125rem;
+
+  @include before_md {
+    overflow-x: scroll;
+  }
+
+  table {
+    border-color: $hr-color;
+  }
+
+  .download-table {
+    margin-bottom: 2.063rem;
+    text-align: center;
+
+    th {
+      padding-bottom: 0.625rem;
+      text-align: center;
+      &.type-name {
+        text-align: left;
+      }
+
+      h4 {
+        line-height: 1.42;
+        letter-spacing: -0.2px;
+
+        @include before_md {
+          font-size: 0.9rem;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    td {
+      padding: 0.563rem 0rem;
+      position: relative;
+      &.type-name {
+        text-align: left;
+      }
+
+      &.icon:before {
+        content: '';
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: 0px;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: auto;
+        width: 23px;
+        height: 23px;
+      }
+
+      &.icon-check:before {
+        background-image: url("/assets/img/ico/new/downloads_check.png");
+      }
+
+      &.icon-uncheck:before {
+        background-image: url("/assets/img/ico/new/downloads_uncheck.png");
+      }
+    }
+
+    tr:last-child {
+      border: 0px;
+    }
+  }
+}
+
+section.version-list {
+  padding: 2.75rem 1rem 1.625rem 1rem;
+
+  .copay-img-cont {
+
+    img {
+      width: 117px;
+    }
+  }
+
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 1.063rem;
+  }
+
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  img {
+    margin-top: 2.25rem;
+  }
+
+  p {
+    max-width: 379px;
+    width: 100%;
+  }
+
+  .link-small-dark {
+    margin-bottom: 1.438rem;
+    display: inline-block;
+  }
+}
+
+.last-hr-copay {
+  margin-bottom: 1.438rem;
+}
+
+.version-list-links {
+  margin-bottom: 0.75rem;
+
+  .link {
+    padding: 5px 65px 20px 30px;
+    position: relative;
+    color: $general-text-color;
+    font-size: $font-size-12;
+    font-weight: 600;
+    display: inline-block;
+    width: 32%;
+
+    @include before_md {
+      width: 100%;
+    }
+  }
+
+  .link:before {
+    content:'';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    top: 4px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+  }
+
+  .win-64:before, .win-32:before {
+    background-image: url("/assets/img/ico/new/windows-8.png");
+  }
+
+  .linux-64:before, .linux-32:before {
+    background-image: url("/assets/img/ico/new/linux.png");
+  }
+
+  .mac-64:before {
+    background-image: url("/assets/img/ico/new/mac-os-icon.png");
+  }
+
+  .source-code:before {
+    background-image: url("/assets/img/ico/new/github-logo.png");
+  }
+
+  .freebsd:before {
+    background-image: url("/assets/img/ico/new/free-bsd.png");
+  }
+
+}
+
+.os {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    opacity: 0.7;
+    position: relative;
+    top: 4px;
+  }
+  &.win::before {
+    background-image: url("/assets/img/ico/new/windows-8.png");
+  }
+  &.linux::before {
+    background-image: url("/assets/img/ico/new/linux.png");
+  }
+  &.mac::before {
+    background-image: url("/assets/img/ico/new/mac-os-icon.png");
+  }
+  &.android::before {
+    background-image: url("/assets/img/ico/new/android-os.png");
+  }
+}

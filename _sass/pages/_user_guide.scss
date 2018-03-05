@@ -1,0 +1,30 @@
+section.general-guide {
+  padding: 4.063rem 0rem 3.625rem;
+
+  h1 {
+    margin: 1.813rem 0rem;
+  }
+
+  p:first-child {
+    margin-top: 0px;
+  }
+}
+
+#page #user-guide-links {
+  margin-bottom: 2.25rem;
+
+  ul {
+    padding-top: 0.313rem;
+    padding-left: 0px;
+    line-height: normal;
+
+    li {
+      margin-bottom: 1.688rem;
+      line-height: normal;
+
+      &:before {
+        border: 0px;
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
-# Qt
-core: 0.15.1.0
+# Particl Qt
+core: 0.15.1.2
 
-# GUI wallet
-wallet: 1.0.0
+# Particl Desktop
+wallet: 1.1.0
+
+# Particl Copay
+copay: 3.7.1.2

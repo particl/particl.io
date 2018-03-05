@@ -1,66 +1,64 @@
 - **Release of GUI TestNet Ver 0.1.0**
-- **Release of GUI MainNet Ver 1.0.0**
-    + UI Integration
-        * Identify RPC and API changes needed around UI Integration
-        * API Service and Consuming
-        * Headless browser
-            - Setup electron test
-            - Daemon tests
-            - RPC Queuing      
-    + GUI Components
-        * RPC Service
-		* Transaction Page – Design review
-		* Cold Staking - Backend changes.
-		* Design and Layout changes
-		* Cold Staking - Backend changes
-		* Add progress bar to coldstake widget
-		* Convert Bootstrap Pagination to Material
-		* Balance Transfer Bugs
-		* Auto start daemon on all platforms
-		* Multi-Wallet implementation
-		* HD wallet import and generate mnemonic seed
-		* Daemon Modal
-		* Syncing Modal to show connected peers
-		* Daemon Management plugin
-		* Add Sign verify message Modal
-		* Upgrade GUI to 0.15.0.4
-        * Bug Fixing (UAT Testing)
-            - Unlock Wallet - Blank screen loaded on press of enter
-			- Restore Wallet - Recovery phrase step
-			- Syncing - Modal not opening
-			- Demon startup error handling
-			- Splash screen display time
-			- Create wallet modal on first use
-			- Tray menus not working on Windows
-			- Wallet Unlocking bugs
-			- Enter wallet recovery phrase error handling
-			- Check if Deamon should start with re-index
-			- Modal Launching code changes on Material
-			- Add Account - Syncing progress display as black bar
-			- Add account button loads a blank page on clean install
-			- Going back and next on "mnemonic phrase confirmation" does not reset the 24 word boxes correctly
-			- Radio buttons 'From account' (between Send payment-/Balance transfer tabs) appear to be dependent/buggy
-			- Advanced options need 'advanced' indicator
-			- Radio buttons (tab: balance transfer) between from/to account not properly configured
-			- Negative part amount (balance transfer) bug contributor-friendly
-			- Total received, should it return a value? 
-			- Incorrect wallet naming in various locations
-			- Private balance not displaying on balance transfer window
-			- Replace Material icons with Particl design
-			- Encrypt Wallet
-			- Filtering issues
-			- Restore Wallet - Recovery phrase step pasting issue
-        * GUI page designs
-            - Staking Widget design
-            - Mockup designs of exchange integration
-            - Various UI changes on GUI pages
+	+ Features (As per Status Update 18/01/2018)
+		* Cold staking widget
+		* ZAP functionality for fast cold staking activation
+		* Debug window console
+		* History filters
+		* Syncing progress bar in left side menu
+		* Notifications for a new release
+		* OS notifications for stakes and incoming transactions
+		* Display client and daemon versions
+		* Paste button in address add
+		* Paste an address anywhere in send page and address book
+		* Display narrations on transactions
+		* Pagination - Choose how many transactions to display per page
+	+ Maintenance
+		* Test and finalize Zap feature 
+		* Update ng2-logger to the latest version
+		* Add takeWhile and OnDestroy hook in all state.observe calls
+		* Update packages
+		* Added RPC calls to console 
+		* Added checksums for build process
+		* Merge dev -> Branch 1.1.0 
+		* Send Page: Updated icons and alignment tweaks
+		* Redefine logging levels
+		* Update Electron to the latest version
+	+ Bugs fixed
+		* Added background image for Mac DMG 
+		* App not quitting when daemon start before the GUI 
+		* Fixed preceding issue on creation of wallet, due to passwords. 
+		* Sign and Verify modal refactoring
+		* Remove arm command not working in builds 
+		* Changed save button name on address book
+		* Fixed success flash message not aligned 
+		* Fix error on creation screen if no password entered 
+		* App title update 
+		* Fix wallet detection 
+		* Fix daemon error messages 
+		* Resolve create wallet without recovery passphrase
+		* Fix Mac build issues
+		* Various other bugs
 - **Particl Market Place**
-    + Market Place Database Design
-    + Establish Marketplace Codebase
-    + Marketplace Categories
-        * Initial Categories (Building and Import)
-    + Current Bootstrap to Material migration
-        * Create Mobile menu in Material
-        * Development clean-up for merge
-- **Particl Core**
-    + API to filter transactions
+	+ Market Place Functions
+		* MP: Functions (RPC API) – Listing Item
+			- ListingItemGetCommand, CategoryCommand
+		* MP: Functions (RPC API) – Item Category
+			- ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand
+		* MP: Functions (RPC API) – Address
+			- AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand
+		* MP: Functions (RPC API) – Profile
+			- ProfileCommand, ProfileListCommand 
+		* MP: Functions (RPC API) – Market
+			- MarketCommand, MarketListCommand
+		* MP: Functions (RPC API) – Data
+			- DataCommand 
+		* MP: Functions (RPC API) – Listing Item
+			- ListingItemService, ListingItemTemplateService
+		* MP: Functions (RPC API) – Item
+			- postitem, updateitem
+	+ Market Place Backend
+		* Design final RPC API
+		* Rename blackbox test files to match the commands being tested
+		* Replace the Country Enum with a library
+		* Particl docker startup options
+		* Remove image Metadata

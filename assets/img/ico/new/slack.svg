@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 16</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Footer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-911.000000, -369.000000)">
+        <g id="Group-5" transform="translate(-10.000000, 0.000000)">
+            <g id="Group-16" transform="translate(921.000000, 369.000000)">
+                <circle id="Oval-Copy-7" fill="#04E8B0" cx="23" cy="23" r="23"></circle>
+                <g id="slack" transform="translate(13.000000, 12.000000)" stroke="#FFFFFF" stroke-width="2">
+                    <path d="M19.1636364,8.18181818 C17.1,1.28181818 14.1272727,-0.318181818 7.27272727,1.74545455 C0.418181818,3.80909091 -1.22727273,6.78181818 0.836363636,13.6363636 C2.9,20.4909091 5.87272727,22.1363636 12.7272727,20.0727273 C19.5818182,18.0090909 21.2272727,15.0363636 19.1636364,8.18181818 Z" id="Shape"></path>
+                    <path d="M10.5181818,5.44545455 L13.7727273,14.9" id="Shape" stroke-linecap="round"></path>
+                    <path d="M6.22727273,6.91818182 L9.48181818,16.3727273" id="Shape" stroke-linecap="round"></path>
+                    <path d="M13.9909091,7.13636364 L4.53636364,10.3909091" id="Shape" stroke-linecap="round"></path>
+                    <path d="M15.4636364,11.4272727 L6.00909091,14.6818182" id="Shape" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
