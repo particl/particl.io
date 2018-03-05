@@ -26,9 +26,14 @@ section.general-download {
 
   .download-table {
     margin-bottom: 2.063rem;
+    text-align: center;
 
     th {
       padding-bottom: 0.625rem;
+      text-align: center;
+      &.type-name {
+        text-align: left;
+      }
 
       h4 {
         line-height: 1.42;
@@ -44,6 +49,9 @@ section.general-download {
     td {
       padding: 0.563rem 0rem;
       position: relative;
+      &.type-name {
+        text-align: left;
+      }
 
       &.icon:before {
         content: '';
@@ -52,7 +60,8 @@ section.general-download {
         background-repeat: no-repeat;
         bottom: 0px;
         top: 0px;
-        left: 0px;
+        left: 50%;
+        transform: translate(-50%, 0);
         margin: auto;
         width: 23px;
         height: 23px;
@@ -128,37 +137,62 @@ section.version-list {
     }
   }
 
-   .link:before {
-      content:'';
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      bottom: 0px;
-      top: 4px;
-      left: 0px;
-      width: 20px;
-      height: 20px;
-      opacity: 0.7;
-    }
+  .link:before {
+    content:'';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    top: 4px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+  }
 
-    .win-64:before, .win-32:before {
-      background-image: url("/assets/img/ico/new/windows-8.png");
-    }
+  .win-64:before, .win-32:before {
+    background-image: url("/assets/img/ico/new/windows-8.png");
+  }
 
-    .linux-64:before, .linux-32:before {
-      background-image: url("/assets/img/ico/new/linux.png");
-    }
+  .linux-64:before, .linux-32:before {
+    background-image: url("/assets/img/ico/new/linux.png");
+  }
 
-    .mac-64:before {
-      background-image: url("/assets/img/ico/new/mac-os-icon.png");
-    }
+  .mac-64:before {
+    background-image: url("/assets/img/ico/new/mac-os-icon.png");
+  }
 
-    .source-code:before {
-      background-image: url("/assets/img/ico/new/github-logo.png");
-    }
+  .source-code:before {
+    background-image: url("/assets/img/ico/new/github-logo.png");
+  }
 
-    .freebsd:before {
-      background-image: url("/assets/img/ico/new/free-bsd.png");
-    }
+  .freebsd:before {
+    background-image: url("/assets/img/ico/new/free-bsd.png");
+  }
 
+}
+
+.os {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    opacity: 0.7;
+    position: relative;
+    top: 4px;
+  }
+  &.win::before {
+    background-image: url("/assets/img/ico/new/windows-8.png");
+  }
+  &.linux::before {
+    background-image: url("/assets/img/ico/new/linux.png");
+  }
+  &.mac::before {
+    background-image: url("/assets/img/ico/new/mac-os-icon.png");
+  }
+  &.android::before {
+    background-image: url("/assets/img/ico/new/android-os.png");
+  }
 }

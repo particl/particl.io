@@ -246,7 +246,6 @@
   }
 
   .blockchain-header {
-
     @include before_md {
       margin-bottom: 10px;
     }
@@ -467,12 +466,10 @@ section#architecture {
 }
 
 #page section.feature.mac {
-  padding: 6.813rem 0rem 0rem;
-
+  padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;
   }
-
   @include before_md() {
     & > .row {
       display: flex;
@@ -493,6 +490,9 @@ section#architecture {
     line-height: 2;
     letter-spacing: 0;
     text-decoration: none;
+    &:hover {
+      color: white;
+    }
 
     .mac-subtext {
       font-size: 0.625rem;

@@ -26,14 +26,14 @@
   max-width: 22.313rem;
   margin-top: 0.41rem;
   margin-bottom: 2.375rem;
-  opacity: 0.2;
+  //opacity: 0.2;
 
   &.active {
     opacity: 1;
   }
 
   &.active.has-opacity {
-    opacity: 0.2;
+    //opacity: 0.2;
 
     @include before_md() {
       opacity: 1;
