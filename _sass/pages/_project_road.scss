@@ -6,15 +6,45 @@ section.general-project-road {
   }
 }
 
-#particl-road-map {
-  padding: 0px;
-
-  .row {
-    max-width: 87.875rem;
-  }
-
-  .column {
-    padding: 0rem 2.125rem;
+// blocks of roadmap updates/features
+.roadmap-items {
+  & > .item {
+    margin-bottom: 2.4rem;
+    .image { // illustration
+      margin-bottom: 1rem;
+    }
+    .tags { // "in progress @ mainnet"
+      font-family: 'GraphikLCGMedium';
+      font-size: 0.75rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      .status.tag {
+        background: #ddd;
+        padding: 0.2rem 1rem;
+        border-radius: 99px;
+        color: white;
+        &.in-progress {
+          background: #02E8B0;
+        }
+        &.planned {
+          background: #ccc;
+        }
+        &.completed {
+          background: none;
+          box-shadow: 0 0 0 1px #02E8B0;
+          color: #02E8B0;
+        }
+      }
+      .network.tag {
+        margin-left: 1.5rem;
+        color: rgba(34,39,39,0.5);
+        &::before {
+          content: "@";
+          color: rgba(34,39,39,0.3);
+          margin-right: 2px;
+        }
+      }
+    }
   }
 }
 
