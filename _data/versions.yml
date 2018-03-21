@@ -1,8 +1,8 @@
-# Particl Qt
-core: 0.15.1.2
+# Particl Qt - https://github.com/particl/particl-core/releases
+core: 0.16.0.2
 
-# Particl Desktop
+# Particl Desktop - https://github.com/particl/particl-desktop/releases
 wallet: 1.1.0
 
-# Particl Copay
+# Particl Copay - https://github.com/particl/copay/releases
 copay: 3.7.1.2
