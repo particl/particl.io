@@ -1,6 +1,7 @@
 
 // Colors
-$primary: #03E8B0; // PART turquoise
+$color: #03E8B0; // PART turquoise
+$primary: $color;
 $secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $success: #98C807 !default; // greens
 $alert: #D13814 !default; // reds
