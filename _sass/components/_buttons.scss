@@ -19,7 +19,7 @@ button, .button { // default, full buttons
     }
   }
 
-// icons in buttons
+  // icons in buttons
   i.ico { margin-right: 0.3rem; }
 
   &.ext:not(.secondary) {
@@ -29,7 +29,6 @@ button, .button { // default, full buttons
       font-size: 0.5rem;
       margin-left: 0.4rem;
     } 
-
     &:hover::after { color: $white; }
   }
 

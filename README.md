@@ -1,11 +1,11 @@
 # Particl.io
 
-> Don't edit files in `_site/` directory directly! Those files are automatically generated. Any changes manually edited there will be overwritten. Edit `.md` files in root dir or corresponding files in `_layouts/` and `_includes` directories depending on your change.
+> Don't edit files in `_site/` directory directly! Those files are automatically generated. Any changes manually edited there will be overwritten. Edit `.md` files in root dir or corresponding files in `_layouts` and `_includes` directories depending on your change.
 
 ## Howto
 
 * **Update wallet version numbers:** edit `_data/versions.yml`
-* `TODO` grab version numbers directly from GitHub
+    - `TODO` grab version numbers directly from GitHub
 
 ## Info
 
@@ -17,8 +17,8 @@
 ## Contribute
 
 1. clone the repo
-2. install `node` and `npm` if you don't have them already
-3. `npm install` to fetch dependencies
+2. install `node` and `yarn`/`npm` if you don't have them already
+3. `yarn install`/`npm install` to fetch dependencies
 4. `gulp watch` for:
     - Sass => CSS autocompiling when changed
     - concat/minify & uglify JS
@@ -26,14 +26,7 @@
 5. or just `gulp watch-sass` for styles only
 
 
-### FYI
-
-* site works without JavaScript (newsletter sign-up suprisingly as well)
-* site is mobile-first
-* local links should have `scroll` class (for smooth scrolling); external `ext` class
-
-
 ## TODO
 
 * Tweaks
-    - [ ] Piwik/Analytics
+    - [ ] self-hosted Piwik analytics?
