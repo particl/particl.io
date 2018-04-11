@@ -131,6 +131,9 @@ section.version-list {
     font-weight: 600;
     display: inline-block;
     width: 32%;
+    &:hover {
+      color: darken($btn-text-color, 5%);
+    }
 
     @include before_md {
       width: 100%;

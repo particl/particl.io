@@ -92,8 +92,6 @@ gulp.task('sass', function (cb) {
 });
 
 
-
-
 // Concatenate JavaScript and uglify
 gulp.task('scripts', function (cb) {
   pump([
@@ -115,6 +113,7 @@ gulp.task('scripts', function (cb) {
   ], cb );
 });
 
+/*
 gulp.task('jekyll-build', function (done) {
     browserSync.notify('Building Jekyll');
     return cp.spawn(jekyll, ['build'], {stdio: 'inherit'}).on('close', done);
@@ -123,10 +122,10 @@ gulp.task('jekyll-build', function (done) {
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
-
+*/
 
 // Launch BrowserSync server
-gulp.task('browserSync', ['jekyll-build'], function() {
+gulp.task('browserSync', function() { // , ['jekyll-build']
   browserSync.init({
     server: {
       baseDir: '_site/',
@@ -181,9 +180,9 @@ gulp.task('webfont', ['optimize'], function (cb) {
 
 
 // Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch', ['browserSync', 'jekyll-rebuild', 'sass', 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () { // , 'jekyll-rebuild'
 //gulp.task('watch', ['sass', 'scripts'], function () {
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
+  //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
   gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.js_in, ['scripts']);
   gulp.watch(paths.ico_input, ['webfont']);
