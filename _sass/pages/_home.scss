@@ -140,13 +140,13 @@
   }
 
   .title {
-    text-align: center;
-    font-family: 'GraphikLCGMedium';
+    text-align: left;
+    font-family: $font;
     color: $intro-logo-title;
     text-transform: uppercase;
 
     @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.625rem; }
+    @include break(xl) { font-size: 0.845rem; }
   }
 
   p {
