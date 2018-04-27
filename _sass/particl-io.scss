@@ -46,12 +46,12 @@
 body {
   background: $bg;
   color: $general-text-color;
-  font-family: 'GraphikLCG';
+  font-family: $font;
   -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  font-family: 'GraphikLCGSemiBold';
+  font-family: $font-bold;
   font-size: 2.375rem;
   color: $general-text-color;
   letter-spacing: -0.9px;
@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'GraphikLCGSemiBold';
+  font-family: $font-bold;
   font-size: 1.75rem;
   color: $general-text-color;
   letter-spacing: -0.8px;
@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'GraphikLCGSemiBold';
+  font-family: $font-bold;
   font-size: 1.375rem;
   color: $general-text-color;
   letter-spacing: -0.6px;
@@ -81,7 +81,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'GraphikLCGSemiBold';
+  font-family: $font-bold;
   font-size: 1.1875rem;
   color: $general-text-color;
   letter-spacing: -0.5px;
@@ -90,7 +90,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'GraphikLCGMedium';
+  font-family: $font-semibold;
   font-size: 0.75rem;  
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -102,7 +102,7 @@ h5 {
 
 p {
   color: $general-op-7;
-  font-family: 'GraphikLCG';
+  font-family: $font;
   letter-spacing: -0.1px;
 
   &.large {
@@ -118,7 +118,7 @@ p {
 
 a {
   font-size: 0.8125rem;
-  font-family: 'GraphikLCGMedium';
+  font-family: $font-semibold;
   line-height: normal;
   letter-spacing: 0.1px;
 
@@ -136,7 +136,7 @@ td.type-name, td.platform-name {
   letter-spacing: -0.3px;
   color: $general-op-6;
   line-height: 1.87;
-  font-family: 'GraphikLCG';
+  font-family: $font;
 }
 
 small {

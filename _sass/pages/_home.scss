@@ -486,7 +486,7 @@ section#architecture {
     padding: 0.56rem 1.73rem;
     position: relative;
     color: $button-color;
-    font-family: 'GraphikLCGSemiBold';
+    font-family: $font-bold;
     line-height: 2;
     letter-spacing: 0;
     text-decoration: none;
@@ -549,7 +549,7 @@ section#architecture {
 
 #part-token {
   padding: 6.938rem 0rem 5.875rem;
-  background-color: $part-token-bg;
+  //background-color: $part-token-bg;
 
   h2 {
 

@@ -102,7 +102,7 @@ button, .button { // default, full buttons
 
 #intro {
   .button {
-    font-family: 'GraphikLCGSemiBold';
+    font-family: $font-bold;
     line-height: 2;
     display: inline-block;
   }

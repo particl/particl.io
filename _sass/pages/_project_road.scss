@@ -26,7 +26,7 @@ section.general-project-road {
       display: none;
     }
     .tags { // "in progress @ mainnet"
-      font-family: 'GraphikLCGMedium';
+      font-family: $font-semibold;
       font-size: 0.75rem;
       letter-spacing: 0.8px;
       text-transform: uppercase;
