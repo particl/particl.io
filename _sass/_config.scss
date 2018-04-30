@@ -34,9 +34,15 @@ $no-padding: 0rem;
 $border-radius: 4px !default;
 
 // Typography
-$font: "GraphikLCG", sans-serif;
-$font-semibold: "GraphikLCGMedium", sans-serif;
-$font-bold: "GraphikLCGSemiBold", sans-serif;
+$font: "Inter_UI", sans-serif;
 
-$font-titles: 'GraphikLCG';
+$font-titles: 'Inter_UI';
 $line-height: normal !default;
+
+$header-line-height: 54px;
+
+$font-size-19: 1.186rem;
+$font-size-15: 0.938rem;
+$font-size-13: 0.813rem;
+$font-size-12: 0.75rem;
+$font-size-10: 0.625rem;

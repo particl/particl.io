@@ -1,5 +1,5 @@
 button, .button { // default, full buttons
-  @include border-radius(17px);
+  @include border-radius(30px);
   border: solid 1.5px $btn-border-color;
   background-color: transparent;
   color: $btn-text-color;
@@ -102,15 +102,16 @@ button, .button { // default, full buttons
 
 #intro {
   .button {
-    font-family: $font-bold;
+    font-family: $font;
+    font-weight: 700;
     line-height: 2;
     display: inline-block;
   }
 
   .btn-home-banner-left {
-    padding: 0.19rem 1.39rem;
+    padding: 0.19rem 1.79rem;
     margin-right: 7px;
-    font-size: 0.81rem;
+    font-size: 0.9rem;
     @include before_md {
       margin-bottom: 10px;
       margin-right: 0px;
@@ -118,7 +119,7 @@ button, .button { // default, full buttons
   }
 
   .btn-home-banner-right {
-    padding: 0.19rem 4.16rem;
-    font-size: 0.81rem;
+    padding: 0.19rem 4.76rem;
+    font-size: 0.9rem;
   }
 }

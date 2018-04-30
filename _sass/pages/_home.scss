@@ -146,7 +146,7 @@
     text-transform: uppercase;
 
     @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.845rem; }
+    @include break(xl) { font-size: 0.83rem; }
   }
 
   p {
@@ -227,7 +227,7 @@
     margin-left: 8.33333%;
     padding: 0 0.6rem;
     letter-spacing: 0.8px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   p {
@@ -293,7 +293,7 @@ section#architecture {
   }
 
   .button {
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
 
     @include before_md {
@@ -413,7 +413,7 @@ section#architecture {
 
   .button {
     font-size: 0.813rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .about-img-container {
@@ -486,7 +486,8 @@ section#architecture {
     padding: 0.56rem 1.73rem;
     position: relative;
     color: $button-color;
-    font-family: $font-bold;
+    font-family: $font;
+    font-weight: 700;
     line-height: 2;
     letter-spacing: 0;
     text-decoration: none;
@@ -497,7 +498,7 @@ section#architecture {
     .mac-subtext {
       font-size: 0.625rem;
       color: $white-op-8;
-      font-weight: 600;
+      font-weight: 700;
       position: absolute;
       top: 6px;
       right: 15px;
