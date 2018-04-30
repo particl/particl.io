@@ -124,7 +124,25 @@ a {
 	font-family: $font;
 	font-weight: 500;
   line-height: normal;
-  letter-spacing: 0.1px;
+	letter-spacing: 0.1px;
+	
+	&[href*="http"]:not(.no-arrow) { // fancy external links
+		//text-decoration-style: dotted;
+		&::after {
+			@extend %tfx;
+			content: "";
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			margin: 0 0.2rem 0 0.25rem;
+			background: url("/assets/img/ico/ext-link.svg") no-repeat center center;
+			background-size: contain;
+			position: relative;
+			top: 1px;
+			opacity: 0.5;
+		}
+	}
+
 
   &.link-small-dark {
     color: $black-op-8;
@@ -263,6 +281,7 @@ section { // full-width sections of content
 			margin: 0 0.2rem;
 			color: lighten($text-muted, 40%);
 			@include break(l) { margin: 0 0.1rem; font-size: 0.85rem; }
+			&[href*="http"]::after { content: none; }
 			&.nick { cursor: help; }
 			&.email:hover { color: $primary; }
 			&.reddit:hover { color: #FF4500; }

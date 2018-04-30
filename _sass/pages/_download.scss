@@ -152,6 +152,7 @@ section.version-list {
     height: 20px;
     opacity: 0.7;
   }
+  .link[href*="http"]::after { content: none; }
 
   .win-64:before, .win-32:before {
     background-image: url("/assets/img/ico/new/windows-8.png");
