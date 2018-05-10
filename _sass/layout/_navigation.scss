@@ -44,14 +44,18 @@
     list-style: none;
     margin: 0rem;
     padding: 0rem;
+    text-align: right;
+    @include before_md {
+      text-align: left;
+    }
 
     li {
-      float: left;
-      display: block;
+      display: inline-block;
       width: 50%;
 
       @include before_md {
         width: 100%;
+        display: block;
 
         border-top: 1px solid $black-op-4;  
 
@@ -61,13 +65,7 @@
       }
 
       @include between_m_lg {
-        width: 27%;
-      }
-
-      &:last-child {
-        @include between_m_lg {
-          width: 46%;
-        }         
+        width: auto;
       }
 
       a { // menu items
