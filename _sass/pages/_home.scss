@@ -322,7 +322,7 @@ section#architecture {
       background-image: url('/assets/img/ico/new/reddit-icon.svg');
       width: 21px;
       left: 39px;
-      top: 7px;
+      top: 12px;
 
       @include before_md {
         width: 175px;
@@ -344,9 +344,9 @@ section#architecture {
 
     &:before {
       background-image: url('/assets/img/ico/new/discord-icon.svg');
-      width: 15px;
+      width: 13px;
       left: 31px;
-      top: 8px;
+      top: 17px;
 
       @include before_md {
         width: 175px;
