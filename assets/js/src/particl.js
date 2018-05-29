@@ -110,4 +110,26 @@ $( document ).ready(function() {
 	    $('.owl-carousel.owl-drag .owl-item.active:last').addClass('has-opacity');
 	  }, 150);
 	}
+
+
+	/* ------------ COUNTDOWN ------------ */
+
+	$(function(){
+		var countdownTo = moment.tz("2018-05-31 23:59", "Etc/UTC"); // <== UTC time of release
+
+		$('#clock').countdown(countdownTo.toDate())
+		.on('update.countdown', function(event) {
+			// full format (days hrs:min:sec)
+			var full = '<div class="part"><span class="number">%-d</span><span class="desc">days</span></div> <div class="part"><span class="number">%-H</span><span class="desc">hours</span></div><div class="part"><span class="number">%-M</span><span class="desc">minutes</span></div><div class="part"><span class="number">%-S</span><span class="desc">seconds</span></div>';
+			// without days (hrs:min:sec)
+			var hours = '<div class="part"><span class="number">%-I</span><span class="desc">hours</span></div><div class="part"><span class="number">%-M</span><span class="desc">minutes</span></div><div class="part"><span class="number">%-S</span><span class="desc">seconds</span></div>';
+
+			$(this).html(event.strftime(hours)); // <== 'hours' or 'full'
+		})
+		.on('finish.countdown', function(event) {
+			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="#">Read announcement</a> & <a href="#">Download now</a></div>')
+				//.parent().addClass('disabled');
+		});
+	});
+
 });
