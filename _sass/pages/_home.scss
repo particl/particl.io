@@ -53,10 +53,15 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-
+  @if $showCountdown {
+    height: 290px;
+  }
   @include before_md {
     height: 168px;
     line-height: 1.4;
+    @if $showCountdown {
+      height: 250px;
+    }
   }
 }
 

@@ -24,8 +24,9 @@
 @import 'components/_dropdown';
 @import 'components/_icons';
 @import 'components/_search-form';
-@import 'components/_modal.scss';
-@import 'components/_download-table.scss';
+@import 'components/_modal';
+@import 'components/_download-table';
+@import 'components/_countdown';
 
 @import 'pages/_home';
 @import 'pages/_why_particl';
@@ -270,7 +271,7 @@ section { // full-width sections of content
 		}
 		.name {
 			margin: 1.3rem 0 0;
-			font-family: "OpenSans", sans-serif; font-weight: bold; font-size: 0.9rem; line-height: 1.35;
+			font-weight: 700; font-size: 0.9rem; line-height: 1.35;
 		}
 		.title {
 			font-size: 0.75rem; line-height: 1.6;
