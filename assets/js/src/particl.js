@@ -115,7 +115,7 @@ $( document ).ready(function() {
 	/* ------------ COUNTDOWN ------------ */
 
 	$(function(){
-		var countdownTo = moment.tz("2018-05-31 23:59", "Etc/UTC"); // <== UTC time of release
+		var countdownTo = moment.tz("2018-05-31 17:00", "Etc/UTC"); // <== UTC time of release
 
 		$('#clock').countdown(countdownTo.toDate())
 		.on('update.countdown', function(event) {
@@ -128,7 +128,6 @@ $( document ).ready(function() {
 		})
 		.on('finish.countdown', function(event) {
 			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="#">Read announcement</a> & <a href="#">Download now</a></div>')
-				//.parent().addClass('disabled');
 		});
 	});
 
