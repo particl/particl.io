@@ -1,9 +1,10 @@
 // Main settings
 
+$debug: true; // enabled debug/dev mode (CSS reponnsivity helper)
 $showCountdown: true; // show/hide countdown
 
 // Colors
-$color: #03E8B0; // PART turquoise
+$color: #04e8b0; // PART turquoise
 $primary: $color;
 $secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $success: #98C807 !default; // greens
@@ -49,3 +50,55 @@ $font-size-15: 0.938rem;
 $font-size-13: 0.813rem;
 $font-size-12: 0.75rem;
 $font-size-10: 0.625rem;
+
+
+// Colors (v2)
+$white: #fff;
+$white-op-9: rgba(255, 255, 255, 0.9);
+
+$general-text-color: #222727;
+$general-op-7: rgba(34, 39, 39, 0.7);
+$general-op-6: rgba(34, 39, 39, 0.6);
+
+$black: #000;
+$black-op-4: rgba(0, 0, 0, 0.4);
+$black-op-5: rgba(0, 0, 0, 0.5);
+$black-op-8: rgba(0, 0, 0, 0.8);
+
+$button-color: $color;
+
+$header-bg: #fafafa;
+$header-mobile-bg: #222727;
+$header-chart-text: rgba(34,39,39,0.5);
+
+$bg: #fff;
+$white-op-6: rgba(255,255,255,0.6);
+$white-op-8: rgba(255,255,255,0.8);
+
+$general-op-5: rgba(34, 39, 39, 0.5);
+
+$section-bg1: #fefefe;
+$section-bg2: #f4f4f4;
+$report-busy-bg: #d8d8d8;
+$header-background: #222727;
+
+$hr-color: #f4f4f4;
+
+$nav_hover: $color;
+$nav_hover_bg: transparent;
+
+$btn-border-color: rgba(4,232,176,0.2);
+$btn-text-color: $color;
+$intro-logo-title: rgba(34, 39, 39,0.5);
+
+$carousel-border-color: #efefef;
+$text-color: rgba(34,39,39,0.6);
+$carousel-dot-color: #222727;
+
+$feature-bg: #222727;
+$feature-header: rgba(4,232,176,0.9);
+$architecture-header: #222727;
+$about-hr-color: #f4f4f4;
+
+$part-token-hr-color: $color;
+$part-token-bg: #fafafa;
