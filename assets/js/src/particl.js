@@ -127,7 +127,7 @@ $( document ).ready(function() {
 			$(this).html(event.strftime(hours)); // <== 'hours' or 'full'
 		})
 		.on('finish.countdown', function(event) {
-			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="#">Read announcement</a> & <a href="#">Download now</a></div>')
+			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="https://particl.news/particl-marketplace-alpha-released-and-available-for-testing-3240739f7509">Read announcement</a> & <a href="https://github.com/particl/particl-desktop/releases">Download now</a></div>')
 		});
 	});
 
