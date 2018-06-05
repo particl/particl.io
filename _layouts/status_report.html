@@ -2,15 +2,18 @@
 layout: default
 ---
 
-      <section id="page-title">
+<section id="page-title">
 	<div class="row">
 		<div class="column">
-			<h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
+      <h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
+      <p class="text-center">Updated 5 Jun 2017</p>
+    </div>
 	</div>
 </section><!-- #page-title -->
 
 
-<section class="report-busy">
+
+<section class="report-busy status-report">
 	<div class="row">
 		<div class="large-6 columns">
 
@@ -19,50 +22,19 @@ layout: default
 				<h2 class="title">What are we busy with</h2>
 			</div>
 			
-			<ul>
-  <li><strong>Release of GUI TestNet Ver 1.1.0</strong>
+<ul>
+  <li>Particl Core 0.16.0.6</li>
+  <li>
+    Particl Market Place – Alpha issues
     <ul>
-      <li>GUI TestNet – Internal UAT (RC4)
-        <ul>
-          <li>Upgrade particld to latest 15.1.2</li>
-          <li>Overview transaction order incorrect</li>
-          <li>Modal layout on Mac and Linux miss aligned</li>
-          <li>Codesign GUI</li>
-        </ul>
-      </li>
+      <li>Fixing bugs identified by users</li>
+      <li>Refactoring modals</li>
+      <li>Shipping profile improvements</li>
+      <li>Enhanced test suites</li>
+      <li>Improving error handling</li>
     </ul>
   </li>
-  <li><strong>Preparation of GUI Ver 1.2.0</strong></li>
-  <li><strong>Particl Market Place</strong>
-    <ul>
-      <li>GUI Design
-        <ul>
-          <li>Market Management</li>
-          <li>Seller interface</li>
-          <li>Buyer interface</li>
-        </ul>
-      </li>
-      <li>GUI Categories Design</li>
-      <li>Market Place Functions
-        <ul>
-          <li>MessagingInformationCommand</li>
-          <li>ListingItemTemplateSearchCommand</li>
-          <li>ListingItemTemplateCreateCommand</li>
-          <li>ItemInformationGetCommand</li>
-          <li>ItemInformationCreateCommand</li>
-          <li>ItemInformationUpdateCommand</li>
-          <li>ItemInformationCommand</li>
-          <li>ListingItemPostCommand</li>
-        </ul>
-      </li>
-      <li>Market Place Backend
-        <ul>
-          <li>Restructure blackbox tests</li>
-          <li>Add CI to build and run blackbox tests against the RPC API on each commit</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li>RingCT Academic review  </li>
 </ul>
 
 
@@ -74,17 +46,12 @@ layout: default
 				<h2 class="title">Waiting for review</h2>
 			</div>
 			
-			<ul>
-  <li><strong>Release of GUI Testnet 1.1.0</strong>
-    <ul>
-      <li>GUI Components
-        <ul>
-          <li>Copy and Paste issue on OSX using shortcut keys</li>
-          <li>Crash while downloading – Daemon timeout</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+<ul>
+  <li>Modals service refactorization</li>
+  <li>Moved seller-listing to separate component for showing listings</li>
+  <li>Refactor of error handling to work on other requests</li>
+  <li>Image size and quality</li>
+  <li>Performance improvements</li>
 </ul>
 
 
@@ -92,7 +59,7 @@ layout: default
 	</div>
 </section><!-- .feature -->
 
-<section class="">
+<section class="report-done status-report">
 	<div class="row">
 		<div class="large-6 column">
 
@@ -101,112 +68,46 @@ layout: default
 				<h2 class="title">Wrapped up</h2>
 			</div>
 			
-			<ul>
-  <li><strong>Release of GUI TestNet Ver 0.1.0</strong>
+<ul>
+  <li>Particl Core 0.16.0.5</li>
+  <li>
+    Particl Market Place Alpha Release
     <ul>
-      <li>Features (As per Status Update 18/01/2018)
+      <li>
+        Listings Page
         <ul>
-          <li>Cold staking widget</li>
-          <li>ZAP functionality for fast cold staking activation</li>
-          <li>Debug window console</li>
-          <li>History filters</li>
-          <li>Syncing progress bar in left side menu</li>
-          <li>Notifications for a new release</li>
-          <li>OS notifications for stakes and incoming transactions</li>
-          <li>Display client and daemon versions</li>
-          <li>Paste button in address add</li>
-          <li>Paste an address anywhere in send page and address book</li>
-          <li>Display narrations on transactions</li>
-          <li>Pagination - Choose how many transactions to display per page</li>
+          <li>Within the Listings page, users will have access to all listings that have been published on the Particl test network. All items can be viewed, added to favourites and added to your cart</li>
+          <li>Search, and filtering capabilities allow users to minimize what they are looking for easily</li>
+          <li>Filtering options currently support country or category</li>
+          <li>The ability to use both in combination is also available</li>
         </ul>
       </li>
-      <li>Maintenance
+      <li>
+        Sell Page
         <ul>
-          <li>Test and finalize Zap feature</li>
-          <li>Update ng2-logger to the latest version</li>
-          <li>Add takeWhile and OnDestroy hook in all state.observe calls</li>
-          <li>Update packages</li>
-          <li>Added RPC calls to console</li>
-          <li>Added checksums for build process</li>
-          <li>Merge dev -&gt; Branch 1.1.0</li>
-          <li>Send Page: Updated icons and alignment tweaks</li>
-          <li>Redefine logging levels</li>
-          <li>Update Electron to the latest version</li>
+          <li>On the Sell page, users have access to their listings and orders</li>
+          <li>New listings can be added and published to the test network</li>
+          <li>A search function is also available to filter through your published listings</li>
         </ul>
       </li>
-      <li>Bugs fixed
+      <li>
+        Buy Page
         <ul>
-          <li>Added background image for Mac DMG</li>
-          <li>App not quitting when daemon start before the GUI</li>
-          <li>Fixed preceding issue on creation of wallet, due to passwords.</li>
-          <li>Sign and Verify modal refactoring</li>
-          <li>Remove arm command not working in builds</li>
-          <li>Changed save button name on address book</li>
-          <li>Fixed success flash message not aligned</li>
-          <li>Fix error on creation screen if no password entered</li>
-          <li>App title update</li>
-          <li>Fix wallet detection</li>
-          <li>Fix daemon error messages</li>
-          <li>Resolve create wallet without recovery passphrase</li>
-          <li>Fix Mac build issues</li>
-          <li>Various other bugs</li>
+          <li>On the Buy page, users have access to their cart, orders and favourites</li>
+          <li>Items added to the cart are available for review and includes a cost summary of all the items contained in the cart</li>
+          <li>Users can start the checkout process by adding shipping details and continuing to the last step where you can order (send a bid) on the items you would like to purchase</li>
+          <li>The favourites tab can be used as a wish list to save items you would like to add to your cart at a later stage</li>
+          <li>Items saved to favourites are available on your return</li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><strong>Particl Market Place</strong>
-    <ul>
-      <li>Market Place Functions
+      <li>
+        Buy Flow: The buy flow consists of 5 steps where the seller and buyer will follow a pre-defined workflow that takes care of bidding and escrow:
         <ul>
-          <li>MP: Functions (RPC API) – Listing Item
-            <ul>
-              <li>ListingItemGetCommand, CategoryCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item Category
-            <ul>
-              <li>ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Address
-            <ul>
-              <li>AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Profile
-            <ul>
-              <li>ProfileCommand, ProfileListCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Market
-            <ul>
-              <li>MarketCommand, MarketListCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Data
-            <ul>
-              <li>DataCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Listing Item
-            <ul>
-              <li>ListingItemService, ListingItemTemplateService</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item
-            <ul>
-              <li>postitem, updateitem</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Market Place Backend
-        <ul>
-          <li>Design final RPC API</li>
-          <li>Rename blackbox test files to match the commands being tested</li>
-          <li>Replace the Country Enum with a library</li>
-          <li>Particl docker startup options</li>
-          <li>Remove image Metadata</li>
+          <li><strong>Bidding:</strong> Once the order has been placed the seller will manually accept the bid allowing the escrow process to start</li>
+          <li><strong>Awaiting escrow:</strong> On an accepted bid, the buyer is now able to make the payment and lock in escrow</li>
+          <li><strong>Escrow (Lock):</strong> The funds are locked in escrow, and the product can be shipped to the buyer</li>
+          <li><strong>Shipping:</strong> The order has been shipped, and the buyer will mark as delivered on receiving the item, this will automatically release escrow</li>
+          <li><strong>Complete:</strong> The purchase will be marked as complete and finalise the release of escrow</li>
         </ul>
       </li>
     </ul>
@@ -222,68 +123,27 @@ layout: default
 				<h2 class="title">What's on the Horizon</h2>
 			</div>
 			
-			<ul>
-  <li><strong>Release of GUI Mainnet 1.1.0</strong>
+<ul>
+  <li>
+    Particl Marketplace – Beta Release
     <ul>
-      <li>Features to be included
+      <li>
+        Features to be included:
         <ul>
-          <li>Cold staking widget</li>
-          <li>ZAP functionality for fast cold staking activation</li>
-          <li>Debug window console</li>
-          <li>History filters</li>
-          <li>Syncing progress bar in left side menu</li>
-          <li>Notifications for a new release</li>
-          <li>OS notifications for stakes and incoming transactions</li>
-          <li>Display client and daemon versions</li>
-          <li>Paste button in address add</li>
-          <li>Paste an address anywhere in send page and address book</li>
-          <li>Display narrations on transactions</li>
-          <li>Pagination - Choose how many transactions to display per page</li>
+          <li>Voting-Consensus on the removal of products </li>
+          <li>Multi-Wallets</li>
+          <li>Starting the desktop without the marketplace</li>
+          <li>Private listings</li>
+          <li>Private Markets</li>
+          <li>Status bar for daemon</li>
+          <li>Escrow enhancements</li>
+          <li>Deposit Negotiations</li>
+          <li>Marketplace versioning for messages and listings</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><strong>Release of GUI Testnet 1.2.0</strong>
-    <ul>
-      <li>Features to be included
-        <ul>
-          <li>Multi-wallet</li>
-          <li>Settings page</li>
-          <li>Message Pop-up for Daemon loading</li>
-          <li>Optional user’s memos for transaction</li>
-          <li>Display fees when sending transactions</li>
-          <li>More detailed connection and network information</li>
-          <li>Connect to remote daemon</li>
-          <li>Automatically ZAP incoming transactions</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Particl Marketplace</strong>
-    <ul>
-      <li>GUI Integration (API Service + Consuming)
-        <ul>
-          <li>Market Management</li>
-          <li>Share URI / Open URI to view marketplace item</li>
-          <li>Add item</li>
-          <li>Add Item Image</li>
-          <li>Full list</li>
-          <li>View Items (Search View)</li>
-          <li>View item</li>
-          <li>View “My Item(s)”</li>
-          <li>View Escrowed item</li>
-          <li>Checkout View</li>
-          <li>Negotiation page integration</li>
-        </ul>
-      </li>
-      <li>P2P Marketplace Governance
-        <ul>
-          <li>Consensus on removal of products (Voting)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Further Third Party Integration</strong></li>
+  <li>Software Development Kit (SDK)</li>
 </ul>
 
 

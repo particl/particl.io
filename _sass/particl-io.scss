@@ -177,6 +177,10 @@ input {
 
 // ---------------[  UI  ]--------------- //
 
+section { // full-width sections of content 
+  padding: 4rem 1rem; 
+  &:nth-of-type(2n) { background: $section-bg1; } 
+}
 
 // -------------[  LAYOUT  ]------------- //
 
