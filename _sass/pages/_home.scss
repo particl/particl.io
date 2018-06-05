@@ -227,7 +227,7 @@
   h5 {
     color: $feature-header;
     line-height: normal;
-    width: 159px;
+    //width: 159px;
     text-transform: uppercase;
     margin-left: 8.33333%;
     padding: 0 0.6rem;
@@ -321,7 +321,7 @@ section#architecture {
 
   .riot-btn {
     padding: 0.5rem 2.688rem 0.5rem 4rem;
-    font-size: 0.91rem;
+    font-size: 0.81rem;
 
     &:before {
       background-image: url('/assets/img/ico/new/reddit-icon.svg');
