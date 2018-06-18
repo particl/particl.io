@@ -2,10 +2,8 @@
 
 /*! BRICKst v1.0.0 | MIT License | allienworks.net */
 
-@import '_config';
 @import '_mixins';
 @import '_grid';
-@import 'base/_colors';
 
 
 // ------ GENERAL ------ //
@@ -95,7 +93,7 @@ iframe { display: block; max-width: 100%; }
 .header-line-height { line-height: $header-line-height; }
 
 // Effects
-.tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
+.tfx, %tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
 .zoom { -webkit-transform: scale(1.1); transform: scale(1.1); }
 
 // Clearfix

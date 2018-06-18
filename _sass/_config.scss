@@ -1,6 +1,11 @@
+// Main settings
+
+$debug: false; // enabled debug/dev mode (CSS reponnsivity helper)
+$showCountdown: true; // show/hide countdown
 
 // Colors
-$primary: #03E8B0; // PART turquoise
+$color: #04e8b0; // PART turquoise
+$primary: $color;
 $secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $success: #98C807 !default; // greens
 $alert: #D13814 !default; // reds
@@ -25,14 +30,76 @@ $break-xl: 75rem !default; // extra-large
 $row-width: 73.125rem !default;// 64rem
 $gutter-width: 0.375rem !default;// 0.6rem
 $block-grid-spacing: 0.7rem !default;
+/*
 $no-left-padding: 0rem;
 $no-right-padding: 0rem;
 $no-padding: 0rem;
-
+*/
 // UI
 $border-radius: 4px !default;
 
 // Typography
-$font: "OpenSans", "Helvetica", "Arial", sans-serif;
-$font-titles: 'GraphikLCG';
+$font: "Inter_UI", sans-serif;
+
+$font-titles: 'Inter_UI';
 $line-height: normal !default;
+
+$header-line-height: 54px;
+
+$font-size-19: 1.186rem;
+$font-size-15: 0.938rem;
+$font-size-13: 0.813rem;
+$font-size-12: 0.75rem;
+$font-size-10: 0.625rem;
+
+
+// Colors (v2)
+$white: #fff;
+$white-op-9: rgba(255, 255, 255, 0.9);
+
+$general-text-color: #222727;
+$general-op-7: rgba(34, 39, 39, 0.7);
+$general-op-6: rgba(34, 39, 39, 0.6);
+
+$black: #000;
+$black-op-4: rgba(0, 0, 0, 0.4);
+$black-op-5: rgba(0, 0, 0, 0.5);
+$black-op-8: rgba(0, 0, 0, 0.8);
+
+$button-color: $color;
+
+$header-bg: #fafafa;
+$header-mobile-bg: #222727;
+$header-chart-text: rgba(34,39,39,0.5);
+
+$bg: #fff;
+$white-op-6: rgba(255,255,255,0.6);
+$white-op-8: rgba(255,255,255,0.8);
+
+$general-op-5: rgba(34, 39, 39, 0.5);
+
+$section-bg1: #fefefe;
+$section-bg2: #f4f4f4;
+$report-busy-bg: #fafafa;
+$header-background: #222727;
+
+$hr-color: #f4f4f4;
+
+$nav_hover: $color;
+$nav_hover_bg: transparent;
+
+$btn-border-color: rgba(4,232,176,0.2);
+$btn-text-color: $color;
+$intro-logo-title: rgba(34, 39, 39,0.5);
+
+$carousel-border-color: #efefef;
+$text-color: rgba(34,39,39,0.6);
+$carousel-dot-color: #222727;
+
+$feature-bg: #222727;
+$feature-header: rgba(4,232,176,0.9);
+$architecture-header: #222727;
+$about-hr-color: #f4f4f4;
+
+$part-token-hr-color: $color;
+$part-token-bg: #fafafa;

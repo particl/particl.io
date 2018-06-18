@@ -20,8 +20,8 @@
       &::before {
         content: "";
         position: absolute;
-        left: -2rem;
-        top: 0.2rem;
+        left: -1.8rem;
+        top: 0.45rem;
         display: block;
         width: 0.625rem;
         height: 0.625rem;
@@ -53,10 +53,15 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-
+  @if $showCountdown {
+    height: 290px;
+  }
   @include before_md {
     height: 168px;
     line-height: 1.4;
+    @if $showCountdown {
+      height: 250px;
+    }
   }
 }
 
@@ -140,13 +145,13 @@
   }
 
   .title {
-    text-align: center;
-    font-family: 'GraphikLCGMedium';
+    text-align: left;
+    font-family: $font;
     color: $intro-logo-title;
     text-transform: uppercase;
 
     @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.625rem; }
+    @include break(xl) { font-size: 0.83rem; }
   }
 
   p {
@@ -222,12 +227,12 @@
   h5 {
     color: $feature-header;
     line-height: normal;
-    width: 159px;
+    //width: 159px;
     text-transform: uppercase;
     margin-left: 8.33333%;
     padding: 0 0.6rem;
     letter-spacing: 0.8px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   p {
@@ -293,7 +298,7 @@ section#architecture {
   }
 
   .button {
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
 
     @include before_md {
@@ -316,13 +321,13 @@ section#architecture {
 
   .riot-btn {
     padding: 0.5rem 2.688rem 0.5rem 4rem;
-    font-size: 0.91rem;
+    font-size: 0.81rem;
 
     &:before {
       background-image: url('/assets/img/ico/new/reddit-icon.svg');
       width: 21px;
       left: 39px;
-      top: 7px;
+      top: 12px;
 
       @include before_md {
         width: 175px;
@@ -344,9 +349,9 @@ section#architecture {
 
     &:before {
       background-image: url('/assets/img/ico/new/discord-icon.svg');
-      width: 15px;
+      width: 13px;
       left: 31px;
-      top: 8px;
+      top: 17px;
 
       @include before_md {
         width: 175px;
@@ -413,7 +418,7 @@ section#architecture {
 
   .button {
     font-size: 0.813rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .about-img-container {
@@ -483,10 +488,11 @@ section#architecture {
   }
 
   .btn-mac-download {
-    padding: 0.56rem 3.91rem  0.56rem 1.03rem;
+    padding: 0.56rem 1.73rem;
     position: relative;
     color: $button-color;
-    font-family: 'GraphikLCGSemiBold';
+    font-family: $font;
+    font-weight: 700;
     line-height: 2;
     letter-spacing: 0;
     text-decoration: none;
@@ -497,7 +503,7 @@ section#architecture {
     .mac-subtext {
       font-size: 0.625rem;
       color: $white-op-8;
-      font-weight: 600;
+      font-weight: 700;
       position: absolute;
       top: 6px;
       right: 15px;
@@ -549,7 +555,7 @@ section#architecture {
 
 #part-token {
   padding: 6.938rem 0rem 5.875rem;
-  background-color: $part-token-bg;
+  //background-color: $part-token-bg;
 
   h2 {
 

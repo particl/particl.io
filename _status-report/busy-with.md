@@ -1,6 +1,6 @@
 - **Release of GUI TestNet Ver 1.1.0**
     + GUI TestNet – Internal UAT (RC4)
-        * Upgrade partilcd to latest 15.1.2
+        * Upgrade particld to latest 15.1.2
         * Overview transaction order incorrect
         * Modal layout on Mac and Linux miss aligned
         * Codesign GUI

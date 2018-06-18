@@ -63,14 +63,15 @@ section.general-careers {
 .careers-desc {
   ul li {
     color: $general-op-6;
-    font-family: 'GraphikLCG';
+    font-family: $font;
     letter-spacing: -0.3px;
     font-size: 0.8125rem;      
     line-height: 1.77;
   }
 
   .careers-email {
-    font-family: 'GraphikLCGSemiBold';
+    font-family: $font;
+    font-weight: 700;
     line-height: 2;
     letter-spacing: 0;
     color: $button-color;

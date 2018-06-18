@@ -42,13 +42,12 @@
       border: 0px !important;
       min-width: inherit !important;
       height: 100%;
-      font-family: "GraphikLCG" !important;
+      font-family: $font !important;
 
       & > div:first-child {
         height: 100%;
 
         & > div:first-child {
-
           width: auto !important;
           text-align: center !important;
           float: none !important;
@@ -96,7 +95,7 @@
               width: 41px;
               height: 57px;
               color: $header-chart-text !important;
-              padding-top: 1.313rem;
+              padding-top: 1.35rem;
             }
           }
         }
@@ -117,7 +116,7 @@
           }
 
           &:before {
-            background-image: url('https://files.coinmarketcap.com/generated/sparklines/1826.png');
+            background-image: url('https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1826.png');
             background-size: 100%;
             background-repeat: no-repeat;
             display: inline-block;
@@ -129,6 +128,7 @@
             bottom: 0px;
             right: 55px;
             margin: auto;
+            filter: hue-rotate(90deg);
 
             @include before_md {
               right: 0px;
@@ -201,9 +201,6 @@ header {
 
 .mobile-header-footer {
   margin-bottom: 3.81rem;
-
-  .links-container {
-  }
 
   .footer-icon-container {
     width: 20%;

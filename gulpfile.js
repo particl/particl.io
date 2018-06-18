@@ -92,8 +92,6 @@ gulp.task('sass', function (cb) {
 });
 
 
-
-
 // Concatenate JavaScript and uglify
 gulp.task('scripts', function (cb) {
   pump([
@@ -101,6 +99,9 @@ gulp.task('scripts', function (cb) {
       paths.js + 'jquery-1.11.2.min.js',
       paths.js + 'modernizr.min.js',
       paths.js + 'owl.carousel.min.js',
+      paths.js + 'jquery.countdown.min.js', // http://hilios.github.io/jQuery.countdown/
+      paths.js + 'moment.min.js', // countdown-related
+      paths.js + 'moment-timezone-with-data-2012-2022.min.js', // countdown-related
       paths.js + 'particl.js',
     ]),
     sourcemaps.init(),
@@ -115,6 +116,7 @@ gulp.task('scripts', function (cb) {
   ], cb );
 });
 
+/*
 gulp.task('jekyll-build', function (done) {
     browserSync.notify('Building Jekyll');
     return cp.spawn(jekyll, ['build'], {stdio: 'inherit'}).on('close', done);
@@ -123,10 +125,10 @@ gulp.task('jekyll-build', function (done) {
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
 });
-
+*/
 
 // Launch BrowserSync server
-gulp.task('browserSync', ['jekyll-build'], function() {
+gulp.task('browserSync', function() { // , ['jekyll-build']
   browserSync.init({
     server: {
       baseDir: '_site/',
@@ -181,9 +183,9 @@ gulp.task('webfont', ['optimize'], function (cb) {
 
 
 // Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch', ['browserSync', 'jekyll-rebuild', 'sass', 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () { // , 'jekyll-rebuild'
 //gulp.task('watch', ['sass', 'scripts'], function () {
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
+  //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
   gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.js_in, ['scripts']);
   gulp.watch(paths.ico_input, ['webfont']);

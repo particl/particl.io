@@ -1,3 +1,11 @@
+code {
+  background: rgba($color, 0.1);
+  color: darken($color, 10%);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
 section.general-project-road {
   padding: 5.813rem 0rem 0rem;
 
@@ -6,15 +14,62 @@ section.general-project-road {
   }
 }
 
-#particl-road-map {
-  padding: 0px;
-
-  .row {
-    max-width: 87.875rem;
-  }
-
-  .column {
-    padding: 0rem 2.125rem;
+// blocks of roadmap updates/features
+.roadmap-items {
+  margin: 0 0 2rem;
+  @include break(m) { margin: 4rem 0; }
+  & > .item {
+    margin-bottom: 3.4rem;
+    @include break(m) { margin-bottom: 4.5rem; }
+    .image { // illustration
+      margin-bottom: 1rem;
+      display: none;
+    }
+    .tags { // "in progress @ mainnet"
+      font-family: $font;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      .status.tag {
+        background: #ddd;
+        padding: 0.2rem 1rem;
+        border-radius: 99px;
+        color: white;
+        &.in-progress {
+          background: $color;
+        }
+        &.planned {
+          background: #ccc;
+        }
+        &.completed {
+          background: none;
+          box-shadow: 0 0 0 1px $color;
+          color: #02E8B0;
+        }
+      }
+      .network.tag {
+        color: rgba(34,39,39,0.5);
+        @include break(s) { margin-left: 0.8rem; }
+        &::before {
+          content: "@";
+          color: rgba(34,39,39,0.3);
+          margin-right: 2px;
+        }
+      }
+    }
+    .title {
+      line-height: 30px;
+      margin-top: 1rem;
+    }
+    .desc {
+      p {
+        line-height: 1.77;
+        color: rgba(34,39,39,0.6);
+        font-size: 0.813rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 

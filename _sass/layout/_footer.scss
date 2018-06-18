@@ -115,6 +115,7 @@ footer {
     width: 46px;
     height: 46px;
   }
+  a.footer-btn[href*="http"]::after { content: none; }
 
   .email-btn:before {
     background-image: url("/assets/img/ico/new/email.svg");

@@ -1,8 +1,11 @@
 button, .button { // default, full buttons
-  @include border-radius(17px);
+  @include border-radius(30px);
   border: solid 1.5px $btn-border-color;
   background-color: transparent;
   color: $btn-text-color;
+  &::after {
+    content: none !important;
+  }
   &:hover, &:focus {
     background: darken($primary, 5%);
     border-color: darken($primary, 5%);
@@ -19,7 +22,7 @@ button, .button { // default, full buttons
     }
   }
 
-// icons in buttons
+  // icons in buttons
   i.ico { margin-right: 0.3rem; }
 
   &.ext:not(.secondary) {
@@ -29,7 +32,6 @@ button, .button { // default, full buttons
       font-size: 0.5rem;
       margin-left: 0.4rem;
     } 
-
     &:hover::after { color: $white; }
   }
 
@@ -103,15 +105,16 @@ button, .button { // default, full buttons
 
 #intro {
   .button {
-    font-family: 'GraphikLCGSemiBold';
+    font-family: $font;
+    font-weight: 700;
     line-height: 2;
     display: inline-block;
   }
 
   .btn-home-banner-left {
-    padding: 0.19rem 1.39rem;
+    padding: 0.19rem 1.79rem;
     margin-right: 7px;
-    font-size: 0.81rem;
+    font-size: 0.9rem;
     @include before_md {
       margin-bottom: 10px;
       margin-right: 0px;
@@ -119,7 +122,7 @@ button, .button { // default, full buttons
   }
 
   .btn-home-banner-right {
-    padding: 0.19rem 4.16rem;
-    font-size: 0.81rem;
+    padding: 0.19rem 4.76rem;
+    font-size: 0.9rem;
   }
 }
