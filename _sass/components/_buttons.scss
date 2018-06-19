@@ -1,14 +1,14 @@
 button, .button { // default, full buttons
+  @extend %tfx;
   @include border-radius(30px);
   border: solid 1.5px $btn-border-color;
   background-color: transparent;
   color: $btn-text-color;
-  &::after {
-    content: none !important;
-  }
+  &::after { content: none !important; }
   &:hover, &:focus {
-    background: darken($primary, 5%);
+    background: darken($primary, 7%);
     border-color: darken($primary, 5%);
+    color: $white;
   }
 
   &.secondary { // secondary, border-only buttons
@@ -35,94 +35,4 @@ button, .button { // default, full buttons
     &:hover::after { color: $white; }
   }
 
-}
-
-.button, button {
-  @extend .tfx;
-  &:hover {
-    background: darken($primary, 7%);
-    color: $white;
-  }
-  &.toggled {
-    background: darken($primary, 10%);
-    box-shadow: 0 3px darken($primary, 24%) inset;
-  }
-
-  // Button Sizes
-  &.tiny {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.65rem;
-  }
-  &.small {
-    padding: 0.5rem 0.95rem;
-    font-size: 0.825rem;
-  }
-  &.large {
-    padding: 0.9rem 1.45rem;
-    font-size: 1.125rem;
-  }
-  &.expand { width: 100%; }
-
-  // Button Variants/Mods
-  &.secondary {
-    color: $black;
-    background: $secondary;
-    &:hover { background: darken($secondary, 7%); }
-    &.toggled {
-      background: darken($secondary, 10%);
-      box-shadow: 0px 3px darken($secondary, 24%) inset;
-    }
-  }
-
-  &.success {
-    background: $success;
-    &:hover { background: darken($success, 7%); }
-    &.toggled {
-      background: darken($success, 10%);
-      box-shadow: 0 3px darken($success, 24%) inset;
-    }
-  }
-
-  &.alert {
-    background: $alert;
-    &:hover { background: darken($alert, 7%); }
-    &.toggled {
-      background: darken($alert, 10%);
-      box-shadow: 0 3px darken($alert, 24%) inset;
-    }
-  }
-
-  &.warning {
-    background: $warning;
-    &:hover { background: darken($warning, 7%); }
-    &.toggled {
-      background: darken($warning, 10%);
-      box-shadow: 0 3px darken($warning, 24%) inset;
-    }
-  }
-
-}
-
-#intro {
-  .button {
-    font-family: $font;
-    font-weight: 700;
-    line-height: 2;
-    display: inline-block;
-  }
-
-  .btn-home-banner-left {
-    padding: 0.19rem 1.79rem;
-    margin-right: 7px;
-    font-size: 0.9rem;
-    @include before_md {
-      margin-bottom: 10px;
-      margin-right: 0px;
-    }
-  }
-
-  .btn-home-banner-right {
-    padding: 0.19rem 4.76rem;
-    font-size: 0.9rem;
-  }
 }

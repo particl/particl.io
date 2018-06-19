@@ -46,7 +46,7 @@
       max-width: 10.5rem;
       font-family: $font !important;
       position: relative;
-      @include break-from(768px) {
+      @include break(large) {
         max-width: 12rem;
       }
 
@@ -61,7 +61,7 @@
           padding: 12px 0px !important;
           display: inline-block;
           height: 100%;
-          @include break-from(768px) {
+          @include break(large) {
             padding-top: 15px !important;
           }
 
@@ -92,7 +92,7 @@
             font-weight: 500;
             font-size: 0.625rem !important;
             text-transform: uppercase;            
-            @include break-from(768px) {
+            @include break(large) {
               color: darken($header-chart-text, 35%);
             }
 
@@ -137,7 +137,7 @@
               right: auto;
               left: 103px;
             }
-            @include break-from(768px) {
+            @include break(large) {
               position: relative;
               left: 7px;
               top: 5px;

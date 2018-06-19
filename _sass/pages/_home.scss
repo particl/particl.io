@@ -45,48 +45,51 @@
 
 }
 
-.banner-header {
-  margin: auto;
-  height: 102px;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  @if $showCountdown {
-    height: 290px;
+.header-title { // page title(s)
+  margin: 4rem 0 2rem;
+  line-height: 1.4;
+  .page-title {
+    margin: 0 0 1rem;
   }
-  @include before_md {
-    height: 168px;
-    line-height: 1.4;
-    @if $showCountdown {
-      height: 250px;
-    }
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $text-muted;
+    margin: 0;
   }
 }
 
-.banner-btn-container {
+.intro-buttons { // download & watch video buttons
   text-align: center;
+  margin: 3rem 0;
+  @include break(m) { margin: 4rem 0 5rem; }
+  .button {
+    font-family: $font;
+    font-weight: 700;
+    line-height: 2;
+    display: inline-block;
+  }
+
+  .btn-home-banner-left {
+    padding: 0.19rem 1.79rem;
+    margin-right: 7px;
+    font-size: 0.9rem;
+    @include before_md {
+      margin-bottom: 10px;
+      margin-right: 0px;
+    }
+  }
+
+  .btn-home-banner-right {
+    padding: 0.19rem 4.76rem;
+    font-size: 0.9rem;
+  }
 }
 
 .logo-listing { // partners & press mentions
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .title {
-    margin: 0rem 0rem 1.5rem;
-
-    &::before { content: none; }
+    margin: 0 0 1.5rem;
   }
-
   .logos {
     display: flex;
     min-height: 86px;
@@ -122,27 +125,9 @@
 #intro {
   text-align: center;
   position: relative;
-  background-color: $part-token-bg;
-  height: 755px;
-
-  padding: 0px !important;
-
-  .bg-img {
-    background-image: url('/assets/img/illustrations/intro_banner_background.png');
-    background-position: center center;
-    background-size: contain;
-    height: 519px;
-    width: 696px;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: auto;
-
-    @include before_md {
-      width: 100%;
-      height: 469px;
-      background-size: cover;
-    }
-  }
+  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% 50px $part-token-bg;
+  background-size: 600px;
+  @include break(large) { background-position: 50% -100px; }
 
   .title {
     text-align: left;
@@ -153,60 +138,6 @@
     @include break(l) { font-size: 0.7rem; }
     @include break(xl) { font-size: 0.83rem; }
   }
-
-  p {
-    @include break(m) {
-      max-width: 34rem;
-      margin: 0 auto;
-    }
-
-    @include break(l) { margin: 0; }
-  }
-
-  .actions { margin-top: 1.5rem; }
-
-  .button {
-    @include break(l) { margin-left: 0; }
-  }
-
-  .wallet-download {
-    @extend .tfx;
-    display: none; // hide for mobiles, doesn't make sense there
-    
-    @include break(l) {
-      display: block;
-      padding-bottom: 1rem;
-      text-align: center;
-      background: $bg;
-      box-shadow: 0 4px 12px -5px rgba($text, 0.3);
-      border-bottom: 4px solid transparent;
-    }
-
-    &:hover {
-      border-bottom: 4px solid $primary;
-      .tag { background: darken($bg, 40%); }
-    }
-
-    & > .title {
-      margin: 0.3rem 0 0.3rem;
-      font-size: 1.15rem;
-    }
-
-    & > .version {
-      font-size: 0.85rem;
-      color: lighten($text, 30%);
-    }
-
-    .tag {
-      @extend .tfx;
-      background: darken($bg, 30%);
-      border-radius: 999px;
-      padding: 0.1rem 0.6rem;
-      font-size: 0.65rem;
-      color: $bg;
-    }
-  }
-
 }
 
 .feature {
