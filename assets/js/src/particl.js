@@ -28,6 +28,8 @@ $( document ).ready(function() {
 
 
 	/* ------------ DESKTOP STICKY NAV ------------ */
+	
+	/*
 	// "Compress" header when scrolling
 	$(function(){
 		$(window).scroll(function(){
@@ -38,25 +40,12 @@ $( document ).ready(function() {
 			}
 		})
 	});
-	
-/*
-	// Smooth scrolling to sections
-	$('.scroll').click(function(event){
-		event.preventDefault();
-		var dest = 0;
-		if ( $(this.hash).offset().top > $(document).height() - $(window).height() ){
-			dest = $(document).height() - $(window).height();
-		} else {
-			dest = $(this.hash).offset().top;
-		}
-		$('html, body').animate({scrollTop:dest}, 1000, 'swing');
-	});
-*/
+	*/
+
 
 	/* ------------ HOMEPAGE CAROUSEL ------------ */
 	$('.owl-carousel').owlCarousel({
 		center: true,
-		items: 2,
 		loop: true,
 		margin: 10,
 		autoplay: true,
@@ -65,51 +54,8 @@ $( document ).ready(function() {
 		paginationNumbers: true,
 		dotsData: true,
 		lazyLoad: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			900: {
-				items: 2
-			},
-			1024: {
-				items: 3
-			},
-			1200: {
-				items: 4
-			}
-		},
-		onDrag: dragg_event,
-		onDragged: dragged_event,
-		onChange: change_event,
-		onChanged: changed_event
+		autoWidth: true,
 	});
-	
-	$('.owl-carousel .owl-item').click(function() {
-	  var selected_pos = $(this).find('> .item').attr('data-dot');
-
-	  $('.owl-carousel').trigger('to.owl.carousel', selected_pos - 1);
-	});
-
-	function dragg_event(event) {
-	  $('.owl-carousel .owl-item').addClass('no-opacity');
-	}
-
-	function dragged_event(event) {
-	  $('.owl-carousel .owl-item').removeClass('no-opacity');
-	}
-
-	function change_event(event) {
-	  $('.owl-carousel.owl-drag .owl-item.active').removeClass('has-opacity');
-	}
-
-	function changed_event(event) {
-	  $('.owl-carousel.owl-drag .owl-item.active').removeClass('has-opacity');
-
-	  setTimeout(function() {
-	    $('.owl-carousel.owl-drag .owl-item.active:last').addClass('has-opacity');
-	  }, 150);
-	}
 
 
 	/* ------------ COUNTDOWN ------------ */

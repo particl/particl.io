@@ -204,21 +204,27 @@
   }
 }
 
-section#architecture {
-  padding: 6.97rem 0rem 9.06rem 0rem;
 
-  @include before_md {
-    padding: 0.9375rem 0rem 3.1875rem 0rem;
+// Carousel with features
+section#features {
+  padding: 1rem 0 4.5rem;
+  @include break(large) {
+    padding: 2rem 0 6rem;
   }
-
-  .row {
-    max-width: 100%;
+  .claim-title {
+    text-align: center; font-weight: 500; line-height: 1.45;
+    width: 100%; max-width: 50rem;
+    margin: 4rem auto 0;
+    padding: 0 2rem;
+    .highlight {
+      font-weight: 700;
+    }
   }
-
   .slider-container {
     margin-top: 3rem;
   }
 }
+
 
 .join-section {
   padding: 2.556rem 0rem 3.25rem;
