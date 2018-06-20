@@ -4,6 +4,10 @@
   }
 }
 
+/* --------------------------------------------- *\
+      Intro "Hero" section
+\* --------------------------------------------- */
+
 #intro {
   text-align: center;
   position: relative;
@@ -61,6 +65,10 @@
     font-size: 0.9rem;
   }
 }
+
+/* --------------------------------------------- *\
+      Partners & Media
+\* --------------------------------------------- */
 
 .logo-listing { // partners & press mentions
   .title {
@@ -151,6 +159,10 @@
 }
 
 
+/* --------------------------------------------- *\
+      Carousel ("features")
+\* --------------------------------------------- */
+
 // Carousel with features
 section#features {
   padding: 1rem 0 4.5rem;
@@ -171,109 +183,62 @@ section#features {
   }
 }
 
+/* --------------------------------------------- *\
+      Join our channels
+\* --------------------------------------------- */
 
 .join-section {
-  padding: 2.556rem 0rem 3.25rem;
-
-  h2 {
-    margin: 2.75rem 0rem 2.813rem;
-    color: $white;
+  text-align: center;
+  padding: 3.4rem 0 2.7rem;
+  background: $black !important;
+  @include break(large) {
+    padding: 4rem 0 4.5rem;
   }
-
+  .title {
+    margin: 1.75rem 2rem 2.7rem;
+    color: $white; line-height: 1.35;
+  }
   .button {
-    font-weight: 700;
-    position: relative;
-
-    @include before_md {
-      display: block;
-      width: 175px;
-      margin: 20px auto;
+    font-size: 0.83rem; font-weight: 700;
+    display: block;
+    width: 220px;
+    margin: 20px auto; padding: 0.65rem 1rem;
+    @include break(large) {
+      display: inline-block;
+      width: 180px;
+      margin: 0 0.3rem;
     }
-
-    &:before {
-      content: '';
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      bottom: 0px;
-      margin: auto;
-      height: 100%;
-    }
-  }
-
-
-  .riot-btn {
-    padding: 0.5rem 2.688rem 0.5rem 4rem;
-    font-size: 0.81rem;
-
-    &:before {
-      background-image: url('/assets/img/ico/new/reddit-icon.svg');
-      width: 21px;
-      left: 39px;
-      top: 12px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 39px;
-        right: 0px;
-        margin: auto;
-        background-size: 12%;
-        background-position: left center;
+    .text {
+      position: relative;
+      padding-left: 26px;
+      &:before { // icon
+        content: '';
+        display: block;
+        width: 20px; height: 20px;
+        position: absolute; left: 0;
+        background-repeat: no-repeat; background-size: contain;
       }
-    }
-  }
-
-  .discard-btn {
-    padding: 0.55rem 2.063rem 0.55rem 3.5rem;
-    font-size: 0.81rem;
-
-    &:before {
-      background-image: url('/assets/img/ico/new/discord-icon.svg');
-      width: 13px;
-      left: 31px;
-      top: 17px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 31px;
-        right: 0px;
-        margin: auto;
-        background-size: 8%;
-        background-position: left center;
+      &.riot:before {
+        background-image: url('/assets/img/ico/new/riot-icon.svg');
+        top: -1px;
       }
-    }
-  }
-
-  .telegram-btn {
-    padding: 0.563rem 1.75rem 0.563rem 3.188rem;
-    font-size: 0.81rem;
-  
-    &:before {
-      background-image: url('/assets/img/ico/new/telegram-icon.svg');
-      width: 35px;
-      left: 20px;
-      top: 0px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 20px;
-        right: 0px;
-        margin: auto;
-        background-size: 24%;
-        background-position: left center;
+      &.discord:before {
+        background-image: url('/assets/img/ico/new/discord-icon.svg');
+        top: 0; left: 3px;
+        height: 17px;
+      }
+      &.telegram:before {
+        background-image: url('/assets/img/ico/new/telegram-icon.svg');
+        top: -2px; left: -3px;
       }
     }
   }
 }
+
+
+/* --------------------------------------------- *\
+      About
+\* --------------------------------------------- */
 
 #about {
   padding: 8.373rem 0rem;
@@ -482,14 +447,7 @@ section#features {
   }
 }
 
-.particl-partners {
-  .title {
-    @include before_xl {
-      display: none;
-    }
-  }
-}
-
+.particl-partners,
 .particl-press {
   @include before_xl {
     display: none;
