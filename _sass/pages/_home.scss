@@ -1,54 +1,30 @@
 #page {
-  margin-top: 3.563rem;
-
-  @include before_md {
-    margin-top: 0px;
+  @include break(large) {
+    margin-top: 3.563rem;
   }
+}
 
-  ul { // fancy lists
-    list-style: none;
-    line-height: 1.7;
-    color: $text-muted;
+#intro {
+  text-align: center;
+  position: relative;
+  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% 50px $part-token-bg;
+  background-size: 600px;
+  @include break(large) { background-position: 50% -100px; }
 
-    @include break(s) { line-height: 2; }
-
-    li {
-      display: block;
-      margin: 0.2rem 0rem;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -1.8rem;
-        top: 0.45rem;
-        display: block;
-        width: 0.625rem;
-        height: 0.625rem;
-        border: 4px solid darken($primary, 3%);
-        border-radius: 50%;
-      }
-    }
-
-    ul { // 2nd level lists
-      li::before {
-        background: lighten($text-muted, 40%);
-        border: none;
-        border-radius: 0;
-        top: 1rem;
-        left: -1.6rem;
-        width: 0.9rem;
-        height: 2px;
-      }
-    }
+  .logos-title {
+    text-align: left;
+    font-family: $font;
+    color: $intro-logo-title;
+    text-transform: uppercase;
+    @include break(l) { font-size: 0.7rem; }
+    @include break(xl) { font-size: 0.83rem; }
   }
-
 }
 
 .header-title { // page title(s)
   margin: 4rem 0 2rem;
   line-height: 1.4;
-  .page-title {
+  .title {
     margin: 0 0 1rem;
   }
   .subtitle {
@@ -118,36 +94,6 @@
     flex-direction: column;
     display: flex;
     align-self: center;
-  }
-
-}
-
-#intro {
-  text-align: center;
-  position: relative;
-  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% 50px $part-token-bg;
-  background-size: 600px;
-  @include break(large) { background-position: 50% -100px; }
-
-  .title {
-    text-align: left;
-    font-family: $font;
-    color: $intro-logo-title;
-    text-transform: uppercase;
-
-    @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.83rem; }
-  }
-}
-
-.feature {
-  &.multiple { // multiple side-by-side features
-    .part {
-      margin-bottom: 2.5rem;
-      @include break(l) { margin-bottom: 0; }
-      @include before_md { margin-bottom:0px; float:none; }
-      &:last-of-type { margin-bottom: 0; }
-    }
   }
 
 }
