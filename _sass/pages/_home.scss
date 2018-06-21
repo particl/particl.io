@@ -12,8 +12,8 @@
   background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% -100px $part-token-bg;
   background-size: 600px;
   @include break(s) { padding: 6rem 2rem; }
-  @include break(m) { padding: 8rem 2rem; }
-  @include break(large) { padding: 8rem 2rem 1rem; }
+  @include break(m) { padding: 8rem 2rem 2rem; }
+  @include break(xl) { padding: 12rem 2rem 3rem; }
 
   // page title(s)
   .header-title {
@@ -72,45 +72,33 @@
   // partners & press mentions
   .partners-press {
     display: none;
-    @include break(large) {
-      display: block;
-      margin-top: 6rem;
-    }
-    .title { // titles at logos (Partners/Press)
-      text-align: left;
-      font-family: $font;
-      color: $intro-logo-title;
-      text-transform: uppercase;
-      @include break(l) { font-size: 0.7rem; }
-      @include break(xl) { font-size: 0.83rem; }
-    }
+    @include break(m) { display: block; margin-top: 6rem; }
+    @include break(large) { margin-top: 9rem; }
+    @include break(xl) { margin-top: 12rem; }
     .logos {
-      display: flex;
-      min-height: 86px;
-      
+      a.item { display: inline-block; }
       .logo {
         @extend .tfx;
-        height: auto;
-        margin: 1rem 1.22rem;
+        width: auto; height: 2.3rem;
+        margin: 0 0.8rem;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         opacity: 0.5;
-  
+        @include break(large) { height: 2.6rem; margin: 0 0.9rem; }
         &:hover {
           -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
           opacity: 1;
         }
-  
-        &:first-child {
-          margin-left: 0.93rem;
-        }
       }
     }
-    a {
-      flex-direction: column;
-      display: flex;
-      align-self: center;
+    .title { // titles at logos (Partners/Press)
+      font-size: 0.75rem; color: darken($bg-muted, 35%);
+      text-transform: uppercase; text-align: center;
+      letter-spacing: 0;
+      margin: 1rem 0 0;
+      @include break(l) { font-size: 0.7rem; }
+      @include break(xl) { font-size: 0.83rem; }
     }
   }
 }
