@@ -1,7 +1,5 @@
 #page {
-  @include break(large) {
-    margin-top: 3.563rem;
-  }
+  margin-top: 3.4rem; // offset sticky header
 }
 
 /* --------------------------------------------- *\
@@ -11,100 +9,114 @@
 #intro {
   text-align: center;
   position: relative;
-  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% 50px $part-token-bg;
+  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% -100px $part-token-bg;
   background-size: 600px;
-  @include break(large) { background-position: 50% -100px; }
+  @include break(s) { padding: 6rem 2rem; }
+  @include break(m) { padding: 8rem 2rem; }
+  @include break(large) { padding: 8rem 2rem 1rem; }
 
-  .logos-title {
-    text-align: left;
-    font-family: $font;
-    color: $intro-logo-title;
-    text-transform: uppercase;
-    @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.83rem; }
-  }
-}
-
-.header-title { // page title(s)
-  margin: 4rem 0 2rem;
-  line-height: 1.4;
-  .title {
-    margin: 0 0 1rem;
-  }
-  .subtitle {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: $text-muted;
-    margin: 0;
-  }
-}
-
-.intro-buttons { // download & watch video buttons
-  text-align: center;
-  margin: 3rem 0;
-  @include break(m) { margin: 4rem 0 5rem; }
-  .button {
-    font-family: $font;
-    font-weight: 700;
-    line-height: 2;
-    display: inline-block;
-  }
-
-  .btn-home-banner-left {
-    padding: 0.19rem 1.79rem;
-    margin-right: 7px;
-    font-size: 0.9rem;
-    @include before_md {
-      margin-bottom: 10px;
-      margin-right: 0px;
+  // page title(s)
+  .header-title {
+    margin: 0 auto 2rem;
+    line-height: 1.4;
+    max-width: 26rem;
+    @include break(large) { max-width: 30rem; }
+    @include break(xl) { max-width: 60rem; }
+    .title {
+      margin: 0 0 1rem;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: $text-muted;
+      margin: 0;
     }
   }
-
-  .btn-home-banner-right {
-    padding: 0.19rem 4.76rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* --------------------------------------------- *\
-      Partners & Media
-\* --------------------------------------------- */
-
-.logo-listing { // partners & press mentions
-  .title {
-    margin: 0 0 1.5rem;
-  }
-  .logos {
-    display: flex;
-    min-height: 86px;
-    
-    .logo {
-      @extend .tfx;
-      height: auto;
-      margin: 1rem 1.22rem;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      opacity: 0.5;
-
-      &:hover {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-        opacity: 1;
+  
+  // download & watch video buttons
+  .intro-buttons {
+    text-align: center;
+    margin: 3rem 0 0;
+    @include break(m) { margin: 4rem 0 0; }
+    .button {
+      font-family: $font; font-size: 0.9rem; font-weight: 700; line-height: 2;
+      display: block;
+      width: 250px;
+      margin: 0 auto; padding: 0.19rem 1rem;
+      @include break(large) {
+        display: inline-block;
+        width: 230px;
+        margin: 0 4px;
       }
-
-      &:first-child {
-        margin-left: 0.93rem;
+      &.first {
+        margin-bottom: 10px;
+      }
+      &.second {
+        border-color: rgba($color, 0.7);
+        &:hover, &:focus {
+          color: darken($color, 5%);
+          border-color: darken($color, 5%);
+          background: none;
+        }
+      }
+      .mobile { // display "Copay" on mobile
+        @include break(large) { display: none; }
+      }
+      .desktop { // display "Desktop" on desktop
+        display: none;
+        @include break(large) { display: inline; }
       }
     }
   }
 
-  a {
-    flex-direction: column;
-    display: flex;
-    align-self: center;
+  // partners & press mentions
+  .partners-press {
+    display: none;
+    @include break(large) {
+      display: block;
+      margin-top: 6rem;
+    }
+    .title { // titles at logos (Partners/Press)
+      text-align: left;
+      font-family: $font;
+      color: $intro-logo-title;
+      text-transform: uppercase;
+      @include break(l) { font-size: 0.7rem; }
+      @include break(xl) { font-size: 0.83rem; }
+    }
+    .logos {
+      display: flex;
+      min-height: 86px;
+      
+      .logo {
+        @extend .tfx;
+        height: auto;
+        margin: 1rem 1.22rem;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.5;
+  
+        &:hover {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+          opacity: 1;
+        }
+  
+        &:first-child {
+          margin-left: 0.93rem;
+        }
+      }
+    }
+    a {
+      flex-direction: column;
+      display: flex;
+      align-self: center;
+    }
   }
-
 }
+
+
+
 
 #page section.feature {
   background-color: $feature-bg;
@@ -444,12 +456,5 @@ section#features {
     color: $black-op-8;
     font-weight: 500;
     text-decoration: underline;
-  }
-}
-
-.particl-partners,
-.particl-press {
-  @include before_xl {
-    display: none;
   }
 }
