@@ -31,7 +31,7 @@
 @import 'pages/_about_us';
 @import 'pages/_careers';
 @import 'pages/_user_guide';
-@import 'pages/_project_road';
+@import 'pages/_roadmap';
 @import 'pages/_status_report';
 @import 'pages/_particl_press';
 @import 'pages/_download';
@@ -175,7 +175,6 @@ input {
 
 section { // full-width sections of content 
   padding: 4rem 1rem; 
-  &:nth-of-type(2n) { background: $section-bg1; } 
 }
 
 // buttons

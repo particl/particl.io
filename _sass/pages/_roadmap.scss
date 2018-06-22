@@ -36,16 +36,17 @@ section.general-project-road {
         padding: 0.2rem 1rem;
         border-radius: 99px;
         color: white;
-        &.in-progress {
-          background: $color;
-        }
         &.planned {
           background: #ccc;
         }
-        &.completed {
+        &.in-progress {
           background: none;
           box-shadow: 0 0 0 1px $color;
           color: #02E8B0;
+        }
+        &.completed {
+          background: $color;
+          
         }
       }
       .network.tag {

@@ -108,7 +108,7 @@
       "The case for privacy"
 \* --------------------------------------------- */
 
-#page section.intro-text {
+section.intro-text {
   background: $black;
   padding: 3rem 0.5rem;
   @include break(m) { padding: 3rem 1rem; }
@@ -128,7 +128,7 @@
 
 
 
-#page section.feature {
+section.feature {
   background-color: $feature-bg;
 
   h5 {
@@ -311,7 +311,7 @@ section#features {
   }
 }
 
-#page section.feature.mac {
+section.feature.mac {
   padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;
