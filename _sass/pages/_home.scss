@@ -104,6 +104,28 @@
 }
 
 
+/* --------------------------------------------- *\
+      "The case for privacy"
+\* --------------------------------------------- */
+
+#page section.intro-text {
+  background: $black;
+  padding: 3rem 0.5rem;
+  @include break(m) { padding: 3rem 1rem; }
+  @include break(large) { padding: 3rem 1rem 3.5rem; }
+  & > .row { max-width: 55rem; }
+  .title {
+    color: $color;
+    margin: 0 0 0.5rem;
+  }
+  p {
+    @extend p.large;
+    color: $white;
+    &:last-of-type { margin-bottom: 0; }
+  }
+}
+
+
 
 
 #page section.feature {
@@ -128,35 +150,6 @@
   }
 }
 
-#page section.blockchain {
-  padding: 4rem 0rem 5.063rem;
-
-  @include before_md {
-    padding: 2.5rem 0rem 3rem;
-  }
-
-  .blockchain-header {
-    @include before_md {
-      margin-bottom: 10px;
-    }
-  }
-
-  h5 {
-    text-align: left;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  p {
-    max-width: 360px;
-    width: 100%;
-
-    @include before_md {
-      margin-top: 0px;
-      max-width: 100%;
-    }
-  }
-}
 
 
 /* --------------------------------------------- *\

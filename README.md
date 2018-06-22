@@ -28,4 +28,3 @@
     - [ ] self-hosted Piwik analytics?
     - [ ] add "particl in press" link
         - [ ] /press - list of articles about PART (+ update it)
-    - [ ] add more Partners below intro (Changelly?)
