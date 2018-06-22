@@ -42,7 +42,7 @@ section.general-project-road {
         &.in-progress {
           background: none;
           box-shadow: 0 0 0 1px $color;
-          color: #02E8B0;
+          color: darken($color, 4%);
         }
         &.completed {
           background: $color;
