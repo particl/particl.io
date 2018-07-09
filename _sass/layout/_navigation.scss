@@ -90,7 +90,8 @@
         }
 
         &.home-download-btn {
-          color: $btn-text-color;
+          color: $color;
+          &:hover { color: darken($color, 5%); }
         }
       }
 

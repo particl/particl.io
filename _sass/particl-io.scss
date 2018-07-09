@@ -18,7 +18,6 @@
 @import 'layout/_sidebar';
 @import 'layout/_forms';
 
-@import 'components/_buttons';
 @import 'components/_carousel';
 @import 'components/_dropdown';
 @import 'components/_icons';
@@ -32,7 +31,7 @@
 @import 'pages/_about_us';
 @import 'pages/_careers';
 @import 'pages/_user_guide';
-@import 'pages/_project_road';
+@import 'pages/_roadmap';
 @import 'pages/_status_report';
 @import 'pages/_particl_press';
 @import 'pages/_download';
@@ -107,12 +106,10 @@ p {
   color: $general-op-7;
   font-family: $font;
   letter-spacing: -0.1px;
-
   &.large {
     font-size: 0.9375rem;  
     line-height: 1.87;
   }
-
   &.small {
     font-size: 0.8125rem;      
     line-height: 1.77;
@@ -127,7 +124,6 @@ a {
 	letter-spacing: 0.1px;
 	
 	&[href*="http"]:not(.no-arrow) { // fancy external links
-		//text-decoration-style: dotted;
 		&::after {
 			@extend %tfx;
 			content: "";
@@ -179,7 +175,69 @@ input {
 
 section { // full-width sections of content 
   padding: 4rem 1rem; 
-  &:nth-of-type(2n) { background: $section-bg1; } 
+}
+
+// buttons
+button, .button { // default, outline-only buttons
+  @extend %tfx;
+  @include border-radius(30px);
+  border: solid 1.5px $btn-border-color;
+  background-color: transparent;
+  color: $btn-text-color;
+  &::after { content: none !important; }
+  &:hover, &:focus {
+    background: darken($primary, 7%);
+    border-color: darken($primary, 5%);
+    color: $white;
+  }
+  &.full { // full buttons
+    background: darken($color, 2%);
+    border-color: darken($color, 2%);
+    color: $white;
+    &:hover, &:focus {
+      background: darken($color, 5%);
+      border-color: darken($color, 5%);
+    }
+  }
+  // icons in buttons
+  i.ico { margin-right: 0.3rem; }
+}
+
+// fancy lists
+#page ul {
+  list-style: none;
+  line-height: 1.7;
+  color: $text-muted;
+  @include break(s) { line-height: 2; }
+
+  li {
+    display: block;
+    margin: 0.2rem 0rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1.8rem;
+      top: 0.45rem;
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      border: 4px solid darken($primary, 3%);
+      border-radius: 50%;
+    }
+  }
+
+  ul { // 2nd level lists
+    li::before {
+      background: lighten($text-muted, 40%);
+      border: none;
+      border-radius: 0;
+      top: 1rem;
+      left: -1.6rem;
+      width: 0.9rem;
+      height: 2px;
+    }
+  }
 }
 
 // -------------[  LAYOUT  ]------------- //

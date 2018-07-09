@@ -21,6 +21,9 @@
     // Usage: @include break(xl) { .. }
     @media only screen and (min-width: $break-xl) { @content; }
   }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
 }
 
 // Custom responsivity (px-based, for when default breakpoints aren't enough)
