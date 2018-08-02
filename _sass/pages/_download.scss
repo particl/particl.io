@@ -86,7 +86,6 @@ section.version-list {
   padding: 2.75rem 1rem 1.625rem 1rem;
 
   .copay-img-cont {
-
     img {
       width: 117px;
     }
@@ -109,10 +108,26 @@ section.version-list {
     max-width: 379px;
     width: 100%;
   }
+}
 
-  .link-small-dark {
-    margin-bottom: 1.438rem;
-    display: inline-block;
+#page {
+  ul.guides {
+    margin: 1rem 0 1.5rem;
+    padding: 0 0 0 1rem;
+    list-style: circle;
+    li {
+      display: list-item;
+      margin: 0;
+      &::before {
+        content: none;
+      }
+    }
+    .link-small-dark {
+      display: inline-block;
+      &:hover {
+        color: $black;
+      }
+    }
   }
 }
 
