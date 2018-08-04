@@ -70,7 +70,7 @@
           & > span:first-child {
 
             &:before {
-              content:'1 part =';
+              //content:'1 part =';
               color: lighten($header-chart-text, 5%);
               font-weight: 500;
               font-size: 0.625rem;

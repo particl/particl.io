@@ -105,6 +105,40 @@
 
 
 /* --------------------------------------------- *\
+      Lastest Highlights (News)
+\* --------------------------------------------- */
+
+section.news {
+  border-top: 1px solid $bg-muted;
+  .section-title {
+    @include md { text-align: center; }
+    @include lg { text-align: left; }
+    .title {
+      margin: 0 0 0.3rem;
+      @include lg { margin: 0 0 1.2rem; }
+    }
+  }
+  p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+  a {
+    color: $text; font-weight: 400; font-size: inherit; text-decoration: underline;
+  }
+  .item {
+    margin-top: 3rem;
+    @include lg { margin-top: 0; }
+    .date { color: $text-muted; font-size: 0.8rem; }
+    .title {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0; text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .text { font-size: 0.8rem; line-height: 1.45; }
+  }
+}
+
+
+/* --------------------------------------------- *\
       "The case for privacy"
 \* --------------------------------------------- */
 
