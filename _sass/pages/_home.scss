@@ -9,11 +9,12 @@
 #intro {
   text-align: center;
   position: relative;
-  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% -100px $part-token-bg;
-  background-size: 600px;
+  background: url('/assets/img/intro-bg_compressed.jpg') no-repeat top center;
+  background-size: cover;
   @include break(s) { padding: 6rem 2rem; }
   @include break(m) { padding: 8rem 2rem 2rem; }
-  @include break(xl) { padding: 12rem 2rem 3rem; }
+  @include break(l) { padding-top: 6rem; }
+  @include break(xl) { padding: 7rem 2rem 2rem; }
 
   // page title(s)
   .header-title {
@@ -37,7 +38,7 @@
   .intro-buttons {
     text-align: center;
     margin: 3rem 0 0;
-    @include break(m) { margin: 4rem 0 0; }
+    @include break(large) { margin: 2.5rem 0 0; }
     .button {
       font-family: $font; font-size: 0.9rem; font-weight: 700; line-height: 2;
       display: block;
@@ -59,12 +60,25 @@
           background: none;
         }
       }
-      .mobile { // display "Copay" on mobile
-        @include break(large) { display: none; }
-      }
-      .desktop { // display "Desktop" on desktop
-        display: none;
-        @include break(large) { display: inline; }
+    }
+  }
+
+  // GUI teaser slider
+  .intro-features {
+    display: none;
+    width: 920px;
+    margin: 3rem auto 2rem;
+    @include break(l) { display: block; }
+    .owl-item {
+      max-width: none; margin-bottom: 0;
+      background: none; box-shadow: none;
+    }
+    .feature-slide {
+      max-width: 920px;
+      height: 500px;
+      img {
+        width: 920px; max-width: 920px;
+        height: auto;
       }
     }
   }
@@ -73,8 +87,8 @@
   .partners-press {
     display: none;
     @include break(m) { display: block; margin-top: 6rem; }
-    @include break(large) { margin-top: 9rem; }
-    @include break(xl) { margin-top: 12rem; }
+    @include break(large) { margin-top: 7rem; }
+    //@include break(xl) { margin-top: 7rem; }
     .logos {
       a.item { display: inline-block; }
       .logo {
@@ -128,7 +142,7 @@ section.news {
   .item {
     margin-top: 3rem;
     @include lg { margin-top: 0; }
-    .date { color: $text-muted; font-size: 0.8rem; }
+    .date { color: rgba($text, 0.5); font-size: 0.8rem; }
     .title {
       font-size: 1.1rem; font-weight: 700; letter-spacing: 0; text-transform: none;
       margin: 0.5rem 0;

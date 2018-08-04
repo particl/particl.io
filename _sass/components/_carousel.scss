@@ -37,27 +37,42 @@
   }
 }
 
-
-.owl-dot {
-  $size: 28px;
-  @extend %tfx;
-  margin: 0 5px;
-  font-size: 0.75rem;
-  color: $general-text-color;
-  font-weight: 500;
-  border: 1.5px solid transparent;
-  border-radius: 50%;
-  width: $size;
-  height: $size;
-  transform: translate (10px, 10px);
-  line-height: ($size - 1px);
-  @include break(xl) { margin: 0 14px; }
-  &:hover, &:focus {
-    background: rgba($text-muted, 0.15);
-  }
-  &.active {
-    background: $color;
-    color: $color-white;
-    font-weight: 700;
+.owl-theme .owl-dots {
+  .owl-dot {
+    // Dots with numbers
+    &.dot-numbered {
+      $size: 28px;
+      @extend %tfx;
+      margin: 0 5px;
+      font-size: 0.75rem;
+      color: $general-text-color;
+      font-weight: 500;
+      border: 1.5px solid transparent;
+      border-radius: 50%;
+      width: $size;
+      height: $size;
+      transform: translate (10px, 10px);
+      line-height: ($size - 1px);
+      @include break(xl) { margin: 0 14px; }
+      &:hover, &:focus {
+        background: rgba($text-muted, 0.15);
+      }
+      &.active {
+        background: $color;
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+  
+    // Simple, color-only dots
+    &.dot-simple {
+      @extend %tfx;
+      &:hover {
+        span { background: darken($bg-muted, 30%); }
+      }
+      &.active {
+        span { background: $color; }
+      }
+    }
   }
 }
