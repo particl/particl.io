@@ -129,13 +129,13 @@
             content: '';
             position: absolute;
             top: 0;
-            right: -8px;
+            left: 53px;
             bottom: 0px;
             margin: auto;
             filter: hue-rotate(90deg);
             @include break-from(330px) {
               right: auto;
-              left: 103px;
+              left: 53px;
             }
             @include break(large) {
               position: relative;
