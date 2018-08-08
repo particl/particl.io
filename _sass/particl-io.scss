@@ -135,7 +135,8 @@ a {
 			background-size: contain;
 			position: relative;
 			top: 1px;
-			opacity: 0.5;
+      opacity: 0.5;
+      .navigation & { filter: invert(70%); }
 		}
 	}
 
