@@ -1,8 +1,6 @@
 footer {
   background-color: $part-token-bg;
-
   .links-container {
-
     ul {
       li {
         a {
@@ -16,7 +14,7 @@ footer {
 footer {
   padding: 2.625rem 0rem 0rem;
   text-align: left;
-  border-top: 2px solid #fff;
+  border-top: 2px solid $white;
   position: relative;
 
   .logo {
@@ -25,21 +23,13 @@ footer {
     height: 92px;
     padding: 1.313rem 0rem;
     width: 101px;
-
-    @include before_md {
-      position: static;
-    }
+    @include before_md { position: static; }
   }
 
-  h4 {
-    font-size: 0.813rem;
-  }
+  h4 { font-size: 0.813rem; }
 
   .part {
-    .title {
-      margin: 0.5rem 0rem 0rem;
-    }
-
+    .title { margin: 0.5rem 0rem 0rem; }
     ul {
       list-style: none;
       padding: 0px;
@@ -48,20 +38,16 @@ footer {
 
   .links-container {
     margin-bottom: 2.8rem;
-
     ul {
       margin-top: 25px;
       margin-bottom: 15px;
-
       li {
         line-height: 1.5;
         padding-bottom: 5px;
-
         a {
           color: $general-op-6;
           font-size: 0.688rem;
         }
-
         &.copyright {
           color: $general-op-6;
           font-size: 0.688rem; 
@@ -71,89 +57,24 @@ footer {
     }
   }
 
-  .inner-line-footer {
-    border-top: 1px solid $white;
-  }
+  .inner-line-footer { border-top: 1px solid $white; }
 
   .social-icons-container {
     padding: 1.313rem 0;
     margin-top: 0.4rem;
-
-    @include before_md {
-      padding: 1.313rem 0rem 0rem;
-    }
-
+    @include before_md { padding: 1.313rem 0rem 0rem; }
     .small-2 {
       @include before_md {
         width: 20%;
         padding-bottom: 21px;
       }
     }
-
-    img {
-      max-width: 6.313rem;
-    }
-
+    img { max-width: 6.313rem; }
     a {
       display: inline-block;
       width: 47px;
       height: 47px;
-
       position: relative;
     }
-  }
-
-  .footer-btn:before {
-    content: '';
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    margin: auto;
-    width: 46px;
-    height: 46px;
-  }
-  a.footer-btn[href*="http"]::after { content: none; }
-
-  .email-btn:before {
-    background-image: url("/assets/img/ico/new/email.svg");
-  }
-
-  .twitter-btn:before {
-    background-image: url("/assets/img/ico/new/twit.svg");
-  }
-
-  .monkey-btn:before {
-    background-image: url("/assets/img/ico/new/monkey.svg");
-  }
-
-  .github-btn:before {
-    background-image: url("/assets/img/ico/new/github.svg");
-  }
-
-  .bitcoin-btn:before {
-    background-image: url("/assets/img/ico/new/bitcoin.svg");
-  }
-
-  .youtube-btn:before {
-    background-image: url("/assets/img/ico/new/youtube.svg");
-  }
-
-  .slack-btn:before {
-    background-image: url("/assets/img/ico/new/slack.svg");
-  }
-
-  .riot-btn:before {
-    background-image: url("/assets/img/ico/new/reddit.svg");
-  }
-
-  .telegram-btn:before {
-    background-image: url("/assets/img/ico/new/telegram.svg");
-  }
-
-  .discord-btn:before {
-    background-image: url("/assets/img/ico/new/d.svg");
   }
 }

@@ -85,98 +85,6 @@
   }
 }
 
-.mobile-header-footer {
-  display: none;
-  margin-bottom: 3.81rem;
-  @include before_md {
-    display: block;
-    padding-top: 24px;
-    .row [class*='col-'] {
-      background-clip: content-box;
-      min-height: 120px;
-      margin-bottom: 30px;
-    }
-  }
-  .title {
-    color: $white;
-    @include before_md {
-      font-size: 0.8125rem;
-      margin: 2.375rem 0rem 0rem;
-    }
-  }
-  .footer-icon-container {
-    width: 20%;
-    float: left;
-    @include before_md { padding-bottom: 21px; }
-  }
-  .social-icons-container {
-    padding: 1.313rem 0rem;
-    @extend %clearfix;
-    @include before_md { padding: 1.313rem 0.8125rem; margin-bottom: 33px; }
-    a { display: inline-block; width: 47px; height: 47px; position: relative; }
-  }
-  .footer-btn:before {
-    content: '';
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    margin: auto;
-    width: 46px;
-    height: 46px;
-  }
-  .email-btn:before { background-image: url("/assets/img/ico/new/email-mobile-header.svg"); }
-  .twitter-btn:before { background-image: url("/assets/img/ico/new/twit-mobile-header.svg"); }
-  .monkey-btn:before { background-image: url("/assets/img/ico/new/monkey-mobile-header.svg"); }
-  .telegram-btn:before { background-image: url("/assets/img/ico/new/telegram-mobile-header.svg"); }
-  .github-btn:before { background-image: url("/assets/img/ico/new/github-mobile-header.svg"); }
-  .bitcoin-btn:before { background-image: url("/assets/img/ico/new/bitcoin-mobile-header.svg"); }
-  .youtube-btn:before { background-image: url("/assets/img/ico/new/youtube-mobile-header.svg"); }
-  .slack-btn:before { background-image: url("/assets/img/ico/new/slack-mobile-header.svg"); }
-  .discord-btn:before { background-image: url("/assets/img/ico/new/discord-mobile.svg"); }
-  .riot-btn:before { background-image: url("/assets/img/ico/new/reddit-mobile-header.svg"); }
-  .footer-circle:before {
-    border: 1px solid $color;
-    border-radius: 50%;
-    content: '';
-  }
-  .links-container {
-    @include before_md {
-      border-bottom: 2px solid $black-op-4;
-    }
-    .copyright {
-      color: $white-op-6;
-      font-size: 0.6875rem;
-      line-height: 2.09;
-      padding: 5px 0px;
-      letter-spacing: -0.3px;
-      font-family: $font;
-    }
-  }
-  ul {
-    li {
-      @include before_md {
-        border-top: 0px;
-        &:last-child {
-          border-bottom: 0px;
-        }
-      }
-    }
-    a {
-      color: $white-op-6;
-      border: 0px;
-      @include before_md {
-        font-size: 0.6875rem;
-        line-height: 2.09;
-        padding: 5px 0px;
-        font-family: $font;
-      }
-    }    
-  }
-}
-
 body.menu-opened {
   @include before_md { overflow: hidden; }
   nav {
@@ -184,17 +92,23 @@ body.menu-opened {
   }
 }
 
-/* SPECIAL ORDER */
-@include before_md {
-  .mobile-header-footer .links-container, footer .links-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+// ---------------[  SOCIAL ICONS  ]--------------- //
+
+.social-icons {
+  .navigation & { // in mobile header menu
+    margin: 0.5rem -0.5rem 5.5rem;
   }
-  .mobile-header-footer .links-container {
-    height: 900px;
-  }
-  footer .links-container {
-    height: 1100px;
+  .social-icon {
+    width: 20%;
+    display: block;
+    float: left;
+    text-align: center;
+    a { display: block; }
+    .title {
+      display: none;
+      font-size: 0.7rem;
+      margin-top: -8px;
+      color: lighten($black, 30%);
+    }
   }
 }

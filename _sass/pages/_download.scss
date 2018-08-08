@@ -15,19 +15,13 @@ section.general-download {
 
 .wallets-view {
   margin-top: 2.125rem;
-
-  @include before_md {
-    overflow-x: scroll;
-  }
-
+  @include before_md { overflow-x: scroll; }
   table {
     border-color: $hr-color;
   }
-
   .download-table {
     margin-bottom: 2.063rem;
     text-align: center;
-
     th {
       padding-bottom: 0.625rem;
       text-align: center;
@@ -52,7 +46,6 @@ section.general-download {
       &.type-name {
         text-align: left;
       }
-
       &.icon:before {
         content: '';
         position: absolute;
@@ -66,14 +59,8 @@ section.general-download {
         width: 23px;
         height: 23px;
       }
-
-      &.icon-check:before {
-        background-image: url("/assets/img/ico/new/downloads_check.png");
-      }
-
-      &.icon-uncheck:before {
-        background-image: url("/assets/img/ico/new/downloads_uncheck.png");
-      }
+      &.icon-check:before { background-image: url("/assets/img/ico/downloads_check.png"); }
+      &.icon-uncheck:before { background-image: url("/assets/img/ico/downloads_uncheck.png"); }
     }
 
     tr:last-child {
@@ -84,26 +71,21 @@ section.general-download {
 
 section.version-list {
   padding: 2.75rem 1rem 1.625rem 1rem;
-
   .copay-img-cont {
     img {
       width: 117px;
     }
   }
-
   h5 {
     margin-top: 0px;
     margin-bottom: 1.063rem;
   }
-
   h2 {
     margin-bottom: 0.75rem;
   }
-
   img {
     margin-top: 2.25rem;
   }
-
   p {
     max-width: 379px;
     width: 100%;
@@ -146,13 +128,8 @@ section.version-list {
     font-weight: 700;
     display: inline-block;
     width: 32%;
-    &:hover {
-      color: darken($btn-text-color, 5%);
-    }
-
-    @include before_md {
-      width: 100%;
-    }
+    &:hover { color: darken($btn-text-color, 5%); }
+    @include before_md { width: 100%; }
   }
 
   .link:before {
@@ -168,27 +145,11 @@ section.version-list {
     opacity: 0.7;
   }
   .link[href*="http"]::after { content: none; }
-
-  .win-64:before, .win-32:before {
-    background-image: url("/assets/img/ico/new/windows-8.png");
-  }
-
-  .linux-64:before, .linux-32:before {
-    background-image: url("/assets/img/ico/new/linux.png");
-  }
-
-  .mac-64:before {
-    background-image: url("/assets/img/ico/new/mac-os-icon.png");
-  }
-
-  .source-code:before {
-    background-image: url("/assets/img/ico/new/github-logo.png");
-  }
-
-  .freebsd:before {
-    background-image: url("/assets/img/ico/new/free-bsd.png");
-  }
-
+  .win-64:before, .win-32:before { background-image: url("/assets/img/ico/windows-8.png"); }
+  .linux-64:before, .linux-32:before { background-image: url("/assets/img/ico/linux.png"); }
+  .mac-64:before { background-image: url("/assets/img/ico/mac-os-icon.png"); }
+  .source-code:before { background-image: url("/assets/img/ico/github-logo.png"); }
+  .freebsd:before { background-image: url("/assets/img/ico/free-bsd.png"); }
 }
 
 .os {
@@ -202,16 +163,8 @@ section.version-list {
     position: relative;
     top: 4px;
   }
-  &.win::before {
-    background-image: url("/assets/img/ico/new/windows-8.png");
-  }
-  &.linux::before {
-    background-image: url("/assets/img/ico/new/linux.png");
-  }
-  &.mac::before {
-    background-image: url("/assets/img/ico/new/mac-os-icon.png");
-  }
-  &.android::before {
-    background-image: url("/assets/img/ico/new/android-os.png");
-  }
+  &.win::before { background-image: url("/assets/img/ico/windows-8.png"); }
+  &.linux::before { background-image: url("/assets/img/ico/linux.png"); }
+  &.mac::before { background-image: url("/assets/img/ico/mac-os-icon.png"); }
+  &.android::before { background-image: url("/assets/img/ico/android-os.png"); }
 }
