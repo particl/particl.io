@@ -1,32 +1,80 @@
+body.menu-opened {
+  @include before_md { overflow: hidden; }
+  nav {
+    @include before_md { overflow-y: scroll; height: 100%; }
+  }
+}
+
+
+.navigation {
+  ul {
+    margin: 0; padding: 0;
+    list-style: none;
+  }
+
+  // ------ Header nav ------ //
+  .header & {
+  }
+
+  // ------ Footer nav ------ //
+  footer & {
+    .menu {
+      @extend %clearfix;
+      margin-bottom: 1rem;
+      & > * { // manual block-grid
+        display: block; float: left; width: 50%;
+        margin-bottom: 1.5rem;
+        line-height: 1.45;
+        &:nth-of-type(2n+1) { clear: both; }
+      }
+    }
+    .label {
+      font-size: 0.825rem; font-weight: 700;
+      display: block; margin-bottom: 0.45rem;
+    }
+    a {
+      font-weight: 400; color: lighten($text-muted, 20%);
+      &:hover, &:focus { color: $text-muted; }
+    }
+  }
+
+  // ------ Modifiers ------ //
+  .mobile-only {
+    @include break(large) { display: none !important; }
+  }
+  .header & {
+    .footer-only { display: none !important; }
+    .full-width { width: 100%; }
+  }
+  footer & {
+    .header-only { display: none !important; }
+  }
+
+}
+
+
+
 .header nav {
-  &.medium-7 {
-    @include between_minlg_maxlg { padding-left: 14%; }
+  @include before_md { 
+    background-color: $header-background;
+    position: fixed;
+    top: 3.375rem;
+    z-index: 1;
   }
-  &.column {
-    @include before_md { 
-      background-color: $header-background;
-      position: fixed;
-      top: 3.375rem;
-      z-index: 1;
-      // padding: 0px;
-    }
-    @include md { position: relative; }
-    &.hide {
-      @include before_md { display: none; }
-      @include md { display: block; }
-    }
-  }
+  @include md { position: relative; }
+  @include between_minlg_maxlg { padding-left: 14%; }
   @include lg {
     display: block !important;
     position: static;
+  }
+  &.hide {
+    @include before_md { display: none; }
+    @include md { display: block; }
   }
 
   // menu
   ul {
     @extend %clearfix;
-    list-style: none;
-    margin: 0rem;
-    padding: 0rem;
     text-align: right;
     @include before_md { text-align: left; }
 
@@ -85,19 +133,10 @@
   }
 }
 
-body.menu-opened {
-  @include before_md { overflow: hidden; }
-  nav {
-    @include before_md { overflow-y: scroll; height: 100%; }
-  }
-}
 
 // ---------------[  SOCIAL ICONS  ]--------------- //
 
 .social-icons {
-  .navigation & { // in mobile header menu
-    margin: 0.5rem -0.5rem 5.5rem;
-  }
   .social-icon {
     width: 20%;
     display: block;
@@ -111,4 +150,26 @@ body.menu-opened {
       color: lighten($black, 30%);
     }
   }
+
+  // ------ Header icons ------ //
+  .header & {
+    margin: 0.5rem -0.5rem 5.5rem;
+    @include break(large) { display: none; }
+  }
+  
+  // ------ Footer icons ------ //
+  footer & {
+    border-top: 1px solid $white;
+    padding: 0.8rem 0 0;
+    .social-icon {
+      .icon {
+        @extend %tfx;
+        filter: grayscale(100%);
+      }
+      a:focus, a:hover {
+        .icon { filter: grayscale(0%); }
+      }
+    }
+  }
+
 }

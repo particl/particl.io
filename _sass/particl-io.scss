@@ -136,7 +136,8 @@ a {
 			position: relative;
 			top: 1px;
       opacity: 0.5;
-      .navigation & { filter: invert(70%); }
+      .header .navigation & { filter: invert(70%); }
+      footer .navigation & { filter: invert(40%); }
 		}
 	}
 

@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	/* ------------ MOBILE MENU ------------ */
 
 	// Hide menu by default
-	$('nav').addClass('hide');
+	$('.header').find('nav').addClass('hide');
 
 	// Mobile menu toggle
 	$('button#menu-toggle').click(function() {
