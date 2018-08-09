@@ -4,4 +4,6 @@ footer {
   text-align: left;
   border-top: 2px solid $white;
   position: relative;
+  @include break-from(700px) { padding: 2.625rem 0 0.4rem; }
+  @include break-from(860px) { padding: 2.625rem 0 1.5rem; }
 }

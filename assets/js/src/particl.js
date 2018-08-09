@@ -26,6 +26,15 @@ $( document ).ready(function() {
 		}
 	});
 
+	// Toggle-able submenus in header
+	$('.menu').find('.category').click(function() {
+		$('.menu').find('.category').removeClass('active');
+		$(this).toggleClass('active');
+	});
+	$('#page').click(function() {
+		$('.menu').find('.category').removeClass('active');
+	});
+
 
 	/* ------------ DESKTOP STICKY NAV ------------ */
 	

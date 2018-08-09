@@ -24,8 +24,11 @@
 
 ## TODO
 
-* Tweaks
-    - [ ] self-hosted Piwik analytics?
-    - [ ] add "particl in press" link
-        - [ ] /press - list of articles about PART (+ update it)
-    - [x] roadmap: add completed items from https://particl.wiki/_media/images/particltimeline-01.png
+- missing content
+    - [ ] /proposals page with PIPs, POPs & RFPs!
+    - [ ] /whitepapers
+- update
+    - [ ] user guides
+    - [ ] press
+- gfx
+    - [ ] logo & copyright in footer (display)

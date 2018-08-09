@@ -94,6 +94,7 @@ iframe { display: block; max-width: 100%; }
 
 // Effects
 .tfx, %tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
+.notfx, %notfx { -webkit-transition: none; transition: none; }
 .zoom { -webkit-transform: scale(1.1); transform: scale(1.1); }
 
 // Clearfix
