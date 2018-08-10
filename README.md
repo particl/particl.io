@@ -30,5 +30,3 @@
 - update
     - [ ] user guides
     - [ ] press
-- gfx
-    - [ ] logo & copyright in footer (display)

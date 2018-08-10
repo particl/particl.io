@@ -21,9 +21,7 @@ body.menu-opened {
       background: none;
       display: block !important; width: (100% / 12 * 7);
     }
-    @include break-from(1200px) {
-      width: (100% / 12 * 8);
-    }
+    @include break-from(1200px) { width: (100% / 12 * 8); }
     ul { @extend %clearfix; }
     .menu {
       @include break(large) { text-align: right; }
@@ -103,19 +101,30 @@ body.menu-opened {
 
   // ------ Footer nav ------ //
   footer & {
+    .wrapper {
+      @include break-from(900px) { padding-bottom: 1.2rem; }
+      @include break-from(960px) { padding-bottom: 0; }
+    }
     .menu {
       @extend %clearfix;
       margin-bottom: 1rem;
-      & > * { // manual block-grid
+      @include break-from(700px) { margin: 0 -0.75rem 1rem; }
+      @include break-from(900px) { float: right; width: 600px; }
+      @include break-from(960px) { width: 640px; }
+      @include break-from(1100px) { width: 735px; }
+      @include break-from(1200px) { width: 780px; }
+      .category { // manual block-grid
         display: block; float: left; width: 50%;
         margin-bottom: 1.5rem;
         line-height: 1.45;
         &:nth-of-type(2n+1) { clear: both; }
         @include break-from(700px) {
-          width: 25%;
+          width: 25%; padding: 0 0.75rem;
           &:nth-of-type(2n+1) { clear: none; }
           &:nth-of-type(4n+1) { clear: both; }
         }
+        @include break-from(900px) { margin-top: 0.8rem; }
+        @include break-from(1200px) { margin-top: 1.1rem; }
       }
     }
     .label {
@@ -135,6 +144,7 @@ body.menu-opened {
   .header & {
     .footer-only { display: none !important; }
     .full-width { width: 100% !important; }
+    .logo-copyright { display: none; }
   }
   footer & {
     .header-only { display: none !important; }
