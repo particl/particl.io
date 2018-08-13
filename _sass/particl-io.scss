@@ -135,7 +135,12 @@ a {
 			background-size: contain;
 			position: relative;
 			top: 1px;
-			opacity: 0.5;
+      opacity: 0.5;
+      .header .navigation & {
+        filter: invert(70%);
+        @include break(large) { filter: invert(30%); }
+      }
+      footer .navigation & { filter: invert(40%); }
 		}
 	}
 

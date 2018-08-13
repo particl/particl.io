@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	/* ------------ MOBILE MENU ------------ */
 
 	// Hide menu by default
-	$('nav').addClass('hide');
+	$('.header').find('nav').addClass('hide');
 
 	// Mobile menu toggle
 	$('button#menu-toggle').click(function() {
@@ -24,6 +24,15 @@ $( document ).ready(function() {
 			$('button#menu-toggle').find('i.ico').toggleClass('ico-menu ico-close');
 			$('nav').addClass('hide');
 		}
+	});
+
+	// Toggle-able submenus in header
+	$('.menu').find('.category').click(function() {
+		$('.menu').find('.category').removeClass('active');
+		$(this).toggleClass('active');
+	});
+	$('#page').click(function() {
+		$('.menu').find('.category').removeClass('active');
 	});
 
 
