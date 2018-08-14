@@ -21,10 +21,12 @@ section.general-project-road {
   & > .item {
     margin-bottom: 3.4rem;
     @include break(m) { margin-bottom: 4.5rem; }
+    /*
     .image { // illustration
       margin-bottom: 1rem;
       display: none;
     }
+    */
     .tags { // "in progress @ mainnet"
       font-family: $font;
       font-weight: 500;
