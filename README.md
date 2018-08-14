@@ -24,9 +24,3 @@
 
 ## TODO
 
-- missing content
-    - [x] /proposals page with PIPs, POPs & RFPs!
-    - [x] /whitepapers
-- update
-    - [x] user guides
-    - [x] press
