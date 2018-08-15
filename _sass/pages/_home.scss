@@ -363,31 +363,7 @@ section.feature.mac {
 
   h2 {
     color: $white;
-    margin: 1.75rem 0rem 1rem;
-  }
-
-  .btn-mac-download {
-    padding: 0.56rem 1.73rem;
-    position: relative;
-    color: $button-color;
-    font-family: $font;
-    font-weight: 700;
-    line-height: 2;
-    letter-spacing: 0;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-
-    .mac-subtext {
-      font-size: 0.625rem;
-      color: $white-op-8;
-      font-weight: 700;
-      position: absolute;
-      top: 6px;
-      right: 15px;
-      text-align: right;
-    }
+    margin: 0 0rem 1rem;
   }
 
   .mac-links {

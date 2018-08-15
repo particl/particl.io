@@ -32,4 +32,11 @@ section {
     }
   }
 
+  &.cta { // call-to-action buttons
+    text-align: center;
+    .button {
+      margin: 0 0.4rem 1rem;
+    }
+  }
+
 }

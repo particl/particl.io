@@ -160,7 +160,7 @@ table {
     border-bottom: 1px solid $bg-muted;
     &:last-of-type { border: none; }
     &:hover {
-      th, td { background: rgba($bg-muted, 0.15); }
+      th, td { background: rgba($bg-muted, 0.25); }
     }
   }
   &.full-width {
@@ -197,16 +197,16 @@ section { // full-width sections of content
 }
 
 // buttons
-button, .button { // default, outline-only buttons
+button, .button { // default, outline-to-full buttons
   @extend %tfx;
   @include border-radius(30px);
-  border: solid 1.5px $btn-border-color;
-  background-color: transparent;
-  color: $btn-text-color;
+  display: inline-block; padding: 0.56rem 1.71rem;
+  background-color: transparent; border: solid 1.5px rgba($color, 0.6);
+  font-size: 0.9rem; font-weight: 700; color: $color;
   &::after { content: none !important; }
   &:hover, &:focus {
-    background: darken($primary, 7%);
-    border-color: darken($primary, 5%);
+    background: darken($primary, 7%); 
+    border-color: darken($primary, 5%); 
     color: $white;
   }
   &.full { // full buttons
@@ -216,6 +216,13 @@ button, .button { // default, outline-only buttons
     &:hover, &:focus {
       background: darken($color, 5%);
       border-color: darken($color, 5%);
+    }
+  }
+  &.hollow { // outline buttons only
+    &:hover, &:focus {
+      border-color: darken($primary, 3%);
+      color: darken($primary, 5%);
+      background: transparent;
     }
   }
   // icons in buttons

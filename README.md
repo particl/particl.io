@@ -26,3 +26,5 @@
 
 - [ ] Intro carousel - split into separate elements (wallet, highlight & text)
 - [ ] Roadmap sub-tasks (split large ones into smaller chunks below)
+- [ ] proper open:graph image
+- [ ] all icons to SVG
