@@ -1,0 +1,35 @@
+section {
+
+  // specs group (blockchain, staking, ..)
+  &.item {
+    .title {
+      margin-top: 0;
+    }
+    .info {
+      table {
+        td, th {
+          padding: 0.825rem 0;
+          font-size: 0.9375rem; letter-spacing: -0.3px;
+          vertical-align: top;
+          small {
+            display: block; margin-top: 0.25rem;
+            font-size: 0.735rem; letter-spacing: 0; line-height: 1.5;
+          }
+          img.value {
+            display: block; width: 1.1rem; float: left;
+            position: relative; top: 2px;
+            & + small { margin-left: 1.7rem; position: relative; top: -2px; }
+          }
+        }
+        th {
+          padding-right: 1.7rem;
+          font-weight: 500; letter-spacing: -0.1px;
+          @include break(large) {
+            width: 18rem;
+          }
+        }
+      }
+    }
+  }
+
+}

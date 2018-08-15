@@ -34,6 +34,7 @@
 @import 'pages/_status_report';
 @import 'pages/_particl_press';
 @import 'pages/_proposals';
+@import 'pages/_specifications';
 @import 'pages/_download';
 
 /*! particl.io v2.0 | Author: Martin Allien <martin@particl.io> */
@@ -53,7 +54,6 @@ h1 {
 	font-weight: 700;
   color: $general-text-color;
   letter-spacing: -0.5px;
-
   @include before_md {
     font-size: 1.875rem;
     letter-spacing: -0.7px;
@@ -117,9 +117,9 @@ p {
 }
 
 a {
-  font-size: 0.8125rem;
+  //font-size: 0.8125rem;
 	font-family: $font;
-	font-weight: 500;
+	//font-weight: 500;
   line-height: normal;
 	letter-spacing: 0.1px;
 	
@@ -151,6 +151,20 @@ a {
 
   &.link-small-grey {
     color: $black-op-5;
+  }
+}
+
+table {
+  th, td { @extend %tfx; }
+  tr {
+    border-bottom: 1px solid $bg-muted;
+    &:last-of-type { border: none; }
+    &:hover {
+      th, td { background: rgba($bg-muted, 0.15); }
+    }
+  }
+  &.full-width {
+    width: 100%;
   }
 }
 

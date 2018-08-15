@@ -24,5 +24,5 @@
 
 ## TODO
 
+- [ ] Intro carousel - split into separate elements (wallet, highlight & text)
 - [ ] Roadmap sub-tasks (split large ones into smaller chunks below)
-- [ ] Introduction > Specifications (coin info - block time, block size, inflation etc.)

@@ -141,6 +141,10 @@ body.menu-opened {
   .mobile-only {
     @include break(large) { display: none !important; }
   }
+  .desktop-only {
+    display: none !important;
+    @include break(large) { display: inline-block !important; }
+  }
   .header & {
     .footer-only { display: none !important; }
     .full-width { width: 100% !important; }
