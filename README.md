@@ -28,3 +28,4 @@
 - [ ] Roadmap sub-tasks (split large ones into smaller chunks below)
 - [ ] proper open:graph image
 - [ ] all icons to SVG
+- [ ] Exchanges page (link to it from "Get PART" on homepage)
