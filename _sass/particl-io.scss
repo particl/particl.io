@@ -143,15 +143,8 @@ a {
       footer .navigation & { filter: invert(40%); }
 		}
 	}
-
-
-  &.link-small-dark {
-    color: $black-op-8;
-  }
-
-  &.link-small-grey {
-    color: $black-op-5;
-  }
+  &.link-small-dark { color: $black-op-8; }
+  &.link-small-grey { color: $black-op-5; }
 }
 
 table {
@@ -190,11 +183,15 @@ input {
 	font-size: 0.9rem;
 }
 
-// ---------------[  UI  ]--------------- //
-
-section { // full-width sections of content 
-  padding: 4rem 1rem; 
+code {
+  background: rgba($color, 0.1);
+  color: darken($color, 10%);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
 }
+
+// ---------------[  UI  ]--------------- //
 
 // buttons
 button, .button { // default, outline-to-full buttons
@@ -229,45 +226,29 @@ button, .button { // default, outline-to-full buttons
   i.ico { margin-right: 0.3rem; }
 }
 
-// fancy lists
-#page ul {
-  list-style: none;
-  line-height: 1.7;
-  color: $text-muted;
-  @include break(s) { line-height: 2; }
-
-  li {
-    display: block;
-    margin: 0.2rem 0rem;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      left: -1.8rem;
-      top: 0.45rem;
-      display: block;
-      width: 0.625rem;
-      height: 0.625rem;
-      border: 4px solid darken($primary, 3%);
-      border-radius: 50%;
-    }
-  }
-
-  ul { // 2nd level lists
-    li::before {
-      background: lighten($text-muted, 40%);
-      border: none;
-      border-radius: 0;
-      top: 1rem;
-      left: -1.6rem;
-      width: 0.9rem;
-      height: 2px;
-    }
-  }
+// common page titles (Roadmap, Status report, ..)
+.page-title {
+  line-height: 1.45;
+  padding: 1.5rem 0 3.5rem;
+  @include break(large) { padding: 4rem 0 5rem; }
+  &.centered { text-align: center; }
+  p { line-height: inherit; }
 }
+
 
 // -------------[  LAYOUT  ]------------- //
 
+section { // full-width sections of content 
+  padding: 4rem 1rem;
+  
+  // call-to-action buttons
+  &.cta {
+    text-align: center;
+    .button {
+      margin: 0 0.4rem 1rem;
+    }
+  }
+}
 
 #team {
 	li.team-member {
@@ -304,10 +285,7 @@ button, .button { // default, outline-to-full buttons
 }
 
 
-
 // ------------[  SPECIFIC  ]------------ //
-
-
 
 .no-js { // for browsers with JS disabled
 	header {
@@ -332,10 +310,6 @@ button, .button { // default, outline-to-full buttons
 		@include break(l) { margin-top: 4.5rem; }
 	}
 }
-
-
-// ------------[  PLUG-INS  ]------------ //
-
 
 
 // -------------[  HELPER  ]------------- //

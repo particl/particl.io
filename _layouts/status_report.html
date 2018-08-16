@@ -2,26 +2,47 @@
 layout: default
 ---
 
-<section id="page-title">
+<section class="page-title centered">
 	<div class="row">
 		<div class="column">
-      <h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
-      <p class="text-center">Updated 3 August 2018</p>
+      <h1 class="title">Particl Project<br />Status Report</h1>
+      <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
+      <small>Updated 3 August 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
 
+<hr>
 
-
-<section class="report-busy status-report">
+<section class="status-report">
 	<div class="row">
-		<div class="large-6 columns">
+    <div class="column">
+      <div class="grid small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
-				<h2 class="title">What are we busy with</h2>
-			</div>
-			
+        <div class="part completed">
+          <h2 class="title">Recently completed</h2>
+          
+<ul>
+  <li>Particl Marketplace (alpha, testnet)
+    <ul>
+      <li>Fixing bugs identified by users</li>
+      <li>Licence terms are updated</li>
+      <li>Voting tools for proposals (adding a screen, post a proposal, process incoming proposal, post a vote, process a vote, list proposals and retrieve proposals)</li>
+      <li>Governance &ndash; Voting an item off the market (check if listing has been voted of the marketplace previously, vote listing item of the marketplace, process incoming votes and return proposal result for the item)</li>
+    </ul>
+  </li>
+  <li>Particl Core
+    <ul>
+      <li>Particl Core 0.16.1.0</li>
+    </ul>
+  </li>
+</ul>
+
+        </div><!-- .completed -->
+
+        <div class="part in-development">
+          <h2 class="title">In development</h2>
+
 <ul>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
@@ -52,15 +73,11 @@ layout: default
   </li>
 </ul>
 
+        </div><!-- .in-development -->
 
-		</div>
-		<div class="large-6 columns">
+        <div class="part reviewed">
+          <h2 class="title">Waiting for review</h2>
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
-				<h2 class="title">Waiting for review</h2>
-			</div>
-			
 <ul>
   <li>Particl Desktop (v1.2.2, mainnet)
     <ul>
@@ -92,45 +109,11 @@ layout: default
   </li>
 </ul>
 
+        </div><!-- .reviewed -->
 
-		</div>
-	</div>
-</section><!-- .feature -->
+        <div class="part upcoming">
+          <h2 class="title">Upcoming features</h2>
 
-<section class="report-done status-report">
-	<div class="row">
-		<div class="large-6 column">
-
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
-				<h2 class="title">Wrapped up</h2>
-			</div>
-			
-<ul>
-  <li>Particl Marketplace (alpha, testnet)
-    <ul>
-      <li>Fixing bugs identified by users</li>
-      <li>Licence terms are updated</li>
-      <li>Voting tools for proposals (adding a screen, post a proposal, process incoming proposal, post a vote, process a vote, list proposals and retrieve proposals)</li>
-      <li>Governance &ndash; Voting an item off the market (check if listing has been voted of the marketplace previously, vote listing item of the marketplace, process incoming votes and return proposal result for the item)</li>
-    </ul>
-  </li>
-  <li>Particl Core
-    <ul>
-      <li>Particl Core 0.16.1.0</li>
-    </ul>
-  </li>
-</ul>
-
-
-		</div>
-		<div class="large-6 column">
-			
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
-				<h2 class="title">What's on the horizon</h2>
-			</div>
-			
 <ul>
   <li>Particl Marketplace (beta)
     <ul>
@@ -145,9 +128,11 @@ layout: default
   <li>Software Development Kit (SDK)</li>
 </ul>
 
+        </div><!-- .upcoming -->
 
-		</div>
+      </div>
+    </div>
 	</div>
-</section><!-- .feature -->
+</section><!-- .status-report -->
 
 {% include particl-desktop.html %}

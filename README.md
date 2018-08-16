@@ -29,3 +29,19 @@
 - [ ] proper open:graph image
 - [ ] all icons to SVG
 - [ ] Exchanges page (link to it from "Get PART" on homepage)
+
+**code rewrite**
+
+- [ ] home
+- [ ] why particl
+- [x] coin specifications
+- [x] roadmap
+- [ ] downloads
+- [ ] user guides
+- [ ] whitepapers
+- [ ] proposals
+- [ ] about us
+- [ ] press
+- [ ] careers
+- [x] status report
+- [ ] global SCSS
