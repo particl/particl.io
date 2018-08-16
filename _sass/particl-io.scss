@@ -253,7 +253,8 @@ section { // full-width sections of content
 #team {
 	li.team-member {
 		text-align: center;
-		margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    @include break(large) { margin-bottom: 2rem; }
 		&::before { content: none; }
 		.photo {
 			width: 130px; height: 130px; margin: 0 auto;
@@ -267,7 +268,8 @@ section { // full-width sections of content
 			font-size: 0.75rem; line-height: 1.6;
 			display: block; margin-bottom: 0.7rem;
 			@include break(l) { margin-bottom: 0.2rem; }
-		}
+    }
+    .links { margin: 0.4rem 0; }
 		.link {
 			margin: 0 0.2rem;
 			color: lighten($text-muted, 40%);
@@ -281,7 +283,7 @@ section { // full-width sections of content
 			&.github:hover { color: $text; }
 		}
 	}
-	hr { margin: 2rem 0 3.5rem; border-top: 5px dotted darken($bg-muted, 3%); }
+	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
 
 
