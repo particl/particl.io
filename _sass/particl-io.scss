@@ -231,6 +231,9 @@ button, .button { // default, outline-to-full buttons
   padding: 1.5rem 0 3.5rem;
   @include break(large) { padding: 4rem 0 5rem; }
   &.centered { text-align: center; }
+  .title {
+    &.centered { text-align: center; }
+  }
   p {
     line-height: 1.87;
     a {
