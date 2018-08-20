@@ -92,23 +92,22 @@ section.version-list {
   }
 }
 
-#page {
-  ul.guides {
-    margin: 1rem 0 1.5rem;
-    padding: 0 0 0 1rem;
-    list-style: circle;
-    li {
-      display: list-item;
-      margin: 0;
-      &::before {
-        content: none;
-      }
+ul.guides {
+  margin: 1rem 0 1.5rem;
+  padding: 0 0 0 1rem;
+  list-style: circle;
+  li {
+    display: list-item;
+    margin: 0;
+    a {
+      padding: 0.2rem 0;
+      font-size: 0.825rem; font-weight: 500;
     }
-    .link-small-dark {
-      display: inline-block;
-      &:hover {
-        color: $black;
-      }
+  }
+  .link-small-dark {
+    display: inline-block;
+    &:hover {
+      color: $black;
     }
   }
 }

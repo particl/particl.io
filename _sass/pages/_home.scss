@@ -27,9 +27,7 @@
       margin: 0 0 1rem;
     }
     .subtitle {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: $text-muted;
+      font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
       margin: 0;
     }
   }
@@ -232,9 +230,7 @@ section#features {
   text-align: center;
   padding: 3.4rem 0 2.7rem;
   background: $black !important;
-  @include break(large) {
-    padding: 4rem 0 4.5rem;
-  }
+  @include break(large) { padding: 4rem 0; }
   .title {
     margin: 1.75rem 2rem 2.7rem;
     color: $white; line-height: 1.35;
@@ -243,7 +239,7 @@ section#features {
     font-size: 0.83rem; font-weight: 700;
     display: block;
     width: 220px;
-    margin: 20px auto; padding: 0.65rem 1rem;
+    margin: 20px auto;
     @include break(large) {
       display: inline-block;
       width: 180px;
@@ -273,10 +269,7 @@ section#features {
 
 #about {
   padding: 8.373rem 0rem;
-
-  @include before_md {
-    padding: 0px;
-  }
+  @include before_md { padding: 0px; }
 
   h5 {
     margin-top: 2.063rem;
@@ -295,15 +288,9 @@ section#features {
     width: 100%;
   }
 
-  .button {
-    font-size: 0.813rem;
-    font-weight: 700;
-  }
-
   .about-img-container {
     text-align: center;
     margin-top: 2.063rem;
-
     @include before_md() {
       &:nth-child(even) {
         margin-top: 3rem;
@@ -313,28 +300,14 @@ section#features {
   }
 
   img {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 
   hr {
     color: $about-hr-color;
     margin: 5rem 0rem;
-
-    @include before_md() {
-      margin: 3rem 0rem;
-    }
-  }
-
-  .btn-about-part {
-    padding: 0.56rem 1.71rem;
-  }
-
-  .btn-about-more {
-    padding: 0.56rem 1.07rem;
-  }
-
-  .btn-about-platform {
-    padding: 0.56rem 1.81rem;
+    @include before_md() { margin: 3rem 0rem; }
   }
 
   @include before_md() {
@@ -349,12 +322,10 @@ section#features {
   }
 }
 
-section.feature.mac {
+section.feature.download-promo {
   padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;
-  }
-  @include before_md() {
     & > .row {
       display: flex;
       flex-direction: column-reverse;
@@ -363,69 +334,39 @@ section.feature.mac {
 
   h2 {
     color: $white;
-    margin: 1.75rem 0rem 1rem;
+    margin: 0 0rem 1rem;
   }
 
-  .btn-mac-download {
-    padding: 0.56rem 1.73rem;
-    position: relative;
-    color: $button-color;
-    font-family: $font;
-    font-weight: 700;
-    line-height: 2;
-    letter-spacing: 0;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-
-    .mac-subtext {
-      font-size: 0.625rem;
-      color: $white-op-8;
-      font-weight: 700;
-      position: absolute;
-      top: 6px;
-      right: 15px;
-      text-align: right;
-    }
-  }
-
-  .mac-links {
+  .links {
     margin-top: 1.2rem;
-
+    font-size: 0.8rem;
     a {
       color: $white-op-8;
       text-decoration: underline;
-
-      &:first-child {
-        margin-right: 20px;
-      }
+      &:first-child { margin-right: 20px; }
+      &:hover, &:focus { color: $white; }
     }
   }
 
-  .mac-container-text {
+  .text {
     @include before_md {
       text-align: center;
       margin-bottom: 5rem;
-
       p.large {
         margin-bottom: 31px;
       }
     }
   }
 
-  .mac-container-img {
+  .image {
     height: 100%;
     text-align: center;
-
     @include before_md { 
       margin-top: 104px;
       margin-bottom: 59px;
     }
-
     img {
       height: 323px;
-
       @include before_md { height: auto; }
     }
   }

@@ -125,6 +125,7 @@ body.menu-opened {
         }
         @include break-from(900px) { margin-top: 0.8rem; }
         @include break-from(1200px) { margin-top: 1.1rem; }
+        a { display: inline-block; padding: 0.25rem 0; }
       }
     }
     .label {
@@ -140,6 +141,10 @@ body.menu-opened {
   // ------ Modifiers ------ //
   .mobile-only {
     @include break(large) { display: none !important; }
+  }
+  .desktop-only {
+    display: none !important;
+    @include break(large) { display: inline-block !important; }
   }
   .header & {
     .footer-only { display: none !important; }

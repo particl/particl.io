@@ -2,65 +2,46 @@
 layout: default
 ---
 
-<section id="page-title">
+<section class="page-title centered">
 	<div class="row">
 		<div class="column">
-      <h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
-      <p class="text-center">Updated 3 August 2018</p>
+      <h1 class="title">Particl Project<br />Status Report</h1>
+      <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
+      <small>Updated 20 August 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
 
+<hr>
 
-
-<section class="report-busy status-report">
+<section class="status-report">
 	<div class="row">
-		<div class="large-6 columns">
+    <div class="column">
+      <div class="grid small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
-				<h2 class="title">What are we busy with</h2>
-			</div>
-			
+        <div class="part completed">
+          <h2 class="title">Recently completed</h2>
+          
 <ul>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Finalising voting and Proposals
-        <ul>
-          <li>Creation of Proposals</li>
-          <li>Voting tools and stats</li>
-          <li>Consensus on the removal of products &ndash; Market governance</li>
-        </ul>
-      </li>
+      <li>Fixing bugs identified by users</li>
       <li>Advanced sort and filter option</li>
-      <li>Code refactoring</li>
-      <li>Multiwallet implementation</li>
-      <li>Escrow process refactor and enhancements</li>
-      <li>Automated Testing &ndash; end-to-end testing, Unit Testing and Regression Testing</li>
-      <li>Error tracking in GUI &ndash; Link to better explain errors (Particl Wiki)</li>
-    </ul>
-  </li>
-  <li>Third-party integrations
-    <ul>
-      <li>Trezor integration</li>
+      <li>Expiry times on listings</li>
     </ul>
   </li>
   <li>Particl Core
     <ul>
-      <li>Particl Core 0.17.0.1</li>
+      <li>Particl Core 0.16.2.0</li>
     </ul>
   </li>
 </ul>
 
+        </div><!-- .completed -->
 
-		</div>
-		<div class="large-6 columns">
+        <div class="part reviewed">
+          <h2 class="title">Waiting for review</h2>
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
-				<h2 class="title">Waiting for review</h2>
-			</div>
-			
 <ul>
   <li>Particl Desktop (v1.2.2, mainnet)
     <ul>
@@ -68,15 +49,22 @@ layout: default
       <li>User Interface updates</li>
       <li>Updated icons</li>
       <li>Transaction handling refactored</li>
-      <li>Running on 0.16.1.0 particl-core</li>
+      <li>Running on 0.16.2.0 Particl Core</li>
     </ul>
   </li>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
+      <li>
+        Finalising voting and Proposals (Governance 1.0)
+        <ul>
+          <li>Creation of Proposals</li>
+          <li>Voting tools and stats</li>
+          <li>Consensus on the removal of products - Market governance</li>
+        </ul>
+      </li>
       <li>Adding a location selector for a more clear pricing structure</li>
       <li>Trigger notifications for orders changes</li>
-      <li>Expiry times on listings</li>
-      <li>Multiwallet design and layout</li>
+      <li>Multi-Wallet design and layout</li>
       <li>Starting the desktop without the marketplace</li>
     </ul>
   </li>
@@ -85,52 +73,52 @@ layout: default
       <li>Ledger integration</li>
     </ul>
   </li>
-  <li>Particl Core
-    <ul>
-      <li>Particl Core 0.17.0.1 (alpha)</li>
-    </ul>
-  </li>
 </ul>
 
+        </div><!-- .reviewed -->
 
-		</div>
-	</div>
-</section><!-- .feature -->
+        <div class="part in-development">
+          <h2 class="title">In development</h2>
 
-<section class="report-done status-report">
-	<div class="row">
-		<div class="large-6 column">
-
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
-				<h2 class="title">Wrapped up</h2>
-			</div>
-			
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>
+    Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Fixing bugs identified by users</li>
-      <li>Licence terms are updated</li>
-      <li>Voting tools for proposals (adding a screen, post a proposal, process incoming proposal, post a vote, process a vote, list proposals and retrieve proposals)</li>
-      <li>Governance &ndash; Voting an item off the market (check if listing has been voted of the marketplace previously, vote listing item of the marketplace, process incoming votes and return proposal result for the item)</li>
+      <li>Code refactoring</li>
+      <li>Multi-Wallet implementation</li>
+      <li>Escrow process refactor and enhancements</li>
+      <li>Automated Testing - End to End testing, Unit Testing and Regression Testing</li>
+      <li>
+        Settings page
+        <ul>
+          <li>Core Settings</li>
+          <li>Marketplace Settings</li>
+          <li>GUI Settings</li>
+        </ul>
+      </li>
+      <li>Staking pool statistics</li>
+      <li>Enhancements on error handling</li>
     </ul>
   </li>
-  <li>Particl Core
+  <li>
+    Third Party Integration
     <ul>
-      <li>Particl Core 0.16.1.0</li>
+      <li>Trezor integration</li>
+    </ul>
+  </li>
+  <li>
+    Particl Core
+    <ul>
+      <li>Particl Core 0.17.0.2</li>
     </ul>
   </li>
 </ul>
 
+        </div><!-- .in-development -->
 
-		</div>
-		<div class="large-6 column">
-			
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
-				<h2 class="title">What's on the horizon</h2>
-			</div>
-			
+        <div class="part upcoming">
+          <h2 class="title">Upcoming features</h2>
+
 <ul>
   <li>Particl Marketplace (beta)
     <ul>
@@ -139,15 +127,16 @@ layout: default
       <li>Escrow enhancements</li>
       <li>Deposit Negotiations</li>
       <li>Marketplace versioning for messages and listings</li>
-      <li>Settings page</li>
     </ul>
   </li>
   <li>Software Development Kit (SDK)</li>
 </ul>
 
+        </div><!-- .upcoming -->
 
-		</div>
+      </div>
+    </div>
 	</div>
-</section><!-- .feature -->
+</section><!-- .status-report -->
 
 {% include particl-desktop.html %}

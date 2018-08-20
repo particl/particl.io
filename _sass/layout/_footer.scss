@@ -1,11 +1,10 @@
 footer {
-  background-color: $part-token-bg;
   padding: 2.625rem 0;
-  text-align: left;
-  border-top: 2px solid $white;
+  font-size: 0.8rem; text-align: left;
+  background-color: $part-token-bg; border-top: 2px solid $white;
   position: relative;
   @include break-from(700px) { padding: 2.625rem 0 0.4rem; }
-  @include break-from(860px) { padding: 2.625rem 0 1.5rem; }
+  @include break-from(860px) { padding: 3.625rem 0 1.5rem; }
 
   // logo/copyright
   .logo-copyright {
