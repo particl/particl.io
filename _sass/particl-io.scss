@@ -29,7 +29,6 @@
 @import 'pages/_why_particl';
 @import 'pages/_about_us';
 @import 'pages/_careers';
-@import 'pages/_user_guide';
 @import 'pages/_roadmap';
 @import 'pages/_status_report';
 @import 'pages/_particl_press';
@@ -232,14 +231,34 @@ button, .button { // default, outline-to-full buttons
   padding: 1.5rem 0 3.5rem;
   @include break(large) { padding: 4rem 0 5rem; }
   &.centered { text-align: center; }
-  p { line-height: inherit; }
+  p {
+    line-height: 1.87;
+    a {
+      color: lighten($text, 20%); font-weight: 500;
+      &:hover { color: $text; }
+    }
+  }
 }
 
 
 // -------------[  LAYOUT  ]------------- //
 
 section { // full-width sections of content 
-  padding: 4rem 1rem;
+  padding: 4rem 0;
+  
+  // link lists (user guides, whitepapers)
+  &.link-list {
+    padding: 4rem 0 6rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      a {
+        display: inline-block; padding: 0.25rem 0;
+        font-size: 0.9rem; color: lighten($text, 35%); line-height: 1.45;
+        &:hover { color: $text; }
+      }
+    }
+  }
   
   // call-to-action buttons
   &.cta {

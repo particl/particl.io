@@ -39,7 +39,7 @@
 - [x] coin specifications
 - [x] roadmap
 - [ ] downloads
-- [ ] user guides
+- [x] user guides
 - [ ] whitepapers
 - [ ] proposals
 - [ ] about us
