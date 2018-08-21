@@ -122,12 +122,12 @@ ul.guides {
   .link {
     padding: 5px 65px 20px 30px;
     position: relative;
-    color: $general-text-color;
-    font-size: $font-size-12;
+    color: $text;
+    font-size: 0.75rem;
     font-weight: 700;
     display: inline-block;
     width: 32%;
-    &:hover { color: darken($btn-text-color, 5%); }
+    &:hover { color: darken($color, 5%); }
     @include before_md { width: 100%; }
   }
 

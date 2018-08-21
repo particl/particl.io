@@ -14,9 +14,9 @@ body.menu-opened {
 
   // ------ Header nav ------ //
   .header & {
-    background-color: $header-background;
-    position: fixed; top: 3.375rem; z-index: 1;
-    @include break-from(768px) {
+    background-color: $black;
+    position: fixed; top: 3rem; left: 0; right: 0; z-index: 1;
+    @include break(large) {
       position: static;
       background: none;
       display: block !important; width: (100% / 12 * 7);
@@ -34,12 +34,12 @@ body.menu-opened {
           @include break(large) {
             display: inline-block; margin-top: 0;
             position: relative;
-            &:hover .label { color: $header-background; }
+            &:hover .label { color: $black; }
           }
           .label {
-            font-size: 0.825rem; color: lighten($header-background, 30%); text-transform: uppercase;
+            font-size: 0.825rem; color: lighten($black, 30%); text-transform: uppercase;
             display: block; padding: 0 0 0.25rem;
-            border-bottom: 1px solid lighten($header-background, 5%);
+            border-bottom: 1px solid lighten($black, 5%);
             @include break(large) {
               font-weight: 500; text-transform: none;
               padding: 1.2rem 1rem;
@@ -69,7 +69,7 @@ body.menu-opened {
                 display: block; padding: 0.6rem 0;
                 color: $white; font-size: 1.025rem; font-family: $font; font-weight: 700;
                 line-height: 26px; text-transform: none;
-                &:hover, &:focus { color: $nav_hover; background: $nav_hover_bg; }
+                &:hover, &:focus { color: $color; background: transparent; }
                 @include break(large) {
                   padding: 0.6rem 1rem; margin: none;
                   font-size: 0.81rem; color: $text-muted; font-weight: 500; text-align: left;

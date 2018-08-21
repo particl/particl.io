@@ -29,7 +29,7 @@
     }
     p { // feature desc
       line-height: 1.77;
-      color: $text-color;
+      color: $text-muted;
       font-size: 0.813rem;
       min-height: 300px;
       margin-bottom: 2.375rem;
@@ -45,7 +45,7 @@
       @extend %tfx;
       margin: 0 5px;
       font-size: 0.75rem;
-      color: $general-text-color;
+      color: $text;
       font-weight: 500;
       border: 1.5px solid transparent;
       border-radius: 50%;

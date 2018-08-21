@@ -1,142 +1,77 @@
 .header {
-  background-color: $header-bg;
-  height: 3.563rem;
-  width: 100%;
-  z-index: 2;
-  position: fixed;
-  top: 0rem;
-  @include before_md {
-    background-color: $header-mobile-bg;
-    height: 3.375rem;
+  background-color: $black;
+  width: 100%; height: 3rem;
+  position: fixed; top: 0; z-index: 2;
+  @include break(large) {
+    background-color: $header-bg;
+    height: 3.563rem;
   }
-  button {
-    &:focus, &:hover {
-      background: transparent;
-      outline: 0px;
+
+  // logo, duh
+  .logo {
+    float: left;
+    margin-left: -0.8rem;
+    a { display: block; }
+    img {
+      display: block;
+      width: 100%; max-width: 6rem; height: auto;
+      padding: 0.8rem;
     }
   }
 
   // mobile: toggle menu button
   #menu-toggle {
     float: right;
-    border: 0px;
-    color: $white-op-8;
-    margin: 0.967rem 0rem;
-    @include md { display: none; }
-    i.ico { margin: 0rem; }
+    padding: 0.9rem 1rem; margin-right: -0.8rem;
+    border: 0;
+    color: rgba($white, 0.8);
+    @include break(large) { display: none; }
+    &:focus, &:hover {
+      background: transparent;
+      outline: 0;
+    }
+    i.ico { margin: 0; }
   }
 
   // price graph
-  .header-chart-container {
-    text-align: center;
-    height: 3.563rem;
+  .coinmarketcap-currency-widget {
+    float: left;
+    width: 8rem; height: 3rem; padding: 0.5rem 0.6rem;
     position: relative;
-    @include between_m_lg { text-align: left; }
-    & > div {
-      border: 0px !important;
-      height: 100%;
-      min-width: inherit !important;
-      max-width: 10.5rem;
-      font-family: $font !important;
-      position: relative;
-      @include break(large) {
-        max-width: 12rem;
-      }
+    color: lighten($black, 30%);
+    @include break(large) { color: $text; }
+
+    // price sparkline
+    &::before {
+      content: '';
+      position: absolute; top: 0; bottom: 0; right: 0;
+      background-image: url('https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1826.png');
+      background-size: 100%; background-repeat: no-repeat;
+      display: block; width: 60px; height: 20px; margin: auto;
+      filter: hue-rotate(90deg);
+    }
+
+    & > div { // widget wrapper
+      border: 0 !important;
+      min-width: auto !important;
       & > div:first-child {
-        height: 100%;
         & > div:first-child {
-          width: auto !important;
-          text-align: center !important;
-          float: none !important;
-          line-height: normal !important;
-          padding: 12px 0px !important;
-          display: inline-block;
-          height: 100%;
-          @include break(large) {
-            padding-top: 15px !important;
+          & > span {
+            &:first-of-type { display: none !important; }
+
+            // USD price
+            &:last-of-type {
+              font-weight: 500;
+              font-size: 0.7rem !important;
+              position: absolute; top: 9px; left: 0.5rem;
+              & > span { display: none; } // price % change
+            }
           }
           br { display: none; }
-          & > span:first-child {
-            &:before {
-              //content:'1 part =';
-              color: lighten($header-chart-text, 5%);
-              font-weight: 500;
-              font-size: 0.625rem;
-              text-transform: uppercase;
-              @include before_md {
-                color: $white;
-              }
-            }
-            & > a { display: none !important; }
-          }
-          // USD price
-          & > span:last-child {
-            color: $white;
-            font-weight: 500;
-            font-size: 0.625rem !important;
-            text-transform: uppercase;            
-            @include break(large) { color: darken($header-chart-text, 35%); }
-            & > span { display: none; } // price change +/- value
-          }
         }
-        & > div:last-child {
-          width: 45px !important;
-          height: 17px;
-          padding: 0px !important;
-          min-width: 40px;
-          display: inline-block;
-          @include between_m_lg { position: relative; }
-          img { display: none; }
-          // sparkline
-          &:before {
-            background-image: url('https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1826.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            display: inline-block;
-            width: 45px; 
-            height: 17px;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 53px;
-            bottom: 0px;
-            margin: auto;
-            filter: hue-rotate(90deg);
-            @include break-from(330px) { right: auto; left: 53px; }
-            @include break(large) { position: relative; left: 7px; top: 5px; }
-          }
-        }
+        & > div:last-child { display: none; } // logo image
       }
       & > div:last-child { display: none; }
-    }             
-    @include before_md { height: 3.375rem; color: $white; text-align: left; }
-    span { line-height: normal; }
-    .header-chart-percent {
-      @include before_md { display: none; }
-    }
-  }
-}
-
-header {
-  height: 3.563rem;
-  @include before_md { height: 3.375rem; }
-  
-  .logo {
-    padding-top: 0.656rem;
-    @extend .tfx;
-    @include before_md { padding-top: 0.563rem; }
-    .desktop-logo { 
-      @include before_md { display: none; } 
-      @include md { display: inline-block; } 
-    }
-    .mobile-logo { 
-      @include before_md { display: inline-block; } 
-      @include md { display: none; } 
-    }
-    img {
-      @extend .tfx;
-      max-width: 5.563rem;
-      height: 36px;
     }
   }
 }

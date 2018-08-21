@@ -175,7 +175,7 @@ section.intro-text {
 
 
 section.feature {
-  background-color: $feature-bg;
+  background-color: $black;
 
   h5 {
     color: $feature-header;
@@ -305,7 +305,7 @@ section#features {
   }
 
   hr {
-    color: $about-hr-color;
+    color: $hr-color;
     margin: 5rem 0rem;
     @include before_md() { margin: 3rem 0rem; }
   }
@@ -375,10 +375,8 @@ section.feature.download-promo {
 
 #part-token {
   padding: 6.938rem 0rem 5.875rem;
-  //background-color: $part-token-bg;
 
   h2 {
-
     &:before {
       content:'';
       position: absolute;
@@ -386,7 +384,7 @@ section.feature.download-promo {
       display: block;
       width: 2.5rem;     
       height: 2px;
-      background: $part-token-hr-color;
+      background: $color;
     }
   }
 
@@ -398,9 +396,7 @@ section.feature.download-promo {
   p {
     max-width: 326px;
     font-size: 0.813rem;
-    color: $text-color;
     line-height: 1.77;
-    width: 100%;
   }
 
   .first-row p {

@@ -13,7 +13,7 @@ $warning: #EF9421 !default; // oranges :)
 $black: #212727; // PART black
 $white: #fff !default;
 
-//$bg: #fff;
+$bg: $white;
 $bg-muted: #F1F1F1; // slightly darker bg
 
 $text: $black;
@@ -32,74 +32,42 @@ $break-large: 768px;
 $row-width: 73.125rem !default;// 64rem
 $gutter-width: 0.75rem !default;// 0.6rem
 $block-grid-spacing: 0.7rem !default;
-/*
-$no-left-padding: 0rem;
-$no-right-padding: 0rem;
-$no-padding: 0rem;
-*/
+
 // UI
 $border-radius: 4px !default;
 
 // Typography
 $font: "Inter_UI", sans-serif;
-
-$font-titles: 'Inter_UI';
 $line-height: normal !default;
-
-$header-line-height: 54px;
-
-$font-size-19: 1.186rem;
-$font-size-15: 0.938rem;
-$font-size-13: 0.813rem;
-$font-size-12: 0.75rem;
-$font-size-10: 0.625rem;
 
 
 // Colors (v2)
 
-$general-text-color: $text;
 $general-op-7: rgba($text, 0.7);
 $general-op-6: rgba($text, 0.6);
+$general-op-5: rgba($text, 0.5);
 
 $black-op-4: rgba($black, 0.4);
 $black-op-5: rgba($black, 0.5);
 $black-op-8: rgba($black, 0.8);
 
-$button-color: $color;
-
 $header-bg: #fafafa;
-$header-mobile-bg: $black;
 $header-chart-text: rgba(34,39,39,0.5);
 
-$bg: #fff;
-$white: #fff;
 $white-op-9: rgba($white, 0.9);
 $white-op-6: rgba($white, 0.6);
 $white-op-8: rgba($white, 0.8);
 
-$general-op-5: rgba(34, 39, 39, 0.5);
-
 $section-bg1: #fefefe;
-$section-bg2: #f4f4f4;
-$header-background: #222727;
 
 $hr-color: #f4f4f4;
 
-$nav_hover: $color;
-$nav_hover_bg: transparent;
-
 $btn-border-color: rgba(4,232,176,0.2);
-$btn-text-color: $color;
 $intro-logo-title: rgba(34, 39, 39,0.5);
 
 $carousel-border-color: #efefef;
-$text-color: rgba(34,39,39,0.6);
 $carousel-dot-color: #222727;
 
-$feature-bg: #222727;
 $feature-header: rgba(4,232,176,0.9);
-$architecture-header: #222727;
-$about-hr-color: #f4f4f4;
 
-$part-token-hr-color: $color;
 $part-token-bg: #fafafa;

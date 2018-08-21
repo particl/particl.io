@@ -18,7 +18,12 @@
 - [x] whitepapers
 - [x] proposals
 - [ ] about us
-- [ ] press
+- [x] press
 - [x] careers
 - [x] status report
+
 - [ ] global SCSS
+- [ ] config & variables
+- [~] header
+- [x] navigation
+- [x] footer
