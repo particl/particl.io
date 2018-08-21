@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	/* ------------ MOBILE MENU ------------ */
 
 	// Hide menu by default
-	$('nav').addClass('hide');
+	$('.header').find('nav').addClass('hide');
 
 	// Mobile menu toggle
 	$('button#menu-toggle').click(function() {
@@ -24,6 +24,15 @@ $( document ).ready(function() {
 			$('button#menu-toggle').find('i.ico').toggleClass('ico-menu ico-close');
 			$('nav').addClass('hide');
 		}
+	});
+
+	// Toggle-able submenus in header
+	$('.menu').find('.category').click(function() {
+		$('.menu').find('.category').removeClass('active');
+		$(this).toggleClass('active');
+	});
+	$('#page').click(function() {
+		$('.menu').find('.category').removeClass('active');
 	});
 
 
@@ -44,7 +53,26 @@ $( document ).ready(function() {
 
 
 	/* ------------ HOMEPAGE CAROUSEL ------------ */
-	$('.owl-carousel').owlCarousel({
+	
+	// GUI intro teaser
+	$('.intro-features').owlCarousel({
+		items: 1,
+		loop: true,
+		margin: 10,
+		nav: false,
+		animateOut: 'fadeOut',
+		mouseDrag: false,
+		touchDrag: false,
+		pullDrag: false,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
+		lazyLoad: true,
+		dotClass: 'owl-dot dot-simple',
+	});
+	
+	// Features
+	$('.slider-features').owlCarousel({
 		center: true,
 		loop: true,
 		margin: 10,
@@ -55,6 +83,7 @@ $( document ).ready(function() {
 		dotsData: true,
 		lazyLoad: true,
 		autoWidth: true,
+		dotClass: 'owl-dot dot-numbered',
 	});
 
 

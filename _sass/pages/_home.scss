@@ -9,11 +9,12 @@
 #intro {
   text-align: center;
   position: relative;
-  background: url('/assets/img/illustrations/intro_banner_background.png') no-repeat 50% -100px $part-token-bg;
-  background-size: 600px;
+  background: url('/assets/img/intro-bg_compressed.jpg') no-repeat top center;
+  background-size: cover;
   @include break(s) { padding: 6rem 2rem; }
   @include break(m) { padding: 8rem 2rem 2rem; }
-  @include break(xl) { padding: 12rem 2rem 3rem; }
+  @include break(l) { padding-top: 6rem; }
+  @include break(xl) { padding: 7rem 2rem 2rem; }
 
   // page title(s)
   .header-title {
@@ -26,9 +27,7 @@
       margin: 0 0 1rem;
     }
     .subtitle {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: $text-muted;
+      font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
       margin: 0;
     }
   }
@@ -37,7 +36,7 @@
   .intro-buttons {
     text-align: center;
     margin: 3rem 0 0;
-    @include break(m) { margin: 4rem 0 0; }
+    @include break(large) { margin: 2.5rem 0 0; }
     .button {
       font-family: $font; font-size: 0.9rem; font-weight: 700; line-height: 2;
       display: block;
@@ -59,12 +58,25 @@
           background: none;
         }
       }
-      .mobile { // display "Copay" on mobile
-        @include break(large) { display: none; }
-      }
-      .desktop { // display "Desktop" on desktop
-        display: none;
-        @include break(large) { display: inline; }
+    }
+  }
+
+  // GUI teaser slider
+  .intro-features {
+    display: none;
+    width: 920px;
+    margin: 3rem auto 2rem;
+    @include break(l) { display: block; }
+    .owl-item {
+      max-width: none; margin-bottom: 0;
+      background: none; box-shadow: none;
+    }
+    .feature-slide {
+      max-width: 920px;
+      height: 500px;
+      img {
+        width: 920px; max-width: 920px;
+        height: auto;
       }
     }
   }
@@ -73,8 +85,8 @@
   .partners-press {
     display: none;
     @include break(m) { display: block; margin-top: 6rem; }
-    @include break(large) { margin-top: 9rem; }
-    @include break(xl) { margin-top: 12rem; }
+    @include break(large) { margin-top: 7rem; }
+    //@include break(xl) { margin-top: 7rem; }
     .logos {
       a.item { display: inline-block; }
       .logo {
@@ -100,6 +112,40 @@
       @include break(l) { font-size: 0.7rem; }
       @include break(xl) { font-size: 0.83rem; }
     }
+  }
+}
+
+
+/* --------------------------------------------- *\
+      Lastest Highlights (News)
+\* --------------------------------------------- */
+
+section.news {
+  border-top: 1px solid $bg-muted;
+  .section-title {
+    @include md { text-align: center; }
+    @include lg { text-align: left; }
+    .title {
+      margin: 0 0 0.3rem;
+      @include lg { margin: 0 0 1.2rem; }
+    }
+  }
+  p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+  a {
+    color: $text; font-weight: 400; font-size: inherit; text-decoration: underline;
+  }
+  .item {
+    margin-top: 3rem;
+    @include lg { margin-top: 0; }
+    .date { color: rgba($text, 0.5); font-size: 0.8rem; }
+    .title {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0; text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .text { font-size: 0.8rem; line-height: 1.45; }
   }
 }
 
@@ -184,9 +230,7 @@ section#features {
   text-align: center;
   padding: 3.4rem 0 2.7rem;
   background: $black !important;
-  @include break(large) {
-    padding: 4rem 0 4.5rem;
-  }
+  @include break(large) { padding: 4rem 0; }
   .title {
     margin: 1.75rem 2rem 2.7rem;
     color: $white; line-height: 1.35;
@@ -195,7 +239,7 @@ section#features {
     font-size: 0.83rem; font-weight: 700;
     display: block;
     width: 220px;
-    margin: 20px auto; padding: 0.65rem 1rem;
+    margin: 20px auto;
     @include break(large) {
       display: inline-block;
       width: 180px;
@@ -207,23 +251,13 @@ section#features {
       &:before { // icon
         content: '';
         display: block;
-        width: 20px; height: 20px;
-        position: absolute; left: 0;
+        width: 40px; height: 40px;
+        position: absolute; left: -10px; top: -10.5px;
         background-repeat: no-repeat; background-size: contain;
       }
-      &.riot:before {
-        background-image: url('/assets/img/ico/new/riot-icon.svg');
-        top: -1px;
-      }
-      &.discord:before {
-        background-image: url('/assets/img/ico/new/discord-icon.svg');
-        top: 0; left: 3px;
-        height: 17px;
-      }
-      &.telegram:before {
-        background-image: url('/assets/img/ico/new/telegram-icon.svg');
-        top: -2px; left: -3px;
-      }
+      &.riot:before { background-image: url('/assets/img/ico/riot.svg'); }
+      &.discord:before { background-image: url('/assets/img/ico/discord.svg'); }
+      &.telegram:before { background-image: url('/assets/img/ico/telegram.svg'); }
     }
   }
 }
@@ -235,10 +269,7 @@ section#features {
 
 #about {
   padding: 8.373rem 0rem;
-
-  @include before_md {
-    padding: 0px;
-  }
+  @include before_md { padding: 0px; }
 
   h5 {
     margin-top: 2.063rem;
@@ -257,15 +288,9 @@ section#features {
     width: 100%;
   }
 
-  .button {
-    font-size: 0.813rem;
-    font-weight: 700;
-  }
-
   .about-img-container {
     text-align: center;
     margin-top: 2.063rem;
-
     @include before_md() {
       &:nth-child(even) {
         margin-top: 3rem;
@@ -275,28 +300,14 @@ section#features {
   }
 
   img {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 
   hr {
     color: $about-hr-color;
     margin: 5rem 0rem;
-
-    @include before_md() {
-      margin: 3rem 0rem;
-    }
-  }
-
-  .btn-about-part {
-    padding: 0.56rem 1.71rem;
-  }
-
-  .btn-about-more {
-    padding: 0.56rem 1.07rem;
-  }
-
-  .btn-about-platform {
-    padding: 0.56rem 1.81rem;
+    @include before_md() { margin: 3rem 0rem; }
   }
 
   @include before_md() {
@@ -311,12 +322,10 @@ section#features {
   }
 }
 
-section.feature.mac {
+section.feature.download-promo {
   padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;
-  }
-  @include before_md() {
     & > .row {
       display: flex;
       flex-direction: column-reverse;
@@ -325,69 +334,39 @@ section.feature.mac {
 
   h2 {
     color: $white;
-    margin: 1.75rem 0rem 1rem;
+    margin: 0 0rem 1rem;
   }
 
-  .btn-mac-download {
-    padding: 0.56rem 1.73rem;
-    position: relative;
-    color: $button-color;
-    font-family: $font;
-    font-weight: 700;
-    line-height: 2;
-    letter-spacing: 0;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-
-    .mac-subtext {
-      font-size: 0.625rem;
-      color: $white-op-8;
-      font-weight: 700;
-      position: absolute;
-      top: 6px;
-      right: 15px;
-      text-align: right;
-    }
-  }
-
-  .mac-links {
+  .links {
     margin-top: 1.2rem;
-
+    font-size: 0.8rem;
     a {
       color: $white-op-8;
       text-decoration: underline;
-
-      &:first-child {
-        margin-right: 20px;
-      }
+      &:first-child { margin-right: 20px; }
+      &:hover, &:focus { color: $white; }
     }
   }
 
-  .mac-container-text {
+  .text {
     @include before_md {
       text-align: center;
       margin-bottom: 5rem;
-
       p.large {
         margin-bottom: 31px;
       }
     }
   }
 
-  .mac-container-img {
+  .image {
     height: 100%;
     text-align: center;
-
     @include before_md { 
       margin-top: 104px;
       margin-bottom: 59px;
     }
-
     img {
       height: 323px;
-
       @include before_md { height: auto; }
     }
   }

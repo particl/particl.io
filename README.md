@@ -20,12 +20,3 @@
     - concat/minify & uglify JS
     - start local BrowserSync server with realtime reloading
 5. or just `gulp watch-sass` for styles only
-
-
-## TODO
-
-* Tweaks
-    - [ ] self-hosted Piwik analytics?
-    - [ ] add "particl in press" link
-        - [ ] /press - list of articles about PART (+ update it)
-    - [x] roadmap: add completed items from https://particl.wiki/_media/images/particltimeline-01.png

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="46px"
+   height="46px"
+   viewBox="0 0 46 46"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="medium.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1531"
+     inkscape:window-height="1168"
+     id="namedview17"
+     showgrid="false"
+     inkscape:zoom="7.2555304"
+     inkscape:cx="1.9445971"
+     inkscape:cy="15.212637"
+     inkscape:window-x="2534"
+     inkscape:window-y="72"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg15" />
+  <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">Group 15</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <path
+     id="Shape-9-1"
+     d="m 14.833109,18.297024 c 0.02653,-0.262104 -0.07344,-0.521163 -0.269139,-0.69757 l -1.993617,-2.401627 v -0.358749 h 6.190179 l 4.784678,10.493419 4.206529,-10.493419 h 5.901105 v 0.358749 l -1.70454,1.634302 c -0.14696,0.112002 -0.219838,0.296119 -0.189395,0.478332 v 12.008142 c -0.03044,0.182218 0.04244,0.366318 0.189395,0.478332 l 1.664668,1.634304 v 0.358749 h -8.373188 v -0.358749 l 1.724477,-1.674165 c 0.169462,-0.169416 0.169462,-0.219235 0.169462,-0.478331 v -9.706165 l -4.794645,12.17755 h -0.647926 l -5.582126,-12.17755 v 8.161548 c -0.04653,0.343135 0.06742,0.688596 0.309011,0.936734 l 2.242819,2.720518 v 0.35875 h -6.359635 v -0.35875 L 14.54404,28.67086 c 0.23983,-0.24855 0.347146,-0.5963 0.289073,-0.936734 z"
+     inkscape:connector-curvature="0"
+     style="fill:#04e8b0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.16298953" />
+</svg>

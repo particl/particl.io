@@ -2,126 +2,141 @@
 layout: default
 ---
 
-<section id="page-title">
+<section class="page-title centered">
 	<div class="row">
 		<div class="column">
-      <h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
-      <p class="text-center">Updated 6 July 2018</p>
+      <h1 class="title">Particl Project<br />Status Report</h1>
+      <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
+      <small>Updated 20 August 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
 
+<hr>
 
-
-<section class="report-busy status-report">
+<section class="status-report">
 	<div class="row">
-		<div class="large-6 columns">
+    <div class="column">
+      <div class="grid small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
-				<h2 class="title">What are we busy with</h2>
-			</div>
-			
+        <div class="part completed">
+          <h2 class="title">Recently completed</h2>
+          
 <ul>
-  <li>
-    Particl Marketplace
-    <ul>
-      <li>Voting &ndash; Consensus on the removal of products</li>
-      <li>Creating proposals and voting on proposals</li>
-      <li>Trigger notifications for orders changes</li>
-      <li>Adding a location selector</li>
-      <li>Advanced sort and filter option</li>
-      <li>Expiry times on listings</li>
-      <li>Code refactoring</li>
-    </ul>
-  </li>
-  <li>Better error handling on Daemon and Market startup</li>
-</ul>
-
-
-		</div>
-		<div class="large-6 columns">
-
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
-				<h2 class="title">Waiting for review</h2>
-			</div>
-			
-<ul>
-  <li>Country filter drop down</li>
-  <li>
-    Particl Desktop Mainnet update
-    <ul>
-      <li>Cold staking widget issue</li>
-      <li>User Interface Updates</li>
-      <li>Modal refactoring</li>
-    </ul>
-  </li>
-</ul>
-
-
-		</div>
-	</div>
-</section><!-- .feature -->
-
-<section class="report-done status-report">
-	<div class="row">
-		<div class="large-6 column">
-
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
-				<h2 class="title">Wrapped up</h2>
-			</div>
-			
-<ul>
-  <li>Particl Core 0.16.1.0</li>
-  <li>Particl Market Place &ndash; Alpha issues
+  <li>Particl Marketplace (alpha, testnet)
     <ul>
       <li>Fixing bugs identified by users</li>
-      <li>Refactoring modals</li>
-      <li>Shipping profile improvements</li>
-      <li>Enhanced test suites</li>
-      <li>Improving error handling</li>
-      <li>Progress bar for daemon</li>
-      <li>Image resizing to allow for larger images</li>
-      <li>Added a debugging console for Market services</li>
-      <li>Auto update of order services</li>
+      <li>Advanced sort and filter option</li>
+      <li>Expiry times on listings</li>
+    </ul>
+  </li>
+  <li>Particl Core
+    <ul>
+      <li>Particl Core 0.16.2.0</li>
     </ul>
   </li>
 </ul>
 
+        </div><!-- .completed -->
 
-		</div>
-		<div class="large-6 column">
-			
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
-				<h2 class="title">What's on the Horizon</h2>
-			</div>
-			
+        <div class="part reviewed">
+          <h2 class="title">Waiting for review</h2>
+
 <ul>
-  <li>Particl Marketplace – Beta Release
+  <li>Particl Desktop (v1.2.2, mainnet)
     <ul>
-      <li>Features to be included:
+      <li>Cold staking widget fix</li>
+      <li>User Interface updates</li>
+      <li>Updated icons</li>
+      <li>Transaction handling refactored</li>
+      <li>Running on 0.16.2.0 Particl Core</li>
+    </ul>
+  </li>
+  <li>Particl Marketplace (alpha, testnet)
+    <ul>
+      <li>
+        Finalising voting and Proposals (Governance 1.0)
         <ul>
-          <li>Multi-Wallets</li>
-          <li>Starting the desktop without the marketplace</li>
-          <li>Private listings</li>
-          <li>Private Markets</li>
-          <li>Escrow enhancements</li>
-          <li>Deposit Negotiations</li>
-          <li>Marketplace versioning for messages and listings</li>
-          <li>Settings page</li>
+          <li>Creation of Proposals</li>
+          <li>Voting tools and stats</li>
+          <li>Consensus on the removal of products - Market governance</li>
         </ul>
       </li>
+      <li>Adding a location selector for a more clear pricing structure</li>
+      <li>Trigger notifications for orders changes</li>
+      <li>Multi-Wallet design and layout</li>
+      <li>Starting the desktop without the marketplace</li>
+    </ul>
+  </li>
+  <li>Third-party integrations
+    <ul>
+      <li>Ledger integration</li>
+    </ul>
+  </li>
+</ul>
+
+        </div><!-- .reviewed -->
+
+        <div class="part in-development">
+          <h2 class="title">In development</h2>
+
+<ul>
+  <li>
+    Particl Marketplace (alpha, testnet)
+    <ul>
+      <li>Code refactoring</li>
+      <li>Multi-Wallet implementation</li>
+      <li>Escrow process refactor and enhancements</li>
+      <li>Automated Testing - End to End testing, Unit Testing and Regression Testing</li>
+      <li>
+        Settings page
+        <ul>
+          <li>Core Settings</li>
+          <li>Marketplace Settings</li>
+          <li>GUI Settings</li>
+        </ul>
+      </li>
+      <li>Staking pool statistics</li>
+      <li>Enhancements on error handling</li>
+    </ul>
+  </li>
+  <li>
+    Third Party Integration
+    <ul>
+      <li>Trezor integration</li>
+    </ul>
+  </li>
+  <li>
+    Particl Core
+    <ul>
+      <li>Particl Core 0.17.0.2</li>
+    </ul>
+  </li>
+</ul>
+
+        </div><!-- .in-development -->
+
+        <div class="part upcoming">
+          <h2 class="title">Upcoming features</h2>
+
+<ul>
+  <li>Particl Marketplace (beta)
+    <ul>
+      <li>Private listings</li>
+      <li>Private Markets</li>
+      <li>Escrow enhancements</li>
+      <li>Deposit Negotiations</li>
+      <li>Marketplace versioning for messages and listings</li>
     </ul>
   </li>
   <li>Software Development Kit (SDK)</li>
 </ul>
 
+        </div><!-- .upcoming -->
 
-		</div>
+      </div>
+    </div>
 	</div>
-</section><!-- .feature -->
+</section><!-- .status-report -->
 
 {% include particl-desktop.html %}

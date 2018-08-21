@@ -15,7 +15,6 @@
 @import 'layout/_grid';
 @import 'layout/_header';
 @import 'layout/_footer';
-@import 'layout/_sidebar';
 @import 'layout/_forms';
 
 @import 'components/_carousel';
@@ -30,13 +29,14 @@
 @import 'pages/_why_particl';
 @import 'pages/_about_us';
 @import 'pages/_careers';
-@import 'pages/_user_guide';
 @import 'pages/_roadmap';
 @import 'pages/_status_report';
 @import 'pages/_particl_press';
+@import 'pages/_proposals';
+@import 'pages/_specifications';
 @import 'pages/_download';
 
-/*! particl.io v1.0 | Author: Martin Allien <martin@particl.io> */
+/*! particl.io v2.0 | Author: Martin Allien <martin@particl.io> */
 
 // -------------[  BASICS  ]------------- //
 
@@ -53,7 +53,6 @@ h1 {
 	font-weight: 700;
   color: $general-text-color;
   letter-spacing: -0.5px;
-
   @include before_md {
     font-size: 1.875rem;
     letter-spacing: -0.7px;
@@ -117,9 +116,9 @@ p {
 }
 
 a {
-  font-size: 0.8125rem;
+  //font-size: 0.8125rem;
 	font-family: $font;
-	font-weight: 500;
+	//font-weight: 500;
   line-height: normal;
 	letter-spacing: 0.1px;
 	
@@ -135,17 +134,29 @@ a {
 			background-size: contain;
 			position: relative;
 			top: 1px;
-			opacity: 0.5;
+      opacity: 0.5;
+      .header .navigation & {
+        filter: invert(70%);
+        @include break(large) { filter: invert(30%); }
+      }
+      footer .navigation & { filter: invert(40%); }
 		}
 	}
+  &.link-small-dark { color: $black-op-8; }
+  &.link-small-grey { color: $black-op-5; }
+}
 
-
-  &.link-small-dark {
-    color: $black-op-8;
+table {
+  th, td { @extend %tfx; }
+  tr {
+    border-bottom: 1px solid $bg-muted;
+    &:last-of-type { border: none; }
+    &:hover {
+      th, td { background: rgba($bg-muted, 0.25); }
+    }
   }
-
-  &.link-small-grey {
-    color: $black-op-5;
+  &.full-width {
+    width: 100%;
   }
 }
 
@@ -171,23 +182,27 @@ input {
 	font-size: 0.9rem;
 }
 
-// ---------------[  UI  ]--------------- //
-
-section { // full-width sections of content 
-  padding: 4rem 1rem; 
+code {
+  background: rgba($color, 0.1);
+  color: darken($color, 10%);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
 }
 
+// ---------------[  UI  ]--------------- //
+
 // buttons
-button, .button { // default, outline-only buttons
+button, .button { // default, outline-to-full buttons
   @extend %tfx;
   @include border-radius(30px);
-  border: solid 1.5px $btn-border-color;
-  background-color: transparent;
-  color: $btn-text-color;
+  display: inline-block; padding: 0.56rem 1.71rem;
+  background-color: transparent; border: solid 1.5px rgba($color, 0.6);
+  font-size: 0.9rem; font-weight: 700; color: $color;
   &::after { content: none !important; }
   &:hover, &:focus {
-    background: darken($primary, 7%);
-    border-color: darken($primary, 5%);
+    background: darken($primary, 7%); 
+    border-color: darken($primary, 5%); 
     color: $white;
   }
   &.full { // full buttons
@@ -199,54 +214,69 @@ button, .button { // default, outline-only buttons
       border-color: darken($color, 5%);
     }
   }
+  &.hollow { // outline buttons only
+    &:hover, &:focus {
+      border-color: darken($primary, 3%);
+      color: darken($primary, 5%);
+      background: transparent;
+    }
+  }
   // icons in buttons
   i.ico { margin-right: 0.3rem; }
 }
 
-// fancy lists
-#page ul {
-  list-style: none;
-  line-height: 1.7;
-  color: $text-muted;
-  @include break(s) { line-height: 2; }
-
-  li {
-    display: block;
-    margin: 0.2rem 0rem;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      left: -1.8rem;
-      top: 0.45rem;
-      display: block;
-      width: 0.625rem;
-      height: 0.625rem;
-      border: 4px solid darken($primary, 3%);
-      border-radius: 50%;
-    }
+// common page titles (Roadmap, Status report, ..)
+.page-title {
+  line-height: 1.45;
+  padding: 1.5rem 0 3.5rem;
+  @include break(large) { padding: 4rem 0 5rem; }
+  &.centered { text-align: center; }
+  .title {
+    &.centered { text-align: center; }
   }
-
-  ul { // 2nd level lists
-    li::before {
-      background: lighten($text-muted, 40%);
-      border: none;
-      border-radius: 0;
-      top: 1rem;
-      left: -1.6rem;
-      width: 0.9rem;
-      height: 2px;
+  p {
+    line-height: 1.87;
+    a {
+      color: lighten($text, 20%); font-weight: 500;
+      &:hover { color: $text; }
     }
   }
 }
 
+
 // -------------[  LAYOUT  ]------------- //
 
+section { // full-width sections of content 
+  padding: 4rem 0;
+  
+  // link lists (user guides, whitepapers)
+  &.link-list {
+    padding: 4rem 0 6rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      a {
+        display: inline-block; padding: 0.25rem 0;
+        font-size: 0.9rem; color: lighten($text, 35%); line-height: 1.45;
+        &:hover { color: $text; }
+      }
+    }
+  }
+  
+  // call-to-action buttons
+  &.cta {
+    text-align: center;
+    .button {
+      margin: 0 0.4rem 1rem;
+    }
+  }
+}
 
 #team {
 	li.team-member {
 		text-align: center;
-		margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    @include break(large) { margin-bottom: 2rem; }
 		&::before { content: none; }
 		.photo {
 			width: 130px; height: 130px; margin: 0 auto;
@@ -260,7 +290,8 @@ button, .button { // default, outline-only buttons
 			font-size: 0.75rem; line-height: 1.6;
 			display: block; margin-bottom: 0.7rem;
 			@include break(l) { margin-bottom: 0.2rem; }
-		}
+    }
+    .links { margin: 0.4rem 0; }
 		.link {
 			margin: 0 0.2rem;
 			color: lighten($text-muted, 40%);
@@ -274,14 +305,11 @@ button, .button { // default, outline-only buttons
 			&.github:hover { color: $text; }
 		}
 	}
-	hr { margin: 2rem 0 3.5rem; border-top: 5px dotted darken($bg-muted, 3%); }
+	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
 
 
-
 // ------------[  SPECIFIC  ]------------ //
-
-
 
 .no-js { // for browsers with JS disabled
 	header {
@@ -306,10 +334,6 @@ button, .button { // default, outline-only buttons
 		@include break(l) { margin-top: 4.5rem; }
 	}
 }
-
-
-// ------------[  PLUG-INS  ]------------ //
-
 
 
 // -------------[  HELPER  ]------------- //

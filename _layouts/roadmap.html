@@ -2,73 +2,27 @@
 layout: default
 ---
 
-<section id="page-title" class="general-project-road">
+<section class="page-title centered">
   <div class="row">
-    <div class="column project-road-header text-center">
-      <h1 class="title header-line-height">Particl Project<br />Roadmap</h1>
-      <small>Updated July 3, 2018</small>
+    <div class="column">
+      <h1 class="title">Particl Project<br />Roadmap</h1>
+      <p class="large">For more detailed progress in Project's development visit <a href="/status-report/">Status Report</a></p>
+      <small>Updated 14 August 2018</small>
     </div>
   </div>
+</section>
 
+<hr>
+
+<section class="roadmap">
   <div class="row">
     <div class="column">
       
       <div class="roadmap-items small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
         <!-- ======[  In Progress  ]====== -->
-
+        
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status in-progress tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
-          </div>
-          <h3 class="title">Support for Hardware Signing Devices</h3>
-          <div class="desc">
-            <p>Particl Core 0.16 introduces generic support for Hardware Signing Devices to provide key-signing capabilities.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status in-progress tag">In Progress</span>
-            <span class="network tag">Testnet/Mainnet</span>
-          </div>
-          <h3 class="title">Ledger Wallet Integration</h3>
-          <div class="desc">
-            <p>Initial support for the Ledger Hardware Wallet is here!<br>This has not yet been extended to <code>blind</code> or <code>anon</code> transactions and therefore currently cannot be used exclusively for all functions of the wallet. Support will continue to be extended in future versions.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status in-progress tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
-          </div>
-          <h3 class="title">Stealth Addresses v2</h3>
-          <div class="desc">
-            <p>In order to facilitate deterministic generation of stealth addresses between Particl Core and Signing Devices the method used to generate these addresses had to be changed.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status in-progress tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
-          </div>
-          <h3 class="title">RingCT &ndash; Academic Review</h3>
-          <div class="desc">
-            <p>NJIT researchers are 5 months into review and will provide the foundation with a report after 6 months on the privacy, cryptography and security recommendations for Particl’s RingCT implementation on the latest Bitcoin codebase.</p>
-          </div>
-        </div>
-
-        <!-- ======[  Planned  ]====== -->
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status in-progress tag">In Progress</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -79,10 +33,31 @@ layout: default
           </div>
         </div>
 
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
+        <!--div class="item">
           <div class="tags">
-            <span class="status planned tag">Planned</span>
+            <span class="status in-progress tag">In Progress</span>
+            <span class="network tag">Testnet/Mainnet</span>
+          </div>
+          <h3 class="title">Multiwallets</h3>
+          <div class="desc">
+            <p>xxxxxxx</p>
+          </div>
+        </div-->
+
+        <div class="item">
+          <div class="tags">
+            <span class="status in-progress tag">In Progress</span>
+            <span class="network tag">Testnet/Mainnet</span>
+          </div>
+          <h3 class="title">Particl Marketplace (beta)</h3>
+          <div class="desc">
+            <p>Our next major release of the decentralized marketplace will be BETA. Beta MP may or may-not be a mainnet viable product. It is too early to tell but is something the team will be transparent in communicating. Privacy and Governance are 2 of the major factors that ultimately will decide.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="tags">
+            <span class="status in-progress tag">In Progress</span>
             <span class="network tag">Mainnet</span>
           </div>
           <h3 class="title">Software Development Kit (SDK)</h3>
@@ -91,9 +66,32 @@ layout: default
           </div>
         </div>
 
+        <div class="item">
+          <div class="tags">
+            <span class="status in-progress tag">In Progress</span>
+            <!--span class="network tag">Testnet</span-->
+          </div>
+          <h3 class="title">Community Fund Vote</h3>
+          <div class="desc">
+            <p>There is PART remaining from the Community Initiative Fund #1 &ndash;  roughly 30,000 PART (at this time) with a few more claims still being vetted. The community needs to create a plan for these extra coins that were donated but not needed. Start brainstorming!</p>
+          </div>
+        </div>
+        
+        <!-- ======[  Planned  ]====== -->
+
+        <!--div class="item">
+          <div class="tags">
+            <span class="status planned tag">Planned</span>
+            <span class="network tag">Testnet/Mainnet</span>
+          </div>
+          <h3 class="title">iOS Copay mobile wallet</h3>
+          <div class="desc">
+            <p>xxxxxxx</p>
+          </div>
+        </div-->
+
         {% comment %}
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet</span>
@@ -107,7 +105,6 @@ layout: default
         {% endcomment %}
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -119,19 +116,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status in-progress tag">In Progress</span>
-            <span class="network tag">Testnet/Mainnet</span>
-          </div>
-          <h3 class="title">Particl Marketplace (beta)</h3>
-          <div class="desc">
-            <p>Our next major release of the decentralized marketplace will be BETA. Beta MP may or may-not be a mainnet viable product. It is too early to tell but is something the team will be transparent in communicating. Privacy and Governance are 2 of the major factors that ultimately will decide.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -143,7 +127,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -155,7 +138,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Mainnet</span>
@@ -167,7 +149,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -179,19 +160,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
-          <div class="tags">
-            <span class="status planned tag">Planned</span>
-            <!--span class="network tag">Testnet</span-->
-          </div>
-          <h3 class="title">Community Fund Vote</h3>
-          <div class="desc">
-            <p>There is PART remaining from the Community Initiative Fund #1 &ndash;  roughly 30,000 PART (at this time) with a few more claims still being vetted. The community needs to create a plan for these extra coins that were donated but not needed. Start brainstorming!</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
@@ -203,12 +171,11 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status planned tag">Planned</span>
             <span class="network tag">Testnet/Mainnet</span>
           </div>
-          <h3 class="title">BlindLightning | BlackLightning</h3>
+          <h3 class="title">Blind Lightning</h3>
           <div class="desc">
             <p>What if Particl Confidential TXs or even RingCT could be leveraged in atomic swaps/lightning network transactions between PART and other coins &ndash; providing true privacy for non-private coins?</p>
           </div>
@@ -218,7 +185,28 @@ layout: default
         <!-- ======[  Completed  ]====== -->
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
+          <div class="tags">
+            <span class="status completed tag">Completed</span>
+            <span class="network tag">Testnet/Mainnet</span>
+          </div>
+          <h3 class="title">Ledger Wallet Integration</h3>
+          <div class="desc">
+            <p>August 7, 2018 &ndash; Initial support for the Ledger Hardware Wallet is here!<br>This has not yet been extended to <code>blind</code> or <code>anon</code> transactions and therefore currently cannot be used exclusively for all functions of the wallet. Support will continue to be extended in future versions.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="tags">
+            <span class="status completed tag">Completed</span>
+            <span class="network tag">Mainnet</span>
+          </div>
+          <h3 class="title">RingCT &ndash; Academic Review</h3>
+          <div class="desc">
+            <p>July 2018 &ndash; NJIT researchers are 5 months into review and will provide the foundation with a report after 6 months on the privacy, cryptography and security recommendations for Particl’s RingCT implementation on the latest Bitcoin codebase.</p>
+          </div>
+        </div>
+
+        <div class="item">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <span class="network tag">Testnet</span>
@@ -230,7 +218,28 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
+          <div class="tags">
+            <span class="status completed tag">Completed</span>
+            <span class="network tag">Mainnet</span>
+          </div>
+          <h3 class="title">Support for Hardware Signing Devices</h3>
+          <div class="desc">
+            <p>March 20, 2018 &ndash; Particl Core 0.16 introduces generic support for Hardware Signing Devices to provide key-signing capabilities.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="tags">
+            <span class="status completed tag">Completed</span>
+            <span class="network tag">Mainnet</span>
+          </div>
+          <h3 class="title">Stealth Addresses v2</h3>
+          <div class="desc">
+            <p>March 20, 2018 &ndash; In order to facilitate deterministic generation of stealth addresses between Particl Core and Signing Devices the method used to generate these addresses had to be changed.</p>
+          </div>
+        </div>
+
+        <div class="item">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <span class="network tag">Mainnet</span>
@@ -242,7 +251,6 @@ layout: default
         </div>
 
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <span class="network tag">Mainnet</span>
@@ -254,7 +262,6 @@ layout: default
         </div>
         
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <span class="network tag">Mainnet</span>
@@ -266,7 +273,6 @@ layout: default
         </div>
         
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <!--span class="network tag">Mainnet</span-->
@@ -278,7 +284,6 @@ layout: default
         </div>
         
         <div class="item">
-          <img src="/assets/img/illustrations/intro_coffee.png" class="image">
           <div class="tags">
             <span class="status completed tag">Completed</span>
             <!--span class="network tag">Mainnet</span-->
