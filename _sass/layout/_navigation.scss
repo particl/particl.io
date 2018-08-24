@@ -16,9 +16,11 @@ body.menu-opened {
   .header & {
     background-color: $black;
     position: fixed; top: 3rem; left: 0; right: 0; z-index: 1;
+    @include break(s) { top: 3.35rem; }
     @include break(large) {
       position: static;
       background: none;
+      float: right;
       display: block !important; width: (100% / 12 * 7);
     }
     @include break-from(1200px) { width: (100% / 12 * 8); }

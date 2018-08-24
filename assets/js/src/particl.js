@@ -95,11 +95,11 @@ $( document ).ready(function() {
 		$('#clock').countdown(countdownTo.toDate())
 		.on('update.countdown', function(event) {
 			// full format (days hrs:min:sec)
-			var full = '<div class="part"><span class="number">%-d</span><span class="desc">days</span></div> <div class="part"><span class="number">%-H</span><span class="desc">hours</span></div><div class="part"><span class="number">%-M</span><span class="desc">minutes</span></div><div class="part"><span class="number">%-S</span><span class="desc">seconds</span></div>';
+			var full = '<div class="part"><span class="number">%-w</span><span class="desc">weeks</span></div><div class="part"><span class="number">%-d</span><span class="desc">days</span></div><div class="part"><span class="number">%-H</span><span class="desc">hours</span></div><div class="part"><span class="number">%-M</span><span class="desc">minutes</span></div><div class="part"><span class="number">%-S</span><span class="desc">seconds</span></div>';
 			// without days (hrs:min:sec)
 			var hours = '<div class="part"><span class="number">%-I</span><span class="desc">hours</span></div><div class="part"><span class="number">%-M</span><span class="desc">minutes</span></div><div class="part"><span class="number">%-S</span><span class="desc">seconds</span></div>';
 
-			$(this).html(event.strftime(hours)); // <== 'hours' or 'full'
+			$(this).html(event.strftime(full)); // <== 'hours' or 'full'
 		})
 		.on('finish.countdown', function(event) {
 			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="https://particl.news/particl-marketplace-alpha-released-and-available-for-testing-3240739f7509">Read announcement</a> & <a href="https://github.com/particl/particl-desktop/releases">Download now</a></div>')

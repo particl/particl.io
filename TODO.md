@@ -5,7 +5,6 @@
 - [ ] proper open:graph image
 - [ ] all icons to SVG
 - [ ] Exchanges page (link to it from "Get PART" on homepage)
-- [ ] black-bg logo to header
 
 **code rewrite**
 
