@@ -13,8 +13,10 @@ section.exchange-group {
   .box {
     background: $white; border-radius: ($border-radius * 2);
     box-shadow: 0 3px 20px rgba($black, 0.06);
-    height: 11.5rem;
+    height: 13rem;
     padding: 1.4rem 1.6rem; margin: 0 0 1.5rem;
+    @include break(s) { height: 11.5rem; }
+    @include break(xl) { height: 12rem; }
   }
 
   a.exchange {
@@ -33,9 +35,10 @@ section.exchange-group {
         @extend %tfx;
         filter: saturate(0%);
         opacity: 0.7;
-        max-width: 7.5rem; max-height: 2.5rem;
+        width: 100%; max-width: 7.5rem; height: auto; max-height: 2.5rem;
         display: block; margin: auto;
         position: relative; top: 50%; transform: translateY(-50%); // center vertically
+        @include break(s) { width: auto; }
       }
     }
     .title {
@@ -46,7 +49,8 @@ section.exchange-group {
       @extend %tfx;
       font-size: 0.7rem; font-weight: 500; color: $white;
       background: rgba($text-muted, 0.3); border-radius: 4px;
-      padding: 0.1rem 0.4rem;
+      display: block; margin: 0 auto 0.2rem; padding: 0.1rem 0.4rem;
+      @include break(s) { display: inline-block; margin: 0 auto; }
     }
   }
 
