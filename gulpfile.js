@@ -35,16 +35,13 @@ var iconfont = require('gulp-iconfont');
 // Iconfont CSS - https://github.com/backflip/gulp-iconfont-css
 var iconfontCss = require('gulp-iconfont-css');
 
-var cp = require('child_process');
-
 
 /* ------------------------------------ *\
     Variables
 \* ------------------------------------ */
 
-var fontName = 'particl-icons';
+var fontName = 'icons';
 
-var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 
 /* ------------------------------------ *\
     Paths
@@ -53,18 +50,16 @@ var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 const paths = {
   template: '*.html',
   // CSS
-  //scss: 'scss/**/*.scss',
   scss: './_sass/**/*.scss',
-  //css: 'css',
   css: './assets/css',
   // JS
   js: './assets/js/src/',
   js_in: './assets/js/src/*.js',
   js_out: './assets/js',
   // iconfont
-  ico_input: 'img/ico/**/*.svg',
-  ico_output: 'img/ico/',
-  font_output: 'fonts/',
+  ico_input: './assets/img/icons/**/*.svg',
+  ico_output: './assets/img/icons/',
+  font_output: './assets/fonts/',
 }
 
 
@@ -165,8 +160,8 @@ gulp.task('webfont', ['optimize'], function (cb) {
     gulp.src(paths.ico_input),
     iconfontCss({
       fontName: fontName,
-      fontPath: '../fonts/',
-      targetPath: '../scss/_particl-icons.scss',
+      fontPath: './assets/fonts/',
+      targetPath: '../../_sass/_icons.scss',
       cssClass: 'ico'
     }),
     iconfont({
