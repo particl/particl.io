@@ -124,7 +124,7 @@ a {
 	&[href*="http"]:not(.no-arrow) { // fancy external links
 		&::after {
 			@extend %tfx;
-      content: "\E001";
+      content: "\E002";
       font-family: "icons"; font-size: 10px; line-height: 1;
 			display: inline-block; margin: 0 0.2rem 0 0.25rem;
       opacity: 0.5;

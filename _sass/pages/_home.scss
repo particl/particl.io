@@ -226,7 +226,7 @@ section#features {
       Join our channels
 \* --------------------------------------------- */
 
-.join-section {
+.community-channels {
   text-align: center;
   padding: 3.4rem 0 2.7rem;
   background: $black !important;
@@ -240,24 +240,22 @@ section#features {
     display: block;
     width: 220px;
     margin: 20px auto;
+    /*
+    &:hover {
+      &.riot { background: #764D80; border-color: #764D80; }
+      &.discord { background: #7289DA; border-color: #7289DA; }
+      &.telegram { background: #2DA5E0; border-color: #2DA5E0; }
+    }
+    */
     @include break(large) {
       display: inline-block;
       width: 180px;
       margin: 0 0.3rem;
     }
-    .text {
-      position: relative;
-      padding-left: 26px;
-      &:before { // icon
-        content: '';
-        display: block;
-        width: 40px; height: 40px;
-        position: absolute; left: -10px; top: -10.5px;
-        background-repeat: no-repeat; background-size: contain;
-      }
-      &.riot:before { background-image: url('/assets/img/ico/riot.svg'); }
-      &.discord:before { background-image: url('/assets/img/ico/discord.svg'); }
-      &.telegram:before { background-image: url('/assets/img/ico/telegram.svg'); }
+    i.ico {
+      margin-right: 0.6rem;
+      font-size: 115%; line-height: 1;
+      position: relative; top: 1px;
     }
   }
 }

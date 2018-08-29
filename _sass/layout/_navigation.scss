@@ -11,6 +11,20 @@ body.menu-opened {
     margin: 0; padding: 0;
     list-style: none;
   }
+  a.mail::after {
+    @extend %tfx;
+    content: "\E001";
+    font-family: "icons"; font-size: 10px; line-height: 1;
+    display: inline-block; margin: 0 0.2rem 0 0.25rem;
+    opacity: 0.5;
+    position: relative; top: -1px;
+    .header & {
+      color: rgba($white, 0.85);
+      margin-left: 0.4rem;
+      @include break(large) { color: $text-muted; }
+    }
+    footer & { color: $text-muted; margin-left: 0.35rem; }
+  }
 
   // ------ Header nav ------ //
   .header & {
@@ -54,7 +68,7 @@ body.menu-opened {
               width: 170px;
               background: $white; border-radius: 4px;
               box-shadow: 0 2px 3px rgba($black, 0.17);
-              position: absolute; right: 0;
+              position: absolute; right: 0; top: 3.25rem;
               &::before {
                 content: ""; display: block;
                 border: 7px solid $white; border-color: transparent transparent $white transparent;
