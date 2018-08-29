@@ -185,6 +185,10 @@ body.menu-opened {
         }
       }
     }
+    .ico {
+      font-size: 1.25rem;
+      display: inline-block; padding: 0.7rem 0;
+    }
     .title {
       display: none;
       @include break-from(920px) {
@@ -206,11 +210,11 @@ body.menu-opened {
     padding: 0.8rem 0 0; margin: 0 -0.5rem;
     @include break(l) { margin: 2rem -0.5rem 0; }
     .social-icon {
-      .icon {
-        filter: grayscale(100%);
+      .ico {
+        color: rgba($text-muted, 0.6);
       }
       a:focus, a:hover {
-        .icon { filter: grayscale(0%); }
+        .ico { color: $color; }
       }
     }
   }

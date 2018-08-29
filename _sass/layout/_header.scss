@@ -25,10 +25,10 @@
   // mobile: toggle menu button
   #menu-toggle {
     float: right;
-    padding: 0.9rem 1rem; margin-right: -0.8rem;
+    padding: 0.7rem 1rem; margin-right: -0.8rem;
     border: 0;
-    color: rgba($white, 0.8);
-    @include break(s) { padding: 1.125rem 1.1rem; }
+    font-size: 1.2rem; color: rgba($white, 0.8);
+    @include break(s) { padding: 0.9rem 1.1rem; }
     @include break(large) { display: none; }
     &:focus, &:hover {
       background: transparent;

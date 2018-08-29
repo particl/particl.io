@@ -8,7 +8,6 @@
 
 @import '_config';
 @import '_brickst';
-@import '_particl-icons';
 @import '_icons';
 @import '_fonts';
 
@@ -118,30 +117,24 @@ p {
 }
 
 a {
-  //font-size: 0.8125rem;
 	font-family: $font;
-	//font-weight: 500;
   line-height: normal;
 	letter-spacing: 0.1px;
 	
 	&[href*="http"]:not(.no-arrow) { // fancy external links
 		&::after {
 			@extend %tfx;
-			content: "";
-			display: inline-block;
-			width: 11px;
-			height: 11px;
-			margin: 0 0.2rem 0 0.25rem;
-			background: url("/assets/img/ico/ext-link.svg") no-repeat center center;
-			background-size: contain;
-			position: relative;
-			top: 1px;
+      content: "\E001";
+      font-family: "icons"; font-size: 10px; line-height: 1;
+			display: inline-block; margin: 0 0.2rem 0 0.25rem;
       opacity: 0.5;
+      position: relative; top: -1px;
       .header .navigation & {
-        filter: invert(70%);
-        @include break(large) { filter: invert(30%); }
+        color: rgba($white, 0.85);
+        margin-left: 0.4rem;
+        @include break(large) { color: $text-muted; }
       }
-      footer .navigation & { filter: invert(40%); }
+      footer .navigation & { color: $text-muted; }
 		}
 	}
   &.link-small-dark { color: $black-op-8; }

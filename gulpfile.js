@@ -160,7 +160,7 @@ gulp.task('webfont', ['optimize'], function (cb) {
     gulp.src(paths.ico_input),
     iconfontCss({
       fontName: fontName,
-      fontPath: './assets/fonts/',
+      fontPath: '/assets/fonts/',
       targetPath: '../../_sass/_icons.scss',
       cssClass: 'ico'
     }),

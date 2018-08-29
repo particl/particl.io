@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 	// Mobile menu toggle
 	$('button#menu-toggle').click(function() {
-		$(this).find('i.ico').toggleClass('ico-menu ico-close');
+		$(this).find('i.ico').toggleClass('ico-menu-open ico-menu-close');
 		$('nav').toggleClass('hide');
 		$('body').toggleClass('menu-opened');
 	});

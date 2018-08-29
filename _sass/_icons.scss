@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "icons";
-	src: url('./assets/fonts/icons.eot');
-	src: url('./assets/fonts/icons.eot?#iefix') format('eot'),
-		url('./assets/fonts/icons.woff2') format('woff2'),
-		url('./assets/fonts/icons.woff') format('woff'),
-		url('./assets/fonts/icons.ttf') format('truetype'),
-		url('./assets/fonts/icons.svg#icons') format('svg');
+	src: url('/assets/fonts/icons.eot');
+	src: url('/assets/fonts/icons.eot?#iefix') format('eot'),
+		url('/assets/fonts/icons.woff2') format('woff2'),
+		url('/assets/fonts/icons.woff') format('woff'),
+		url('/assets/fonts/icons.ttf') format('truetype'),
+		url('/assets/fonts/icons.svg#icons') format('svg');
 }
 
 .ico:before {
@@ -21,35 +21,35 @@
 }
 
 
-.ico-android:before {
+.ico-_ext-link:before {
 	content: "\E001";
 }
 
-.ico-bitcoin:before {
+.ico-android:before {
 	content: "\E002";
 }
 
-.ico-chat:before {
+.ico-bitcoin:before {
 	content: "\E003";
 }
 
-.ico-check:before {
+.ico-chat:before {
 	content: "\E004";
 }
 
-.ico-cross:before {
+.ico-check:before {
 	content: "\E005";
 }
 
-.ico-discord:before {
+.ico-cross:before {
 	content: "\E006";
 }
 
-.ico-email:before {
+.ico-discord:before {
 	content: "\E007";
 }
 
-.ico-ext-link:before {
+.ico-email:before {
 	content: "\E008";
 }
 
