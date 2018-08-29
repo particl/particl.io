@@ -1,22 +1,19 @@
-<div class="header">
+<div class="header" role="banner">
   <div class="row">
+    <div class="column">
 
-    <button id="menu-toggle" class="column small-2">
-      <i class="ico ico-menu"></i>
-    </button>
+      <button id="menu-toggle">
+        <i class="ico ico-menu-open"></i>
+      </button>
 
-    <header class="column no-left-padding large-1 medium-2 small-4" role="banner">
-	
       <div class="logo">
-        <a class="desktop-logo" href="/"><img src="/assets/img/particl-logo-dark.svg" alt="Particl.io"></a>
-        <a class="mobile-logo" href="/"><img src="/assets/img/particl-logo-light.svg" alt="Particl.io"></a>
+        <a href="/"><img src="/assets/img/particl-logotype.svg" alt="Particl.io"></a>
       </div>
 
-    </header><!-- header -->
+      <div class="coinmarketcap-currency-widget" data-currencyid="1826" data-base="USD" data-secondary="" data-ticker="true" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
 
-    <div class="coinmarketcap-currency-widget header-chart-container column large-3 medium-3 small-6" data-currencyid="1826" data-base="USD" data-secondary="" data-ticker="true" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+      {% include navigation.html %}
 
-    {% include navigation.html %}
-
+    </div>
   </div>
 </div><!-- .header -->

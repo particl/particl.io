@@ -11,14 +11,30 @@ body.menu-opened {
     margin: 0; padding: 0;
     list-style: none;
   }
+  a.mail::after {
+    @extend %tfx;
+    content: "\E001";
+    font-family: "icons"; font-size: 10px; line-height: 1;
+    display: inline-block; margin: 0 0.2rem 0 0.25rem;
+    opacity: 0.5;
+    position: relative; top: -1px;
+    .header & {
+      color: rgba($white, 0.85);
+      margin-left: 0.4rem;
+      @include break(large) { color: $text-muted; }
+    }
+    footer & { color: $text-muted; margin-left: 0.35rem; }
+  }
 
   // ------ Header nav ------ //
   .header & {
-    background-color: $header-background;
-    position: fixed; top: 3.375rem; z-index: 1;
-    @include break-from(768px) {
+    background-color: $black;
+    position: fixed; top: 3rem; left: 0; right: 0; z-index: 1;
+    @include break(s) { top: 3.35rem; }
+    @include break(large) {
       position: static;
       background: none;
+      float: right;
       display: block !important; width: (100% / 12 * 7);
     }
     @include break-from(1200px) { width: (100% / 12 * 8); }
@@ -34,12 +50,12 @@ body.menu-opened {
           @include break(large) {
             display: inline-block; margin-top: 0;
             position: relative;
-            &:hover .label { color: $header-background; }
+            &:hover .label { color: $black; }
           }
           .label {
-            font-size: 0.825rem; color: lighten($header-background, 30%); text-transform: uppercase;
+            font-size: 0.825rem; color: lighten($black, 30%); text-transform: uppercase;
             display: block; padding: 0 0 0.25rem;
-            border-bottom: 1px solid lighten($header-background, 5%);
+            border-bottom: 1px solid lighten($black, 5%);
             @include break(large) {
               font-weight: 500; text-transform: none;
               padding: 1.2rem 1rem;
@@ -52,7 +68,7 @@ body.menu-opened {
               width: 170px;
               background: $white; border-radius: 4px;
               box-shadow: 0 2px 3px rgba($black, 0.17);
-              position: absolute; right: 0;
+              position: absolute; right: 0; top: 3.25rem;
               &::before {
                 content: ""; display: block;
                 border: 7px solid $white; border-color: transparent transparent $white transparent;
@@ -69,7 +85,7 @@ body.menu-opened {
                 display: block; padding: 0.6rem 0;
                 color: $white; font-size: 1.025rem; font-family: $font; font-weight: 700;
                 line-height: 26px; text-transform: none;
-                &:hover, &:focus { color: $nav_hover; background: $nav_hover_bg; }
+                &:hover, &:focus { color: $color; background: transparent; }
                 @include break(large) {
                   padding: 0.6rem 1rem; margin: none;
                   font-size: 0.81rem; color: $text-muted; font-weight: 500; text-align: left;
@@ -183,6 +199,10 @@ body.menu-opened {
         }
       }
     }
+    .ico {
+      font-size: 1.25rem;
+      display: inline-block; padding: 0.7rem 0;
+    }
     .title {
       display: none;
       @include break-from(920px) {
@@ -204,11 +224,11 @@ body.menu-opened {
     padding: 0.8rem 0 0; margin: 0 -0.5rem;
     @include break(l) { margin: 2rem -0.5rem 0; }
     .social-icon {
-      .icon {
-        filter: grayscale(100%);
+      .ico {
+        color: rgba($text-muted, 0.6);
       }
       a:focus, a:hover {
-        .icon { filter: grayscale(0%); }
+        .ico { color: $color; }
       }
     }
   }

@@ -89,9 +89,6 @@ iframe { display: block; max-width: 100%; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 
-// Header line-height
-.header-line-height { line-height: $header-line-height; }
-
 // Effects
 .tfx, %tfx, a { -webkit-transition: all 0.15s; transition: all 0.15s; }
 .notfx, %notfx { -webkit-transition: none; transition: none; }
