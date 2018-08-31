@@ -3,7 +3,6 @@
 - [ ] Roadmap sub-tasks (split large ones into smaller chunks below)
 - icons
    - [ ] roadmap: add icons to statuses (+ animate In Progress)
-   - [ ] exchanges: add +/-/~ icons to group features
 
 **code rewrite**
 

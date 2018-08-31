@@ -141,6 +141,8 @@ a {
   &.link-small-grey { color: $black-op-5; }
 }
 
+abbr[title] { border: none; cursor: help; }
+
 table {
   th, td { @extend %tfx; }
   tr {

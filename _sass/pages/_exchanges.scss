@@ -1,12 +1,31 @@
 section.exchange-group {
 
-  ul.traits {
-    padding-left: 2.5rem; margin: 1rem 0 2.5rem;
-    font-size: 0.9rem; color: $text-muted;
-    li {
-      margin-bottom: 0.4rem;
-      line-height: 1.45;
-      abbr { border: none; }
+  .traits {
+    margin-bottom: 2.5rem;
+    .ico {
+      @extend %tfx;
+      color: lighten($text-muted, 35%);
+      float: left;
+    }
+    .trait {
+      margin-left: 0.5rem; padding: 0.4rem 0;
+      @include break(l) { margin-left: 1.5rem; }
+      &:hover {
+        ul { color: darken($text-muted, 15%); }
+        .ico-check { color: darken($color, 3%); }
+        .ico-upcoming { color: $warning; }
+        .ico-cross { color: $alert; }
+      }
+    }
+    ul {
+      @extend %tfx;
+      list-style: none;
+      padding-left: 2rem; margin: 0;
+      font-size: 0.9rem; color: $text-muted;
+      li {
+        margin-bottom: 0.4rem;
+        line-height: 1.45;
+      }
     }
   }
 

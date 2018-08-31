@@ -97,7 +97,7 @@
 	content: "\E013";
 }
 
-.ico-pending:before {
+.ico-progress:before {
 	content: "\E014";
 }
 
@@ -121,10 +121,14 @@
 	content: "\E019";
 }
 
-.ico-win:before {
+.ico-upcoming:before {
 	content: "\E01A";
 }
 
-.ico-youtube:before {
+.ico-win:before {
 	content: "\E01B";
+}
+
+.ico-youtube:before {
+	content: "\E01C";
 }
