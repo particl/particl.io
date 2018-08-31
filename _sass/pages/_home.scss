@@ -65,7 +65,7 @@
   .intro-features {
     display: none;
     width: 920px;
-    margin: 3rem auto 2rem;
+    margin: 5rem auto 2rem;
     @include break(l) { display: block; }
     .owl-item {
       max-width: none; margin-bottom: 0;
@@ -74,9 +74,25 @@
     .feature-slide {
       max-width: 920px;
       height: 500px;
-      img {
-        width: 920px; max-width: 920px;
-        height: auto;
+      position: relative;
+      .wallet {
+        width: 770px; max-width: 770px; height: auto;
+        margin: 0 auto;
+      }
+      .highlight {
+        position: absolute; bottom: 0; right: 0;
+        width: 280px; height: 280px;
+      }
+      .text {
+        position: absolute; bottom: 1.9rem; left: 4.9rem;
+        font-size: 0.925rem; color: $text-muted;
+        strong { color: $text; }
+      }
+      .tag {
+        position: absolute; bottom: 100px; left: 50px;
+        background: lighten($text-muted, 10%); border-radius: $border-radius;
+        font-size: 0.7rem; text-transform: uppercase; font-weight: 500; color: $white;
+        padding: 0.25rem 0.7rem;
       }
     }
   }
