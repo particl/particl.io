@@ -190,24 +190,11 @@ section.intro-text {
 
 
 
-section.feature {
+section.download-promo {
   background-color: $black;
-
-  h5 {
-    color: $feature-header;
-    line-height: normal;
-    //width: 159px;
-    text-transform: uppercase;
-    margin-left: 8.33333%;
-    padding: 0 0.6rem;
-    letter-spacing: 0.8px;
-    font-weight: 700;
-  }
-
   p {
     margin-bottom: 2.125rem;
     color: $white-op-9;
-
     @include before_md { margin-bottom: 0px; }
   }
 }
@@ -336,7 +323,7 @@ section#features {
   }
 }
 
-section.feature.download-promo {
+section.download-promo {
   padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;

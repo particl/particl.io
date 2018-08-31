@@ -30,6 +30,7 @@ section.exchange-group {
   }
 
   .box {
+    @extend %tfx;
     background: $white; border-radius: ($border-radius * 2);
     box-shadow: 0 3px 20px rgba($black, 0.06);
     height: 13rem;
@@ -42,6 +43,7 @@ section.exchange-group {
     text-align: center;
     &::after { content: none; }
     &:hover {
+      .box { box-shadow: 0 3px 20px rgba($black, 0.15); }
       .logo img { opacity: 1; filter: saturate(100%); }
       .tag {
         &.crypto { background: darken($color, 5%); }
