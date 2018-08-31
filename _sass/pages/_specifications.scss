@@ -13,10 +13,12 @@ section.specs {
             display: block; margin-top: 0.25rem;
             font-size: 0.735rem; letter-spacing: 0; line-height: 1.5;
           }
-          img.value {
-            display: block; width: 1.1rem; float: left;
-            position: relative; top: 2px;
+          .value {
+            float: left;
+            font-size: 1.1rem;
+            position: relative; top: 0px;
             & + small { margin-left: 1.7rem; position: relative; top: -2px; }
+            &.ico-check { color: $color; }
           }
         }
         th {
