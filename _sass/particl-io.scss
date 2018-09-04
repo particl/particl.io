@@ -41,6 +41,12 @@
 
 // -------------[  BASICS  ]------------- //
 
+html {
+  font-size: 16px;
+  @include break-from(1450px) { font-size: 17px; }
+  @include break-from(1950px) { font-size: 18px; }
+}
+
 body {
   background: $bg;
   color: $text;

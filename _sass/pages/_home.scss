@@ -241,18 +241,10 @@ section#features {
   .button {
     font-size: 0.83rem; font-weight: 700;
     display: block;
-    width: 220px;
-    margin: 20px auto;
-    /*
-    &:hover {
-      &.riot { background: #764D80; border-color: #764D80; }
-      &.discord { background: #7289DA; border-color: #7289DA; }
-      &.telegram { background: #2DA5E0; border-color: #2DA5E0; }
-    }
-    */
+    width: 11.5rem;
+    margin: 0.8rem auto;
     @include break(large) {
       display: inline-block;
-      width: 180px;
       margin: 0 0.3rem;
     }
     i.ico {

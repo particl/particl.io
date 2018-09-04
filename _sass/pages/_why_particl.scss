@@ -22,9 +22,9 @@
       background-color: $white;
       margin: 0.7rem 0; padding: 2.438rem 2.563rem;
       @include break(large) {
-        min-height: 420px;
-        &.medium { min-height: 500px; }
-        &.long { min-height: 620px; }
+        min-height: 26.5rem;
+        &.medium { min-height: 31.5rem; }
+        &.long { min-height: 38.5rem; }
       }
       h2 { margin: 0 0 1.313rem; }
       p { margin: 0; }
