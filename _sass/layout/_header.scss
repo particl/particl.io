@@ -1,293 +1,88 @@
 .header {
-  background-color: $header-bg;
-  height: 3.563rem;
-  width: 100%;
-  z-index: 2;
-  position: fixed;
-  top: 0rem;
-
-  @include before_md {
-    background-color: $header-mobile-bg;
-    height: 3.375rem;
+  background-color: $black;
+  width: 100%; height: 3rem;
+  position: fixed; top: 0; z-index: 2;
+  @include break(s) { height: 3.35rem; }
+  @include break(large) {
+    background-color: $header-bg;
   }
 
-  button {
+  // logo, duh
+  .logo {
+    float: left;
+    margin-left: -0.8rem;
+    @include break(large) { background: $black; margin-right: 0.8rem; }
+    a { display: block; }
+    img {
+      display: block;
+      width: 100%; max-width: 6rem; height: auto;
+      padding: 0.8rem;
+      @include break(s) { max-width: 6.7rem; padding: 0.9rem 0.9rem; }
+      @include break(large) { max-width: 7.3rem; padding: 1rem 1.3rem; }
+    }
+  }
+
+  // mobile: toggle menu button
+  #menu-toggle {
+    float: right;
+    padding: 0.7rem 1rem; margin-right: -0.8rem;
+    border: 0;
+    font-size: 1.2rem; color: rgba($white, 0.8);
+    @include break(s) { padding: 0.9rem 1.1rem; }
+    @include break(large) { display: none; }
     &:focus, &:hover {
       background: transparent;
-      outline: 0px;
+      outline: 0;
     }
+    i.ico { margin: 0; }
   }
 
-  #menu-toggle { // mobile: toggle menu button
-    float: right;
-    border: 0px;
-    color: $white-op-8;
-    margin: 0.967rem 0rem;
-
-    @include md { display: none; }
-
-    i.ico { margin: 0rem; }
-  }
-
-  .header-chart-container {
-    text-align: center;
-    height: 3.563rem;
-    position: relative;
-
-    @include between_m_lg {
-      text-align: left;
-    }
-
-    & > div {
-      border: 0px !important;
-      min-width: inherit !important;
-      height: 100%;
-      font-family: "GraphikLCG" !important;
-
-      & > div:first-child {
-        height: 100%;
-
-        & > div:first-child {
-
-          width: auto !important;
-          text-align: center !important;
-          float: none !important;
-          line-height: normal !important;
-          padding: 15px 0px !important;
-          display: inline-block;
-          height: 100%;
-
-          br { display: none; }
-
-          & > span:first-child {
-
-            &:before {
-              content:'1 part =';
-              color: $header-chart-text;
-              font-weight: 500;
-              font-size: 0.625rem;
-              text-transform: uppercase;
-
-              @include before_md {
-                color: $white;
-              }
-            }
-
-            & > a {
-              display: none !important;
-            }
-          }
-
-          & > span:last-child {
-            color: $header-chart-text;
-            font-weight: 500;
-            font-size: 0.625rem !important;
-            text-transform: uppercase;
-
-            @include before_md {
-              color: $white;
-            }
-
-            & > span {
-              position: absolute;
-              top: 0px;
-              bottom: 0px;
-              right: 0px;
-              width: 41px;
-              height: 57px;
-              color: $header-chart-text !important;
-              padding-top: 1.313rem;
-            }
-          }
-        }
-
-        & > div:last-child {
-          width: 45px !important;
-          height: 17px;
-          padding: 0px !important;
-          min-width: 40px;
-          display: inline-block;
-
-          @include between_m_lg {
-            position: relative;
-          }
-
-          img {
-            display: none;
-          }
-
-          &:before {
-            background-image: url('https://files.coinmarketcap.com/generated/sparklines/1826.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            display: inline-block;
-            width: 45px; 
-            height: 17px;
-            content:'';
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            right: 55px;
-            margin: auto;
-
-            @include before_md {
-              right: 0px;
-            }
-
-            @include between_m_lg {
-              right: 0px;
-            }
-
-          }
-        }
-      }
-
-      & > div:last-child {
-        display: none;
-      }
-
-    }             
-
-    @include before_md {
-      height: 3.375rem;
-      color: $white;
-      text-align: left;
-    }
-
-    span {
-      line-height: normal;
-    }
-
-    .header-chart-percent {
-      @include before_md {
-        display: none;
-      }
-    }
-  }
-}
-
-header {
-  height: 3.563rem;
-
-  @include before_md {
-    height: 3.375rem;
-  }
-  
-  .logo {
-    padding-top: 0.656rem;
-    @extend .tfx;
-    
-    @include before_md {
-      padding-top: 0.563rem;
-    }
-
-    .desktop-logo { 
-      @include before_md { display: none; } 
-      @include md { display: inline-block; } 
-    }
-
-    .mobile-logo { 
-      @include before_md { display: inline-block; } 
-      @include md { display: none; } 
-    }
-
-    img {
-      @extend .tfx;
-      max-width: 5.563rem;
-      height: 36px;
-    }
-  }
-}
-
-.mobile-header-footer {
-  margin-bottom: 3.81rem;
-
-  .links-container {
-  }
-
-  .footer-icon-container {
-    width: 20%;
+  // price graph
+  .coinmarketcap-currency-widget {
     float: left;
+    width: 8rem; height: 3rem; padding: 0.5rem 0.6rem;
+    position: relative;
+    color: lighten($black, 30%);
+    @include break(s) { width: 8.8rem; height: 3.35rem; }
+    @include break(large) { color: $text; }
 
-    @include before_md {
-      padding-bottom: 21px;
+    // price sparkline
+    &::before {
+      content: '';
+      position: absolute; top: 0; bottom: 0; right: 0;
+      background-image: url('https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1826.png');
+      background-size: 100%; background-repeat: no-repeat;
+      display: block; width: 60px; height: 20px; margin: auto;
+      filter: hue-rotate(90deg);
+      @include break(s) { width: 65px; height: 21px; }
     }
-  }
 
-  .social-icons-container {
-    padding: 1.313rem 0rem;
-    @extend %clearfix;
+    & > div { // widget wrapper
+      border: 0 !important;
+      min-width: auto !important;
+      & > div:first-child {
+        & > div:first-child {
+          & > span {
+            &:first-of-type { display: none !important; }
 
-    @include before_md {
-      padding: 1.313rem 0.8125rem;
-      margin-bottom: 33px;
+            // USD price
+            &:last-of-type {
+              font-weight: 500;
+              font-size: 0.7rem !important;
+              position: absolute; top: 9px; left: 0.5rem;
+              @include break(s) { left: 0.7rem; top: 12px; }
+              @include break(large) {
+                color: rgba($text-muted, 0.7); font-size: 0.65rem !important;
+                top: 14px;
+              }
+              & > span { display: none; } // price % change
+            }
+          }
+          br { display: none; }
+        }
+        & > div:last-child { display: none; } // logo image
+      }
+      & > div:last-child { display: none; }
     }
-
-    a {
-      display: inline-block;
-      width: 47px;
-      height: 47px;
-
-      position: relative;
-    }
-  }
-
-  .footer-btn:before {
-    content: '';
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
-    margin: auto;
-    width: 46px;
-    height: 46px;
-  }
-
-  .email-btn:before {
-    background-image: url("/assets/img/ico/new/email-mobile-header.svg");
-  }
-
-  .twitter-btn:before {
-    background-image: url("/assets/img/ico/new/twit-mobile-header.svg");
-  }
-
-  .monkey-btn:before {
-    background-image: url("/assets/img/ico/new/monkey-mobile-header.svg");
-  }
-
-  .telegram-btn:before {
-    background-image: url("/assets/img/ico/new/telegram-mobile-header.svg");
-  }
-
-  .github-btn:before {
-    background-image: url("/assets/img/ico/new/github-mobile-header.svg");
-  }
-
-  .bitcoin-btn:before {
-    background-image: url("/assets/img/ico/new/bitcoin-mobile-header.svg");
-  }
-
-  .youtube-btn:before {
-    background-image: url("/assets/img/ico/new/youtube-mobile-header.svg");
-  }
-
-  .slack-btn:before {
-    background-image: url("/assets/img/ico/new/slack-mobile-header.svg");
-  }
-
-  .discord-btn:before {
-    background-image: url("/assets/img/ico/new/discord-mobile.svg");
-  }
-
-  .riot-btn:before {
-    background-image: url("/assets/img/ico/new/reddit-mobile-header.svg");
-  }
-
-  .footer-circle:before {
-    border: 1px solid #04E8B0;
-    border-radius: 50%;
-    content: '';
   }
 }

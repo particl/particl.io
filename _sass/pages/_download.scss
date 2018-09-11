@@ -15,19 +15,13 @@ section.general-download {
 
 .wallets-view {
   margin-top: 2.125rem;
-
-  @include before_md {
-    overflow-x: scroll;
-  }
-
+  @include before_md { overflow-x: scroll; }
   table {
     border-color: $hr-color;
   }
-
   .download-table {
     margin-bottom: 2.063rem;
     text-align: center;
-
     th {
       padding-bottom: 0.625rem;
       text-align: center;
@@ -52,28 +46,6 @@ section.general-download {
       &.type-name {
         text-align: left;
       }
-
-      &.icon:before {
-        content: '';
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        bottom: 0px;
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        margin: auto;
-        width: 23px;
-        height: 23px;
-      }
-
-      &.icon-check:before {
-        background-image: url("/assets/img/ico/new/downloads_check.png");
-      }
-
-      &.icon-uncheck:before {
-        background-image: url("/assets/img/ico/new/downloads_uncheck.png");
-      }
     }
 
     tr:last-child {
@@ -84,35 +56,24 @@ section.general-download {
 
 section.version-list {
   padding: 2.75rem 1rem 1.625rem 1rem;
-
   .copay-img-cont {
-
     img {
       width: 117px;
     }
   }
-
   h5 {
     margin-top: 0px;
     margin-bottom: 1.063rem;
   }
-
   h2 {
     margin-bottom: 0.75rem;
   }
-
   img {
     margin-top: 2.25rem;
   }
-
   p {
     max-width: 379px;
     width: 100%;
-  }
-
-  .link-small-dark {
-    margin-bottom: 1.438rem;
-    display: inline-block;
   }
 }
 
@@ -120,79 +81,61 @@ section.version-list {
   margin-bottom: 1.438rem;
 }
 
+
+ul.guides {
+  margin: 1rem 0 1.5rem;
+  padding: 0 0 0 1rem;
+  list-style: circle;
+  li {
+    display: list-item;
+    margin: 0;
+    a {
+      padding: 0.2rem 0;
+      font-size: 0.825rem; font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .link-small-dark {
+    display: inline-block;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
 .version-list-links {
   margin-bottom: 0.75rem;
 
-  .link {
-    padding: 5px 65px 20px 30px;
-    position: relative;
-    color: $general-text-color;
-    font-size: $font-size-12;
-    font-weight: 600;
-    display: inline-block;
+  a.link {
     width: 32%;
-
-    @include before_md {
-      width: 100%;
+    display: inline-block; padding: 0.3rem 0; margin-bottom: 0.4rem;
+    position: relative;
+    color: $text; font-size: 0.8rem; font-weight: 700;
+    cursor: pointer;
+    &:hover { color: darken($color, 5%); }
+    @include before_md { width: 100%; }
+    &:after { content: none !important; }
+    i.ico {
+      font-size: 1.2rem;
+      margin-right: 0.6rem;
+      position: relative; top: 2px;
     }
   }
-
-  .link:before {
-    content:'';
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    bottom: 0px;
-    top: 4px;
-    left: 0px;
-    width: 20px;
-    height: 20px;
-    opacity: 0.7;
-  }
-
-  .win-64:before, .win-32:before {
-    background-image: url("/assets/img/ico/new/windows-8.png");
-  }
-
-  .linux-64:before, .linux-32:before {
-    background-image: url("/assets/img/ico/new/linux.png");
-  }
-
-  .mac-64:before {
-    background-image: url("/assets/img/ico/new/mac-os-icon.png");
-  }
-
-  .source-code:before {
-    background-image: url("/assets/img/ico/new/github-logo.png");
-  }
-
-  .freebsd:before {
-    background-image: url("/assets/img/ico/new/free-bsd.png");
-  }
-
 }
 
-.os {
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 2px;
-    opacity: 0.7;
-    position: relative;
-    top: 4px;
+// Comparison table
+.download-table {
+  .value {
+    i.ico {
+      font-size: 1.3rem;
+      &.ico-check { color: $color; }
+      &.ico-cross { color: $alert; }
+    }
   }
-  &.win::before {
-    background-image: url("/assets/img/ico/new/windows-8.png");
-  }
-  &.linux::before {
-    background-image: url("/assets/img/ico/new/linux.png");
-  }
-  &.mac::before {
-    background-image: url("/assets/img/ico/new/mac-os-icon.png");
-  }
-  &.android::before {
-    background-image: url("/assets/img/ico/new/android-os.png");
+  .platform-name {
+    i.ico {
+      font-size: 1rem; color: $text-muted;
+      display: inline-block; margin: 2px;
+    }
   }
 }

@@ -2,293 +2,148 @@
 layout: default
 ---
 
-      <section id="page-title">
+<section class="page-title centered">
 	<div class="row">
 		<div class="column">
-			<h1 class="title text-center header-line-height">Particl Project<br />Status Report</h1>
+      <h1 class="title">Particl Project<br />Status Report</h1>
+      <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
+      <small>Updated 31 August 2018</small>
+    </div>
 	</div>
 </section><!-- #page-title -->
 
+<hr>
 
-<section class="report-busy">
+<section class="status-report">
 	<div class="row">
-		<div class="large-6 columns">
+    <div class="column">
+      <div class="grid small-block-grid-1 medium-block-grid-2 large-block-grid-2">
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/busy-with.svg" alt="">
-				<h2 class="title">What are we busy with</h2>
-			</div>
-			
-			<ul>
-  <li><strong>Release of GUI TestNet Ver 1.1.0</strong>
+        <div class="part completed">
+          <h2 class="title">Recently completed</h2>
+          
+<ul>
+  <li>Particl Desktop (v1.2.2, mainnet)
     <ul>
-      <li>GUI TestNet – Internal UAT (RC4)
-        <ul>
-          <li>Upgrade partilcd to latest 15.1.2</li>
-          <li>Overview transaction order incorrect</li>
-          <li>Modal layout on Mac and Linux miss aligned</li>
-          <li>Codesign GUI</li>
-        </ul>
-      </li>
+      <li>Cold staking widget fix</li>
+      <li>User Interface updates</li>
+      <li>Updated icons</li>
+      <li>Transaction handling refactored</li>
+      <li>Running on 0.16.2.0 Particl Core</li>
     </ul>
   </li>
-  <li><strong>Preparation of GUI Ver 1.2.0</strong></li>
-  <li><strong>Particl Market Place</strong>
+  <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>GUI Design
+      <li>
+        Finalising voting and Proposals (Governance 1.0)
         <ul>
-          <li>Market Management</li>
-          <li>Seller interface</li>
-          <li>Buyer interface</li>
+          <li>Creation of Proposals</li>
+          <li>Voting tools and stats</li>
         </ul>
       </li>
-      <li>GUI Categories Design</li>
-      <li>Market Place Functions
-        <ul>
-          <li>MessagingInformationCommand</li>
-          <li>ListingItemTemplateSearchCommand</li>
-          <li>ListingItemTemplateCreateCommand</li>
-          <li>ItemInformationGetCommand</li>
-          <li>ItemInformationCreateCommand</li>
-          <li>ItemInformationUpdateCommand</li>
-          <li>ItemInformationCommand</li>
-          <li>ListingItemPostCommand</li>
-        </ul>
-      </li>
-      <li>Market Place Backend
-        <ul>
-          <li>Restructure blackbox tests</li>
-          <li>Add CI to build and run blackbox tests against the RPC API on each commit</li>
-        </ul>
-      </li>
+      <li>Trigger notifications for orders changes</li>
+      <li>Adding a location selector for a more clear pricing structure</li>
+      <li>Starting the desktop without the marketplace</li>
+      <li>Settings page design and layout</li>
+      <li>Advanced sort and filter option</li>
+      <li>Multi-Wallet design and layout</li>
+      <li>Expiry times on listings</li>
+    </ul>
+  </li>
+  <li>Particl Core
+    <ul>
+      <li>Particl Core 0.16.2.0</li>
     </ul>
   </li>
 </ul>
 
+        </div><!-- .completed -->
 
-		</div>
-		<div class="large-6 columns">
+        <div class="part reviewed">
+          <h2 class="title">Waiting for review</h2>
 
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/under-review.svg" alt="">
-				<h2 class="title">Waiting for review</h2>
-			</div>
-			
-			<ul>
-  <li><strong>Release of GUI Testnet 1.1.0</strong>
+<ul>
+  <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>GUI Components
+      <li>
+        Finalising voting and Proposals (Governance 1.0)
         <ul>
-          <li>Copy and Paste issue on OSX using shortcut keys</li>
-          <li>Crash while downloading – Daemon timeout</li>
+          <li>Consensus on the removal of products - Market governance</li>
         </ul>
       </li>
+      <li>Settings API for Marketplace</li>
+    </ul>
+  </li>
+  <li>Third-party integrations
+    <ul>
+      <li>Ledger integration</li>
     </ul>
   </li>
 </ul>
 
+        </div><!-- .reviewed -->
 
-		</div>
+        <div class="part in-development">
+          <h2 class="title">In development</h2>
+
+<ul>
+  <li>
+    Particl Marketplace (alpha, testnet)
+    <ul>
+      <li>Code refactoring</li>
+      <li>Multi-Wallet implementation</li>
+      <li>Escrow process refactor and enhancements</li>
+      <li>Automated Testing - End to End testing, Unit Testing and Regression Testing</li>
+      <li>
+        Settings page
+        <ul>
+          <li>Core Settings</li>
+          <li>Marketplace Settings</li>
+          <li>GUI Settings</li>
+        </ul>
+      </li>
+      <li>Staking pool statistics</li>
+      <li>Enhancements on error handling</li>
+      <li>Automatic splitting of outputs</li>
+      <li>Improved message processing</li>
+    </ul>
+  </li>
+  <li>
+    Third Party Integration
+    <ul>
+      <li>Trezor integration</li>
+    </ul>
+  </li>
+  <li>
+    Particl Core
+    <ul>
+      <li>Particl Core 0.17.0.2</li>
+    </ul>
+  </li>
+</ul>
+
+        </div><!-- .in-development -->
+
+        <div class="part upcoming">
+          <h2 class="title">Upcoming features</h2>
+
+<ul>
+  <li>Particl Marketplace (beta)
+    <ul>
+      <li>Private listings</li>
+      <li>Private Markets</li>
+      <li>Deposit Negotiations</li>
+      <li>Marketplace versioning for messages and listings</li>
+    </ul>
+  </li>
+  <li>Software Development Kit (SDK)</li>
+</ul>
+
+        </div><!-- .upcoming -->
+
+      </div>
+    </div>
 	</div>
-</section><!-- .feature -->
-
-<section class="">
-	<div class="row">
-		<div class="large-6 column">
-
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/wrapped-up.svg" alt="">
-				<h2 class="title">Wrapped up</h2>
-			</div>
-			
-			<ul>
-  <li><strong>Release of GUI TestNet Ver 0.1.0</strong>
-    <ul>
-      <li>Features (As per Status Update 18/01/2018)
-        <ul>
-          <li>Cold staking widget</li>
-          <li>ZAP functionality for fast cold staking activation</li>
-          <li>Debug window console</li>
-          <li>History filters</li>
-          <li>Syncing progress bar in left side menu</li>
-          <li>Notifications for a new release</li>
-          <li>OS notifications for stakes and incoming transactions</li>
-          <li>Display client and daemon versions</li>
-          <li>Paste button in address add</li>
-          <li>Paste an address anywhere in send page and address book</li>
-          <li>Display narrations on transactions</li>
-          <li>Pagination - Choose how many transactions to display per page</li>
-        </ul>
-      </li>
-      <li>Maintenance
-        <ul>
-          <li>Test and finalize Zap feature</li>
-          <li>Update ng2-logger to the latest version</li>
-          <li>Add takeWhile and OnDestroy hook in all state.observe calls</li>
-          <li>Update packages</li>
-          <li>Added RPC calls to console</li>
-          <li>Added checksums for build process</li>
-          <li>Merge dev -&gt; Branch 1.1.0</li>
-          <li>Send Page: Updated icons and alignment tweaks</li>
-          <li>Redefine logging levels</li>
-          <li>Update Electron to the latest version</li>
-        </ul>
-      </li>
-      <li>Bugs fixed
-        <ul>
-          <li>Added background image for Mac DMG</li>
-          <li>App not quitting when daemon start before the GUI</li>
-          <li>Fixed preceding issue on creation of wallet, due to passwords.</li>
-          <li>Sign and Verify modal refactoring</li>
-          <li>Remove arm command not working in builds</li>
-          <li>Changed save button name on address book</li>
-          <li>Fixed success flash message not aligned</li>
-          <li>Fix error on creation screen if no password entered</li>
-          <li>App title update</li>
-          <li>Fix wallet detection</li>
-          <li>Fix daemon error messages</li>
-          <li>Resolve create wallet without recovery passphrase</li>
-          <li>Fix Mac build issues</li>
-          <li>Various other bugs</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Particl Market Place</strong>
-    <ul>
-      <li>Market Place Functions
-        <ul>
-          <li>MP: Functions (RPC API) – Listing Item
-            <ul>
-              <li>ListingItemGetCommand, CategoryCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item Category
-            <ul>
-              <li>ItemCategoryFindCommand, ItemCategoryCreateCommand, ItemCategoryGetCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Address
-            <ul>
-              <li>AddressCreateCommand, AddressUpdateCommand, AddressCommand, AddressListCommand, AddressRemoveCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Profile
-            <ul>
-              <li>ProfileCommand, ProfileListCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Market
-            <ul>
-              <li>MarketCommand, MarketListCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Data
-            <ul>
-              <li>DataCommand</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Listing Item
-            <ul>
-              <li>ListingItemService, ListingItemTemplateService</li>
-            </ul>
-          </li>
-          <li>MP: Functions (RPC API) – Item
-            <ul>
-              <li>postitem, updateitem</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Market Place Backend
-        <ul>
-          <li>Design final RPC API</li>
-          <li>Rename blackbox test files to match the commands being tested</li>
-          <li>Replace the Country Enum with a library</li>
-          <li>Particl docker startup options</li>
-          <li>Remove image Metadata</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-
-		</div>
-		<div class="large-6 column">
-			
-			<div class="icon-title">
-				<img class="ico" src="/assets/img/ico/status-report/on-horizon.svg" alt="">
-				<h2 class="title">What's on the Horizon</h2>
-			</div>
-			
-			<ul>
-  <li><strong>Release of GUI Mainnet 1.1.0</strong>
-    <ul>
-      <li>Features to be included
-        <ul>
-          <li>Cold staking widget</li>
-          <li>ZAP functionality for fast cold staking activation</li>
-          <li>Debug window console</li>
-          <li>History filters</li>
-          <li>Syncing progress bar in left side menu</li>
-          <li>Notifications for a new release</li>
-          <li>OS notifications for stakes and incoming transactions</li>
-          <li>Display client and daemon versions</li>
-          <li>Paste button in address add</li>
-          <li>Paste an address anywhere in send page and address book</li>
-          <li>Display narrations on transactions</li>
-          <li>Pagination - Choose how many transactions to display per page</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Release of GUI Testnet 1.2.0</strong>
-    <ul>
-      <li>Features to be included
-        <ul>
-          <li>Multi-wallet</li>
-          <li>Settings page</li>
-          <li>Message Pop-up for Daemon loading</li>
-          <li>Optional user’s memos for transaction</li>
-          <li>Display fees when sending transactions</li>
-          <li>More detailed connection and network information</li>
-          <li>Connect to remote daemon</li>
-          <li>Automatically ZAP incoming transactions</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Particl Marketplace</strong>
-    <ul>
-      <li>GUI Integration (API Service + Consuming)
-        <ul>
-          <li>Market Management</li>
-          <li>Share URI / Open URI to view marketplace item</li>
-          <li>Add item</li>
-          <li>Add Item Image</li>
-          <li>Full list</li>
-          <li>View Items (Search View)</li>
-          <li>View item</li>
-          <li>View “My Item(s)”</li>
-          <li>View Escrowed item</li>
-          <li>Checkout View</li>
-          <li>Negotiation page integration</li>
-        </ul>
-      </li>
-      <li>P2P Marketplace Governance
-        <ul>
-          <li>Consensus on removal of products (Voting)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Further Third Party Integration</strong></li>
-</ul>
-
-
-		</div>
-	</div>
-</section><!-- .feature -->
+</section><!-- .status-report -->
 
 {% include particl-desktop.html %}

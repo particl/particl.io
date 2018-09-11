@@ -1,398 +1,268 @@
 #page {
-  margin-top: 3.563rem;
-
-  @include before_md {
-    margin-top: 0px;
-  }
-
-  ul { // fancy lists
-    list-style: none;
-    line-height: 1.7;
-    color: $text-muted;
-
-    @include break(s) { line-height: 2; }
-
-    li {
-      display: block;
-      margin: 0.2rem 0rem;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: -2rem;
-        top: 0.2rem;
-        display: block;
-        width: 0.625rem;
-        height: 0.625rem;
-        border: 4px solid darken($primary, 3%);
-        border-radius: 50%;
-      }
-    }
-
-    ul { // 2nd level lists
-      li::before {
-        background: lighten($text-muted, 40%);
-        border: none;
-        border-radius: 0;
-        top: 1rem;
-        left: -1.6rem;
-        width: 0.9rem;
-        height: 2px;
-      }
-    }
-  }
-
+  margin-top: 3.4rem; // offset sticky header
 }
 
-.banner-header {
-  margin: auto;
-  height: 102px;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-
-  @include before_md {
-    height: 168px;
-    line-height: 1.4;
-  }
-}
-
-.banner-btn-container {
-  text-align: center;
-}
-
-.logo-listing { // partners & press mentions
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .title {
-    margin: 0rem 0rem 1.5rem;
-
-    &::before { content: none; }
-  }
-
-  .logos {
-    display: flex;
-    min-height: 86px;
-    
-    .logo {
-      @extend .tfx;
-      height: auto;
-      margin: 1rem 1.22rem;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      opacity: 0.5;
-
-      &:hover {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-        opacity: 1;
-      }
-
-      &:first-child {
-        margin-left: 0.93rem;
-      }
-    }
-  }
-
-  a {
-    flex-direction: column;
-    display: flex;
-    align-self: center;
-  }
-
-}
+/* --------------------------------------------- *\
+      Intro "Hero" section
+\* --------------------------------------------- */
 
 #intro {
   text-align: center;
   position: relative;
-  background-color: $part-token-bg;
-  height: 755px;
+  background: url('/assets/img/intro-bg_compressed.jpg') no-repeat top center;
+  background-size: cover;
+  @include break(s) { padding: 6rem 2rem; }
+  @include break(m) { padding: 8rem 2rem 2rem; }
+  @include break(l) { padding-top: 6rem; }
+  @include break(xl) { padding: 7rem 2rem 2rem; }
 
-  padding: 0px !important;
-
-  .bg-img {
-    background-image: url('/assets/img/illustrations/intro_banner_background.png');
-    background-position: center center;
-    background-size: contain;
-    height: 519px;
-    width: 696px;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: auto;
-
-    @include before_md {
-      width: 100%;
-      height: 469px;
-      background-size: cover;
+  // page title(s)
+  .header-title {
+    margin: 0 auto 2rem;
+    line-height: 1.4;
+    max-width: 26rem;
+    @include break(large) { max-width: 30rem; }
+    @include break(xl) { max-width: 60rem; }
+    .title {
+      margin: 0 0 1rem;
+    }
+    .subtitle {
+      font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
+      margin: 0;
     }
   }
-
-  .title {
+  
+  // download & watch video buttons
+  .intro-buttons {
     text-align: center;
-    font-family: 'GraphikLCGMedium';
-    color: $intro-logo-title;
-    text-transform: uppercase;
-
-    @include break(l) { font-size: 0.7rem; }
-    @include break(xl) { font-size: 0.625rem; }
-  }
-
-  p {
-    @include break(m) {
-      max-width: 34rem;
-      margin: 0 auto;
-    }
-
-    @include break(l) { margin: 0; }
-  }
-
-  .actions { margin-top: 1.5rem; }
-
-  .button {
-    @include break(l) { margin-left: 0; }
-  }
-
-  .wallet-download {
-    @extend .tfx;
-    display: none; // hide for mobiles, doesn't make sense there
-    
-    @include break(l) {
+    margin: 3rem 0 0;
+    @include break(large) { margin: 2.5rem 0 0; }
+    .button {
+      font-family: $font; font-size: 0.9rem; font-weight: 700; line-height: 2;
       display: block;
-      padding-bottom: 1rem;
-      text-align: center;
-      background: $bg;
-      box-shadow: 0 4px 12px -5px rgba($text, 0.3);
-      border-bottom: 4px solid transparent;
-    }
-
-    &:hover {
-      border-bottom: 4px solid $primary;
-      .tag { background: darken($bg, 40%); }
-    }
-
-    & > .title {
-      margin: 0.3rem 0 0.3rem;
-      font-size: 1.15rem;
-    }
-
-    & > .version {
-      font-size: 0.85rem;
-      color: lighten($text, 30%);
-    }
-
-    .tag {
-      @extend .tfx;
-      background: darken($bg, 30%);
-      border-radius: 999px;
-      padding: 0.1rem 0.6rem;
-      font-size: 0.65rem;
-      color: $bg;
+      width: 250px;
+      margin: 0 auto; padding: 0.19rem 1rem;
+      @include break(large) {
+        display: inline-block;
+        width: 230px;
+        margin: 0 4px;
+      }
+      &.first {
+        margin-bottom: 10px;
+      }
+      &.second {
+        border-color: rgba($color, 0.7);
+        &:hover, &:focus {
+          color: darken($color, 5%);
+          border-color: darken($color, 5%);
+          background: none;
+        }
+      }
     }
   }
 
+  // GUI teaser slider
+  .intro-features {
+    display: none;
+    width: 920px;
+    margin: 5rem auto 2rem;
+    @include break(l) { display: block; }
+    .owl-item {
+      max-width: none; margin-bottom: 0;
+      background: none; box-shadow: none;
+    }
+    .feature-slide {
+      max-width: 920px;
+      height: 500px;
+      position: relative;
+      .wallet {
+        width: 770px; max-width: 770px; height: auto;
+        margin: 0 auto;
+      }
+      .highlight {
+        position: absolute; bottom: 0; right: 0;
+        width: 280px; height: 280px;
+      }
+      .text {
+        position: absolute; bottom: 1.9rem; left: 4.9rem;
+        font-size: 0.925rem; color: $text-muted;
+        strong { color: $text; }
+      }
+      .tag {
+        position: absolute; bottom: 100px; left: 50px;
+        background: lighten($text-muted, 10%); border-radius: $border-radius;
+        font-size: 0.7rem; text-transform: uppercase; font-weight: 500; color: $white;
+        padding: 0.25rem 0.7rem;
+      }
+    }
+  }
+
+  // partners & press mentions
+  .partners-press {
+    display: none;
+    @include break(m) { display: block; margin-top: 6rem; }
+    @include break(large) { margin-top: 7rem; }
+    //@include break(xl) { margin-top: 7rem; }
+    .logos {
+      a.item { display: inline-block; }
+      .logo {
+        @extend .tfx;
+        width: auto; height: 2.3rem;
+        margin: 0 0.8rem;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.5;
+        @include break(large) { height: 2.6rem; margin: 0 0.9rem; }
+        &:hover {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+          opacity: 1;
+        }
+      }
+    }
+    .title { // titles at logos (Partners/Press)
+      font-size: 0.75rem; color: darken($bg-muted, 35%);
+      text-transform: uppercase; text-align: center;
+      letter-spacing: 0;
+      margin: 1rem 0 0;
+      @include break(l) { font-size: 0.7rem; }
+      @include break(xl) { font-size: 0.83rem; }
+    }
+  }
 }
 
-.feature {
-  &.multiple { // multiple side-by-side features
-    .part {
-      margin-bottom: 2.5rem;
-      @include break(l) { margin-bottom: 0; }
-      @include before_md { margin-bottom:0px; float:none; }
-      &:last-of-type { margin-bottom: 0; }
+
+/* --------------------------------------------- *\
+      Lastest Highlights (News)
+\* --------------------------------------------- */
+
+section.news {
+  border-top: 1px solid $bg-muted;
+  .section-title {
+    @include md { text-align: center; }
+    @include lg { text-align: left; }
+    .title {
+      margin: 0 0 0.3rem;
+      @include lg { margin: 0 0 1.2rem; }
     }
   }
-
+  p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+  a {
+    color: $text; font-weight: 400; font-size: inherit; text-decoration: underline;
+  }
+  .item {
+    margin-top: 3rem;
+    @include lg { margin-top: 0; }
+    .date { color: rgba($text, 0.5); font-size: 0.8rem; }
+    .title {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0; text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .text { font-size: 0.8rem; line-height: 1.45; }
+  }
 }
 
-#page section.feature {
-  background-color: $feature-bg;
 
-  h5 {
-    color: $feature-header;
-    line-height: normal;
-    width: 159px;
-    text-transform: uppercase;
-    margin-left: 8.33333%;
-    padding: 0 0.6rem;
-    letter-spacing: 0.8px;
-    font-weight: 500;
+/* --------------------------------------------- *\
+      "The case for privacy"
+\* --------------------------------------------- */
+
+section.intro-text {
+  background: $black;
+  padding: 3rem 0.5rem;
+  @include break(m) { padding: 3rem 1rem; }
+  @include break(large) { padding: 3rem 1rem 3.5rem; }
+  & > .row { max-width: 55rem; }
+  .title {
+    color: $color;
+    margin: 0 0 0.5rem;
   }
+  p {
+    @extend p.large;
+    color: $white;
+    &:last-of-type { margin-bottom: 0; }
+  }
+}
 
+
+
+
+section.download-promo {
+  background-color: $black;
   p {
     margin-bottom: 2.125rem;
     color: $white-op-9;
-
     @include before_md { margin-bottom: 0px; }
   }
 }
 
-#page section.blockchain {
-  padding: 4rem 0rem 5.063rem;
 
-  @include before_md {
-    padding: 2.5rem 0rem 3rem;
+
+/* --------------------------------------------- *\
+      Carousel ("features")
+\* --------------------------------------------- */
+
+// Carousel with features
+section#features {
+  padding: 1rem 0 4.5rem;
+  @include break(large) {
+    padding: 2rem 0 6rem;
   }
-
-  .blockchain-header {
-    @include before_md {
-      margin-bottom: 10px;
+  .claim-title {
+    text-align: center; font-weight: 500; line-height: 1.45;
+    width: 100%; max-width: 50rem;
+    margin: 4rem auto 0;
+    padding: 0 2rem;
+    .highlight {
+      font-weight: 700;
     }
   }
-
-  h5 {
-    text-align: left;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  p {
-    max-width: 360px;
-    width: 100%;
-
-    @include before_md {
-      margin-top: 0px;
-      max-width: 100%;
-    }
-  }
-}
-
-section#architecture {
-  padding: 6.97rem 0rem 9.06rem 0rem;
-
-  @include before_md {
-    padding: 0.9375rem 0rem 3.1875rem 0rem;
-  }
-
-  .row {
-    max-width: 100%;
-  }
-
   .slider-container {
     margin-top: 3rem;
   }
 }
 
-.join-section {
-  padding: 2.556rem 0rem 3.25rem;
+/* --------------------------------------------- *\
+      Join our channels
+\* --------------------------------------------- */
 
-  h2 {
-    margin: 2.75rem 0rem 2.813rem;
-    color: $white;
+.community-channels {
+  text-align: center;
+  padding: 3.4rem 0 2.7rem;
+  background: $black !important;
+  @include break(large) { padding: 4rem 0; }
+  .title {
+    margin: 1.75rem 2rem 2.7rem;
+    color: $white; line-height: 1.35;
   }
-
   .button {
-    font-weight: 600;
-    position: relative;
-
-    @include before_md {
-      display: block;
-      width: 175px;
-      margin: 20px auto;
+    font-size: 0.83rem; font-weight: 700;
+    display: block;
+    width: 11.5rem;
+    margin: 0.8rem auto;
+    @include break(large) {
+      display: inline-block;
+      margin: 0 0.3rem;
     }
-
-    &:before {
-      content: '';
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      bottom: 0px;
-      margin: auto;
-      height: 100%;
-    }
-  }
-
-
-  .riot-btn {
-    padding: 0.5rem 2.688rem 0.5rem 4rem;
-    font-size: 0.91rem;
-
-    &:before {
-      background-image: url('/assets/img/ico/new/reddit-icon.svg');
-      width: 21px;
-      left: 39px;
-      top: 7px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 39px;
-        right: 0px;
-        margin: auto;
-        background-size: 12%;
-        background-position: left center;
-      }
-    }
-  }
-
-  .discard-btn {
-    padding: 0.55rem 2.063rem 0.55rem 3.5rem;
-    font-size: 0.81rem;
-
-    &:before {
-      background-image: url('/assets/img/ico/new/discord-icon.svg');
-      width: 15px;
-      left: 31px;
-      top: 8px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 31px;
-        right: 0px;
-        margin: auto;
-        background-size: 8%;
-        background-position: left center;
-      }
-    }
-  }
-
-  .telegram-btn {
-    padding: 0.563rem 1.75rem 0.563rem 3.188rem;
-    font-size: 0.81rem;
-  
-    &:before {
-      background-image: url('/assets/img/ico/new/telegram-icon.svg');
-      width: 35px;
-      left: 20px;
-      top: 0px;
-
-      @include before_md {
-        width: 175px;
-        height: 30px;
-        top: 0px;
-        bottom: 0px;
-        left: 20px;
-        right: 0px;
-        margin: auto;
-        background-size: 24%;
-        background-position: left center;
-      }
+    i.ico {
+      margin-right: 0.6rem;
+      font-size: 115%; line-height: 1;
+      position: relative; top: 1px;
     }
   }
 }
 
+
+/* --------------------------------------------- *\
+      About
+\* --------------------------------------------- */
+
 #about {
   padding: 8.373rem 0rem;
-
-  @include before_md {
-    padding: 0px;
-  }
+  @include before_md { padding: 0px; }
 
   h5 {
     margin-top: 2.063rem;
@@ -411,15 +281,9 @@ section#architecture {
     width: 100%;
   }
 
-  .button {
-    font-size: 0.813rem;
-    font-weight: 600;
-  }
-
   .about-img-container {
     text-align: center;
     margin-top: 2.063rem;
-
     @include before_md() {
       &:nth-child(even) {
         margin-top: 3rem;
@@ -429,28 +293,14 @@ section#architecture {
   }
 
   img {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 
   hr {
-    color: $about-hr-color;
+    color: $hr-color;
     margin: 5rem 0rem;
-
-    @include before_md() {
-      margin: 3rem 0rem;
-    }
-  }
-
-  .btn-about-part {
-    padding: 0.56rem 1.71rem;
-  }
-
-  .btn-about-more {
-    padding: 0.56rem 1.07rem;
-  }
-
-  .btn-about-platform {
-    padding: 0.56rem 1.81rem;
+    @include before_md() { margin: 3rem 0rem; }
   }
 
   @include before_md() {
@@ -465,12 +315,10 @@ section#architecture {
   }
 }
 
-#page section.feature.mac {
+section.download-promo {
   padding: 3.913rem 0rem 0rem;
   @include before_md {
     padding: 0px;
-  }
-  @include before_md() {
     & > .row {
       display: flex;
       flex-direction: column-reverse;
@@ -479,68 +327,39 @@ section#architecture {
 
   h2 {
     color: $white;
-    margin: 1.75rem 0rem 1rem;
+    margin: 0 0rem 1rem;
   }
 
-  .btn-mac-download {
-    padding: 0.56rem 3.91rem  0.56rem 1.03rem;
-    position: relative;
-    color: $button-color;
-    font-family: 'GraphikLCGSemiBold';
-    line-height: 2;
-    letter-spacing: 0;
-    text-decoration: none;
-    &:hover {
-      color: white;
-    }
-
-    .mac-subtext {
-      font-size: 0.625rem;
-      color: $white-op-8;
-      font-weight: 600;
-      position: absolute;
-      top: 6px;
-      right: 15px;
-      text-align: right;
-    }
-  }
-
-  .mac-links {
+  .links {
     margin-top: 1.2rem;
-
+    font-size: 0.8rem;
     a {
       color: $white-op-8;
       text-decoration: underline;
-
-      &:first-child {
-        margin-right: 20px;
-      }
+      &:first-child { margin-right: 20px; }
+      &:hover, &:focus { color: $white; }
     }
   }
 
-  .mac-container-text {
+  .text {
     @include before_md {
       text-align: center;
       margin-bottom: 5rem;
-
       p.large {
         margin-bottom: 31px;
       }
     }
   }
 
-  .mac-container-img {
+  .image {
     height: 100%;
     text-align: center;
-
     @include before_md { 
       margin-top: 104px;
       margin-bottom: 59px;
     }
-
     img {
       height: 323px;
-
       @include before_md { height: auto; }
     }
   }
@@ -549,10 +368,8 @@ section#architecture {
 
 #part-token {
   padding: 6.938rem 0rem 5.875rem;
-  background-color: $part-token-bg;
 
   h2 {
-
     &:before {
       content:'';
       position: absolute;
@@ -560,7 +377,7 @@ section#architecture {
       display: block;
       width: 2.5rem;     
       height: 2px;
-      background: $part-token-hr-color;
+      background: $color;
     }
   }
 
@@ -572,9 +389,7 @@ section#architecture {
   p {
     max-width: 326px;
     font-size: 0.813rem;
-    color: $text-color;
     line-height: 1.77;
-    width: 100%;
   }
 
   .first-row p {
@@ -590,19 +405,5 @@ section#architecture {
     color: $black-op-8;
     font-weight: 500;
     text-decoration: underline;
-  }
-}
-
-.particl-partners {
-  .title {
-    @include before_xl {
-      display: none;
-    }
-  }
-}
-
-.particl-press {
-  @include before_xl {
-    display: none;
   }
 }

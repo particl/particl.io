@@ -3,18 +3,9 @@ section.general-press {
 }
 
 .press-items.general-press {
-  padding: 5.813rem 0rem 0.438rem;  
-
-  .column {
-    padding: 0rem;
-  } 
+  padding: 5.813rem 0 3.5rem;
 }
 
-.press-header {
-  h1 {
-    margin-bottom: 0px;
-  }
-}
 
 .press-items {
 
@@ -22,24 +13,32 @@ section.general-press {
     padding: 0rem 0.91rem;
   }
 
-  .item {
+  .press-articles { // block grid of articles
     margin-bottom: 3rem;
-    @include break(xl) { margin-bottom: 3.813rem; }
-    &:last-of-type { margin-bottom: 0; }
+  }
 
-    .image {
-      margin-bottom: 1rem;
-      @include break(xl) { margin-bottom: 1.125rem; }
-      img { display: block; }
+  .item {
+    margin-bottom: 2rem;
+    //&:last-of-type { margin-bottom: 0; }
+    
+    a.press-item {
+      display: inline-block; padding: 0 0 0 1.2rem;
+      border-left: 3px solid $bg-muted;
+      &:hover, &:focus {
+        border-color: $color;
+        .meta { color: $general-op-7; }
+      }
     }
 
     .title {
       margin: 0 0 0.5rem;
-
+      font-size: 1rem; font-weight: 500; letter-spacing: 0; line-height: 1.35;
+      @include break(m) { margin: 0 0 0.6rem; }
       &::before { content: none; }
     }
 
     .meta {
+      @extend %tfx;
       font-size: 0.625rem;
       font-weight: 500;
       color: $general-op-5;

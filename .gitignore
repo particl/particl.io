@@ -6,6 +6,7 @@
 
 # Jekyll
 .sass-cache/*
+_site/*
 
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -71,3 +72,5 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/phpstorm
 node_modules/
+
+yarn\.lock

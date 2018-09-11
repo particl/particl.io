@@ -2,19 +2,15 @@
 layout: default
 ---
 
-<section class="wallets general-download">
-	<div class="row wallets-header">
-		<div class="columns large-12 no-left-padding">
-			<h1>Downloads</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="part large-12 columns desc-form no-left-padding">
-			<p class="large">
+<section class="page-title">
+  <div class="row">
+    <div class="large-5 columns">
+      <h1 class="title">Downloads</h1>
+      <p class="large">
         Particl Desktop is our flagship product and is the best application to begin using PART. All available and in-development features are bundled in Desktop.
-			</p>
-		</div>
-	</div>
+      </p>
+    </div>
+  </div>
 </section>
 
 <hr />
@@ -24,20 +20,34 @@ layout: default
 		<div class="large-4 columns">
 			<img src="/assets/img/illustrations/downloads_particl_desktop.png" alt="Particl Desktop" class="illustration">
 		</div>
-		<div class="large-8 columns no-left-padding">
-			<h5 class="lead2">v{{ site.data.versions.wallet }}</h5>
+		<div class="large-8 columns">
+			<h5 class="lead2" id="particl-desktop-version"></h5>
 			<h2>Particl Desktop</h2>
 			<p class="large">
         Particl Desktop is Particl’s main GUI wallet. It’s beautiful and feature-rich client, recommended for most users.
-			</p>
-			<a href="https://github.com/particl/particl-desktop/releases/tag/v{{ site.data.versions.wallet }}" class="center link-small-dark">Installation Guide</a>
+      </p>
+      <ul class="guides">
+        <li><a id="desktop-guide" target="_blank" class="center link-small-dark">Installation Guide</a></li>
+      </ul>
 			<div class="version-list-links">
-				<a href="https://github.com/particl/particl-desktop/releases/download/v{{ site.data.versions.wallet }}/particl-desktop-{{ site.data.versions.wallet }}-win-x64.zip" target="_blank" class="win-64 link">Windows, 64-bit</a>
-				<a href="https://github.com/particl/particl-desktop/releases/download/v{{ site.data.versions.wallet }}/particl-desktop-{{ site.data.versions.wallet }}-linux-x64.tar.gz" target="_blank" class="linux-64 link">Linux, 64-bit (tar .gz)</a>
-				<a href="https://github.com/particl/particl-desktop/releases/download/v{{ site.data.versions.wallet }}/particl-desktop-{{ site.data.versions.wallet }}-mac.zip" target="_blank" class="mac-64 link">Mac OS X, 64-bit</a>
-				<a href="https://github.com/particl/particl-desktop/releases/download/v{{ site.data.versions.wallet }}/particl-desktop-{{ site.data.versions.wallet }}-win.exe" target="_blank" class="win-32 link">Windows, 32-bit</a>
-				<a href="https://github.com/particl/particl-desktop/releases/download/v{{ site.data.versions.wallet }}/particl-desktop-{{ site.data.versions.wallet }}-linux-amd64.deb" target="_blank" class="linux-32 link">Linux, 64-bit</a>
-				<a href="https://github.com/particl/particl-desktop/archive/v{{ site.data.versions.wallet }}.zip" target="_blank" class="source-code link">Source code (.zip)</a>
+				<a id="desktop-win64" target="_blank" class="link">
+          <i class="ico ico-win"></i>Windows, 64-bit
+        </a>
+				<a id="desktop-linux64" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux, 64-bit (tar.gz)
+        </a>
+				<a id="desktop-mac" target="_blank" class="link">
+          <i class="ico ico-macos"></i>Mac OS X, 64-bit
+        </a>
+				<a id="desktop-win32" target="_blank" class="link">
+          <i class="ico ico-win"></i>Windows, 32-bit
+        </a>
+				<a id="desktop-linux-deb" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux, 64-bit (deb)
+        </a>
+				<a id="desktop-source" target="_blank" class="link">
+          <i class="ico ico-github"></i>Source code (.zip)
+        </a>
 			</div>
 		</div>
 
@@ -51,20 +61,35 @@ layout: default
 		<div class="large-4 columns">
 			<img src="/assets/img/illustrations/downloads_particl_qt.png" alt="Particl Qt" class="illustration">
 		</div>
-		<div class="large-8 columns no-left-padding">
-			<h5 class="lead2">v{{ site.data.versions.core }}</h5>
-			<h2>Particl Core QT</h2>
+		<div class="large-8 columns">
+			<h5 class="lead2" id="particl-core-version"></h5>
+			<h2>Particl Core Qt <small>(with Ledger wallet support)</small></h2>
 			<p class="large">
 				Particl Qt is suitable for everyone and highly recommended for beginners, as it's feature-rich, user-friendly and easy to setup. Download latest release, double-click Particl executable (in bin/ directory) and you're done.
-			</p>
-			<a href="https://particl.news/release-particl-core-0-15-1-1-6d1d82e9a86b" target="_blank" class="center link-small-dark">Installation Guide</a>
+      </p>
+      <ul class="guides">
+        <li><a id="core-guide" target="_blank" class="center link-small-dark">Installation Guide</a><br></li>
+        <li><a href="https://particl.wiki/ledger" target="_blank" class="center link-small-dark">Ledger hardware wallet setup guide</a></li>
+      </ul>
 			<div class="version-list-links">
-				<a href="https://github.com/particl/particl-core/releases/download/v{{ site.data.versions.core }}/particl-{{ site.data.versions.core }}-win64.zip" target="_blank" class="win-64 link">Windows, 64-bit</a>
-				<a href="https://github.com/particl/particl-core/releases/download/v{{ site.data.versions.core }}/particl-{{ site.data.versions.core }}-x86_64-linux-gnu.tar.gz" target="_blank" class="linux-64 link">Linux, 64-bit (tar .gz)</a>
-				<a href="https://github.com/particl/particl-core/releases/download/v{{ site.data.versions.core }}/particl-{{ site.data.versions.core }}-osx-unsigned.dmg" target="_blank" class="mac-64 link">Mac OS X, 64-bit</a>
-				<a href="https://github.com/particl/particl-core/releases/download/v{{ site.data.versions.core }}/particl-{{ site.data.versions.core }}-win32.zip" target="_blank" class="win-32 link">Windows, 32-bit</a>
-				<a href="https://github.com/particl/particl-core/releases/download/v{{ site.data.versions.core }}/particl-{{ site.data.versions.core }}.tar.gz" target="_blank" class="linux-32 link">Linux, 32-bit</a>
-				<a href="https://github.com/particl/particl-core/archive/v{{ site.data.versions.core }}.zip" target="_blank" class="source-code link">Source code (.zip)</a>
+				<a id="core-win64" target="_blank" class="link">
+          <i class="ico ico-win"></i>Windows, 64-bit
+        </a>
+				<a id="core-linux64" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux, 64-bit (tar.gz)
+        </a>
+				<a id="core-mac" target="_blank" class="link">
+          <i class="ico ico-macos"></i>Mac OS X, 64-bit
+        </a>
+				<a id="core-win32" target="_blank" class="link">
+          <i class="ico ico-win"></i>Windows, 32-bit
+        </a>
+				<a id="core-linux32" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux, 32-bit
+        </a>
+				<a id="core-source" target="_blank" class="link">
+          <i class="ico ico-github"></i>Source code (.zip)
+        </a>
 			</div>
 		</div>
 	</div>
@@ -77,15 +102,19 @@ layout: default
 		<div class="large-4 columns">
 			<img src="/assets/img/illustrations/downloads_particl_cli.png" alt="Particl CLI" class="illustration">
 		</div>
-		<div class="large-8 columns no-left-padding">
-			<h5 class="lead2">v{{ site.data.versions.core }}</h5>
+		<div class="large-8 columns">
+			<h5 class="lead2" id="particl-cli-version"></h5>
 			<h2>Particl-cli</h2>
 			<p class="large">
 				Particl-cli offers all the essential features, but doesn't include all the advanced bells and whistles of Particl graphical clients. Particl-cli is recommended for advanced users.
 			</p>
-			<a href="https://particl.news/release-particl-core-0-15-1-1-6d1d82e9a86b" target="_blank" class="center link-small-dark">Installation Guide</a>
+			<ul class="guides">
+        <li><a id="cli-guide" target="_blank" class="center link-small-dark">Installation Guide</a></li>
+      </ul>
 			<div class="version-list-links">
-				<a href="https://github.com/particl/particl-core/releases/tag/v{{ site.data.versions.core }}"  target="_blank"class="source-code link">Github</a>
+				<a id="cli-source" target="_blank" class="link">
+          <i class="ico ico-github"></i>Github
+        </a>
 			</div>
 		</div>
 	</div>
@@ -98,14 +127,20 @@ layout: default
 		<div class="large-4 columns text-center copay-img-cont">
 			<img src="/assets/img/illustrations/downloads_particl_copay.png" alt="Particl Copay" class="illustration">
 		</div>
-		<div class="large-8 columns no-left-padding">
-			<h5 class="lead2">v{{ site.data.versions.copay }}</h5>
+		<div class="large-8 columns">
+			<h5 class="lead2" id="particl-copay-version"></h5>
 			<h2>Particl Copay</h2>
 			<p class="large">
 				Copay is a secure particl wallet platform for both desktop and mobile devices.
 			</p>
-      <a href="https://play.google.com/store/apps/details?id=io.particl.copay" target="_blank" class="center link-small-dark">Download Particl Copay (Android)</a><br>
-      <a href="https://github.com/particl/copay/releases" target="_blank" class="center link-small-dark">Download Particl Copay (Win / macOS / Linux)</a>
+      <div class="version-list-links">
+        <a href="https://play.google.com/store/apps/details?id=io.particl.copay" target="_blank" class="link">
+          <i class="ico ico-android"></i>Google Play (Android)
+        </a>
+        <a href="https://github.com/particl/copay/releases" target="_blank" class="link">
+          <i class="ico ico-github"></i>Github (PC)
+        </a>
+      </div>
 		</div>
 	</div>
 </section><!-- .desktop -->
@@ -114,111 +149,125 @@ layout: default
 
 <section class="wallets general-download">
   <div class="row wallets-view">
-    <div class="large-12 small-12 columns no-left-padding">
-      <table class="download-table" width="100%">
+    <div class="column">
+      <table class="download-table full-width">
         <thead>
           <tr>
-            <th scope="col"><h4>Particl Desktop</h4></th>
-            <th scope="col"><h4>Particl QT</h4></th>
-            <th scope="col"><h4>Particl-cli</h4></th>
-            <th scope="col"><h4>Particl Copay</h4></th>
-            <th scope="col" class="type-name"><h4>Feature</h4></th>
+            <th><h4>Particl Desktop</h4></th>
+            <th><h4>Particl Qt</h4></th>
+            <th><h4>Particl-cli</h4></th>
+            <th><h4>Particl Copay</h4></th>
+            <th class="type-name"><h4>Feature</h4></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="icon icon-check" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Opensource</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">Opensource</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Send/receive (public) PART coins</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">Send/receive (public) PART coins</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-uncheck" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Send/receive (private) Blind and Anon tokens</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Send/receive (private) Blind and Anon tokens</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-uncheck" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Staking</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Staking</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-uncheck" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Signing/verifying of messages</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Signing/verifying of messages</td>
           </tr>
           <tr>
-            <td class="icon icon-uncheck" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-uncheck" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Advanced wallet management, coin control</td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Advanced wallet management, coin control</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Multisignature</td>
+            <td><small>alpha on testnet</small></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Access to Particl Marketplace</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-check" data-label="Particl QT"></td>
-            <td class="icon icon-check" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">HD Wallet</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">Multisignature</td>
           </tr>
           <tr>
-            <td class="icon icon-check" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-uncheck" data-label="Particl QT"></td>
-            <td class="icon icon-uncheck" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Multiple Wallets</td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">HD Wallet</td>
           </tr>
           <tr>
-            <td class="icon icon-uncheck" scope="row" data-label="Particl Desktop"></td>
-            <td class="icon icon-uncheck" data-label="Particl QT"></td>
-            <td class="icon icon-uncheck" data-label="Particl-cli"></td>
-            <td class="icon icon-check" data-label="Particl Copay"></td>
-            <td class="type-name" data-label="Feature">Support Fiat Currencies</td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="type-name">Hardware wallet support (Ledger)</td>
           </tr>
           <tr>
-            <td class="platform-name" align="center" scope="row" data-label="Particl Desktop">
-              <span class="os win"></span>
-              <span class="os mac"></span>
-              <span class="os linux"></span>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">Multiple Wallets</td>
+          </tr>
+          <tr>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-cross"></i></td>
+            <td class="value"><i class="ico ico-check"></i></td>
+            <td class="type-name">Support Fiat Currencies</td>
+          </tr>
+          <tr>
+            <td class="platform-name" align="center">
+              <i class="ico ico-win"></i>
+              <i class="ico ico-macos"></i>
+              <i class="ico ico-linux"></i>
             </td>
-            <td class="platform-name" align="center" scope="row" data-label="Particl Desktop">
-              <span class="os win"></span>
-              <span class="os mac"></span>
-              <span class="os linux"></span>
+            <td class="platform-name" align="center">
+              <i class="ico ico-win"></i>
+              <i class="ico ico-macos"></i>
+              <i class="ico ico-linux"></i>
             </td>
-            <td class="platform-name" align="center" scope="row" data-label="Particl Desktop">
-              <span class="os win"></span>
-              <span class="os mac"></span>
-              <span class="os linux"></span>
+            <td class="platform-name" align="center">
+              <i class="ico ico-win"></i>
+              <i class="ico ico-macos"></i>
+              <i class="ico ico-linux"></i>
             </td>
-            <td class="platform-name" align="center" scope="row" data-label="Particl Desktop">
-              <span class="os win"></span>
-              <span class="os mac"></span>
-              <span class="os linux"></span>
-              <span class="os android"></span>
+            <td class="platform-name" align="center">
+              <i class="ico ico-win"></i>
+              <i class="ico ico-macos"></i>
+              <i class="ico ico-linux"></i>
+              <i class="ico ico-android"></i>
             </td>
-            <td class="type-name" data-label="Particl-cli">Platform</td>
+            <td class="type-name">Platform</td>
           </tr>
         </tbody>
       </table>
@@ -227,3 +276,90 @@ layout: default
 </section>
 
 {% include particl-desktop.html %}
+
+
+<!-- Grab latest version numbers from GitHub & generate download links -->
+<script src="/assets/js/src/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+
+/* --- DESKTOP --- */
+
+var desktop_api = document.createElement('script');
+desktop_api.src = 'https://api.github.com/repos/particl/particl-desktop/releases/latest?callback=get_desktop_version';
+
+function get_desktop_version(response) {
+  var version = response.data.tag_name, // get current tag from GH API (=> "v1.1.0")
+      ver_num = version.substring(1), // strip the leading "v" (=> "1.1.0")
+      // generate OS links
+      core_link = "https://github.com/particl/particl-desktop/releases/download/",
+          win64 = core_link + version + "/particl-desktop-" + ver_num + "-win-x64.zip",
+          win32 = core_link + version + "/particl-desktop-" + ver_num + "-win.exe";
+        linux64 = core_link + version + "/particl-desktop-" + ver_num + "-linux-x64.tar.gz";
+      linux_deb = core_link + version + "/particl-desktop-" + ver_num + "-linux-amd64.deb";
+            mac = core_link + version + "/particl-desktop-" + ver_num + "-mac.zip";
+         source = "https://github.com/particl/particl-desktop/archive/" + version + ".zip",
+          guide = "https://github.com/particl/particl-desktop/releases/tag/" + version;
+  
+  // Insert current latest release version number to HTML
+  $('#particl-desktop-version').html(version);
+  
+  // Insert links for latest downloads
+  $('#desktop-win64').attr("href", win64);
+  $('#desktop-win32').attr("href", win32);
+  $('#desktop-linux64').attr("href", linux64);
+  $('#desktop-linux-deb').attr("href", linux_deb);
+  $('#desktop-mac').attr("href", mac);
+  $('#desktop-source').attr("href", source);
+  $('#desktop-guide').attr("href", guide);
+}
+
+/* --- CORE & CLI --- */
+
+var core_api = document.createElement('script');
+core_api.src = 'https://api.github.com/repos/particl/particl-core/releases/latest?callback=get_core_version';
+
+function get_core_version(response) {
+  var version = response.data.tag_name, // get current tag from GH API (=> "v1.1.0")
+      ver_num = version.substring(1), // strip the leading "v" (=> "1.1.0")
+      // generate OS links
+      core_link = "https://github.com/particl/particl-core/releases/download/",
+          win64 = core_link + version + "/particl-" + ver_num + "-win64.zip",
+          win32 = core_link + version + "/particl-" + ver_num + "-win32.zip",
+        linux64 = core_link + version + "/particl-" + ver_num + "-x86_64-linux-gnu.tar.gz",
+        linux32 = core_link + version + "/particl-" + ver_num + ".tar.gz",
+            mac = core_link + version + "/particl-" + ver_num + "-osx-unsigned.dmg",
+         source = "https://github.com/particl/particl-core/archive/" + version + ".zip",
+          guide = "https://github.com/particl/particl-core/releases/tag/" + version;
+  
+  // Insert current latest release version number to HTML
+  $('#particl-core-version').html(version);
+  $('#particl-cli-version').html(version);
+  
+  // Insert links for latest downloads
+  $('#core-win64').attr("href", win64);
+  $('#core-win32').attr("href", win32);
+  $('#core-linux64').attr("href", linux64);
+  $('#core-linux32').attr("href", linux32);
+  $('#core-mac').attr("href", mac);
+  $('#core-source').attr("href", source);
+  $('#core-guide').attr("href", guide);
+
+  $('#cli-source').attr("href", guide);
+  $('#cli-guide').attr("href", guide);
+}
+
+/* --- COPAY --- */
+
+var copay_api = document.createElement('script');
+copay_api.src = 'https://api.github.com/repos/particl/copay/releases/latest?callback=get_copay_version';
+
+function get_copay_version(response) {
+  var version = response.data.tag_name; // get current tag from GH API (=> "v1.1.0")
+  
+  // Insert current latest release version number to HTML
+  $('#particl-copay-version').html(version);
+}
+
+$("head").append(desktop_api).append(core_api).append(copay_api);
+
+</script>
