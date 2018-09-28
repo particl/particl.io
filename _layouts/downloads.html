@@ -292,11 +292,11 @@ function get_desktop_version(response) {
       ver_num = version.substring(1), // strip the leading "v" (=> "1.1.0")
       // generate OS links
       core_link = "https://github.com/particl/particl-desktop/releases/download/",
-          win64 = core_link + version + "/particl-desktop-" + ver_num + "-win-x64.zip",
-          win32 = core_link + version + "/particl-desktop-" + ver_num + "-win.exe";
-        linux64 = core_link + version + "/particl-desktop-" + ver_num + "-linux-x64.tar.gz";
-      linux_deb = core_link + version + "/particl-desktop-" + ver_num + "-linux-amd64.deb";
-            mac = core_link + version + "/particl-desktop-" + ver_num + "-mac.zip";
+          win64 = core_link + version + "/particl-desktop-" + version + "-win-x64.zip",
+          win32 = core_link + version + "/particl-desktop-" + version + "-win-ia32.zip";
+        linux64 = core_link + version + "/particl-desktop-" + version + "-linux-x64.zip";
+      linux_deb = core_link + version + "/particl-desktop-" + version + "-linux-amd64.deb";
+            mac = core_link + version + "/particl-desktop-" + version + "-mac.zip";
          source = "https://github.com/particl/particl-desktop/archive/" + version + ".zip",
           guide = "https://github.com/particl/particl-desktop/releases/tag/" + version;
   
