@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 14 September 2018</small>
+      <small>Updated 28 September 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -23,21 +23,31 @@ layout: default
           <h2 class="title">Recently completed</h2>
           
 <ul>
-  <li>Particl Desktop (v1.2.3, mainnet)
-    <ul>
-      <li>Time offset warning icon</li>
-      <li>User Interface updates</li>
-      <li>Stability Improvements</li>
-      <li>Transaction handling refactored</li>
-      <li>Running on 0.16.2.0 Particl Core</li>
-    </ul>
-  </li>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Receiving notification when a new proposal has been submitted</li>
+      <li>Settings API for Marketplace</li>
       <li>Bug fixes and UI improvements</li>
-      <li>Automatic splitting of outputs</li>
-      <li>Design and layout for staking pool statistics</li>
+      <li>Escrow process refactor and enhancements</li>
+      <li>Expiry times on listings</li>
+      <li>
+        Improved message processing
+        <ul>
+          <li>Message throttling/cache</li>
+          <li>Reprocess failed messages and recover from errors</li>
+        </ul>
+      </li>
+      <li>
+        Automated system testing
+        <ul>
+          <li>Blackbox tests running on Market code base</li>
+        </ul>
+      </li>
+      <li>
+        Design and Layout
+        <ul>
+            <li>Various UI/UX improvements</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -48,26 +58,31 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
+  <li>Particl Desktop (v1.3, mainnet)
+    <ul>
+      <li>Stability improvements</li>
+      <li>Running on 0.17.0.1 Particl Core</li>
+    </ul>
+  </li>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
+      <li>Automated testing - Integration testing</li>
       <li>
         Finalising voting and Proposals (Governance 1.0)
         <ul>
           <li>Consensus on the removal of products - Market governance</li>
         </ul>
       </li>
-      <li>Settings API for Marketplace</li>
-      <li>Automated testing - Integration testing</li>
       <li>
-        Development items on the settings page
+        Settings page
         <ul>
-          <li>Main (General, Transactions, Privacy and Window Behaviour)</li>
-          <li>dApps (Marketplace)</li>
-          <li>Display (Navigation and Notifications)</li>
+          <li>GUI Settings</li>
+          <li>Market Settings</li>
         </ul>
       </li>
     </ul>
   </li>
+  <li>Staking pool statistics</li>
   <li>Third-party integrations
     <ul>
       <li>Ledger integration</li>
@@ -85,12 +100,11 @@ layout: default
     Particl Marketplace (alpha, testnet)
     <ul>
       <li>Code refactoring</li>
+      <li>Adding weights behind the votes on Governance (Listing removal)</li>
       <li>Proposals to be time based instead of block based</li>
+      <li>Votes to be time based instead of block based</li>
       <li>Multi-Wallet implementation</li>
-      <li>Escrow process refactor and enhancements</li>
       <li>Updating testing documentation</li>
-      <li>Staking pool statistics</li>
-      <li>Expiry times on listings</li>
       <li>
         Automated Testing
         <ul>
@@ -103,8 +117,6 @@ layout: default
         Settings page
         <ul>
           <li>Core Settings</li>
-          <li>Marketplace Settings</li>
-          <li>GUI Settings</li>
         </ul>
       </li>
       <li>
@@ -112,6 +124,13 @@ layout: default
         <ul>
           <li>Removing action messages</li>
           <li>Reprocess failed messages</li>
+        </ul>
+      </li>
+      <li>
+        Design and Layout
+        <ul>
+          <li>Adding a Support and Help menu to the GUI</li>
+          <li>UX design and layout to support Private Marketplaces on the GUI</li>
         </ul>
       </li>
     </ul>
@@ -126,7 +145,7 @@ layout: default
   <li>
     Particl Core
     <ul>
-      <li>Particl Core 0.17.0.1rc2</li>
+      <li>Particl Core 0.17.0.1</li>
     </ul>
   </li>
 </ul>
@@ -139,8 +158,8 @@ layout: default
 <ul>
   <li>Particl Marketplace (beta)
     <ul>
-      <li>Private listings</li>
       <li>Private Markets</li>
+      <li>Private listings</li>
       <li>Deposit Negotiations</li>
       <li>Marketplace versioning for messages and listings</li>
       <li>Inventory Management</li>
