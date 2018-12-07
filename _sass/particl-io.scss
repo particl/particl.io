@@ -315,6 +315,24 @@ section { // full-width sections of content
 	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
 
+// Newsletter form
+#sib_embed_signup {
+  background: $color;
+  padding: 0.7rem 0;
+  #theform { margin: 0; }
+  .subscribe-form {
+    p {
+      margin: 0 0 0.3rem;
+      color: $white;
+    }
+    button {
+      color: $white;
+    }
+    small {
+      color: $white;
+    }
+  }
+}
 
 // ------------[  SPECIFIC  ]------------ //
 
