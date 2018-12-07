@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 9 November 2018</small>
+      <small>Updated 7 December 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -26,14 +26,26 @@ layout: default
   <li>Particl Marketplace (alpha, testnet)
     <ul>
       <li>GUI Stabilize, Bug fixes and UI improvements</li>
-      <li>Multiple image scrolling for listed items</li>
-      <li>Governance 1.0</li>
-      <li>Votes to be time based instead of block based</li>
-      <li>Proposals to be time based instead of block based</li>
-      <li>Uniformed height of listing items</li>
-      <li>Drag'n'drop capability added when adding listings</li>
+      <li>Displaying the listings expiring in time</li>
+      <li>Filtering of reported items in a single view to cast your vote</li>
     </ul>
   </li>
+  <li>Particl Desktop
+    <ul>
+      <li>Better fund conversion between Public, Blind and Anon</li>
+      <li>Design/UX
+        <ul>
+          <li>Unify address details modal</li>
+        </ul>
+      </li>
+      <li>Proposals
+        <ul>
+          <li>Clearing attention notifications</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Staking pool statistics</li>
 </ul>
 
         </div><!-- .completed -->
@@ -42,30 +54,22 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>Particl Desktop (alpha, testnet)
     <ul>
       <li>Automated testing - Integration testing</li>
-      <li>
-        Settings page
+      <li>Settings page
         <ul>
           <li>GUI Settings</li>
           <li>Core Settings</li>
           <li>Market Settings</li>
         </ul>
       </li>
-      <li>Ability to view a list of reported items to cast a vote</li>
-      <li>
-        Design/UX
-        <ul>
-          <li>Unify address details modal</li>
-        </ul>
-      </li>
     </ul>
   </li>
-  <li>Staking pool statistics</li>
-  <li>Third-party integrations
+  <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Ledger integration</li>
+      <li>Sorting order of templates and listings in Sell page</li>
+      <li>Adding weights behind the votes on Listing governance (backend)</li>
     </ul>
   </li>
 </ul>
@@ -79,35 +83,41 @@ layout: default
   <li>
     Particl Marketplace (alpha, testnet)
     <ul>
-      <li>
-        Private Markets
+      <li>Code refactoring
         <ul>
-          <li>HTML implementation of design and new flow</li>
+          <li>Improved command error handling</li>
+          <li>Fix existing black box tests</li>
+          <li>Add tests for the existing API</li>
         </ul>
       </li>
-      <li>Code refactoring</li>
-      <li>
-        Proposals enhancements
+      <li>Update testing documentation</li>
+      <li>Automated Testing
         <ul>
-          <li>Clearing attention notifications</li>
+          <li>End to End testing</li>
+          <li>Unit Testing</li>
+          <li>Regression Testing</li>
+        </ul>
+      </li>
+      <li>Design/UX
+        <ul>
+          <li>Redesign of Listing's detail page including public comments</li>
+          <li>Private messaging (between Seller and Buyer)</li>
+          <li>Layout and design for inventory management</li>
+        </ul>
+      </li>
+      <li>GUI Stabilize and Bug fixes
+        <ul>
+          <li>Resolving all bugs reported on latest Testnet Build (1.2.2-20181128-alpha-RC1)</li>
+          <li>Image uploads/compression causing resolution issues</li>
         </ul>
       </li>
       <li>Adding weights behind the votes on Governance (Listing removal)</li>
       <li>Sorting order of templates and listings in Sell page</li>
       <li>Updating testing documentation</li>      
-      <li>
-        Automated Testing
-        <ul>
-          <li>End to End testing</li>
-          <li>Unit Testing</li>
-	        <li>Regression Testing</li>
-        </ul>
-      </li>
     </ul>
   </li>
   <li>RingCT Implementation</li>
-  <li>
-    Third Party Integration
+  <li>Third Party Integration
     <ul>
       <li>Trezor integration</li>
     </ul>
