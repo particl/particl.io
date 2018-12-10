@@ -5,7 +5,7 @@
       <input type="hidden" id="sib_embed_invalid_email_message" value="That email address is not valid. Please try again.">
       <input type="hidden" name="primary_type" id="primary_type" value="email">
       <div id="sib_loading_gif_area" style="display: none;">
-      <img src="img/subscribe-loader.gif">
+         <img class="signup-loader" src="/assets/img/signup-loader.svg">
       </div>
       <form class="description" id="theform" name="theform" action="https://my.sendinblue.com/users/subscribeembed/js_id/2tdmv/id/1" onsubmit="return false;">
       <input type="hidden" name="js_id" id="js_id" value="2tdmv">
@@ -19,15 +19,17 @@
 
          <div class="primary-group email-group forms-builder-group">
             <div class="row mandatory-email">
-            <div class="subscribe-form">
-               <p>Beta is coming! Sign-up for latest updates:</p>
-               <input type="text" class="input" name="email" id="email" value="" placeholder="YOUR EMAIL ADDRESS">
-               <button class="submit" type="submit" data-editfield="subscribe">Sign-up</button>
-               <small>We promise not to spam you or share your address.</small>
-            </div>
-            <div class="hidden-btns">
-               <a class="btn move" href="#"><i class="fa fa-arrows"></i></a>
-            </div>
+               <div class="subscribe-form">
+                  <h3 class="title">Beta is coming! Sign-up for latest updates:</h3>
+                  <div class="form">
+                     <input type="text" class="input" name="email" id="email" value="" placeholder="Your email address">
+                     <small>We promise not to spam you or share your address.</small>
+                     <button class="full submit" type="submit" data-editfield="subscribe">Sign-up</button>
+                  </div>
+               </div>
+               <div class="hidden-btns">
+                  <a class="btn move" href="#"><i class="fa fa-arrows"></i></a>
+               </div>
             </div>
          </div><!-- .primary-group -->
 

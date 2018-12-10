@@ -317,19 +317,61 @@ section { // full-width sections of content
 
 // Newsletter form
 #sib_embed_signup {
-  background: $color;
-  padding: 0.7rem 0;
+  @include gradient($color, darken($color, 7%));
+  padding: 1px 0.8rem;
+  #sib_loading_gif_area {
+    width: auto !important; height: auto !important;
+    max-width: 3rem; margin: 0 auto -1.3rem;
+  }
+  .signup-loader { width: 100%; max-width: 3rem; margin: 0 auto; }
   #theform { margin: 0; }
   .subscribe-form {
-    p {
-      margin: 0 0 0.3rem;
-      color: $white;
+    text-align: center;
+    h3.title {
+      font-size: 0.9rem; color: $white; letter-spacing: 0; line-height: 1.5;
+      text-shadow: 0 1px 2px darken($color, 10%);
+      margin: 1rem 0 0.7rem;
+      @include break(m) { font-size: 1.1rem; }
+      @include break(l) { margin: 1.3rem 0 0.8rem; }
     }
-    button {
-      color: $white;
+    .form {
+      position: relative;
+      max-width: 30rem; margin: 0 auto;
+      .input {
+        margin-bottom: 0.3rem;
+        background: $white; border-radius: 50px;
+        @include break(s) { padding-right: 7rem; }
+        @include break(m) { margin-bottom: 0.5rem; }
+      }
+      small {
+        color: $white;
+        display: inline-block;
+        @include break(s) { margin-bottom: 1rem; }
+        @include break(m) { font-size: 80%; margin-bottom: 1.2rem; }
+        @include break(l) { margin-bottom: 1.5rem; }
+      }
+      button {
+        margin: 0.7rem 0 1rem;
+        border: 1px solid rgba($white, 0.3);
+        @include break(s) {
+          position: absolute; top: 3px; right: 4px;
+          margin: 0; padding: 0.45rem 1.4rem;
+        }
+      }
     }
-    small {
-      color: $white;
+  }
+  // Error messages
+  .message_area {
+    margin: -1px -0.8rem; padding: 0.4rem 0.8rem 0.4rem 3rem;
+    background: $info !important;
+    font-size: 0.85rem; color: $white !important;
+    border: none !important;
+    text-align: center;
+    button { // close button
+      height: 1.5rem; width: 1.5rem;
+      padding: 0; margin: 0 0.7rem 0 -2.2rem;
+      font-weight: 400; color: $white; text-align: center;
+      border: none; background: darken($info, 10%);
     }
   }
 }
