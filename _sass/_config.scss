@@ -1,14 +1,20 @@
+// Main settings
+
+$debug: false; // enabled debug/dev mode (CSS reponnsivity helper)
+$showCountdown: false; // show/hide countdown
 
 // Colors
-$primary: #03E8B0; // PART turquoise
+$color: #04e8b0; // PART turquoise
+$primary: $color;
 $secondary: #DCDDDE !default; // usually grayscale-ish, slightly darked than content background
 $success: #98C807 !default; // greens
-$alert: #D13814 !default; // reds
-$warning: #EF9421 !default; // oranges :)
+$alert: #FF542C !default; // reds
+$warning: #FFCE00 !default; // oranges :)
+$info: #2183EF;
 $black: #212727; // PART black
 $white: #fff !default;
 
-$bg: #fff;
+$bg: $white;
 $bg-muted: #F1F1F1; // slightly darker bg
 
 $text: $black;
@@ -21,15 +27,40 @@ $break-t: 45rem !default; // tablet
 $break-l: 60rem !default; // large (desktop)
 $break-xl: 75rem !default; // extra-large
 
+$break-large: 768px;
+
 // Grid
-$row-width: 75rem !default; // 64rem
-$gutter-width: 0.6rem !default;
+$row-width: 73.125rem !default;// 64rem
+$gutter-width: 0.75rem !default;// 0.6rem
 $block-grid-spacing: 0.7rem !default;
 
 // UI
 $border-radius: 4px !default;
 
 // Typography
-$font: "OpenSans", "Helvetica", "Arial", sans-serif;
-$font-titles: "NexaB", "Open Sans", sans-serif;
-$line-height: 1.4 !default;
+$font: "Inter_UI", sans-serif;
+$line-height: normal !default;
+
+
+// Colors (v2)
+
+$general-op-7: rgba($text, 0.7);
+$general-op-6: rgba($text, 0.6);
+$general-op-5: rgba($text, 0.5);
+
+$black-op-4: rgba($black, 0.4);
+$black-op-5: rgba($black, 0.5);
+$black-op-8: rgba($black, 0.8);
+
+$header-bg: #fafafa;
+$header-chart-text: rgba(34,39,39,0.5);
+
+$white-op-9: rgba($white, 0.9);
+$white-op-6: rgba($white, 0.6);
+$white-op-8: rgba($white, 0.8);
+
+$section-bg1: #fefefe;
+
+$hr-color: #f4f4f4;
+
+$part-token-bg: #fafafa;

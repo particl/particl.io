@@ -1,0 +1,35 @@
+.career-offer {
+  .type { text-transform: uppercase; margin: 0 0 0.7rem; }
+  .title { margin: 0 0 2rem; }
+  .apply {
+    @extend %clearfix;
+    background: $bg-muted; border-radius: $border-radius;
+    padding: 0.9rem 1.2rem; margin: 1.5rem 0 1rem;
+    .text {
+      font-size: 0.825rem; line-height: 1.45; color: $text-muted;
+      @include break(m) {
+        float: left; width: calc(100% - 6.7rem);
+      }
+    }
+    .button {
+      display: block;
+      width: 6.2rem; margin: 0.7rem auto 0;
+      text-align: center;
+      @include break(m) {
+        float: right; margin: 0;
+      }
+    }
+  }
+  .requirements {
+    .subtitle {
+      @include break(xl) { margin-top: -1.2rem; }
+    }
+    ul { padding-left: 1.4rem; }
+    li {
+      margin-bottom: 0.3rem;
+      font-size: 0.83rem; line-height: 1.45;
+      color: $general-op-6;
+      @include break(xl) { font-size: 0.9375rem; }
+    }
+  }
+}

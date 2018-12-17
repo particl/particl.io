@@ -1,0 +1,79 @@
+section.general-about {
+  width: 100%; //max-width: 1180px;
+  margin: auto
+}
+
+section.general-about {
+  padding: 2rem 1rem;
+}
+
+.about-us-header {
+  margin-top: 3.563rem;
+}
+
+.about-us-desc {
+  margin-bottom: 1.5rem;
+}
+
+#statistic {
+  background-color: $section-bg1;
+  h1 { margin-top: 0rem; }
+  h2 {
+    margin-top: 1.625rem;
+    margin-bottom: 2.563rem;
+  }
+  .number-header { margin-bottom: 1.125rem; }
+  .lead2 { margin: auto; }
+}
+
+#particl_foundation {
+  padding: 0;
+  .particl-foundation-bg {
+    background-image: url('/assets/img/illustrations/about_us_banner.png');
+    background-position: center center;
+    background-size: cover;
+    height: 411px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: auto;
+    h1 {
+      position: absolute;
+      bottom: 55px;
+      left: 134px;
+      margin: auto;
+      width: 350px;
+      background-color: $white;
+      padding: 8px 0;
+      @include before_md { width: auto; }
+    }
+  }
+}
+
+#page section#about_us {
+  background-color: $section-bg1;
+  .about-us-item {
+    margin-top: 0.498rem;
+    margin-bottom: 2.188rem;
+  }
+}
+
+.team-header {
+  margin-top: 0.813rem;
+  h1 { margin-bottom: 1.5rem; }
+}
+
+.team-desc { margin-bottom: 1.188rem; }
+
+#team {
+  background-color: $section-bg1;
+  margin-top: 2.5rem;
+}
+
+.locate {
+  padding-top: 3.125rem;
+  margin-bottom: 3.688rem;
+  .locate-desc p {
+    margin-bottom: 4rem;
+  }
+}

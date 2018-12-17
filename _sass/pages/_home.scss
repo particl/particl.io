@@ -1,0 +1,409 @@
+#page {
+  margin-top: 3.4rem; // offset sticky header
+}
+
+/* --------------------------------------------- *\
+      Intro "Hero" section
+\* --------------------------------------------- */
+
+#intro {
+  text-align: center;
+  position: relative;
+  background: url('/assets/img/intro-bg_compressed.jpg') no-repeat top center;
+  background-size: cover;
+  @include break(s) { padding: 6rem 2rem; }
+  @include break(m) { padding: 8rem 2rem 2rem; }
+  @include break(l) { padding-top: 6rem; }
+  @include break(xl) { padding: 7rem 2rem 2rem; }
+
+  // page title(s)
+  .header-title {
+    margin: 0 auto 2rem;
+    line-height: 1.4;
+    max-width: 26rem;
+    @include break(large) { max-width: 30rem; }
+    @include break(xl) { max-width: 60rem; }
+    .title {
+      margin: 0 0 1rem;
+    }
+    .subtitle {
+      font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
+      margin: 0;
+    }
+  }
+  
+  // download & watch video buttons
+  .intro-buttons {
+    text-align: center;
+    margin: 3rem 0 0;
+    @include break(large) { margin: 2.5rem 0 0; }
+    .button {
+      font-family: $font; font-size: 0.9rem; font-weight: 700; line-height: 2;
+      display: block;
+      width: 250px;
+      margin: 0 auto; padding: 0.19rem 1rem;
+      @include break(large) {
+        display: inline-block;
+        width: 230px;
+        margin: 0 4px;
+      }
+      &.first {
+        margin-bottom: 10px;
+      }
+      &.second {
+        border-color: rgba($color, 0.7);
+        &:hover, &:focus {
+          color: darken($color, 5%);
+          border-color: darken($color, 5%);
+          background: none;
+        }
+      }
+    }
+  }
+
+  // GUI teaser slider
+  .intro-features {
+    display: none;
+    width: 920px;
+    margin: 5rem auto 2rem;
+    @include break(l) { display: block; }
+    .owl-item {
+      max-width: none; margin-bottom: 0;
+      background: none; box-shadow: none;
+    }
+    .feature-slide {
+      max-width: 920px;
+      height: 500px;
+      position: relative;
+      .wallet {
+        width: 770px; max-width: 770px; height: auto;
+        margin: 0 auto;
+      }
+      .highlight {
+        position: absolute; bottom: 0; right: 0;
+        width: 280px; height: 280px;
+      }
+      .text {
+        position: absolute; bottom: 1.9rem; left: 4.9rem;
+        font-size: 0.925rem; color: $text-muted;
+        strong { color: $text; }
+      }
+      .tag {
+        position: absolute; bottom: 100px; left: 50px;
+        background: lighten($text-muted, 10%); border-radius: $border-radius;
+        font-size: 0.7rem; text-transform: uppercase; font-weight: 500; color: $white;
+        padding: 0.25rem 0.7rem;
+      }
+    }
+  }
+
+  // partners & press mentions
+  .partners-press {
+    display: none;
+    @include break(m) { display: block; margin-top: 6rem; }
+    @include break(large) { margin-top: 7rem; }
+    //@include break(xl) { margin-top: 7rem; }
+    .logos {
+      a.item { display: inline-block; }
+      .logo {
+        @extend .tfx;
+        width: auto; height: 2.3rem;
+        margin: 0 0.8rem;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.5;
+        @include break(large) { height: 2.6rem; margin: 0 0.9rem; }
+        &:hover {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+          opacity: 1;
+        }
+      }
+    }
+    .title { // titles at logos (Partners/Press)
+      font-size: 0.75rem; color: darken($bg-muted, 35%);
+      text-transform: uppercase; text-align: center;
+      letter-spacing: 0;
+      margin: 1rem 0 0;
+      @include break(l) { font-size: 0.7rem; }
+      @include break(xl) { font-size: 0.83rem; }
+    }
+  }
+}
+
+
+/* --------------------------------------------- *\
+      Lastest Highlights (News)
+\* --------------------------------------------- */
+
+section.news {
+  border-top: 1px solid $bg-muted;
+  .section-title {
+    @include md { text-align: center; }
+    @include lg { text-align: left; }
+    .title {
+      margin: 0 0 0.3rem;
+      @include lg { margin: 0 0 1.2rem; }
+    }
+  }
+  p {
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+  a {
+    color: $text; font-weight: 400; font-size: inherit; text-decoration: underline;
+  }
+  .item {
+    margin-top: 3rem;
+    @include lg { margin-top: 0; }
+    .date { color: rgba($text, 0.5); font-size: 0.8rem; }
+    .title {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0; text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .text { font-size: 0.8rem; line-height: 1.45; }
+  }
+}
+
+
+/* --------------------------------------------- *\
+      "The case for privacy"
+\* --------------------------------------------- */
+
+section.intro-text {
+  background: $black;
+  padding: 3rem 0.5rem;
+  @include break(m) { padding: 3rem 1rem; }
+  @include break(large) { padding: 3rem 1rem 3.5rem; }
+  & > .row { max-width: 55rem; }
+  .title {
+    color: $color;
+    margin: 0 0 0.5rem;
+  }
+  p {
+    @extend p.large;
+    color: $white;
+    &:last-of-type { margin-bottom: 0; }
+  }
+}
+
+
+
+
+section.download-promo {
+  background-color: $black;
+  p {
+    margin-bottom: 2.125rem;
+    color: $white-op-9;
+    @include before_md { margin-bottom: 0px; }
+  }
+}
+
+
+
+/* --------------------------------------------- *\
+      Carousel ("features")
+\* --------------------------------------------- */
+
+// Carousel with features
+section#features {
+  padding: 1rem 0 4.5rem;
+  @include break(large) {
+    padding: 2rem 0 6rem;
+  }
+  .claim-title {
+    text-align: center; font-weight: 500; line-height: 1.45;
+    width: 100%; max-width: 50rem;
+    margin: 4rem auto 0;
+    padding: 0 2rem;
+    .highlight {
+      font-weight: 700;
+    }
+  }
+  .slider-container {
+    margin-top: 3rem;
+  }
+}
+
+/* --------------------------------------------- *\
+      Join our channels
+\* --------------------------------------------- */
+
+.community-channels {
+  text-align: center;
+  padding: 3.4rem 0 2.7rem;
+  background: $black !important;
+  @include break(large) { padding: 4rem 0; }
+  .title {
+    margin: 1.75rem 2rem 2.7rem;
+    color: $white; line-height: 1.35;
+  }
+  .button {
+    font-size: 0.83rem; font-weight: 700;
+    display: block;
+    width: 11.5rem;
+    margin: 0.8rem auto;
+    @include break(large) {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+    i.ico {
+      margin-right: 0.6rem;
+      font-size: 115%; line-height: 1;
+      position: relative; top: 1px;
+    }
+  }
+}
+
+
+/* --------------------------------------------- *\
+      About
+\* --------------------------------------------- */
+
+#about {
+  padding: 8.373rem 0rem;
+  @include before_md { padding: 0px; }
+
+  h5 {
+    margin-top: 2.063rem;
+    margin-bottom: 1.438rem;
+  }
+
+  h2 {
+    margin: 0rem 0rem 1.063rem;
+    max-width: 425px;
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    max-width: 524px;
+    width: 100%;
+  }
+
+  .about-img-container {
+    text-align: center;
+    margin-top: 2.063rem;
+    @include before_md() {
+      &:nth-child(even) {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  hr {
+    color: $hr-color;
+    margin: 5rem 0rem;
+    @include before_md() { margin: 3rem 0rem; }
+  }
+
+  @include before_md() {
+    & > .row:nth-of-type(odd) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    & > .row:nth-last-child(1) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+section.download-promo {
+  padding: 3.913rem 0rem 0rem;
+  @include before_md {
+    padding: 0px;
+    & > .row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  h2 {
+    color: $white;
+    margin: 0 0rem 1rem;
+  }
+
+  .links {
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    a {
+      color: $white-op-8;
+      text-decoration: underline;
+      &:first-child { margin-right: 20px; }
+      &:hover, &:focus { color: $white; }
+    }
+  }
+
+  .text {
+    @include before_md {
+      text-align: center;
+      margin-bottom: 5rem;
+      p.large {
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  .image {
+    height: 100%;
+    text-align: center;
+    @include before_md { 
+      margin-top: 104px;
+      margin-bottom: 59px;
+    }
+    img {
+      height: 323px;
+      @include before_md { height: auto; }
+    }
+  }
+
+}
+
+#part-token {
+  padding: 6.938rem 0rem 5.875rem;
+
+  h2 {
+    &:before {
+      content:'';
+      position: absolute;
+      bottom: -1.5rem;
+      display: block;
+      width: 2.5rem;     
+      height: 2px;
+      background: $color;
+    }
+  }
+
+  h3 {
+    margin-top: 3.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    max-width: 326px;
+    font-size: 0.813rem;
+    line-height: 1.77;
+  }
+
+  .first-row p {
+    min-height: 68px;
+  }
+
+  .second-row p {
+    min-height: 23px;
+  }
+
+  .more-btn {
+    font-size: 0.813rem;
+    color: $black-op-8;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

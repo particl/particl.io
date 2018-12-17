@@ -1,0 +1,141 @@
+section.general-download {
+  padding: 3.875rem 0rem;
+}
+
+.wallets-header {
+  h1 {
+    margin-bottom: 0.875rem;
+  }
+}
+
+.desc-form {
+  max-width: 450px;
+  width: 100%;
+}
+
+.wallets-view {
+  margin-top: 2.125rem;
+  @include before_md { overflow-x: scroll; }
+  table {
+    border-color: $hr-color;
+  }
+  .download-table {
+    margin-bottom: 2.063rem;
+    text-align: center;
+    th {
+      padding-bottom: 0.625rem;
+      text-align: center;
+      &.type-name {
+        text-align: left;
+      }
+
+      h4 {
+        line-height: 1.42;
+        letter-spacing: -0.2px;
+
+        @include before_md {
+          font-size: 0.9rem;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    td {
+      padding: 0.563rem 0rem;
+      position: relative;
+      &.type-name {
+        text-align: left;
+      }
+    }
+
+    tr:last-child {
+      border: 0px;
+    }
+  }
+}
+
+section.version-list {
+  padding: 2.75rem 1rem 1.625rem 1rem;
+  .copay-img-cont {
+    img {
+      width: 117px;
+    }
+  }
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 1.063rem;
+  }
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+  img {
+    margin-top: 2.25rem;
+  }
+  p {
+    max-width: 379px;
+    width: 100%;
+  }
+}
+
+.last-hr-copay {
+  margin-bottom: 1.438rem;
+}
+
+
+ul.guides {
+  margin: 1rem 0 1.5rem;
+  padding: 0 0 0 1rem;
+  list-style: circle;
+  li {
+    display: list-item;
+    margin: 0;
+    a {
+      padding: 0.2rem 0;
+      font-size: 0.825rem; font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .link-small-dark {
+    display: inline-block;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.version-list-links {
+  margin-bottom: 0.75rem;
+
+  a.link {
+    width: 32%;
+    display: inline-block; padding: 0.3rem 0; margin-bottom: 0.4rem;
+    position: relative;
+    color: $text; font-size: 0.8rem; font-weight: 700;
+    cursor: pointer;
+    &:hover { color: darken($color, 5%); }
+    @include before_md { width: 100%; }
+    &:after { content: none !important; }
+    i.ico {
+      font-size: 1.2rem;
+      margin-right: 0.6rem;
+      position: relative; top: 2px;
+    }
+  }
+}
+
+// Comparison table
+.download-table {
+  .value {
+    i.ico {
+      font-size: 1.3rem;
+      &.ico-check { color: $color; }
+      &.ico-cross { color: $alert; }
+    }
+  }
+  .platform-name {
+    i.ico {
+      font-size: 1rem; color: $text-muted;
+      display: inline-block; margin: 2px;
+    }
+  }
+}

@@ -21,6 +21,9 @@
     // Usage: @include break(xl) { .. }
     @media only screen and (min-width: $break-xl) { @content; }
   }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
 }
 
 // Custom responsivity (px-based, for when default breakpoints aren't enough)
@@ -47,4 +50,90 @@
   background: -o-linear-gradient(top, $top 0%,$bottom 100%);
   background: -ms-linear-gradient(top, $top 0%,$bottom 100%);
   background: linear-gradient(to bottom, $top 0%,$bottom 100%);
+}
+
+
+//include border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+}
+
+
+
+// Before medium devices
+@mixin before_md {
+   @media (max-width: #{$screen-md-max}) {
+       @content;
+   }
+}
+
+// Medium device
+@mixin md {
+   @media (min-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+//Between medium and large
+@mixin between_m_lg {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-max:}) {
+    @content;
+  }
+}
+
+//Between medium and extra large
+@mixin between_m_mlg {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// Before extra large devices
+@mixin before_xl {
+   @media (max-width: #{$screen-lg-max}) {
+       @content;
+   }
+}
+
+//After extra large devices
+@mixin after_xl {
+   @media (min-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (min-width: #{$screen-lg-max}) {
+       @content;
+   }
+}
+
+// Between medium and Extra Large
+@mixin between_minlg_maxlg {
+   @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+       @content;
+   }
+}
+ 
+// After Desktop and Large Desktop
+@mixin between_lg_mlg {
+  @media (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// After Desktop and Large Desktop
+@mixin mlg {
+  @media (min-width: #{$screen-mxl}) {
+    @content;
+  }
 }

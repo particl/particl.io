@@ -1,0 +1,384 @@
+/*---
+# Only the main Sass file needs front matter (the dashes are enough)
+---*/
+@import 'utils/_variables';
+
+@import 'owl-carousel/owl.carousel.scss';
+@import 'owl-carousel/owl.theme.default.scss';
+
+@import '_config';
+@import '_brickst';
+@import '_icons';
+@import '_fonts';
+
+@import 'layout/_navigation';
+@import 'layout/_grid';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_forms';
+
+@import 'components/_carousel';
+@import 'components/_dropdown';
+@import 'components/_icons';
+@import 'components/_search-form';
+@import 'components/_modal';
+@import 'components/_download-table';
+@import 'components/_countdown';
+
+@import 'pages/_home';
+@import 'pages/_why_particl';
+@import 'pages/_about_us';
+@import 'pages/_careers';
+@import 'pages/_roadmap';
+@import 'pages/_status_report';
+@import 'pages/_particl_press';
+@import 'pages/_proposals';
+@import 'pages/_specifications';
+@import 'pages/_exchanges';
+@import 'pages/_download';
+
+/*! particl.io v2.0 | Author: Martin Allien <martin@particl.io> */
+
+// -------------[  BASICS  ]------------- //
+
+html {
+  font-size: 16px;
+  @include break-from(1450px) { font-size: 17px; }
+  @include break-from(1950px) { font-size: 18px; }
+}
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-family: $font;
+  font-size: 2.375rem;
+	font-weight: 700;
+  color: $text;
+  letter-spacing: -0.5px;
+  @include before_md {
+    font-size: 1.875rem;
+    letter-spacing: -0.7px;
+    line-height: 1.4;
+  }
+}
+
+h2 {
+	font-family: $font;
+  font-size: 1.75rem;
+	font-weight: 700;
+  color: $text;
+  letter-spacing: -0.5px;
+  line-height: 34px;
+  margin: 0 0 3rem;
+}
+
+h3 {
+	font-family: $font;
+  font-size: 1.375rem;
+	font-weight: 700;
+  color: $text;
+  letter-spacing: -0.6px;
+  line-height: 34px;
+}
+
+h4 {
+	font-family: $font;
+  font-size: 1.1875rem;
+	font-weight: 700;
+  color: $text;
+  letter-spacing: -0.5px;
+  line-height: 27px;
+  margin: 0px;
+}
+
+h5 {
+  font-family: $font;
+	font-size: 0.75rem;
+	font-weight: 500;  
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  &.lead2 {
+    color: $general-op-7;
+  }
+}
+
+p {
+  color: $general-op-7;
+  font-family: $font;
+  letter-spacing: -0.1px;
+  &.large {
+    font-size: 0.9375rem;  
+    line-height: 1.87;
+  }
+  &.small {
+    font-size: 0.8125rem;      
+    line-height: 1.77;
+  }
+}
+
+a {
+	font-family: $font;
+  line-height: normal;
+	letter-spacing: 0.1px;
+	
+	&[href*="http"]:not(.no-arrow) { // fancy external links
+		&::after {
+			@extend %tfx;
+      content: "\E002";
+      font-family: "icons"; font-size: 10px; line-height: 1;
+			display: inline-block; margin: 0 0.2rem 0 0.25rem;
+      opacity: 0.5;
+      position: relative; top: -1px;
+      .header .navigation & {
+        color: rgba($white, 0.85);
+        margin-left: 0.4rem;
+        @include break(large) { color: $text-muted; }
+      }
+      footer .navigation & { color: $text-muted; }
+		}
+	}
+  &.link-small-dark { color: $black-op-8; }
+  &.link-small-grey { color: $black-op-5; }
+}
+
+abbr[title] { border: none; cursor: help; }
+
+table {
+  th, td { @extend %tfx; }
+  tr {
+    border-bottom: 1px solid $bg-muted;
+    &:last-of-type { border: none; }
+    &:hover {
+      th, td { background: rgba($bg-muted, 0.25); }
+    }
+  }
+  &.full-width {
+    width: 100%;
+  }
+}
+
+td.type-name, td.platform-name {
+  font-size: 0.9375rem;  
+  letter-spacing: -0.3px;
+  color: $general-op-6;
+  line-height: 1.87;
+  font-family: $font;
+}
+
+small {
+	font-size: 70%; color: lighten($text-muted, 20%); line-height: 1.4;
+}
+
+// Forms
+form {
+	margin: 1.5rem 0;
+}
+input {
+	border: none; border-radius: $border-radius;
+	padding: 0.7rem 1.4rem; margin-bottom: 0.2rem;
+	font-size: 0.9rem;
+}
+
+code {
+  background: rgba($color, 0.1);
+  color: darken($color, 10%);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+// ---------------[  UI  ]--------------- //
+
+// buttons
+button, .button { // default, outline-to-full buttons
+  @extend %tfx;
+  @include border-radius(30px);
+  display: inline-block; padding: 0.56rem 1.71rem;
+  background-color: transparent; border: solid 1.5px rgba($color, 0.6);
+  font-size: 0.9rem; font-weight: 700; color: $color;
+  &::after { content: none !important; }
+  &:hover, &:focus {
+    background: darken($primary, 7%); 
+    border-color: darken($primary, 5%); 
+    color: $white;
+  }
+  &.full { // full buttons
+    background: darken($color, 2%);
+    border-color: darken($color, 2%);
+    color: $white;
+    &:hover, &:focus {
+      background: darken($color, 5%);
+      border-color: darken($color, 5%);
+    }
+  }
+  &.hollow { // outline buttons only
+    &:hover, &:focus {
+      border-color: darken($primary, 3%);
+      color: darken($primary, 5%);
+      background: transparent;
+    }
+  }
+  // icons in buttons
+  i.ico { margin-right: 0.3rem; }
+}
+
+// common page titles (Roadmap, Status report, ..)
+.page-title {
+  line-height: 1.45;
+  padding: 1.5rem 0 3.5rem;
+  @include break(large) { padding: 4rem 0 5rem; }
+  &.centered { text-align: center; }
+  .title {
+    &.centered { text-align: center; }
+  }
+  p {
+    line-height: 1.87;
+    a {
+      color: lighten($text, 20%); font-weight: 500;
+      &:hover { color: $text; }
+    }
+  }
+}
+
+
+// -------------[  LAYOUT  ]------------- //
+
+section { // full-width sections of content 
+  padding: 4rem 0;
+  
+  // link lists (user guides, whitepapers)
+  &.link-list {
+    padding: 4rem 0 6rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      a {
+        display: inline-block; padding: 0.25rem 0;
+        font-size: 0.9rem; color: lighten($text, 35%); line-height: 1.45;
+        &:hover { color: $text; }
+      }
+    }
+  }
+  
+  // call-to-action buttons
+  &.cta {
+    text-align: center;
+    .button {
+      margin: 0 0.4rem 1rem;
+    }
+  }
+}
+
+#team {
+	li.team-member {
+		text-align: center;
+    margin-bottom: 1.5rem;
+    @include break(large) { margin-bottom: 2rem; }
+		&::before { content: none; }
+		.photo {
+			width: 130px; height: 130px; margin: 0 auto;
+			border-radius: 50%; overflow: hidden;
+		}
+		.name {
+			margin: 1.3rem 0 0;
+			font-weight: 700; font-size: 0.9rem; line-height: 1.35;
+		}
+		.title {
+			font-size: 0.75rem; line-height: 1.6;
+			display: block; margin-bottom: 0.7rem;
+			@include break(l) { margin-bottom: 0.2rem; }
+    }
+    .links { margin: 0.4rem 0; }
+		.link {
+			margin: 0 0.2rem;
+			color: lighten($text-muted, 40%);
+			@include break(l) { margin: 0 0.1rem; font-size: 0.85rem; }
+			&[href*="http"]::after { content: none; }
+			&.nick { cursor: help; }
+			&.email:hover { color: $primary; }
+			&.reddit:hover { color: #FF4500; }
+			&.twitter:hover { color: #00A0D1; }
+			&.linkedin:hover { color: #4875B4; }
+			&.github:hover { color: $text; }
+		}
+	}
+	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
+}
+
+
+// ------------[  SPECIFIC  ]------------ //
+
+.no-js { // for browsers with JS disabled
+	header {
+		position: static;
+		@include break(l) { padding: 1rem 0 0; }
+		#menu-toggle { display: none; }
+		.logo {
+			text-align: center; margin: 0;
+			img {
+				@include break(l) { max-width: 6rem; }
+			}
+		}
+	}
+	nav {
+		position: static;
+		ul li a {
+			@include break(l) { padding: 1.8rem 1.5rem; }
+		}
+	}
+	#page {
+		margin-top: 0;
+		@include break(l) { margin-top: 4.5rem; }
+	}
+}
+
+
+// -------------[  HELPER  ]------------- //
+
+.respo {
+  position: fixed; bottom: 0; right: 0; width: 1.5rem; z-index: 1000;
+  background: black; color: white; padding: 3px 0;
+	font-size: 10px; text-align: center; text-transform: uppercase; font-weight: bold;
+	@if $debug == false { // hide if not in debug mode
+    display: none; 
+  } 
+  .size { display: none; }
+  @include break(xs) {
+    .size { display: none; }
+    .xs { display: block; }
+  }
+  @include break(s) {
+    .size { display: none; }
+    .s { display: block; }
+  }
+  @include break(m) {
+    .size { display: none; }
+    .m { display: block; }
+  }
+  @include break(t) {
+    .size { display: none; }
+    .t { display: block; }
+  }
+  @include break(l) {
+    .size { display: none; }
+    .l { display: block; }
+  }
+  @include break(xl) {
+    .size { display: none; }
+    .xl { display: block; }
+  }
+}
+
+
+// MSIE 10+ fix for badly scaled SVGs
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; 
+  }
+}
