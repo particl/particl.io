@@ -304,7 +304,9 @@ section { // full-width sections of content
 			&.email:hover { color: $primary; }
 			&.reddit:hover { color: #FF4500; }
 			&.twitter:hover { color: #00A0D1; }
-			&.linkedin:hover { color: #4875B4; }
+      &.linkedin:hover { color: #4875B4; }
+      &.facebook:hover { color: #29487d; }
+      &.instagram:hover { color: #D82667; }
 			&.github:hover { color: $text; }
 		}
 	}
