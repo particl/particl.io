@@ -315,7 +315,7 @@ section { // full-width sections of content
 	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
 
-// Newsletter form
+// Newsletter form (small)
 #sib_embed_signup {
   @include gradient($color, darken($color, 7%));
   padding: 1px 0.8rem;
@@ -375,6 +375,99 @@ section { // full-width sections of content
     }
   }
 }
+
+
+section.subscribe {
+  .text {
+    ul {
+      margin: 1.5rem 0; padding: 0 0 0 2rem;
+      list-style: none;
+      li {
+        margin: 0.6rem 0;
+        font-size: 0.838rem; color: $text-muted; line-height: 1.6;
+        position: relative;
+        &::before { // check icon
+          content: "";
+          display: block; width: 5px; height: 10px;
+          border-right: 3px solid $color; border-bottom: 3px solid $color;
+          transform: rotate(45deg);
+          position: absolute; left: -1.3rem; top: 2px;
+        }
+      }
+    }
+  }
+
+  // Subscribe page form (big)
+  #sib-container {
+    box-shadow: 0 4px 25px 0 rgba(black, 0.06);
+    border: 0; border-radius: 10px;
+    padding: 2.438rem 2.563rem 0.838rem;
+  }
+  #sib-form {
+    text-align: left;
+    margin: 0;
+  }
+  .form-message-panel { // global error/success messages
+    display: none; margin: 8px 0;
+  }
+  .form-message-panel--active { // ^ active
+    display: inline-block;
+  }
+  .checkbox__label {
+    word-wrap: break-word; word-break: break-all;
+  }
+  .entry__choice {
+    margin-bottom: 0.5rem;
+    word-wrap: break-all;
+    font-size: 0.85rem; font-weight: 500;
+  }
+  .entry__choice,
+  .entry__label {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .form-block { // section block
+    margin-top: 1.7rem;
+    &:first-of-type { margin: 0; }
+    .text-form-block { font-size: 0.75rem; }
+  }
+  label {
+    &.entry__label { // section title
+      display: block; margin-bottom: 0.9rem;
+      font-weight: 600;
+    }
+    &.entry__specification { // section help text
+      cursor: default;
+      font-size: 0.7rem; color: $black-op-5; line-height: 1.6;
+      display: block; margin-top: 0.8rem;
+    }
+  }
+  .required-tag { // required fields
+    font-size: 0.65rem; color: $color; text-transform: uppercase;
+    border: 1px solid $color; border-radius: $border-radius;
+    display: inline; margin-left: 0.3rem; padding: 1px 0.4rem; float: none;
+  }
+  input {
+    &.input_replaced { // checkboxes
+      position: relative; top: 3px;
+      margin-right: 0.3rem;
+    }
+  }
+  .input {
+    width: calc(100% - 1rem);
+    background: $bg-muted;
+  }
+  .g-recaptcha {
+    transform: scale(.77);
+    -webkit-transform: scale(.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+  .form-block__button { // subscribe button
+    @extend button.full;
+  }
+}
+
 
 // ------------[  SPECIFIC  ]------------ //
 

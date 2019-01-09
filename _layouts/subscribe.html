@@ -5,7 +5,7 @@ layout: default
    <div class="row">
      <div class="large-5 columns">
          <h1 class="title">Subscribe</h1>
-         <p class="large">Never miss important news like security issues and hardforks, get tips for Buyers &amp; Sellers and more. We promise not to spam you or share your email with 3rd parties.</a></p>
+         <p class="large">Never miss important news like security issues and hardforks, get tips for Buyers &amp; Sellers and more.</a></p>
      </div>
    </div>
 </section>
@@ -14,14 +14,25 @@ layout: default
 
 <section class="subscribe">
 	<div class="row">
-      <div class="text large-4 columns">
-         <h3 class="title">Opt-in for Particl updates</h3>
-         <p class="large">Subscribe to our newsletter(s) and stay up-to-date with latest developments, testing opportunities and announcements.</p>
-      </div>
-      <div class="info large-8 columns">
+    <div class="text large-4 columns">
+      <h3 class="title">Opt-in for Particl updates</h3>
+      <p class="large">Subscribe to our newsletter(s) and stay up-to-date with latest developments, testing opportunities and announcements.</p>
+      <ul>
+        <li>Your e-mail will be used only for Particl newsletters</li>
+        <li>You can unsubscribe at any time</li>
+        <li>No spamming</li>
+        <li>We promise not to share your e-mail address with 3<sup>rd</sup> parties (except for <a href="https://sendinblue.com">SendinBlue</a> as our mailing service provider)</li>
+      </ul>
+    </div>
+    <div class="info large-6 large-push-1 columns">
 
 <!-- SendinBlue form HTML/AJAX form (start) -->
-
+<!--
+  1) comment out head & body tags
+  2) replace &quot; by quotes
+  3) remove all inline styles (regex replace ' style=".*"' to '' in this file only)
+  4) add <span class="required-tag">Required</span> to email's title
+-->
 
 
 <!--DOCTYPE html>
@@ -60,34 +71,34 @@ layout: default
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
-  <body style="text-align: center; background-color: #E5EDF5;"-->
-    <div id="error-message" class="form-message-panel" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#FF474D; background-color:#FFE4E2; border-radius:3px; border-color:#FF474D; max-width:540px;">
+  <body-->
+    <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
         Your Subscription could not be validated. Please try again.
       </p>
     </div>
     <div></div>
-    <div id="success-message" class="form-message-panel" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#00CF6D; background-color:#D6F2E1; border-radius:3px; border-color:#00CF6D; max-width:540px;">
+    <div id="success-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
         Your subscription has been successful.
       </p>
     </div>
     <div></div>
-    <div id="sib-container" style=" text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
+    <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEALFxc1Lvmm0QZX8ujrbbNFof_JjaC8Kl6AuSfWg_g-MfSvCooVUEaH_AeTsC2MRIkfb96DlKt-_T00vJF2AA446SS28ZALOOd66d44HU_HV8bi4TxsdFQf0hZbJ8cDpJ-uMfyas1EdjmctO6rNIMpJWqs0Rn7LnkGnUH_jonh64aJ-5S4GHFwyqVaZoadrsquINi88Rz2owm">
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAAZDw52vT0HVxA7ZGA5vuc3B9Szer7G_s4rb8aMeWnyRgR80_JGBEm8efer3HJO93hX-baZuzu7rCpXhZzGYgByY9QDF_sWtcOMmd8FoZmxDuvDFg6TodIzwviDXy_Yt41qHe9Bgq_t1_8-lJ2MADoK159lri2ANalqZ5tbgQpOdj1AP_CcbVx5eBKI8OW2yZGh6bwKlUBnK">
 
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label" style=" font-size:16px; text-align:left; font-weight:700; font-family:'Helvetica', sans-serif; color:#3c4858;" for="EMAIL" data-required="*">
-                Enter your e-mail address to subscribe
+              <label class="entry__label">
+                Enter your e-mail address to subscribe <span class="required-tag">Required</span>
               </label>
               <div class="entry__field">
                 <input type="email" class="input" id="defaultEMAIL" name="defaultEMAIL" autocomplete="off" placeholder="Your e-mail" data-required="true" required />
               </div>
             </div>
-            <label class="entry__error entry__error--primary" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#FF474D; background-color:#FFE4E2; border-radius:3px; border-color:#FF474D;">
+            <label class="entry__error entry__error--primary">
             </label>
           </div>
         </div>
@@ -95,7 +106,7 @@ layout: default
         <div class="sib-checkbox-group form-block">
           <div class="form__entry entry_mcq">
             <div class="form__label-row ">
-              <label class="entry__label" style=" font-size:16px; text-align:left; font-weight:700; font-family:'Helvetica', sans-serif; color:#3c4858;" for="">
+              <label class="entry__label">
                 Choose your interests
               </label>
               <div>
@@ -117,12 +128,18 @@ layout: default
                     <span class="checkbox checkbox_tick_positive"></span>News &amp; updates
                   </label>
                 </div>
+                <div class="entry__choice">
+                  <label class="checkbox__label">
+                    <input type="checkbox" class="input_replaced" name="lists_26[]" data-value="Testing (betas, early access)" value="5c361f03f3959963f1740fe5" />
+                    <span class="checkbox checkbox_tick_positive"></span>Testing (betas, early access)
+                  </label>
+                </div>
               </div>
             </div>
-            <label class="entry__error entry__error--primary" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#FF474D; background-color:#FFE4E2; border-radius:3px; border-color:#FF474D;">
+            <label class="entry__error entry__error--primary">
             </label>
-            <label class="entry__specification" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#8390A4;">
-              You can optionally customize your interests. Regardless of your selection here, every user is automatically subscribed to 'Important updates' list (e-mails about urgent, security matters only, like hardforks etc.)
+            <label class="entry__specification">
+              You can optionally customize your interests. Regardless of your selection here, every user is automatically subscribed to "Important updates" list (e-mails about urgent, security matters only, like hardforks etc.)
             </label>
           </div>
         </div>
@@ -130,39 +147,39 @@ layout: default
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label" style=" font-size:16px; text-align:left; font-weight:700; font-family:'Helvetica', sans-serif; color:#3c4858;" for="NAME">
+              <label class="entry__label">
                 Your name
               </label>
               <div class="entry__field">
                 <input type="text" class="input" id="NAME" name="NAME" autocomplete="off" placeholder="How should we call you?" />
               </div>
             </div>
-            <label class="entry__error entry__error--primary" style=" font-size:12px; text-align:left; font-family:'Helvetica', sans-serif; color:#FF474D; background-color:#FFE4E2; border-radius:3px; border-color:#FF474D;">
+            <label class="entry__error entry__error--primary">
             </label>
           </div>
         </div>
 
-        <div class="form-block" style="text-align: left">
-          <button class="form-block__button" style=" font-size:16px; text-align:left; font-weight:700; font-family:'Helvetica', sans-serif; color:#FFFFFF; background-color:#3E4857; border-radius:3px;" form="sib-form" type="submit">
-            SUBSCRIBE
+        <div class="form-block">
+          <button class="form-block__button">
+            Subscribe to updates
           </button>
-          <div class="loader" style="display: none;">
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
-            <div style="background: #3E4857;"></div>
+          <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
 
-        <div class="form-block" style=" font-size:14px; text-align:center; font-family:'Helvetica', sans-serif; color:#333; background-color:transparent;">
+        <div class="form-block">
           <div class="text-form-block">
             <p>
               <a href="https://sendinblue.com" target="target_blank">Terms &amp; Privacy policy</a>
@@ -197,9 +214,9 @@ layout: default
 
 <!-- SendinBlue form HTML/AJAX form (end) -->
 
-      </div><!-- .column -->
+    </div><!-- .column -->
 	</div>
-</section><!-- #page-title -->
+</section><!-- .subscribe -->
 
 <hr />
 
