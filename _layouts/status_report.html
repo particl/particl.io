@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 31 August 2018</small>
+      <small>Updated 7 December 2018</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -23,38 +23,29 @@ layout: default
           <h2 class="title">Recently completed</h2>
           
 <ul>
-  <li>Particl Desktop (v1.2.2, mainnet)
-    <ul>
-      <li>Cold staking widget fix</li>
-      <li>User Interface updates</li>
-      <li>Updated icons</li>
-      <li>Transaction handling refactored</li>
-      <li>Running on 0.16.2.0 Particl Core</li>
-    </ul>
-  </li>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>
-        Finalising voting and Proposals (Governance 1.0)
+      <li>GUI Stabilize, Bug fixes and UI improvements</li>
+      <li>Displaying the listings expiring in time</li>
+      <li>Filtering of reported items in a single view to cast your vote</li>
+    </ul>
+  </li>
+  <li>Particl Desktop
+    <ul>
+      <li>Better fund conversion between Public, Blind and Anon</li>
+      <li>Design/UX
         <ul>
-          <li>Creation of Proposals</li>
-          <li>Voting tools and stats</li>
+          <li>Unify address details modal</li>
         </ul>
       </li>
-      <li>Trigger notifications for orders changes</li>
-      <li>Adding a location selector for a more clear pricing structure</li>
-      <li>Starting the desktop without the marketplace</li>
-      <li>Settings page design and layout</li>
-      <li>Advanced sort and filter option</li>
-      <li>Multi-Wallet design and layout</li>
-      <li>Expiry times on listings</li>
+      <li>Proposals
+        <ul>
+          <li>Clearing attention notifications</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>Particl Core
-    <ul>
-      <li>Particl Core 0.16.2.0</li>
-    </ul>
-  </li>
+  <li>Staking pool statistics</li>
 </ul>
 
         </div><!-- .completed -->
@@ -63,20 +54,22 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>Particl Desktop (alpha, testnet)
     <ul>
-      <li>
-        Finalising voting and Proposals (Governance 1.0)
+      <li>Automated testing - Integration testing</li>
+      <li>Settings page
         <ul>
-          <li>Consensus on the removal of products - Market governance</li>
+          <li>GUI Settings</li>
+          <li>Core Settings</li>
+          <li>Market Settings</li>
         </ul>
       </li>
-      <li>Settings API for Marketplace</li>
     </ul>
   </li>
-  <li>Third-party integrations
+  <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Ledger integration</li>
+      <li>Sorting order of templates and listings in Sell page</li>
+      <li>Adding weights behind the votes on Listing governance (backend)</li>
     </ul>
   </li>
 </ul>
@@ -90,34 +83,43 @@ layout: default
   <li>
     Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Code refactoring</li>
-      <li>Multi-Wallet implementation</li>
-      <li>Escrow process refactor and enhancements</li>
-      <li>Automated Testing - End to End testing, Unit Testing and Regression Testing</li>
-      <li>
-        Settings page
+      <li>Code refactoring
         <ul>
-          <li>Core Settings</li>
-          <li>Marketplace Settings</li>
-          <li>GUI Settings</li>
+          <li>Improved command error handling</li>
+          <li>Fix existing black box tests</li>
+          <li>Add tests for the existing API</li>
         </ul>
       </li>
-      <li>Staking pool statistics</li>
-      <li>Enhancements on error handling</li>
-      <li>Automatic splitting of outputs</li>
-      <li>Improved message processing</li>
+      <li>Update testing documentation</li>
+      <li>Automated Testing
+        <ul>
+          <li>End to End testing</li>
+          <li>Unit Testing</li>
+          <li>Regression Testing</li>
+        </ul>
+      </li>
+      <li>Design/UX
+        <ul>
+          <li>Redesign of Listing's detail page including public comments</li>
+          <li>Private messaging (between Seller and Buyer)</li>
+          <li>Layout and design for inventory management</li>
+        </ul>
+      </li>
+      <li>GUI Stabilize and Bug fixes
+        <ul>
+          <li>Resolving all bugs reported on latest Testnet Build (1.2.2-20181128-alpha-RC1)</li>
+          <li>Image uploads/compression causing resolution issues</li>
+        </ul>
+      </li>
+      <li>Adding weights behind the votes on Governance (Listing removal)</li>
+      <li>Sorting order of templates and listings in Sell page</li>
+      <li>Updating testing documentation</li>      
     </ul>
   </li>
-  <li>
-    Third Party Integration
+  <li>RingCT Implementation</li>
+  <li>Third Party Integration
     <ul>
       <li>Trezor integration</li>
-    </ul>
-  </li>
-  <li>
-    Particl Core
-    <ul>
-      <li>Particl Core 0.17.0.2</li>
     </ul>
   </li>
 </ul>
@@ -130,8 +132,8 @@ layout: default
 <ul>
   <li>Particl Marketplace (beta)
     <ul>
-      <li>Private listings</li>
-      <li>Private Markets</li>
+      <li>Inventory Management</li>
+      <li>Product Imports</li>
       <li>Deposit Negotiations</li>
       <li>Marketplace versioning for messages and listings</li>
     </ul>

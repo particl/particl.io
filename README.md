@@ -20,3 +20,4 @@
     - concat/minify & uglify JS
     - start local BrowserSync server with realtime reloading
 5. or just `gulp watch-sass` for styles only
+
