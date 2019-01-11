@@ -16,8 +16,12 @@ layout: default
 	<div class="row">
     <div class="text large-4 columns">
       <h3 class="title">Opt-out for Particl updates</h3>
-      <p class="large">You can unsubscribe to stop receiving <strong>all</strong> e-mails from Particl. Note: this means we won't be able to contact you in some serious cases (like security issues or hardforks etc.).</p>
-      <p class="large">If you'll change your mind in the future, you can always re-subscribe on <a href="/subscribe">Subscribe page</a></p>
+      <p class="large">You can unsubscribe to stop receiving <strong>all</strong> e-mails from Particl.</p>
+      <p class="small">Note: this means we won't be able to contact you in some serious cases (like security issues or hardforks etc.).</p>
+      <ul>
+        <li>You can edit your subscription preferences on <a href="/subscribe">Subscribe page</a></li>
+        <li>If you'll change your mind in the future, you can always re-subscribe on <a href="/subscribe">Subscribe page</a></li>
+      </ul>
     </div>
     <div class="info large-6 large-push-1 columns">
 
@@ -27,6 +31,8 @@ layout: default
   2) replace ' by quotes
   3) remove all inline styles (regex replace '' to '' in this file only)
   4) add <span class="required-tag">Required</span> to email's title
+  5) add <i class="ico ico-check"></i> to success messages (on top of the form)
+  6) add <i class="ico ico-cross"></i> to error messages
 -->
 
 
@@ -69,13 +75,13 @@ layout: default
   <body-->
     <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        Your Unsubscription could not be validated. Please try again.
+        <i class="ico ico-cross"></i> Your Unsubscription could not be validated. Please try again.
       </p>
     </div>
     <div></div>
     <div id="success-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        Your un-subscription is successful.
+        <i class="ico ico-check"></i> Your un-subscription is successful.
       </p>
     </div>
     <div></div>

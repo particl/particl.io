@@ -395,23 +395,35 @@ section.subscribe {
         }
       }
     }
+    a {
+      color: inherit; text-decoration: underline;
+      &:hover, &:focus { text-decoration: none; }
+    }
   }
 
   // Subscribe page form (big)
   #sib-container {
     box-shadow: 0 4px 25px 0 rgba(black, 0.06);
     border: 0; border-radius: 10px;
-    padding: 2.438rem 2.563rem 0.838rem;
+    padding: 2.438rem 2.563rem 1.838rem;
   }
   #sib-form {
     text-align: left;
     margin: 0;
   }
   .form-message-panel { // global error/success messages
-    display: none; margin: 8px 0;
-  }
-  .form-message-panel--active { // ^ active
-    display: inline-block;
+    display: none;
+    width: 100%; margin: 0 0 1.7rem;
+    font-size: 0.95rem; text-align: center;
+    &.form-message-panel--active { // ^ active
+      display: inline-block;
+    }
+    p { margin: 0; font-weight: 500; }
+    i.ico {
+      margin-right: 0.3rem;
+      &.ico-check { color: $color; }
+      &.ico-cross { color: $alert; }
+    }
   }
   .checkbox__label {
     word-wrap: break-word; word-break: break-all;
@@ -426,10 +438,17 @@ section.subscribe {
     width: 100%;
     word-wrap: break-word;
   }
+  .entry__error { // invalid field error (wrong email format etc.)
+    font-size: 0.75rem; color: $alert; line-height: 1.4;
+    margin-top: 0.3rem;
+  }
   .form-block { // section block
     margin-top: 1.7rem;
     &:first-of-type { margin: 0; }
-    .text-form-block { font-size: 0.75rem; }
+    .text-form-block {
+      font-size: 0.75rem;
+      p { margin: 0; }
+    }
   }
   label {
     &.entry__label { // section title
@@ -454,8 +473,12 @@ section.subscribe {
     }
   }
   .input {
+    @extend %tfx;
     width: calc(100% - 1rem);
     background: $bg-muted;
+  }
+  .entry_errored {
+    .input { background: rgba($alert, 0.1); }
   }
   .g-recaptcha {
     transform: scale(.77);

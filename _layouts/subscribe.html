@@ -23,6 +23,7 @@ layout: default
         <li>No spamming</li>
         <li>We promise not to share your e-mail address with 3<sup>rd</sup> parties (except for <a href="https://sendinblue.com">SendinBlue</a> as our mailing service provider)</li>
       </ul>
+      <p class="large">If you're already subscribed, you can use this page to update your subscription preferences.</p>
     </div>
     <div class="info large-6 large-push-1 columns">
 
@@ -32,6 +33,8 @@ layout: default
   2) replace &quot; by quotes
   3) remove all inline styles (regex replace ' style=".*"' to '' in this file only)
   4) add <span class="required-tag">Required</span> to email's title
+  5) add <i class="ico ico-check"></i> to success messages (on top of the form)
+  6) add <i class="ico ico-cross"></i> to error messages
 -->
 
 
@@ -74,13 +77,13 @@ layout: default
   <body-->
     <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        Your Subscription could not be validated. Please try again.
+        <i class="ico ico-cross"></i> Your Subscription could not be validated. Please try again.
       </p>
     </div>
     <div></div>
     <div id="success-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        Your subscription has been successful.
+        <i class="ico ico-check"></i> Your subscription has been successful.
       </p>
     </div>
     <div></div>
