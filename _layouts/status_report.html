@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 7 December 2018</small>
+      <small>Updated 11 January 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -26,26 +26,18 @@ layout: default
   <li>Particl Marketplace (alpha, testnet)
     <ul>
       <li>GUI Stabilize, Bug fixes and UI improvements</li>
-      <li>Displaying the listings expiring in time</li>
-      <li>Filtering of reported items in a single view to cast your vote</li>
+      <li>Showing the remaining time left on an listing item</li>
+      <li>Adding the ability to view the detailed overview of a listing while in the cart</li>
+      <li>Added a refresh button to the listing page, enabling users to refresh the listings page to load the latest listings</li>
+      <li>Added the option to allow for a order to be rejected with a predefined message</li>
+      <li>Bugs when updating and editing a saved listing resolved</li>
     </ul>
   </li>
   <li>Particl Desktop
     <ul>
-      <li>Better fund conversion between Public, Blind and Anon</li>
-      <li>Design/UX
-        <ul>
-          <li>Unify address details modal</li>
-        </ul>
-      </li>
-      <li>Proposals
-        <ul>
-          <li>Clearing attention notifications</li>
-        </ul>
-      </li>
+      <li>Clear proposal notifications on view</li>
     </ul>
   </li>
-  <li>Staking pool statistics</li>
 </ul>
 
         </div><!-- .completed -->
@@ -54,9 +46,18 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
+  <li>Particl Marketplace (alpha, testnet)
+    <ul>
+      <li>Bid placed on an expired item will now return an error and reset checkout process</li>
+      <li>Update rejectBid command to allow for saving and retrieving reject message/reasons</li>
+      <li>Image uploads resolution issues</li>
+      <li>Enhancements to the checkout and buyflow process</li>
+      <li>Adding weights behind the votes on Governance (Listing removal)</li>
+      <li>Automated testing - Integration testing</li>
+    </ul>
+  </li>
   <li>Particl Desktop (alpha, testnet)
     <ul>
-      <li>Automated testing - Integration testing</li>
       <li>Settings page
         <ul>
           <li>GUI Settings</li>
@@ -66,10 +67,11 @@ layout: default
       </li>
     </ul>
   </li>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>Particl Copay
     <ul>
-      <li>Sorting order of templates and listings in Sell page</li>
-      <li>Adding weights behind the votes on Listing governance (backend)</li>
+      <li>Update Particl Copay App to the latest version</li>
+      <li>Copay app to be available on iOS/App Store</li>
+      <li>Release of Copay App to Play store</li>
     </ul>
   </li>
 </ul>
@@ -98,28 +100,28 @@ layout: default
           <li>Regression Testing</li>
         </ul>
       </li>
-      <li>Design/UX
+      <li>Choosing an image to feature as the main photo on the market</li>
+      <li>GUI Stabilize and Bug fixes</li>
+      <li>Redesign of Listing's detail page including public comments</li>
+      <li>Layout and design for a messaging system
         <ul>
-          <li>Redesign of Listing's detail page including public comments</li>
-          <li>Private messaging (between Seller and Buyer)</li>
-          <li>Layout and design for inventory management</li>
+          <li>Public Comments</li>
+          <li>Private messaging (while in Buy flow)</li>
         </ul>
       </li>
-      <li>GUI Stabilize and Bug fixes
-        <ul>
-          <li>Resolving all bugs reported on latest Testnet Build (1.2.2-20181128-alpha-RC1)</li>
-          <li>Image uploads/compression causing resolution issues</li>
-        </ul>
-      </li>
-      <li>Adding weights behind the votes on Governance (Listing removal)</li>
-      <li>Sorting order of templates and listings in Sell page</li>
-      <li>Updating testing documentation</li>      
+      <li>Layout and design for inventory management</li>
     </ul>
   </li>
   <li>RingCT Implementation</li>
   <li>Third Party Integration
     <ul>
       <li>Trezor integration</li>
+    </ul>
+  </li>
+  <li>Particl Copay
+    <ul>
+      <li>Cold staking support</li>
+      <li>Cold staking to multisig wallet</li>
     </ul>
   </li>
 </ul>
