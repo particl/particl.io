@@ -137,7 +137,7 @@
 \* --------------------------------------------- */
 
 section.news {
-  border-top: 1px solid $bg-muted;
+  //border-top: 1px solid $bg-muted;
   .section-title {
     @include md { text-align: center; }
     @include lg { text-align: left; }

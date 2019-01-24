@@ -20,4 +20,9 @@
     </div>
   </section><!-- .feature -->
 
-  {% include signup-form.html %}
+
+<!-- Show subscribe promo everywhere except for Subscribe page -->
+{% if page.url == "/subscribe/" %}
+{% else %}
+  {% include subscribe-promo.html %}
+{% endif %}

@@ -314,7 +314,7 @@ section { // full-width sections of content
 	}
 	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
-
+/*
 // Newsletter form (small)
 #sib_embed_signup {
   @include gradient($color, darken($color, 7%));
@@ -375,8 +375,9 @@ section { // full-width sections of content
     }
   }
 }
+*/
 
-
+// Subscribe page
 section.subscribe {
   .text {
     ul {
@@ -488,6 +489,41 @@ section.subscribe {
   }
   .form-block__button { // subscribe button
     @extend button.full;
+  }
+}
+
+// Subscribe promo stripe
+section.subscribe-promo {
+  @include gradient($secondary, darken($secondary, 7%));
+  text-align: center;
+  padding: 1.9rem 0;
+  @include break(m) { text-align: left; }
+  h3.title {
+    font-size: 1rem; color: $white; letter-spacing: 0; line-height: 1.5;
+    text-shadow: 0 1px 2px darken($secondary, 10%); text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    @include break(m) { font-size: 0.85rem; }
+  }
+  small {
+    color: $white; font-size: 85%;
+    display: inline-block; margin: 0.5rem 0;
+    @include break(m) { margin: 0; }
+  }
+  .cta { // button container
+    padding-top: 0.9rem;
+    .button {
+      color: $white;
+      border: 3px solid mix($secondary, $white, 60%);
+      box-shadow: 0 0 60px rgba($white, 0.5);
+      &:hover {
+        background: darken($secondary, 10%);
+        border-color: mix($secondary, $white, 50%);
+      }
+      span {
+        display: none;
+        @include break(m) { display: inline; }
+      }
+    }
   }
 }
 
