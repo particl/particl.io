@@ -2,12 +2,12 @@
 layout: default
 ---
 <section class="page-title">
-   <div class="row">
-     <div class="large-5 columns">
-         <h1 class="title">Subscribe</h1>
-         <p class="large">Never miss important news like security issues and hardforks, get tips for Buyers &amp; Sellers and more.</a></p>
-     </div>
-   </div>
+  <div class="row">
+    <div class="large-5 columns">
+      <h1 class="title">Subscribe</h1>
+      <p class="large">Never miss important news like security issues and hardforks, get tips for Buyers &amp; Sellers and more.</a></p>
+    </div>
+  </div>
 </section>
 
 <hr>
@@ -89,16 +89,16 @@ layout: default
     <div></div>
     <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAAZDw52vT0HVxA7ZGA5vuc3B9Szer7G_s4rb8aMeWnyRgR80_JGBEm8efer3HJO93hX-baZuzu7rCpXhZzGYgByY9QDF_sWtcOMmd8FoZmxDuvDFg6TodIzwviDXy_Yt41qHe9Bgq_t1_8-lJ2MADoK159lri2ANalqZ5tbgQpOdj1AP_CcbVx5eBKI8OW2yZGh6bwKlUBnK">
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAJTQORJXCQC23iHgG9umJc6Iek0XoTBRMlKPz8Ng7rlVIJZvpANtyQczoAFQ2PUuf6cHVmU-SNuFlIVFl9a46ASM-EvZyYuJXufLA6p1pNqhC_i6wAOIVssanyVfevGPYY1-Jhv1woaVCPP-OIEwvvLmqXIsjlV7WFV99Wr-AxnjZMOZhdWwHa5qCR3K3HqCVVhFFqKX4csO">
 
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
               <label class="entry__label">
-                Enter your e-mail address to subscribe <span class="required-tag">Required</span>
+                Your name
               </label>
               <div class="entry__field">
-                <input type="email" class="input" id="defaultEMAIL" name="defaultEMAIL" autocomplete="off" placeholder="Your e-mail" data-required="true" required />
+                <input type="text" class="input" id="NAME" name="NAME" autocomplete="off" placeholder="How should we call you?" />
               </div>
             </div>
             <label class="entry__error entry__error--primary">
@@ -110,10 +110,10 @@ layout: default
           <div class="form__entry entry_block">
             <div class="form__label-row ">
               <label class="entry__label">
-                Your name
+                Enter your e-mail address to subscribe <span class="required-tag">Required</span>
               </label>
               <div class="entry__field">
-                <input type="text" class="input" id="NAME" name="NAME" autocomplete="off" placeholder="How should we call you?" />
+                <input type="email" class="input" id="defaultEMAIL" name="defaultEMAIL" autocomplete="off" placeholder="Your e-mail" data-required="true" required />
               </div>
             </div>
             <label class="entry__error entry__error--primary">
@@ -157,7 +157,26 @@ layout: default
             <label class="entry__error entry__error--primary">
             </label>
             <label class="entry__specification">
-              You can optionally customize your interests. Regardless of your selection here, every user is automatically subscribed to "Important updates" list (e-mails about urgent, security matters only, like hardforks etc.)
+              You can optionally customize your interests. Regardless of your selection here, every user is automatically subscribed to 'Important updates' list (e-mails about urgent, security matters only, like hardforks etc.)
+            </label>
+          </div>
+        </div>
+
+        <div class="sib-captcha form-block">
+          <div class="form__entry entry_block">
+            <div class="form__label-row">
+              <label class="entry__label">
+                Form secured by re-Captcha
+              </label>
+              <script>
+                function handleCaptchaResponse() {
+                  var event = new Event('captchaChange');
+                  document.getElementById('sib-captcha').dispatchEvent(event);
+                }
+              </script>
+              <div class="g-recaptcha" id="sib-captcha" data-sitekey="6Le_QIgUAAAAAMEeImxmh8dL0FuV9NMnW--RFhj7" data-callback="handleCaptchaResponse"></div>
+            </div>
+            <label class="entry__error entry__error--primary">
             </label>
           </div>
         </div>

@@ -463,8 +463,8 @@ section.subscribe {
     }
   }
   .required-tag { // required fields
-    font-size: 0.65rem; color: $color; text-transform: uppercase;
-    border: 1px solid $color; border-radius: $border-radius;
+    font-size: 0.65rem; color: $alert; text-transform: uppercase;
+    border: 1px solid $alert; border-radius: $border-radius;
     display: inline; margin-left: 0.3rem; padding: 1px 0.4rem; float: none;
   }
   input {
@@ -489,6 +489,13 @@ section.subscribe {
   }
   .form-block__button { // subscribe button
     @extend button.full;
+    background: $alert;
+    border-color: $alert;
+    font-size: 1.1rem;
+    &:hover, &:focus {
+      background: darken($alert, 10%);
+      border-color: darken($alert, 10%);
+    }
   }
 }
 
