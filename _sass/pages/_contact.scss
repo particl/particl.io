@@ -1,0 +1,8 @@
+section.secure-disclosure {
+  background: $bg-muted;
+  text-align: center;
+  @include break(large) { text-align: left; }
+  .button {
+    @include break(large) { float: left; margin: 0.6rem 4rem 0 0; }
+  }
+}
