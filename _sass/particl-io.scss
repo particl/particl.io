@@ -276,8 +276,8 @@ section { // full-width sections of content
   }
 }
 
-#team {
-	li.team-member {
+.team {
+	.team-member {
 		text-align: center;
     margin-bottom: 1.5rem;
     @include break(large) { margin-bottom: 2rem; }
