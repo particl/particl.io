@@ -1,5 +1,6 @@
 section.contact-us {
   .part {
+    text-align: center;
     .box {
       @extend %tfx;
       background: $white; border-radius: ($border-radius * 2);
@@ -7,8 +8,18 @@ section.contact-us {
       padding: 1.4rem 1.6rem; margin: 0 0 1.5rem;
       &:hover { box-shadow: 0 3px 20px rgba($black, 0.15); }
     }
-    .title {
-      text-align: center;
+    .team-member {
+      .name { font-size: 1rem; }
+      .links { margin: 0.6rem 0; }
+      & > .title {
+        color: $text-muted;
+        @include break(xl) { display: block; height: 1.2rem; }
+      }
+    }
+    p.small {
+      margin-bottom: 1.5rem;
+      @include break(large) { height: 3.2rem; }
+      @include break(xl) { height: 4.8rem; }
     }
   }
 }
