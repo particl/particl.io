@@ -1,3 +1,18 @@
+section.contact-us {
+  .part {
+    .box {
+      @extend %tfx;
+      background: $white; border-radius: ($border-radius * 2);
+      box-shadow: 0 3px 20px rgba($black, 0.06);
+      padding: 1.4rem 1.6rem; margin: 0 0 1.5rem;
+      &:hover { box-shadow: 0 3px 20px rgba($black, 0.15); }
+    }
+    .title {
+      text-align: center;
+    }
+  }
+}
+
 section.secure-disclosure {
   background: $bg-muted;
   text-align: center;

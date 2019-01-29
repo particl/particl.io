@@ -7,40 +7,45 @@ layout: default
 		<div class="column">
       <h1 class="title">Contact us</h1>
       <p class="large">Get in touch via our general email address or contact some department directly.<br>For secure matters (security issues &amp; bugs), you can reach us via PGP/GPG keys provided below.</p>
-      <a href="xxxxxxxxxxx" class="button full">hello @ xxxxxx.io</a>
+      <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;hello&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;" class="button full">
+        <i class="ico ico-_email"></i>
+        hello&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;
+      </a>
     </div>
 	</div>
 </section><!-- #page-title -->
-
-<hr>
 
 <section class="contact-us">
 	<div class="row">
     <div class="column">
       <div class="grid small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-
-        <div class="part marketing">
-          <h2 class="title">Marketing &amp; Press</h2>
-          <p>xxxxxxxx</p>
-          <a href="mailto:xxxxxxxxxx" class="hollow small button">xxxxxxxx</a>
-        </div><!-- .marketing -->
-
-        <div class="part parnerships">
-          <h2 class="title">Partnerships</h2>
-          <p>xxxxxxxx</p>
-          <a href="mailto:xxxxxxxxxx" class="hollow small button">xxxxxxxx</a>
+        
+        <div class="part team parnerships">
+          <div class="box">
+            <h3 class="title">Partnerships</h3>
+            {% include team/imran.html %}
+          </div>
         </div><!-- .parnerships -->
 
-        <div class="part careers">
-          <h2 class="title">Careers</h2>
-          <p>xxxxxxxx</p>
-          <a href="mailto:xxxxxxxxxx" class="hollow small button">xxxxxxxx</a>
-        </div><!-- .careers -->
+        <div class="part team marketing">
+          <div class="box">
+            <h3 class="title">Marketing &amp; Press</h3>
+            {% include team/paul.html %}
+          </div>
+        </div><!-- .marketing -->
 
-        <div class="part development">
-          <h2 class="title">Development</h2>
-          <p>xxxxxxxx</p>
-          <a href="mailto:xxxxxxxxxx" class="hollow small button">xxxxxxxx</a>
+        <div class="part team events">
+          <div class="box">
+            <h3 class="title">Events &amp; Meet-ups</h3>
+            {% include team/lina.html %}
+          </div>
+        </div><!-- .marketing -->
+        
+        <div class="part team development">
+          <div class="box">
+            <h3 class="title">Development</h3>
+            {% include team/ryno.html %}
+          </div>
         </div><!-- .development -->
 
       </div>
