@@ -36,6 +36,7 @@
 @import 'pages/_specifications';
 @import 'pages/_exchanges';
 @import 'pages/_download';
+@import 'pages/_contact';
 
 /*! particl.io v2.0 | Author: Martin Allien <martin@particl.io> */
 
@@ -275,8 +276,8 @@ section { // full-width sections of content
   }
 }
 
-#team {
-	li.team-member {
+.team {
+	.team-member {
 		text-align: center;
     margin-bottom: 1.5rem;
     @include break(large) { margin-bottom: 2rem; }
@@ -307,6 +308,7 @@ section { // full-width sections of content
       &.linkedin:hover { color: #4875B4; }
       &.facebook:hover { color: #29487d; }
       &.instagram:hover { color: #D82667; }
+      &.telegram:hover { color: #2DA5E0; }
 			&.github:hover { color: $text; }
 		}
 	}
