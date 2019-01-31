@@ -237,6 +237,10 @@ button, .button { // default, outline-to-full buttons
       &:hover, &:focus { color: darken($alert, 5%); border-color: darken($alert, 5%); background: transparent; }
     }
   }
+  // size variations
+  &.large {
+    font-size: 1.1rem; padding: 0.675rem 1.95rem;
+  }
   // icons in buttons
   i.ico { margin-right: 0.3rem; }
 }

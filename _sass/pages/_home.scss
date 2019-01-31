@@ -112,21 +112,28 @@
 
   .capture {
     margin-top: 4rem;
+    @include break(large) { margin-top: 5rem; }
+    @include break(l) { margin-top: 6rem; }
     .text {
       margin-top: 3rem;
-      @include break(l) { text-align: left; }
+      @include break(large) { margin-top: 0; text-align: left; }
       .item {
         margin-bottom: 2.4rem;
+        @include break(large) { margin-bottom: 1.8rem; }
         .ico {
           display: inline-block; margin-right: 0.3rem;
           color: darken($bg-muted, 30%);
+          @include break(large) { margin-right: 0.5rem; }
         }
         .title {
           display: inline-block; margin: 0;
           font-size: 1.3rem; line-height: 1.3;
+          @include break(large) { margin: 0 0 0 -1rem; }
         }
         p {
           font-size: 0.85rem; line-height: 1.5;
+          @include break(large) { padding-left: 1.1rem; }
+          @include break(l) { max-width: 26rem; }
         }
       }
     }
