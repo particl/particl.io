@@ -225,6 +225,18 @@ button, .button { // default, outline-to-full buttons
       background: transparent;
     }
   }
+  // color variations
+  &.alert {
+    border-color: rgba($alert, 0.6); color: $alert;
+    &:hover, &:focus { background: darken($alert, 7%); border-color: darken($alert, 5%); }
+    &.full {
+      background: darken($alert, 2%); border-color: darken($alert, 2%); color: $white;
+      &:hover, &:focus { background: darken($alert, 12%); border-color: darken($alert, 12%); }
+    }
+    &.hollow {
+      &:hover, &:focus { color: darken($alert, 5%); border-color: darken($alert, 5%); background: transparent; }
+    }
+  }
   // icons in buttons
   i.ico { margin-right: 0.3rem; }
 }
