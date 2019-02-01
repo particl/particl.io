@@ -1,0 +1,153 @@
+---
+layout: pop-up
+---
+
+<img class="particl-logo" src="{{ "/assets/img/particl-logo-dark.svg" | relative_url }}" alt="Particl.io">
+<h1 class="title">Get started</h1>
+<h2 class="subtitle">Decentralized Peer to Peer Marketplace</h2>
+<p class="small">
+  Enter your name and email below&hellip;<br>
+  We'll keep you in the loop!
+</p>
+
+<!-- =============== ↓ SUBSCRIPTION FORM ↓ =============== -->
+
+<!--
+    1) comment out <head> & <body>
+    2) change &quot; > '
+    3) regex replace ' style=".*"' > ''
+    4) add icons to error/success messages on top:
+      <i class="ico ico-cross"></i>
+      <i class="ico ico-check"></i>
+    5) add icons below inputs (name & email):
+      <i class="ico ico-person"></i>
+      <i class="ico ico-_email"></i>
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="https://static.sendinblue.com/images/favicon.ico" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+    </style>
+    <link rel="stylesheet" href="https://assets.sendinblue.com/component/form/61c63ac2f8837041dc7e.css">
+    <link rel="stylesheet" href="https://assets.sendinblue.com/component/clickable/74ef9830e6b42f1f3c59.css">
+    <link rel="stylesheet" href="https://forms.sendinblue.com/forms/end-form/build/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+
+  <body-->
+    <div id="error-message" class="form-message-panel">
+      <p class="form-message-panel__text form-message-panel__text--center">
+        <i class="ico ico-cross"></i>Your subscription could not be saved. Please try again.
+      </p>
+    </div>
+    <div></div>
+    <div id="success-message" class="form-message-panel">
+      <p class="form-message-panel__text form-message-panel__text--center">
+        <i class="ico ico-check"></i>Your subscription has been successful.
+      </p>
+    </div>
+    <div></div>
+    <div id="sib-container">
+
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAPEZ18DF2CGWRENGAcjbbiSmk5rjvM4FbtBaOuVJI00bsFQ5ltc3UyKeDaQOToLN93X1aremxAc81akCzgw_kmzbbhC1L46b1QWP6B9rtgQj1K73arcmhVhcz0VCjpCcp0XYil61Jph82U1Yo2LPYJn_j8cxTxkq4WUGXSNsF-HJ7NWbECxp30vFua-epUKWoAFr22jjvgLD">
+        <div class="sib-input form-block">
+          <div class="form__entry entry_block">
+            <div class="form__label-row ">
+              <div class="entry__field">
+                <input type="text" class="input" id="NAME" name="NAME" autocomplete="off" placeholder="Your name" data-required="true" required />
+                <i class="ico ico-person"></i>
+              </div>
+            </div>
+            <label class="entry__error entry__error--primary">
+            </label>
+          </div>
+        </div>
+        <div class="sib-input form-block">
+          <div class="form__entry entry_block">
+            <div class="form__label-row ">
+              <div class="entry__field">
+                <input type="email" class="input" id="defaultEMAIL" name="defaultEMAIL" autocomplete="off" placeholder="Email address" data-required="true" required />
+                <i class="ico ico-_email"></i>
+              </div>
+            </div>
+            <label class="entry__error entry__error--primary">
+            </label>
+          </div>
+        </div>
+        <div class="form-block">
+          <button class="form-block__button">
+            Notify me first!
+          </button>
+          <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+      </form>
+    </div>
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+
+
+
+      window.translation = {
+        common: {
+          selectedList: '{quantity} list selected',
+          selectedLists: '{quantity} lists selected'
+        }
+      };
+
+      var AUTOHIDE = Boolean(1);
+    </script>
+    <script src="https://forms.sendinblue.com/forms/end-form/build/main.js">
+    </script>
+  <!--/body>
+
+</html-->
+
+<!-- =============== ↑ SUBSCRIPTION FORM ↑ =============== -->
+
+<p class="small">No Spam. No Ads. No BS.</p>
