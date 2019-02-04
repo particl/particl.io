@@ -22,7 +22,6 @@
 
 
 <!-- Show subscribe promo everywhere except for Subscribe page -->
-{% if page.url == "/subscribe/" %}
-{% else %}
+{% unless page.url contains "subscribe" %}
   {% include subscribe-promo.html %}
-{% endif %}
+{% endunless %}

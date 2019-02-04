@@ -235,6 +235,13 @@ button, .button { // default, outline-to-full buttons
   padding: 1.5rem 0 3.5rem;
   @include break(large) { padding: 4rem 0 5rem; }
   &.centered { text-align: center; }
+  i.ico {
+    font-size: 3rem;
+    margin-bottom: -1.6rem;
+    display: block;
+    &.ico-check { color: $color; }
+    &.ico-cross { color: $alert; }
+  }
   .title {
     &.centered { text-align: center; }
   }
