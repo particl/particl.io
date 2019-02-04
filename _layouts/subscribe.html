@@ -29,12 +29,13 @@ layout: default
 
 <!-- SendinBlue form HTML/AJAX form (start) -->
 <!--
-  1) comment out head & body tags
+  1) comment out html, head & body tags
   2) replace &quot; by quotes
   3) remove all inline styles (regex replace ' style=".*"' to '' in this file only)
   4) add <span class="required-tag">Required</span> to email's title
-  5) add <i class="ico ico-check"></i> to success messages (on top of the form)
-  6) add <i class="ico ico-cross"></i> to error messages
+  5) add <i class="ico ico-cross"></i> to error messages (on top of the form)
+  6) add <i class="ico ico-check"></i> to success messages
+  7) if reCaptcha is used, include <script src="https://www.google.com/recaptcha/api.js"></script>
 -->
 
 
@@ -77,7 +78,7 @@ layout: default
   <body-->
     <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        <i class="ico ico-cross"></i> Your Subscription could not be validated. Please try again.
+        <i class="ico ico-cross"></i> Your subscription could not be saved. Please try again.
       </p>
     </div>
     <div></div>
@@ -89,8 +90,7 @@ layout: default
     <div></div>
     <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAJTQORJXCQC23iHgG9umJc6Iek0XoTBRMlKPz8Ng7rlVIJZvpANtyQczoAFQ2PUuf6cHVmU-SNuFlIVFl9a46ASM-EvZyYuJXufLA6p1pNqhC_i6wAOIVssanyVfevGPYY1-Jhv1woaVCPP-OIEwvvLmqXIsjlV7WFV99Wr-AxnjZMOZhdWwHa5qCR3K3HqCVVhFFqKX4csO">
-
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAP8t6ShAQtSjlXCjxXdSPv_qCqyua-Kr6esf3QWl1KdIei2CrTRenHtsKG3pVIunsYKekHO5lj_dYQTNtY12jNVF4cKECCYWBuSUDgRin86CsJzkMzHLxqga3NnuS4ZYDVfYoeM5PErmnM8E20o7C8i5bliR-05CVpUfI_3BjhPfTSWU6VcbeQVpzDoqnYhlDhF8GGV_n5t2">
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
@@ -105,7 +105,6 @@ layout: default
             </label>
           </div>
         </div>
-
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
@@ -120,7 +119,6 @@ layout: default
             </label>
           </div>
         </div>
-
         <div class="sib-checkbox-group form-block">
           <div class="form__entry entry_mcq">
             <div class="form__label-row ">
@@ -161,26 +159,6 @@ layout: default
             </label>
           </div>
         </div>
-
-        <div class="sib-captcha form-block">
-          <div class="form__entry entry_block">
-            <div class="form__label-row">
-              <label class="entry__label">
-                Form secured by re-Captcha
-              </label>
-              <script>
-                function handleCaptchaResponse() {
-                  var event = new Event('captchaChange');
-                  document.getElementById('sib-captcha').dispatchEvent(event);
-                }
-              </script>
-              <div class="g-recaptcha" id="sib-captcha" data-sitekey="6Le_QIgUAAAAAMEeImxmh8dL0FuV9NMnW--RFhj7" data-callback="handleCaptchaResponse"></div>
-            </div>
-            <label class="entry__error entry__error--primary">
-            </label>
-          </div>
-        </div>
-
         <div class="form-block">
           <button class="form-block__button">
             Keep me in the loop
@@ -200,7 +178,6 @@ layout: default
             <div></div>
           </div>
         </div>
-
         <div class="form-block">
           <div class="text-form-block">
             <p>
@@ -208,14 +185,14 @@ layout: default
             </p>
           </div>
         </div>
-
+        <input type="text" name="email_address_check" value="" class="input--hidden">
       </form>
     </div>
     <script>
-      window.EMAIL_INVALID_MESSAGE = "Information you have provided is not valid. Please check the field format and try again.";
-      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-      window.GENERIC_INVALID_MESSAGE = window.EMAIL_INVALID_MESSAGE;
-
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+      window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+      window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
       window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
 
       window.translation = {
