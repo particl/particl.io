@@ -14,12 +14,11 @@ layout: pop-up
 
 <!--
     1) comment out <head> & <body>
-    2) change &quot; > '
-    3) regex replace ' style=".*"' > ''
-    4) add icons to error/success messages on top:
+    2) regex replace ' style=".*"' > ''
+    3) add icons to error/success messages on top:
       <i class="ico ico-cross"></i>
       <i class="ico ico-check"></i>
-    5) add icons below inputs (name & email):
+    4) add icons below inputs (name & email):
       <i class="ico ico-person"></i>
       <i class="ico ico-_email"></i>
 
@@ -59,22 +58,23 @@ layout: pop-up
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
-  <body-->
+  <body style="text-align: center;
+   background-color: #E5EDF5;             "-->
     <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        <i class="ico ico-cross"></i>Your subscription could not be saved. Please try again.
+        <i class="ico ico-cross"></i> Your subscription could not be saved. Please try again.
       </p>
     </div>
     <div></div>
     <div id="success-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
-        <i class="ico ico-check"></i>Your subscription has been successful.
+        <i class="ico ico-check"></i> Your subscription has been successful.
       </p>
     </div>
     <div></div>
     <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAPEZ18DF2CGWRENGAcjbbiSmk5rjvM4FbtBaOuVJI00bsFQ5ltc3UyKeDaQOToLN93X1aremxAc81akCzgw_kmzbbhC1L46b1QWP6B9rtgQj1K73arcmhVhcz0VCjpCcp0XYil61Jph82U1Yo2LPYJn_j8cxTxkq4WUGXSNsF-HJ7NWbECxp30vFua-epUKWoAFr22jjvgLD">
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAJYD277tc3a-P4HT55_b09Cy8hgnQj21bkZMAa-fV2H_ANU-pgT7BdxPHEYldB48zstnrXFGp0KovL2388sCATAfA2B7ORBLAw1Kx5X-msDXMgAc15CCt95P4f9WmfDT8ziHYPwevTl5LkY8s_zHfrHoniLC2_2wWbWgFHYgxDDBwniD_h-0uWkHGrmfgDTnDcNOBFpZd9XR">
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
@@ -100,7 +100,7 @@ layout: pop-up
           </div>
         </div>
         <div class="form-block">
-          <button class="form-block__button">
+          <button class="form-block__button" form="sib-form" type="submit">
             Notify me first!
           </button>
           <div class="loader">

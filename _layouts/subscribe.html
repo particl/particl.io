@@ -29,13 +29,13 @@ layout: default
 
 <!-- SendinBlue form HTML/AJAX form (start) -->
 <!--
+  UPDATE: IT'S ENOUGH TO REPLACE FORM ACTION URL IF NO ELEMENTS WERE UPDATED!
   1) comment out html, head & body tags
-  2) replace &quot; by quotes
-  3) remove all inline styles (regex replace ' style=".*"' to '' in this file only)
-  4) add <span class="required-tag">Required</span> to email's title
-  5) add <i class="ico ico-cross"></i> to error messages (on top of the form)
-  6) add <i class="ico ico-check"></i> to success messages
-  7) if reCaptcha is used, include <script src="https://www.google.com/recaptcha/api.js"></script>
+  2) remove all inline styles (regex replace ' style=".*"' to '' in this file only)
+  3) add <span class="required-tag">Required</span> to email's title
+  4) add <i class="ico ico-cross"></i> to error messages (on top of the form)
+  5) add <i class="ico ico-check"></i> to success messages
+  6) if reCaptcha is used, include <script src="https://www.google.com/recaptcha/api.js"></script>
 -->
 
 
@@ -75,7 +75,8 @@ layout: default
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
-  <body-->
+  <body style="text-align: center;
+   background-color: #E5EDF5;             "-->
     <div id="error-message" class="form-message-panel">
       <p class="form-message-panel__text form-message-panel__text--center">
         <i class="ico ico-cross"></i> Your subscription could not be saved. Please try again.
@@ -90,11 +91,11 @@ layout: default
     <div></div>
     <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAP8t6ShAQtSjlXCjxXdSPv_qCqyua-Kr6esf3QWl1KdIei2CrTRenHtsKG3pVIunsYKekHO5lj_dYQTNtY12jNVF4cKECCYWBuSUDgRin86CsJzkMzHLxqga3NnuS4ZYDVfYoeM5PErmnM8E20o7C8i5bliR-05CVpUfI_3BjhPfTSWU6VcbeQVpzDoqnYhlDhF8GGV_n5t2">
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAKotSKJxbNKb16CTMa6V1dFS_-2q-xCQ4nRJx16kym-zoh2OM8M2zGTzMj3qHl_8ZUXWiMJ7qSDTryOe5B9JXyCTw8Li3PRr23NL8a3eZY9ZR6fnSZ6uwH0r0_dJe_36RNNX8hnjCL_1PAHQxNHDvYEukKaIM3pFv_sA2hDrzWX5aZy9aYfm3m3zPPlkBuT4cx5dHXIZomEH">
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label">
+              <label class="entry__label" for="NAME">
                 Your name
               </label>
               <div class="entry__field">
@@ -108,7 +109,7 @@ layout: default
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label">
+              <label class="entry__label" for="EMAIL">
                 Enter your e-mail address to subscribe <span class="required-tag">Required</span>
               </label>
               <div class="entry__field">
@@ -160,7 +161,7 @@ layout: default
           </div>
         </div>
         <div class="form-block">
-          <button class="form-block__button">
+          <button class="form-block__button" form="sib-form" type="submit">
             Keep me in the loop
           </button>
           <div class="loader">
@@ -204,8 +205,7 @@ layout: default
 
       var AUTOHIDE = Boolean(0);
     </script>
-    <script src="https://forms.sendinblue.com/forms/end-form/build/main.js">
-    </script>
+    <script src="https://forms.sendinblue.com/forms/end-form/build/main.js"></script>
   <!--/body>
 
 </html-->
