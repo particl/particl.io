@@ -90,12 +90,12 @@ layout: default
     <div></div>
     <div id="sib-container">
 
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAAedW42W-fu7LPAjaTd3Ydm0mXt5nKIQEz8oZZCGh2lH4RrT4uuXOuLtobO5bmZTC9RZ3rTA6huJK0c1BiXOWc82uOye6zE7oV75n0vJiN2yUJQ5XO7QO0teb3sDQQhhQ3aU_xVboR4P1Qmw7fVMWY4Kzq-c_2_taMp3kDWoqSsnMf-jY2_ROn9-krKOXjS4EdBVnejfhubZ">
+      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIEAMUfOHqHIKWFm0020HHQ9ZPUQJzaxLLzOXEd2J7Pg838hdnekgwg0q_hKpRe80uzvden4dc88NMbtMf93hXslilslyZq947OLDPG4vimEh2-c6Z4eVbCwP-RM76wdyLIK3Ez0pjLVQmIm-DDg91laORsiDIdmovQmqF3WGqE_fYJrsls1RiRjIHKKcl3gjs32aEVkDeiEdis">
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label" for="NAME">
-                Your name
+              <label class="entry__label" for="NAME" data-required="*">
+                Your name <span class="required-tag">Required</span>
               </label>
               <div class="entry__field">
                 <input type="text" class="input" id="NAME" name="NAME" autocomplete="off" placeholder="How should we call you?" />
@@ -108,7 +108,7 @@ layout: default
         <div class="sib-input form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label" for="EMAIL">
+              <label class="entry__label" for="EMAIL" data-required="*">
                 Enter your e-mail address to subscribe <span class="required-tag">Required</span>
               </label>
               <div class="entry__field">
@@ -162,9 +162,6 @@ layout: default
         <div class="sib-captcha form-block">
           <div class="form__entry entry_block">
             <div class="form__label-row ">
-              <label class="entry__label">
-                Form secured by re-Captcha
-              </label>
               <script>
                 function handleCaptchaResponse() {
                   var event = new Event('captchaChange');
