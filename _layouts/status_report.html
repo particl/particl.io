@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 1 February 2019</small>
+      <small>Updated 16 February 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -25,33 +25,30 @@ layout: default
 <ul>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Sorting of Seller's listings and templates</li>
-      <li><code>BidSend</code> should error if listing has expired</li>
-      <li>Store images locally instead of in the DB</li>
-      <li>Choosing a featured image/photo for Listings</li>
-      <li>Image uploads resolution issues</li>
-      <li>Bid placed on an expired item should return an error and reset checkout process</li>
-      <li>Multi-image upload failing when creating and publishing a Listing</li>
-      <li>Cast a weighted vote on removing an Item that has been flagged as inappropriate</li>
-      <li>Removal of a listing that has been voted off</li>
+      <li>Bug fixes</li>
+      <li>Retrieving an smsg message in a textual format changed from ‘ascii’ to ‘text’</li>
+      <li>Error message - <code>invalid from address</code> when wallet is not encrypted</li>
     </ul>
   </li>
   <li>Particl Desktop
     <ul>
-      <li>Add processing Modal to Listings page when reporting and voting on the removal of a listing</li>
-      <li>Show SMSG Message size limit</li>
-      <li>Bulk uploading of images</li>
-      <li>Image uploads resolution issues</li>
-      <li>Add loading spinner/bar to Checkout and Buyflow process</li>
-      <li>Choosing an image to feature as the main photo on the Market</li>
-      <li>Adding weights behind the votes on Governance (Listing removal)</li>
-      <li>Enhancements to the checkout and buyflow process</li>
+      <li>Enhancement on</li>
+	<ul>
+	  <li>Transaction Overview Page</li>
+	  <li>Listings detail page</li>
+	</ul>
+      <li>Bug fixes identified by community/team members</li>
+      <li><strong>New version Available</strong> update (displays on existing versions that a new release is available)</li>
+      <li>Reduced Image quality for lower transaction costs</li>
+      <li>Cart listing management enhancements</li>
+      <li>Changed how accepting the terms work</li>
+      <li>Listing fee estimate now use actual size of the listing</li>
+      <li>Enhancement made to saving a listing for later</li>
     </ul>
   </li>
   <li>Particl Copay
     <ul>
-      <li>Update Particl Copay App to the latest version</li>
-      <li>Copay app available on iOS/App Store &amp; Play Store</li>
+      <li>Bug fixes with latest available version</li>
     </ul>
   </li>
 </ul>
@@ -62,16 +59,20 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
-    <ul>
-      <li>Improved command error handling</li>
-    </ul>
-  </li>
   <li>Particl Desktop
     <ul>
-      <li>New version Available update (displays on existing versions that a new release is available)</li>
-      <li>Redesign of Listing's detail page including public comments</li>
+      <li>JavaScript Error when downloading the daemon</li>
       <li>Layout and design for inventory management</li>
+    </ul>
+  </li>
+  <li>Particl Copay
+    <ul>
+      <li>Add Cold-Staking to Particl Copay App</li>
+	<ul>
+          <li>Including visual enhancements</li>
+          <li>QR code scanning</li>
+        </ul>
+      <li>Disable the ability to add Bitcoin Cash as a wallet</li>
     </ul>
   </li>
 </ul>
@@ -86,17 +87,21 @@ layout: default
     Particl Marketplace (alpha, testnet)
     <ul>
       <li>Code refactoring</li>
+      <li>OMP Library Integration</li>
+      <li>MP error message <code>amount out of range</code></li>
+      <li>Public comments on listings</li>
     </ul>
   </li>
   <li>
     Particl Desktop
     <ul>
+      <li>Unlock modal not closing on submit in certain cases</li>
+      <li>Published listings displaying as unpublished</li>
       <li>GUI Stabilize and Bug fixes</li>
     </ul>
   </li>
   <li>Particl Copay
     <ul>
-      <li>Cold staking support</li>
       <li>Cold staking to multisig wallet</li>
     </ul>
   </li>
@@ -135,7 +140,7 @@ layout: default
 
       </div>
     </div>
-	</div>
+  </div>
 </section><!-- .status-report -->
 
 {% include particl-desktop.html %}
