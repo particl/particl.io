@@ -1,0 +1,55 @@
+// vertically scrolling text in page title
+$scroll-line: 2rem;
+
+.scroller {
+  text-align: center; font-weight: 500; line-height: $scroll-line;
+  overflow: hidden;
+  position: relative; top: 0.55rem;
+  display: block; height: $scroll-line;
+  @include break(m) {
+    display: inline-block; margin-left: 0.8rem;
+    text-align: left;
+  }
+  .scrolling {
+    position: relative;
+    animation: text-scroller 10s; animation-iteration-count: infinite;
+    margin: 0;
+  }
+  &.market {
+    .ico { margin-right: 0.5rem; }
+    .ico-anon,
+    .ico-cog { color: $tertiary; }
+    .ico-lock,
+    .ico-smiley { color: $secondary; }
+    .ico-stake,
+    .ico-thumb-up { color: $primary; }
+  }
+}
+
+@keyframes text-scroller {
+  0% { top: 0; }
+  10% { top: 0; }
+  17% { top: -($scroll-line); }
+  27% { top: -($scroll-line); }
+  33% { top: -($scroll-line * 2); }
+  43% { top: -($scroll-line * 2); }
+  50% { top: -($scroll-line * 3); }
+  60% { top: -($scroll-line * 3); }
+  66% { top: -($scroll-line * 4); }
+  76% { top: -($scroll-line * 4); }
+  83% { top: -($scroll-line * 5); }
+  93% { top: -($scroll-line * 5); }
+  99% { top: 0; }
+}
+
+/*
+@keyframes text-scroller {
+  0%  { top: 0; }
+  17% { top: -($scroll-line); }
+  33% { top: -($scroll-line * 2); }
+  50% { top: -($scroll-line * 3); }
+  66% { top: -($scroll-line * 4); }
+  83% { top: -($scroll-line * 5); }
+  99% { top: 0; }
+}
+*/

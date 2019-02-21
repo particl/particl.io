@@ -28,6 +28,7 @@
 @import 'pages/_home';
 @import 'pages/_why_particl';
 @import 'pages/_about_us';
+@import 'pages/_market';
 @import 'pages/_careers';
 @import 'pages/_roadmap';
 @import 'pages/_status_report';
@@ -176,6 +177,10 @@ small {
 	font-size: 70%; color: lighten($text-muted, 20%); line-height: 1.4;
 }
 
+.video-container {
+  text-align: left;
+}
+
 // Forms
 form {
 	margin: 1.5rem 0;
@@ -223,6 +228,18 @@ button, .button { // default, outline-to-full buttons
       border-color: darken($primary, 3%);
       color: darken($primary, 5%);
       background: transparent;
+    }
+  }
+  // color variations
+  &.secondary {
+    border-color: rgba($secondary, 0.6); color: $secondary;
+    &:hover, &:focus { background: darken($secondary, 7%); border-color: darken($secondary, 5%); }
+    &.full {
+      background: darken($secondary, 2%); border-color: darken($secondary, 2%); color: $white;
+      &:hover, &:focus { background: darken($secondary, 12%); border-color: darken($secondary, 12%); }
+    }
+    &.hollow {
+      &:hover, &:focus { color: darken($secondary, 5%); border-color: darken($secondary, 5%); background: transparent; }
     }
   }
   // icons in buttons

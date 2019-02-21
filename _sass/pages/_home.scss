@@ -28,7 +28,7 @@
     }
     .subtitle {
       font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
-      margin: 0;
+      display: inline-block; margin: 0;
     }
   }
   
