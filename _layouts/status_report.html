@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 11 January 2019</small>
+      <small>Updated 16 February 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -27,17 +27,30 @@ layout: default
 <ul>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
-      <li>GUI Stabilize, Bug fixes and UI improvements</li>
-      <li>Showing the remaining time left on an listing item</li>
-      <li>Adding the ability to view the detailed overview of a listing while in the cart</li>
-      <li>Added a refresh button to the listing page, enabling users to refresh the listings page to load the latest listings</li>
-      <li>Added the option to allow for a order to be rejected with a predefined message</li>
-      <li>Bugs when updating and editing a saved listing resolved</li>
+      <li>Bug fixes</li>
+      <li>Retrieving an smsg message in a textual format changed from ‘ascii’ to ‘text’</li>
+      <li>Error message - <code>invalid from address</code> when wallet is not encrypted</li>
     </ul>
   </li>
   <li>Particl Desktop
     <ul>
-      <li>Clear proposal notifications on view</li>
+      <li>Enhancement on</li>
+	<ul>
+	  <li>Transaction Overview Page</li>
+	  <li>Listings detail page</li>
+	</ul>
+      <li>Bug fixes identified by community/team members</li>
+      <li><strong>New version Available</strong> update (displays on existing versions that a new release is available)</li>
+      <li>Reduced Image quality for lower transaction costs</li>
+      <li>Cart listing management enhancements</li>
+      <li>Changed how accepting the terms work</li>
+      <li>Listing fee estimate now use actual size of the listing</li>
+      <li>Enhancement made to saving a listing for later</li>
+    </ul>
+  </li>
+  <li>Particl Copay
+    <ul>
+      <li>Bug fixes with latest available version</li>
     </ul>
   </li>
 </ul>
@@ -48,32 +61,20 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>Particl Desktop
     <ul>
-      <li>Bid placed on an expired item will now return an error and reset checkout process</li>
-      <li>Update rejectBid command to allow for saving and retrieving reject message/reasons</li>
-      <li>Image uploads resolution issues</li>
-      <li>Enhancements to the checkout and buyflow process</li>
-      <li>Adding weights behind the votes on Governance (Listing removal)</li>
-      <li>Automated testing - Integration testing</li>
-    </ul>
-  </li>
-  <li>Particl Desktop (alpha, testnet)
-    <ul>
-      <li>Settings page
-        <ul>
-          <li>GUI Settings</li>
-          <li>Core Settings</li>
-          <li>Market Settings</li>
-        </ul>
-      </li>
+      <li>JavaScript Error when downloading the daemon</li>
+      <li>Layout and design for inventory management</li>
     </ul>
   </li>
   <li>Particl Copay
     <ul>
-      <li>Update Particl Copay App to the latest version</li>
-      <li>Copay app to be available on iOS/App Store</li>
-      <li>Release of Copay App to Play store</li>
+      <li>Add Cold-Staking to Particl Copay App</li>
+	<ul>
+          <li>Including visual enhancements</li>
+          <li>QR code scanning</li>
+        </ul>
+      <li>Disable the ability to add Bitcoin Cash as a wallet</li>
     </ul>
   </li>
 </ul>
@@ -87,43 +88,29 @@ layout: default
   <li>
     Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Code refactoring
-        <ul>
-          <li>Improved command error handling</li>
-          <li>Fix existing black box tests</li>
-          <li>Add tests for the existing API</li>
-        </ul>
-      </li>
-      <li>Update testing documentation</li>
-      <li>Automated Testing
-        <ul>
-          <li>End to End testing</li>
-          <li>Unit Testing</li>
-          <li>Regression Testing</li>
-        </ul>
-      </li>
-      <li>Choosing an image to feature as the main photo on the market</li>
+      <li>Code refactoring</li>
+      <li>OMP Library Integration</li>
+      <li>MP error message <code>amount out of range</code></li>
+      <li>Public comments on listings</li>
+    </ul>
+  </li>
+  <li>
+    Particl Desktop
+    <ul>
+      <li>Unlock modal not closing on submit in certain cases</li>
+      <li>Published listings displaying as unpublished</li>
       <li>GUI Stabilize and Bug fixes</li>
-      <li>Redesign of Listing's detail page including public comments</li>
-      <li>Layout and design for a messaging system
-        <ul>
-          <li>Public Comments</li>
-          <li>Private messaging (while in Buy flow)</li>
-        </ul>
-      </li>
-      <li>Layout and design for inventory management</li>
+    </ul>
+  </li>
+  <li>Particl Copay
+    <ul>
+      <li>Cold staking to multisig wallet</li>
     </ul>
   </li>
   <li>RingCT Implementation</li>
   <li>Third Party Integration
     <ul>
       <li>Trezor integration</li>
-    </ul>
-  </li>
-  <li>Particl Copay
-    <ul>
-      <li>Cold staking support</li>
-      <li>Cold staking to multisig wallet</li>
     </ul>
   </li>
 </ul>
@@ -142,6 +129,12 @@ layout: default
       <li>Marketplace versioning for messages and listings</li>
     </ul>
   </li>
+  <li>Particl Copay
+    <ul>
+      <li>Disable ability to add Bitcoin Cash as a wallet</li>
+      <li>Add Cold-Staking to Multisig Wallet on Particl Copay App</li>
+    </ul>
+  </li>
   <li>Software Development Kit (SDK)</li>
 </ul>
 
@@ -149,7 +142,7 @@ layout: default
 
       </div>
     </div>
-	</div>
+  </div>
 </section><!-- .status-report -->
 
 {% include particl-desktop.html %}
