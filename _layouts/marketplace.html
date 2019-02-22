@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section id="intro">
+<section id="intro" class="market-page">
   <div class="row">
     <div class="column">
 
@@ -28,37 +28,43 @@ layout: default
         <a href="/marketplace/sell/" class="full secondary button">For Sellers</a>
       </div>
 
-      <div class="video-container">
-        <video controls preload="none" poster="/assets/video/test.png">
-          <source src="/assets/video/test.webm" type="video/webm">
-          <!--source src="/assets/video/test.mp4" type="video/mp4"-->
-          Sorry, your browser doesn't support HTML video. Consider upgrading or switching to a modern browser like Mozilla Firefox or Brave.
-        </video>
+      <div class="video-wrap">
+        <div class="window-titlebar">Particl Desktop</div>
+        <div class="video-container">
+          <video controls preload="none" poster="/assets/video/video-placeholder.png">
+            <!--source src="/assets/video/video-placeholder.webm" type="video/webm"-->
+            <source src="/assets/video/video-placeholder.mp4" type="video/mp4">
+            Sorry, your browser doesn't support HTML video. Consider upgrading or switching to a modern browser like Mozilla Firefox or Brave.
+          </video>
+        </div>
       </div>
-
-      <div class="partners-press">
-        <div class="partners">
-          <div class="logos">
-            <a target="_blank" class="no-arrow item" href="https://auroraia.com" title="Aurora IA">
-              <img class="logo aurora" src="/assets/img/partners/aurora.png" alt="Aurora IA">
-            </a>
-            <a target="_blank" class="no-arrow item" href="https://btcmedia.org" title="BTC Media">
-              <img class="logo btc-media" src="/assets/img/partners/btc-media.png" alt="BTC Media">
-            </a>
-            <a target="_blank" class="no-arrow item" href="https://www.lunatech.co.za/" title="Lunatech (Pty) Ltd">
-              <img class="logo lunatech" src="/assets/img/partners/lunatech.png" alt="Lunatech (Pty) Ltd">
-            </a>
-            <a target="_blank" class="no-arrow item" href="https://www.changelly.com/" title="Changelly">
-              <img class="logo changelly" src="/assets/img/partners/changelly.svg" alt="Changelly">
-            </a>
-          </div><!-- .logos -->
-          <h2 class="title">Supported by</h2>
-        </div><!-- .partners -->
-      </div><!-- .partners-press -->
 
     </div><!-- .column -->
   </div>
 </section><!-- #intro -->
+
+
+<section class="about-market">
+  <div class="arrow"></div>
+  <div class="row">
+    <div class="illustration column">
+      <img src="/assets/img/illustrations/illustration-placeholder.png" alt="">
+    </div>
+    <div class="text column">
+      <h2 class="title">About Particl's Open Marketplace</h2>
+      <p>
+        The Particl Open Marketplace is a first of its kind market network for the internet.
+      </p>
+      <p>
+        Using <strong>peer-to-peer</strong> technology, it operates with no central authority or middleman and is exclusively owned and operated by its network of users; enabling new exciting possibilities that could not be covered by any previous marketplaces.
+      </p>
+      <p>
+        <strong>Particl is also scalable, fast, secure and private.</strong> You can buy and sell your favorite product directly for cryptocurrencies, knowing that others can’t monitor your activity.
+      </p>
+    </div>
+  </div>
+</section><!-- .about-market -->
+  
  
 
 {% include dive-deeper.html %}
