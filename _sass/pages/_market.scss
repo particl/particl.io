@@ -99,19 +99,21 @@ section {
 
   // MP features
   &.market-features {
+    text-align: center;
+    @include break(large) { text-align: left; }
     .section-title {
       margin: 0 0 1rem; text-align: center;
-      @include break(large) { margin: 0 0 2rem; }
+      @include break(l) { margin: 0 0 2rem; }
     }
     .feature {
       padding: 2rem 0;
-      @include break(l) { padding: 4rem 0; }
+      @include break(large) { padding: 4rem 0; }
       .illustration {
         margin-bottom: 1rem;
         @include break(large) { margin: 0; }
         img {
-          width: 100%; max-width: 25rem; margin: 1rem auto; display: block;
-          @include break(large) { width: 85%; max-width: none; }
+          width: 100%; max-width: 20rem; margin: 1rem auto; display: block;
+          @include break(large) { width: 70%; max-width: none; }
           @include break(l) { margin: 0 auto; }
         }
       }
@@ -127,6 +129,55 @@ section {
           position: relative; top: -3px;
         }
       }
+    }
+  }
+
+  // Buyer/seller blocks
+  &.buyer-seller {
+    background: rgba($bg-muted, 0.3);
+    padding-bottom: 0;
+    .section-title {
+      text-align: center; font-weight: 400; line-height: 1.5; color: $text-muted;
+      strong { display: block; font-weight: 700; color: $text; }
+    }
+    .buyer,
+    .seller {
+      @extend %tfx;
+      color: $white; font-weight: 700; font-size: 1.2rem;
+      padding: 2rem 2.5rem;
+      position: relative;
+      &:hover {
+        .arrow { right: 2.2rem; border-color: rgba($white, 0.6); }
+      }
+      @include break(large) { padding: 3.5rem 4rem; font-size: 1.3rem; }
+      .arrow {
+        @extend %tfx;
+        width: 1.2rem; height: 1.2rem;
+        border-top: 3px solid rgba($white, 0.4); border-right: 3px solid rgba($white, 0.4);
+        transform: rotate(45deg); position: absolute; right: 2.5rem; top: 2.1rem;
+        @include break(large) { top: 3.6rem; }
+      }
+    }
+    .buyer {
+      background: $color;
+      &:hover, &:focus {
+        background: darken($color, 3%);
+        .arrow {
+          @include break(large) { left: 2.2rem; }
+        }
+      }
+      @include break(large) { text-align: right; }
+      .arrow {
+        @include break(large) {
+          right: auto; left: 2.5rem;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .seller {
+      background: $secondary;
+      &:hover, &:focus { background: darken($secondary, 5%); }
+      @include break(large) { text-align: left; }
     }
   }
 
