@@ -97,6 +97,39 @@ section {
     }
   }
 
+  // MP features
+  &.market-features {
+    .section-title {
+      margin: 0 0 1rem; text-align: center;
+      @include break(large) { margin: 0 0 2rem; }
+    }
+    .feature {
+      padding: 2rem 0;
+      @include break(l) { padding: 4rem 0; }
+      .illustration {
+        margin-bottom: 1rem;
+        @include break(large) { margin: 0; }
+        img {
+          width: 100%; max-width: 25rem; margin: 1rem auto; display: block;
+          @include break(large) { width: 85%; max-width: none; }
+          @include break(l) { margin: 0 auto; }
+        }
+      }
+      .text {
+        .title {
+          margin: 0;
+        }
+        .tag {
+          font-size: 50%; text-transform: uppercase; line-height: 1.1rem;
+          font-weight: 500; letter-spacing: 0; color: white;
+          background: $secondary; border-radius: 4px;
+          display: inline-block; padding: 0 0.4rem; margin-left: 0.4rem;
+          position: relative; top: -3px;
+        }
+      }
+    }
+  }
+
 }
 
 
