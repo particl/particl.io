@@ -366,9 +366,8 @@ section.download-promo {
 
 }
 
-#part-token {
+#dive-deeper {
   padding: 6.938rem 0rem 5.875rem;
-
   h2 {
     &:before {
       content:'';
@@ -380,30 +379,19 @@ section.download-promo {
       background: $color;
     }
   }
-
-  h3 {
-    margin-top: 3.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    max-width: 326px;
-    font-size: 0.813rem;
-    line-height: 1.77;
-  }
-
-  .first-row p {
-    min-height: 68px;
-  }
-
-  .second-row p {
-    min-height: 23px;
-  }
-
-  .more-btn {
-    font-size: 0.813rem;
-    color: $black-op-8;
-    font-weight: 500;
-    text-decoration: underline;
+  .box {
+    @extend %box;
+    @include break(large) { padding: 1.8rem 2.4rem; }
+    @include break-from(1450px) { padding: 2rem 2.6rem; }
+    .title {
+      margin: 0 0 0.5rem;
+      @include break-from(1450px) { margin: 0 0 1.2rem; }
+    }
+    .desc {
+      font-size: 0.813rem; line-height: 1.77;
+      margin-bottom: 1.1rem;
+      @include break(large) { height: 6rem; }
+      @include break-from(1450px) { height: 6.3rem; }
+    }
   }
 }
