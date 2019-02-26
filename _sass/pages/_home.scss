@@ -367,15 +367,13 @@ section.download-promo {
 }
 
 #dive-deeper {
-  padding: 6.938rem 0rem 5.875rem;
+  padding: 6.938rem 0 5.875rem;
   h2 {
+    margin-bottom: 5rem;
     &:before {
       content:'';
-      position: absolute;
-      bottom: -1.5rem;
-      display: block;
-      width: 2.5rem;     
-      height: 2px;
+      position: absolute; bottom: 3rem;
+      display: block; width: 2.5rem; height: 4px;
       background: $color;
     }
   }
