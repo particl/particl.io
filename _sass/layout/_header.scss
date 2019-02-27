@@ -18,7 +18,7 @@
       width: 100%; max-width: 6rem; height: auto;
       padding: 0.8rem;
       @include break(s) { max-width: 6.7rem; padding: 0.9rem 0.9rem; }
-      @include break(large) { max-width: 7.3rem; padding: 1rem 1.3rem; }
+      @include break(large) { max-width: 6.9rem; padding: 1rem 1.3rem; }
     }
   }
 

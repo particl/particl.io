@@ -19,3 +19,9 @@
 
     </div>
   </section><!-- .feature -->
+
+
+<!-- Show subscribe promo everywhere except for Subscribe page -->
+{% unless page.url contains "subscribe" %}
+  {% include subscribe-promo.html %}
+{% endunless %}

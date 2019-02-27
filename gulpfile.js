@@ -97,6 +97,7 @@ gulp.task('scripts', function (cb) {
       paths.js + 'jquery.countdown.min.js', // http://hilios.github.io/jQuery.countdown/
       paths.js + 'moment.min.js', // countdown-related
       paths.js + 'moment-timezone-with-data-2012-2022.min.js', // countdown-related
+      paths.js + 'jquery.magnific-popup.min.js', // pop-ups
       paths.js + 'particl.js',
     ]),
     sourcemaps.init(),

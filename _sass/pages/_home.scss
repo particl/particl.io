@@ -23,15 +23,24 @@
     max-width: 26rem;
     @include break(large) { max-width: 30rem; }
     @include break(xl) { max-width: 60rem; }
+    .tag {
+      background: darken($color, 4%);
+      display: inline-block; padding: 0.15rem 1rem; margin: 0 0 0.7rem;
+      font-size: 0.8rem; text-transform: uppercase;
+      color: $color-white; font-weight: 500;
+    }
     .title {
       margin: 0 0 1rem;
+      span { color: darken($color, 4%); }
     }
     .subtitle {
       font-size: 1.3rem; font-weight: 400; color: lighten($text-muted, 15%);
       margin: 0;
     }
   }
-  
+
+  // ------- ↓ original GUI intro ↓ ------- //
+
   // download & watch video buttons
   .intro-buttons {
     text-align: center;
@@ -97,12 +106,52 @@
     }
   }
 
+  // ------- ↑ original GUI intro ↑ ------- //
+
+  // ------- ↓ marketing capture intro ↓ ------- //
+
+  .capture {
+    margin-top: 4rem;
+    @include break(large) { margin-top: 5rem; }
+    @include break(l) { margin-top: 6rem; }
+    .text {
+      margin-top: 3rem;
+      @include break(large) { margin-top: 0; text-align: left; }
+      .item {
+        margin-bottom: 2.4rem;
+        @include break(large) { margin-bottom: 1.8rem; }
+        .ico {
+          display: inline-block; margin-right: 0.3rem;
+          color: darken($bg-muted, 30%);
+          @include break(large) { margin-right: 0.5rem; }
+        }
+        .title {
+          display: inline-block; margin: 0;
+          font-size: 1.3rem; line-height: 1.3;
+          @include break(large) { margin: 0 0 0 -1rem; }
+        }
+        p {
+          font-size: 0.85rem; line-height: 1.5;
+          @include break(large) { padding-left: 1.1rem; }
+          @include break(l) { max-width: 26rem; }
+        }
+      }
+    }
+    .video {
+      @include before_md { padding: 0; }
+      .video-container {
+        margin: 0 0 2rem;
+      }
+    }
+  }
+
+  // ------- ↑ marketing capture intro ↑ ------- //
+
   // partners & press mentions
   .partners-press {
     display: none;
     @include break(m) { display: block; margin-top: 6rem; }
     @include break(large) { margin-top: 7rem; }
-    //@include break(xl) { margin-top: 7rem; }
     .logos {
       a.item { display: inline-block; }
       .logo {
@@ -137,7 +186,7 @@
 \* --------------------------------------------- */
 
 section.news {
-  border-top: 1px solid $bg-muted;
+  //border-top: 1px solid $bg-muted;
   .section-title {
     @include md { text-align: center; }
     @include lg { text-align: left; }
