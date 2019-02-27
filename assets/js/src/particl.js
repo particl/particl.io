@@ -87,6 +87,14 @@ $( document ).ready(function() {
 	});
 
 
+	/* ------------ POP-UPS (https://dimsemenov.com/plugins/magnific-popup/documentation.html) ------------ */
+
+	// Homepage > Capture subscribe
+	$('.popup-ajax').magnificPopup({
+		type: 'ajax'
+	});
+
+
 	/* ------------ COUNTDOWN ------------ */
 
 	$(function(){

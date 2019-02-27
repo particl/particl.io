@@ -11,6 +11,13 @@ body.menu-opened {
     margin: 0; padding: 0;
     list-style: none;
   }
+  .tag {
+    background: $color; border-radius: 3px;
+    display: inline-block; padding: 0.1rem 0.35rem; margin-left: 0.2rem;
+    font-size: 0.55rem; line-height: 1.3; color: $color-white;
+    text-transform: uppercase; font-weight: 700;
+    position: relative; top: -2px;
+  }
   a.mail::after {
     @extend %tfx;
     content: "\E001";
