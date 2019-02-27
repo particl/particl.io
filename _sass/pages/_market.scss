@@ -6,6 +6,31 @@ $scroll-line: 1.9rem;
     max-width: 50rem;
   }
 
+  // Market > Buy/Sell intro section
+  &.subpage {
+    text-align: left;
+    padding-bottom: 0;
+    overflow: hidden;
+    border-bottom: 1px solid $bg-muted;
+    .header-title {
+      max-width: 32rem; margin: 0;
+      @include break(large) { margin: 0 0 5rem; }
+    }
+    .illustration {
+      margin-bottom: 2rem;
+      img {
+        display: block; width: 100%; max-width: 24rem; margin: -2rem auto 0;
+        @include break(m) { margin: -4rem auto 0; }
+        @include break(large) { margin: 0; }
+        @include break(l) { margin: -2rem 0 0; }
+      }
+    }
+    .video-wrap {
+      margin: 2rem auto 0; max-width: 55rem;
+      @include break(large) { margin: 2rem auto -8rem; }
+    }
+  }
+
   // vertically scrolling text in page title
   .scroller {
     text-align: center; font-weight: 500; line-height: ($scroll-line - 0.02rem);
