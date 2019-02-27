@@ -206,6 +206,41 @@ section {
     }
   }
 
+
+  // Market > Buy/sell features
+  &.buy-sell-features {
+    .item {
+      @extend %clearfix;
+      margin-bottom: 2rem;
+    }
+    $icon-size: 2.6rem;
+    .icon {
+      width: $icon-size; height: $icon-size;
+      display: block; float: left; margin-top: -0.5rem;
+      border: 1px solid $color; border-radius: 50%;
+      line-height: ($icon-size - 0.1rem); color: $color; text-align: center;
+    }
+    .text {
+      float: left; width: calc(100% - #{$icon-size}); padding-left: 1.2rem;
+    }
+    .title {
+      font-size: 1.1rem; line-height: 1.3; letter-spacing: 0;
+      margin: 0 0 0.8rem;
+    }
+    p {
+      font-size: 0.825rem; line-height: 1.6;
+    }
+    ul.fancy {
+      margin: 0; padding: 0;
+      list-style: none;
+      .ico { color: $color; margin-right: 0.4rem; }
+      li {
+        font-size: 0.825rem; line-height: 1.6; color: $text-muted;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
 }
 
 
