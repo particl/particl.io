@@ -95,7 +95,7 @@ section {
       border: 1rem solid transparent; border-bottom-color: $black;
       width: 0; height: 0;
       position: absolute; top: -2rem;
-      left: 50%; transform: translateX(-50%)
+      left: 50%; transform: translateX(-50%);
     }
     .illustration {
       display: none;
@@ -211,13 +211,19 @@ section {
   &.buy-sell-features {
     .item {
       @extend %clearfix;
-      margin-bottom: 2rem;
+      margin-top: 1rem; margin-bottom: 1rem;
+      &:hover {
+        .icon {
+          box-shadow: 0 0 0 5px rgba($color, 0.15);
+        }
+      }
     }
     $icon-size: 2.6rem;
     .icon {
+      @extend %tfx;
       width: $icon-size; height: $icon-size;
       display: block; float: left; margin-top: -0.5rem;
-      border: 1px solid $color; border-radius: 50%;
+      border: 1px solid $color; border-radius: 50%; box-shadow: 0 0 transparent;
       line-height: ($icon-size - 0.1rem); color: $color; text-align: center;
     }
     .text {
@@ -238,6 +244,31 @@ section {
         font-size: 0.825rem; line-height: 1.6; color: $text-muted;
         margin-bottom: 0.2rem;
       }
+    }
+  }
+
+  // Market > Buy/sell subscribe
+  &.market-subscribe {
+    background: $black;
+    text-align: center;
+    position: relative;
+    padding: 3.5rem 0 3rem;
+    .arrow {
+      border: 0.8rem solid transparent; border-top-color: $white;
+      width: 0; height: 0;
+      position: absolute; top: -3.5rem;
+      left: 50%; transform: translateX(-50%);
+    }
+    .title {
+      color: $white; font-size: 1.25rem; line-height: 1.4;
+      margin: 0 0 1rem;
+    }
+    p {
+      font-size: 0.825rem; line-height: 1.6; color: $white-op-6;
+    }
+    .button {
+      margin-top: 1rem;
+      .ico { margin-right: 0.5rem; }
     }
   }
 
