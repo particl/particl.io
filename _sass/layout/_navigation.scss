@@ -36,7 +36,7 @@ body.menu-opened {
   // ------ Header nav ------ //
   .header & {
     background-color: $black;
-    position: fixed; top: 3rem; left: 0; right: 0; z-index: 1;
+    position: fixed; top: 3rem; left: 0; right: 0; z-index: 10;
     @include break(s) { top: 3.35rem; }
     @include break(large) {
       position: static;
