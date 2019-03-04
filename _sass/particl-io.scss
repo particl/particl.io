@@ -255,9 +255,8 @@ button, .button { // default, outline-to-full buttons
     }
   }
   // size variations
-  &.large {
-    font-size: 1.1rem; padding: 0.675rem 1.95rem;
-  }
+  &.small { font-size: 0.825rem; padding: 0.4rem 1.2rem; }
+  &.large { font-size: 1.1rem; padding: 0.675rem 1.95rem; }
   // icons in buttons
   i.ico { margin-right: 0.3rem; }
 }
