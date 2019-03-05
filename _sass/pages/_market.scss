@@ -245,6 +245,12 @@ section {
         margin-bottom: 0.2rem;
       }
     }
+    &.seller {
+      .icon { border-color: $secondary; color: $secondary; }
+      ul.fancy {
+        .ico { color: $secondary; }
+      }
+    }
   }
 
   // Market > Buy/sell subscribe
