@@ -42,9 +42,9 @@ body.menu-opened {
       position: static;
       background: none;
       float: right;
-      display: block !important; width: (100% / 12 * 7);
+      display: block !important; width: (100% / 12 * 10);
     }
-    @include break-from(1200px) { width: (100% / 12 * 8); }
+    //@include break-from(1200px) { width: (100% / 12 * 10); }
     ul { @extend %clearfix; }
     .menu {
       @include break(large) { text-align: right; }
