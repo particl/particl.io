@@ -2,14 +2,14 @@
 
 // Main settings
 
-$debug: true; // enabled debug/dev mode (CSS responsivity helper)
+$debug: false; // enabled debug/dev mode (CSS responsivity helper)
 $showCountdown: false; // show/hide countdown
 
 // Colors
-$color: #04e8b0; // PART turquoise
+$color: #45D492; // PART turquoise
 $primary: $color;
-$secondary: #108CDA; // PART blue
-$tertiary: #563F8F; // PART purple
+$secondary: #1597DD; // PART blue
+$tertiary: #5949A7; // PART purple
 $success: #98C807 !default; // greens
 $alert: #FF542C !default; // reds
 $warning: #FFCE00 !default; // oranges :)
