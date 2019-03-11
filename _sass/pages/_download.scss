@@ -123,6 +123,12 @@ ul.guides {
   }
 }
 
+// Testnet/development versions
+.development-versions {
+  margin: 2rem 0 0;
+  h5.lead { margin: 0 0 0.5rem; color: $text-muted; }
+}
+
 // Comparison table
 .download-table {
   .value {
