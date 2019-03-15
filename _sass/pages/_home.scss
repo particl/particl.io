@@ -344,6 +344,7 @@ section#features {
   img {
     width: 100%;
     max-width: 360px;
+    @include break(l) { max-width: 490px; }
   }
 
   hr {
