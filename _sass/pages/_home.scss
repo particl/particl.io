@@ -238,18 +238,6 @@ section.intro-text {
 
 
 
-
-section.download-promo {
-  background-color: $black;
-  p {
-    margin-bottom: 2.125rem;
-    color: $white-op-9;
-    @include before_md { margin-bottom: 0px; }
-  }
-}
-
-
-
 /* --------------------------------------------- *\
       Carousel ("features")
 \* --------------------------------------------- */
@@ -366,7 +354,9 @@ section#features {
 }
 
 section.download-promo {
-  padding: 3.913rem 0rem 0rem;
+  background-color: $black;
+  padding: 3.3rem 0 0.5rem;
+  @include break(large) { padding: 3.3rem 0 1.5rem; }
   @include before_md {
     padding: 0px;
     & > .row {
@@ -374,12 +364,15 @@ section.download-promo {
       flex-direction: column-reverse;
     }
   }
-
   h2 {
     color: $white;
     margin: 0 0rem 1rem;
   }
-
+  p {
+    margin-bottom: 2.125rem;
+    color: $white-op-9;
+    @include before_md { margin-bottom: 0px; }
+  }
   .links {
     margin-top: 1.2rem;
     font-size: 0.8rem;
@@ -390,7 +383,6 @@ section.download-promo {
       &:hover, &:focus { color: $white; }
     }
   }
-
   .text {
     @include before_md {
       text-align: center;
@@ -400,17 +392,14 @@ section.download-promo {
       }
     }
   }
-
   .image {
     height: 100%;
     text-align: center;
     @include before_md { 
-      margin-top: 104px;
-      margin-bottom: 59px;
+      margin: 4rem 0 1rem;
     }
     img {
-      height: 323px;
-      @include before_md { height: auto; }
+      width: 100%; max-width: 400px;
     }
   }
 
