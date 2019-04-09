@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="page-title centered">
+	<div class="row">
+		<div class="column">
+      <h1 class="title">Particl Events</h1>
+      <small>Updated April 9, 2019</small>
+		</div>
+	</div>
+</section><!-- .page-title -->
+
+
+<section class="press-items">
+
+	<div class="row">
+		<div class="column">
+
+      <div class="event-items small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+
+      {% for event in site.events %}
+        <div class="box">
+          <img src="{{ event.image }}" alt="{{ event.name }}">
+          <h2 class="title">{{ event.name }} <span class="tag">{{ event.type }}</span></h2>
+          <div class="meta">
+            <p class="date">{{ event.from | date: '%-d %b' }} &ndash; {{ event.to | date: '%-d %b %Y' }}</p>
+            <p class="location">{{ event.location }}</p>
+            <p class="links"><a href="{{ event.link }}">Official website</a></p>
+          </div>
+          <p>{{ event.excerpt | markdownify }}</p>
+        </div>
+      {% endfor %}
+
+      </div><!-- .event-items -->
+
+		</div><!-- .column -->
+	</div><!-- .row -->
+</section><!-- .press-items -->
+
+{% include particl-desktop.html %}
