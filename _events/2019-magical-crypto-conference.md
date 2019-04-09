@@ -3,11 +3,10 @@ name: Magical Crypto Conference
 type: conference
 link: https://magicalcryptoconference.com/
 image: 2019-magical-crypto-conference.png
-year: 2018
-from: 2019-05-11
-to: 2019-05-12
+from: '2019-05-11'
+to: '2019-05-12'
 location: New York
-particl_speakers: no
+particl_speakers: false
 excerpt: Magical crypto conference features 2 days, 2 stages and 40+ speakers from all around the world including many of the industry's top experts!
 ---
 
