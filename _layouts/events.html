@@ -18,52 +18,50 @@ layout: default
 
 	<div class="row">
 		<div class="column">
-      <h2 class="title">Upcoming</h2>
+      <h2 class="title">Upcoming events</h2>
 
       <div class="upcoming event-items small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-      {% assign upcoming_events = site.events | sort: 'starts' %}
+      {% assign upcoming_events = site.events | where_exp: "event", "event.ends >= today" | sort: "starts" %}
       {% for event in upcoming_events %}
-        {% if event.ends > today %}
 
-          <div class="item">
-            <div class="box">
-              <a href="{{ event.url }}">
-                <img src="{{ event.image }}" alt="{{ event.title }}">
-              </a>
-              <h2 class="title">
-                <span class="tag">{{ event.type }}</span>
-                <a href="{{ event.url }}">{{ event.title }}</a>
-              </h2>
-              <div class="meta">
-                <p class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</p>
-                <p class="location">{{ event.location }}</p>
-                <p class="links"><a href="{{ event.link }}">Official website</a></p>
-              </div>
+        <div class="item">
+          <div class="box">
+            <a href="{{ event.url }}">
+              <img src="{{ event.image }}" alt="{{ event.title }}">
+            </a>
+            <h2 class="title">
+              <span class="tag">{{ event.type }}</span>
+              <a href="{{ event.url }}">{{ event.title }}</a>
+            </h2>
+            <div class="meta">
+              <p class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</p>
+              <p class="location">{{ event.location }}</p>
+              <p class="links"><a href="{{ event.link }}">Official website</a></p>
             </div>
           </div>
-        {% endif %}
+        </div>
+      {% else %}
+        <p>Sorry, no upcoming events are planned at this time</p>        
       {% endfor %}
       </div><!-- .event-items -->
 
       <h2 class="title">Past events</h2>
 
       <div class="past event-items small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-      {% assign past_events = site.events | sort: 'starts' | reverse %}
+      {% assign past_events = site.events | where_exp: "event", "event.ends < today" | sort: "starts" | reverse %}
       {% for event in past_events %}
-        {% if event.ends < today %}
 
-          <div class="item">
-            <h2 class="title">
-              <a href="{{ event.url }}">{{ event.title }}</a>
-              <span class="tag">{{ event.type }}</span>
-            </h2>
-            <p class="meta">
-              <span class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</span> |
-              <span class="location">{{ event.location }}</span>
-            </p>
-          </div>
+        <div class="item">
+          <h2 class="title">
+            <a href="{{ event.url }}">{{ event.title }}</a>
+            <span class="tag">{{ event.type }}</span>
+          </h2>
+          <p class="meta">
+            <span class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</span> |
+            <span class="location">{{ event.location }}</span>
+          </p>
+        </div>
 
-        {% endif %}
       {% endfor %}
       </div><!-- .event-items -->
 
