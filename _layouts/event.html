@@ -64,6 +64,7 @@ layout: default
           </tr>
         </table>
 
+        {% if page.particl_presence %}
         <h2 class="subtitle">Particl presence <small>({{ page.particl_presence }})</small></h2>
         <p>
           Confirmed Particl team members and advisors present at event:
@@ -76,6 +77,7 @@ layout: default
             {% include advisor/{{ advisor }}.html %}
           {% endfor %}
         </div>
+        {% endif %}
       </div>
 
       <a href="/events/" class="hollow button">&larr; Back to all Events</a>
