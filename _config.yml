@@ -19,9 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Particl is an open source, decentralized privacy platform.
   Built for global person to person and business to person eCommerce.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: particlproject
-github_username:  particl
+url: "https://particl.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -36,7 +34,16 @@ plugins:
   - jekyll-redirect-from
 
 collections:
-  - events
+  events:
+    output: true
+
+defaults:
+  # for events
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
