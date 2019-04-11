@@ -2,7 +2,7 @@
 title: Consensus
 type: conference
 link: https://www.coindesk.com/events/consensus-2019
-image: 2019-consensus.jpeg
+image: 2019-consensus.jpg
 starts: '2019-05-13'
 starts_time:
 ends: '2019-05-15'
