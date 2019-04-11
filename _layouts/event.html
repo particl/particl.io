@@ -16,14 +16,14 @@ layout: default
 </section><!-- .page-title -->
 {% endcomment %}
 
-<section class="events">
+<section class="events detail">
 	<div class="row">
 		<div class="large-7 large-centered column">
       <div class="box">
         <img src="{{ page.image }}" alt="{{ page.title }}">
         <h1 class="title">
           {{ page.title }}
-          <span class="tag">{{ page.type }}</span>
+          <span class="event-tag">{{ page.type }}</span>
         </h1>
         {{ content }}
         <h2 class="subtitle">{{ page.type | capitalize }} details</h2>
@@ -83,5 +83,5 @@ layout: default
       <a href="/events/" class="hollow button">&larr; Back to all Events</a>
     </div><!-- .columns -->
 	</div><!-- .row -->
-</section><!-- .events -->
+</section><!-- .events.detail -->
 

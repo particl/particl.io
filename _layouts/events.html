@@ -8,6 +8,10 @@ layout: default
 	<div class="row">
 		<div class="column">
       <h1 class="title">Particl Events</h1>
+      <p class="large">
+        Overview of conferences and meet-ups either hosted or attended<br>
+        by Particl and the community &ndash; a great way to get in touch!
+      </p>
       <small>Updated April 9, 2019</small>
 		</div>
 	</div>
@@ -26,17 +30,16 @@ layout: default
 
         <div class="item">
           <div class="box">
-            <a href="{{ event.url }}">
+            <a class="image" href="{{ event.url }}">
               <img src="{{ event.image }}" alt="{{ event.title }}">
             </a>
-            <h2 class="title">
-              <span class="tag">{{ event.type }}</span>
+            <h3 class="title">
+              <div class="event-tag">{{ event.type }}</div>
               <a href="{{ event.url }}">{{ event.title }}</a>
-            </h2>
+            </h3>
             <div class="meta">
-              <p class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</p>
-              <p class="location">{{ event.location }}</p>
-              <p class="links"><a href="{{ event.link }}">Official website</a></p>
+              <div class="location">{{ event.location }}</div>
+              <div class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</div>
             </div>
           </div>
         </div>
@@ -52,14 +55,13 @@ layout: default
       {% for event in past_events %}
 
         <div class="item">
-          <h2 class="title">
-            <a href="{{ event.url }}">{{ event.title }}</a>
-            <span class="tag">{{ event.type }}</span>
-          </h2>
-          <p class="meta">
-            <span class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</span> |
-            <span class="location">{{ event.location }}</span>
-          </p>
+          <a href="{{ event.url }}" class="event-item">
+            <h3 class="title">{{ event.title }}<span class="event-tag">{{ event.type }}</span></h3>
+            <p class="meta">
+              <span class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</span> |
+              <span class="location">{{ event.location }}</span>
+            </p>
+          </a>
         </div>
 
       {% endfor %}
