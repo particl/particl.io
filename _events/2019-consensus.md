@@ -9,7 +9,7 @@ ends: '2019-05-15'
 ends_time:
 location: New York Hilton Midtown
 particl_presence: booth
-team_presence: [juha, gerlof, imran, paul]
+team_presence: [juha, gerlof, imran, paul, lina, cryptoguard]
 advisor_presence: [joe-fisher]
 invitation: https://particl.news/particl-in-nyc-consensus-2019-3f6671bd2aa6
 report:

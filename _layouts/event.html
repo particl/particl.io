@@ -19,50 +19,56 @@ layout: default
 <section class="events detail">
 	<div class="row">
 		<div class="large-7 large-centered column">
+      <h1 class="title">
+        <span class="event-tag">{{ page.type }}</span>
+        {{ page.title }}
+      </h1>
       <div class="box">
-        <img src="{{ page.image }}" alt="{{ page.title }}">
-        <h1 class="title">
-          {{ page.title }}
-          <span class="event-tag">{{ page.type }}</span>
-        </h1>
-        {{ content }}
+        <div class="image">
+          <img src="{{ page.image }}" alt="{{ page.title }}">
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
         <h2 class="subtitle">{{ page.type | capitalize }} details</h2>
-        <table>
-          <tr>
-            <th>Event starts</th>
-            <td>
-              {{ page.starts | date: '%-d %B, %Y' }}
-              {% if page.starts_time %}({{ page.starts_time | date: '%H:%M' }}){% endif %}
-            </td>
-          </tr>
-          <tr>
-            <th>Event ends</th>
-            <td>
-              {{ page.ends | date: '%-d %B, %Y' }}
-              {% if page.ends_time %}({{ page.ends_time | date: '%H:%M' }}){% endif %}
-            </td>
-          </tr>
-          {% if page.location %}
-          <tr>
-            <th>Location</th>
-            <td>{{ page.location }} (<a href="https://www.openstreetmap.org/search?query={{ page.location }}" target="_blank">map</a>)</td>
-          </tr>
-          {% endif %}
-          <tr>
-            <th>More info</th>
-            <td>
-              {% if page.link %}
-              <a href="{{ page.link }}" taget="_blank">{{ page.type | capitalize }} website</a>
-              {% endif %}
-              {% if page.invitation %}
-              &bull; <a href="{{ page.invitation }}" target="_blank">Invitation</a>
-              {% endif %}
-              {% if page.report %}
-              &bull; <a href="{{ page.report }}" target="_blank">Event recap</a>
-              {% endif %}
-            </td>
-          </tr>
-        </table>
+        <div class="details">
+          <table>
+            <tr>
+              <th>Event starts</th>
+              <td>
+                {{ page.starts | date: '%-d %B, %Y' }}
+                {% if page.starts_time %}({{ page.starts_time | date: '%H:%M' }}){% endif %}
+              </td>
+            </tr>
+            <tr>
+              <th>Event ends</th>
+              <td>
+                {{ page.ends | date: '%-d %B, %Y' }}
+                {% if page.ends_time %}({{ page.ends_time | date: '%H:%M' }}){% endif %}
+              </td>
+            </tr>
+            {% if page.location %}
+            <tr>
+              <th>Location</th>
+              <td>{{ page.location }} (<a href="https://www.openstreetmap.org/search?query={{ page.location }}" target="_blank">map</a>)</td>
+            </tr>
+            {% endif %}
+            <tr>
+              <th>More info</th>
+              <td>
+                {% if page.link %}
+                <a href="{{ page.link }}" taget="_blank">{{ page.type | capitalize }} website</a>
+                {% endif %}
+                {% if page.invitation %}
+                &bull; <a href="{{ page.invitation }}" target="_blank">Invitation</a>
+                {% endif %}
+                {% if page.report %}
+                &bull; <a href="{{ page.report }}" target="_blank">Event recap</a>
+                {% endif %}
+              </td>
+            </tr>
+          </table>
+        </div>
 
         {% if page.particl_presence %}
         <h2 class="subtitle">Particl presence <small>({{ page.particl_presence }})</small></h2>
@@ -78,9 +84,12 @@ layout: default
           {% endfor %}
         </div>
         {% endif %}
-      </div>
+      </div><!-- .box -->
 
-      <a href="/events/" class="hollow button">&larr; Back to all Events</a>
+      <p class="text-center">
+        <a href="/events/" class="hollow button">&larr; Back to all Events</a>
+      </p>
+
     </div><!-- .columns -->
 	</div><!-- .row -->
 </section><!-- .events.detail -->

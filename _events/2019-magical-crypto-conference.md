@@ -8,10 +8,10 @@ starts_time:
 ends: '2019-05-12'
 ends_time:
 location: New York
-particl_presence: visitors
-team_presence: [juha, gerlof, imran, paul]
+particl_presence: booth
+team_presence: [juha, gerlof, imran, paul, lina, cryptoguard]
 advisor_presence: [joe-fisher]
-invitation:
+invitation: https://particl.news/particl-in-nyc-magical-crypto-conference-2019-459c1f868522
 report:
 ---
 
