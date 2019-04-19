@@ -12,7 +12,9 @@ particl_presence: presentation
 team_presence: [lina, gerlof]
 advisor_presence: []
 invitation: https://particl.news/particl-in-paris-presentations-at-coinhouse-a38106cdd36a
-report:
+report: https://www.youtube.com/watch?v=N2e2YfZb_sw
 ---
 
 We are thrilled to announce that Particl will be holding an event directly at the headquarters of CoinHouse, France’s most famous crypto hub, on the 21st of February 2019 from 7:00PM to 8:30PM CET.
+
+<a class="hollow button" href="https://www.youtube.com/watch?v=tQrDPzUGYaY" target="_blank">Watch Particl's presentation</a>
