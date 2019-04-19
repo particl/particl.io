@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+{% assign today = site.time | date: '%Y-%m-%d' %}
+
+{% comment %}
+<section class="page-title centered">
+	<div class="row">
+		<div class="column">
+      <h1 class="title">{{ page.title }}</h1>
+      <div class="tag">{{ page.type }}</div>
+      <small>{{ page.starts | date: '%-d %b' }} &ndash; {{ page.ends | date: '%-d %b %Y' }}</small>
+		</div>
+	</div>
+</section><!-- .page-title -->
+{% endcomment %}
+
+<section class="events detail">
+	<div class="row">
+		<div class="large-7 large-centered column">
+      <h1 class="title">
+        <span class="event-tag">{{ page.type }}</span>
+        {{ page.title }}
+      </h1>
+      <div class="box">
+        <div class="image">
+          <img src="img/{{ page.image }}" alt="{{ page.title }}">
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
+        <h2 class="subtitle">{{ page.type | capitalize }} details</h2>
+        <div class="details">
+          <table>
+            <tr>
+              <th>Event starts</th>
+              <td>
+                {{ page.starts | date: '%-d %B, %Y' }}
+                {% if page.starts_time %}({{ page.starts_time | date: '%H:%M' }}){% endif %}
+              </td>
+            </tr>
+            <tr>
+              <th>Event ends</th>
+              <td>
+                {{ page.ends | date: '%-d %B, %Y' }}
+                {% if page.ends_time %}({{ page.ends_time | date: '%H:%M' }}){% endif %}
+              </td>
+            </tr>
+            {% if page.location %}
+            <tr>
+              <th>Location</th>
+              <td>{{ page.location }} (<a href="https://www.openstreetmap.org/search?query={{ page.location }}" target="_blank">map</a>)</td>
+            </tr>
+            {% endif %}
+            <tr>
+              <th>More info</th>
+              <td>
+                {% if page.link %}
+                <a href="{{ page.link }}" taget="_blank">{{ page.type | capitalize }} website</a>
+                {% endif %}
+                {% if page.invitation %}
+                &bull; <a href="{{ page.invitation }}" target="_blank">Invitation</a>
+                {% endif %}
+                {% if page.report %}
+                &bull; <a href="{{ page.report }}" target="_blank">Event recap</a>
+                {% endif %}
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        {% if page.particl_presence %}
+        <h2 class="subtitle">Particl presence <small>({{ page.particl_presence }})</small></h2>
+        <p>
+          Confirmed Particl team members and advisors present at event:
+        </p>
+        <div class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
+          {% for member in page.team_presence %}
+            {% include team/{{ member }}.html %}
+          {% endfor %}
+          {% for advisor in page.advisor_presence %}
+            {% include advisor/{{ advisor }}.html %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div><!-- .box -->
+
+      <p class="text-center">
+        <a href="/events/" class="hollow button">&larr; Back to all Events</a>
+      </p>
+
+    </div><!-- .columns -->
+	</div><!-- .row -->
+</section><!-- .events.detail -->
+

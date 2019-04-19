@@ -13,15 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Particl.io ∘ The Blockchain Privacy Platform
+title: Particl.io • The Blockchain Privacy Platform
 email: hello@particl.io
 description: > # this means to ignore newlines until "baseurl:"
   Particl is an open source, decentralized privacy platform.
   Built for global person to person and business to person eCommerce.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: particlproject
-github_username:  particl
+url: "https://particl.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -34,6 +32,19 @@ plugins_dir:
 
 plugins:
   - jekyll-redirect-from
+
+collections:
+  events:
+    output: true
+
+defaults:
+  # for events
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+      image: "00-default-event.jpg"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
