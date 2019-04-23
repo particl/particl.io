@@ -363,68 +363,6 @@ section { // full-width sections of content
 	}
 	hr { margin: 2rem 0 3.5rem; border-top: 3px dotted darken($bg-muted, 3%); }
 }
-/*
-// Newsletter form (small)
-#sib_embed_signup {
-  @include gradient($color, darken($color, 7%));
-  padding: 1px 0.8rem;
-  #sib_loading_gif_area {
-    width: auto !important; height: auto !important;
-    max-width: 3rem; margin: 0 auto -1.3rem;
-  }
-  .signup-loader { width: 100%; max-width: 3rem; margin: 0 auto; }
-  #theform { margin: 0; }
-  .subscribe-form {
-    text-align: center;
-    h3.title {
-      font-size: 0.9rem; color: $white; letter-spacing: 0; line-height: 1.5;
-      text-shadow: 0 1px 2px darken($color, 10%);
-      margin: 1rem 0 0.7rem;
-      @include break(m) { font-size: 1.1rem; }
-      @include break(l) { margin: 1.3rem 0 0.8rem; }
-    }
-    .form {
-      position: relative;
-      max-width: 30rem; margin: 0 auto;
-      .input {
-        margin-bottom: 0.3rem;
-        background: $white; border-radius: 50px;
-        @include break(s) { padding-right: 7rem; }
-        @include break(m) { margin-bottom: 0.5rem; }
-      }
-      small {
-        color: $white;
-        display: inline-block;
-        @include break(s) { margin-bottom: 1rem; }
-        @include break(m) { font-size: 80%; margin-bottom: 1.2rem; }
-        @include break(l) { margin-bottom: 1.5rem; }
-      }
-      button {
-        margin: 0.7rem 0 1rem;
-        border: 1px solid rgba($white, 0.3);
-        @include break(s) {
-          position: absolute; top: 3px; right: 4px;
-          margin: 0; padding: 0.45rem 1.4rem;
-        }
-      }
-    }
-  }
-  // Error messages
-  .message_area {
-    margin: -1px -0.8rem; padding: 0.4rem 0.8rem 0.4rem 3rem;
-    background: $info !important;
-    font-size: 0.85rem; color: $white !important;
-    border: none !important;
-    text-align: center;
-    button { // close button
-      height: 1.5rem; width: 1.5rem;
-      padding: 0; margin: 0 0.7rem 0 -2.2rem;
-      font-weight: 400; color: $white; text-align: center;
-      border: none; background: darken($info, 10%);
-    }
-  }
-}
-*/
 
 // Subscribe page
 section.subscribe {
@@ -455,18 +393,36 @@ section.subscribe {
   #sib-container {
     box-shadow: 0 4px 25px 0 rgba(black, 0.06);
     border: 0; border-radius: 10px;
-    padding: 2.438rem 2.563rem 1.838rem;
+    padding: 2.438rem 2.563rem 1rem;
   }
   #sib-form {
     text-align: left;
     margin: 0;
   }
-  .form-message-panel { // global error/success messages
+  .sib-form-message-panel { // global error/success messages
     display: none;
     width: 100%; margin: 0 0 1.7rem;
     font-size: 0.95rem; text-align: center;
-    &.form-message-panel--active { // ^ active
+    &.sib-form-message-panel--active { // ^ active
       display: inline-block;
+    }
+    &#success-message {
+      background: rgba($color, 0.15); border-radius: $border-radius;
+      padding: 0.5rem 1rem 0.8rem;
+      svg {
+        width: 1.2rem; margin-right: 0.2rem;
+        position: relative; top: 4px;
+        fill: $color;
+      }
+    }
+    &#error-message {
+      background: rgba($alert, 0.15); border-radius: $border-radius;
+      padding: 0.5rem 1rem 0.8rem;
+      svg {
+        width: 1.2rem; margin-right: 0.2rem;
+        position: relative; top: 4px;
+        fill: $alert;
+      }
     }
     p { margin: 0; font-weight: 500; }
     i.ico {
@@ -492,10 +448,10 @@ section.subscribe {
     font-size: 0.75rem; color: $alert; line-height: 1.4;
     margin-top: 0.3rem;
   }
-  .form-block { // section block
+  .sib-form-block { // section block
     margin-top: 1.7rem;
     &:first-of-type { margin: 0; }
-    .text-form-block {
+    .sib-text-form-block {
       font-size: 0.75rem;
       p { margin: 0; }
     }
@@ -521,6 +477,7 @@ section.subscribe {
       position: relative; top: 3px;
       margin-right: 0.3rem;
     }
+    &.input--hidden { padding: 0; }
   }
   .input {
     @extend %tfx;
@@ -530,13 +487,16 @@ section.subscribe {
   .entry_errored {
     .input { background: rgba($alert, 0.1); }
   }
-  .g-recaptcha {
-    transform: scale(.77);
-    -webkit-transform: scale(.77);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
+  .sib-captcha {
+    label.entry__label { display: none; }
+    .g-recaptcha {
+      transform: scale(.85);
+      -webkit-transform: scale(.85);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
   }
-  .form-block__button { // subscribe button
+  .sib-form-block__button { // subscribe button
     @extend button.full;
     background: $alert;
     border-color: $alert;
