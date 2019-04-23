@@ -276,7 +276,7 @@ button, .button { // default, outline-to-full buttons
 // Magnific pop-up
 .mfp-bg { opacity: 0.5; }
 .popup-container {
-  background: $color-white;
+  background: $color-white; border-radius: ($border-radius * 2);
   max-width: 50rem; margin: 0 auto; padding: 2rem 1rem;
   position: relative;
   text-align: center;
