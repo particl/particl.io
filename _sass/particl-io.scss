@@ -425,11 +425,6 @@ section.subscribe {
       }
     }
     p { margin: 0; font-weight: 500; }
-    i.ico {
-      margin-right: 0.3rem;
-      &.ico-check { color: $color; }
-      &.ico-cross { color: $alert; }
-    }
   }
   .checkbox__label {
     word-wrap: break-word; word-break: break-all;
@@ -547,19 +542,32 @@ section.subscribe-promo {
 .capture-popup {
   background: url('/assets/img/intro-bg_compressed.jpg') no-repeat top center $color-white;
   max-width: 37rem;
-  .form-message-panel { // global error/success messages
+  .sib-form-message-panel { // global error/success messages
     display: none;
-    width: 100%; margin: 0 0 1.7rem;
+    width: 100%; margin: 0.5rem 0 0;
     font-size: 0.95rem; text-align: center;
-    &.form-message-panel--active { // ^ active
+    &.sib-form-message-panel--active { // ^ active
       display: inline-block;
     }
-    p { margin: 0; font-weight: 500; }
-    i.ico {
-      margin-right: 0.3rem;
-      &.ico-check { color: $color; }
-      &.ico-cross { color: $alert; }
+    &#success-message {
+      background: rgba($color, 0.15); border-radius: $border-radius;
+      padding: 0.5rem 1rem 0.8rem;
+      svg {
+        width: 1.2rem; margin-right: 0.2rem;
+        position: relative; top: 4px;
+        fill: $color;
+      }
     }
+    &#error-message {
+      background: rgba($alert, 0.15); border-radius: $border-radius;
+      padding: 0.5rem 1rem 0.8rem;
+      svg {
+        width: 1.2rem; margin-right: 0.2rem;
+        position: relative; top: 4px;
+        fill: $alert;
+      }
+    }
+    p { margin: 0; font-weight: 500; }
   }
   .entry__error { // invalid field error (wrong email format etc.)
     font-size: 0.75rem; color: $alert; line-height: 1.4;
@@ -587,7 +595,7 @@ section.subscribe-promo {
   .entry_errored {
     .input { background: rgba($alert, 0.1); }
   }
-  .form-block__button { // subscribe button
+  .sib-form-block__button { // subscribe button
     @extend button.full.alert;
     margin-top: 1.2rem;
     font-size: 1.1rem;
