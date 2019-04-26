@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 16 February 2019</small>
+      <small>Updated 17 April 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -26,29 +26,26 @@ layout: default
   <li>Particl Marketplace (alpha, testnet)
     <ul>
       <li>Bug fixes</li>
-      <li>Retrieving an smsg message in a textual format changed from ‘ascii’ to ‘text’</li>
-      <li>Error message - <code>invalid from address</code> when wallet is not encrypted</li>
+      <li>Backend changes for Multi wallet implementation</li>
     </ul>
   </li>
   <li>Particl Desktop
     <ul>
-      <li>Enhancement on</li>
-      <ul>
-        <li>Transaction Overview Page</li>
-        <li>Listings detail page</li>
-      </ul>
-      <li>Bug fixes identified by community/team members</li>
-      <li><strong>New version Available</strong> update (displays on existing versions that a new release is available)</li>
-      <li>Reduced Image quality for lower transaction costs</li>
-      <li>Cart listing management enhancements</li>
-      <li>Changed how accepting the terms work</li>
-      <li>Listing fee estimate now use actual size of the listing</li>
-      <li>Enhancement made to saving a listing for later</li>
+      <li>Multi wallet implementation</li>
+      <li>Update to latest Angular/Material - Including dependencies</li>
+      <li>Bug fixes</li>
     </ul>
   </li>
-  <li>Particl Copay
+  <li>Particl Copay (awaiting release)
     <ul>
-      <li>Bug fixes with latest available version</li>
+      <li>Cold Staking on Application</li>
+      <li>Disable ability to add Bitcoin cash as a wallet</li>
+      <li>Adding cold staking to multisig wallet </li>
+    </ul>
+  </li>
+  <li>Particl Core
+    <ul>
+      <li>Release of 0.18.0.6 (<a href="https://github.com/particl/particl-core/blob/0.18/doc/release-notes-particl.md#01806-rc2" target="_blank">release notes</a>)</li>
     </ul>
   </li>
 </ul>
@@ -59,20 +56,16 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Desktop
+  <li>Particl Marketplace
     <ul>
-      <li>JavaScript Error when downloading the daemon</li>
-      <li>Layout and design for inventory management</li>
+      <li>Ability to filter out flagged listings on search results</li>
+      <li><code>ListingItemMessages</code> with existing hash should be ignored</li>
+      <li>Public comments on listings</li>
     </ul>
   </li>
-  <li>Particl Copay
+  <li>Particl Desktop
     <ul>
-      <li>Add Cold-Staking to Particl Copay App</li>
-	<ul>
-          <li>Including visual enhancements</li>
-          <li>QR code scanning</li>
-        </ul>
-      <li>Disable the ability to add Bitcoin Cash as a wallet</li>
+      <li>Removal of flagged items from users listing page</li>
     </ul>
   </li>
 </ul>
@@ -88,21 +81,14 @@ layout: default
     <ul>
       <li>Code refactoring</li>
       <li>OMP Library Integration</li>
-      <li>MP error message <code>amount out of range</code></li>
-      <li>Public comments on listings</li>
+      <li>Ability to pay for orders via Copay App</li>
     </ul>
   </li>
   <li>
     Particl Desktop
     <ul>
-      <li>Unlock modal not closing on submit in certain cases</li>
-      <li>Published listings displaying as unpublished</li>
       <li>GUI Stabilize and Bug fixes</li>
-    </ul>
-  </li>
-  <li>Particl Copay
-    <ul>
-      <li>Cold staking to multisig wallet</li>
+      <li>Ability to pay for orders via Copay App</li>
     </ul>
   </li>
   <li>RingCT Implementation</li>
@@ -121,16 +107,10 @@ layout: default
 <ul>
   <li>Particl Marketplace (beta)
     <ul>
-      <li>Inventory Management</li>
+      <li>Quantity Management</li>
       <li>Product Imports</li>
       <li>Deposit Negotiations</li>
       <li>Marketplace versioning for messages and listings</li>
-    </ul>
-  </li>
-  <li>Particl Copay
-    <ul>
-      <li>Disable ability to add Bitcoin Cash as a wallet</li>
-      <li>Add Cold-Staking to Multisig Wallet on Particl Copay App</li>
     </ul>
   </li>
   <li>Software Development Kit (SDK)</li>

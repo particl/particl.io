@@ -2,7 +2,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% if page.title %}{{ page.title | escape }} ∘ Particl.io{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }} • Particl.io{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
