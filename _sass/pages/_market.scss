@@ -33,7 +33,7 @@ $scroll-line: 1.9rem;
 
   // vertically scrolling text in page title
   .scroller {
-    text-align: center; font-weight: 500; line-height: ($scroll-line - 0.02rem);
+    text-align: center; font-weight: 500; line-height: ($scroll-line - 0.01rem);
     overflow: hidden;
     position: relative; top: 0.55rem;
     display: block; height: $scroll-line;
@@ -260,7 +260,7 @@ section {
     position: relative;
     padding: 3.5rem 0 3rem;
     .arrow {
-      border: 0.8rem solid transparent; border-top-color: $white;
+      border: 0.8rem solid transparent; border-top-color: darken($bg, 2.5%);
       width: 0; height: 0;
       position: absolute; top: -3.5rem;
       left: 50%; transform: translateX(-50%);
