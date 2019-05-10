@@ -27,7 +27,7 @@ $scroll-line: 1.9rem;
     }
     .video-wrap {
       margin: 2rem auto 0; max-width: 55rem;
-      @include break(large) { margin: 2rem auto -8rem; }
+      .video-container { padding-bottom: 46.6%; } // offset non-standard aspect ratio
     }
   }
 
@@ -76,9 +76,7 @@ $scroll-line: 1.9rem;
       padding: 0.25rem 1rem;
       border-top-left-radius: ($border-radius * 2); border-top-right-radius: ($border-radius * 2);
     }
-    .video-container {
-      margin: 0;
-    }
+    .video-container { margin: 0; padding-bottom: 46.6%; } // offset non-standard aspect ratio}
   }
 
 }
