@@ -28,6 +28,7 @@
 
 @import 'pages/_home';
 @import 'pages/_why_particl';
+@import 'pages/_bug-bounties';
 @import 'pages/_about_us';
 @import 'pages/_careers';
 @import 'pages/_roadmap';
@@ -115,14 +116,13 @@ p {
   color: $general-op-7;
   font-family: $font;
   letter-spacing: -0.1px;
-  &.large {
-    font-size: 0.9375rem;  
-    line-height: 1.87;
-  }
-  &.small {
-    font-size: 0.8125rem;      
-    line-height: 1.77;
-  }
+  &.large { font-size: 0.9375rem; line-height: 1.87; }
+  &.small { font-size: 0.8125rem; line-height: 1.77; }
+}
+
+ul, ol {
+  &.large { color: $general-op-7; font-size: 0.9375rem; line-height: 1.87; }
+  &.small { color: $general-op-7; font-size: 0.8125rem; line-height: 1.77; }
 }
 
 a {
@@ -240,6 +240,17 @@ button, .button { // default, outline-to-full buttons
     }
     &.hollow {
       &:hover, &:focus { color: darken($alert, 5%); border-color: darken($alert, 5%); background: transparent; }
+    }
+  }
+  &.secondary {
+    border-color: rgba($secondary, 0.6); color: $secondary;
+    &:hover, &:focus { background: darken($secondary, 7%); border-color: darken($secondary, 5%); }
+    &.full {
+      background: darken($secondary, 2%); border-color: darken($secondary, 2%); color: $white;
+      &:hover, &:focus { background: darken($secondary, 12%); border-color: darken($secondary, 12%); }
+    }
+    &.hollow {
+      &:hover, &:focus { color: darken($secondary, 5%); border-color: darken($secondary, 5%); background: transparent; }
     }
   }
   // size variations
