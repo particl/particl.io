@@ -148,6 +148,9 @@ a {
 	}
   &.link-small-dark { color: $black-op-8; }
   &.link-small-grey { color: $black-op-5; }
+  &.info, &.secondary { color: $secondary; }
+  &.alert, &.warning { color: $alert; }
+  &.tertiary { color: $tertiary; }
 }
 
 abbr[title] { border: none; cursor: help; }
