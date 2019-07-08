@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 17 April 2019</small>
+      <small>Updated 8 July 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -25,29 +25,64 @@ layout: default
 <ul>
   <li>Particl Marketplace (alpha, testnet)
     <ul>
+      <li>Removal of flagged items from users listing page</li>
+      <li>OMP Library integration
+        <ul>
+          <li>Blind escrow integration</li>
+        </ul>
+      </li>
+      <li>Updating/enhancements to automated tests running in the background</li>
       <li>Bug fixes</li>
-      <li>Backend changes for Multi wallet implementation</li>
     </ul>
   </li>
   <li>Particl Desktop
     <ul>
-      <li>Multi wallet implementation</li>
-      <li>Update to latest Angular/Material - Including dependencies</li>
+      <li>Buy flow
+        <ul>
+          <li>Enhanced the error message to indicate to the user that they do need a blind balance in order to complete the buyflow steps</li>
+          <li>Buyer's contact details can now be optionally provided to Seller (as it is needed by many carriers)</li>
+          <li>Additional step added</li>
+        </ul>
+      </li>
+      <li>UI
+        <ul>
+          <li>Terms and Conditions will now appear in the main window</li>
+          <li>Top bar: added an overview of spendable Blind balance (for Marketplace transactions)</li>
+          <li>PART amounts are now displayed with 8 decimal places</li>
+          <li>Popup notifications for buy and sell orders are now combined</li>
+        </ul>
+      </li>
+      <li>Listings
+        <ul>
+          <li>Removal of flagged items from users listing page</li>
+          <li>Added a filter to view flagged Listings only</li>
+          <li>A listings expiry time is now visible on the listing</li>
+        </ul>
+      </li>
+      <li>Overview
+        <ul>
+          <li>Updated balance breakdown to per-type (Public, Blind, Anon) and per-state (Total, Spendable, Staking, Pending)</li>
+        </ul>
+      </li>
+      <li>Send
+        <ul>
+          <li>Blind "Available balance" now shows spendable (instead of total Blind balance)</li>
+        </ul>
+      </li>
       <li>Bug fixes</li>
     </ul>
   </li>
   <li>Particl Copay (awaiting release)
     <ul>
       <li>Cold Staking on Application</li>
-      <li>Disable ability to add Bitcoin cash as a wallet</li>
-      <li>Adding cold staking to multisig wallet </li>
     </ul>
   </li>
   <li>Particl Core
     <ul>
-      <li>Release of 0.18.0.6 (<a href="https://github.com/particl/particl-core/blob/0.18/doc/release-notes-particl.md#01806-rc2" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.0.11 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.0.11" target="_blank">release notes</a>)</li>
     </ul>
   </li>
+  <li>RingCT implementation</li>
 </ul>
 
         </div><!-- .completed -->
@@ -56,16 +91,11 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <li>Particl Marketplace
-    <ul>
-      <li>Ability to filter out flagged listings on search results</li>
-      <li><code>ListingItemMessages</code> with existing hash should be ignored</li>
-      <li>Public comments on listings</li>
-    </ul>
-  </li>
   <li>Particl Desktop
     <ul>
-      <li>Removal of flagged items from users listing page</li>
+      <li>Product imports from 3rd party markets (awaiting testing)</li>
+      <li>Indicator for new listings, while browsing the listings (awaiting testing)</li>
+      <li>Category filter: expand and collapse sub-categories</li>
     </ul>
   </li>
 </ul>
@@ -79,19 +109,15 @@ layout: default
   <li>
     Particl Marketplace (alpha, testnet)
     <ul>
-      <li>Code refactoring</li>
-      <li>OMP Library Integration</li>
-      <li>Ability to pay for orders via Copay App</li>
+      <li>Market Management</li>
     </ul>
   </li>
   <li>
     Particl Desktop
     <ul>
-      <li>GUI Stabilize and Bug fixes</li>
-      <li>Ability to pay for orders via Copay App</li>
+      <li>Bug fixes</li>
     </ul>
   </li>
-  <li>RingCT Implementation</li>
   <li>Third Party Integration
     <ul>
       <li>Trezor integration</li>
@@ -108,9 +134,8 @@ layout: default
   <li>Particl Marketplace (beta)
     <ul>
       <li>Quantity Management</li>
-      <li>Product Imports</li>
-      <li>Deposit Negotiations</li>
-      <li>Marketplace versioning for messages and listings</li>
+      <li>Translations</li>
+      <li>Comments/reviews on Listings</li>
     </ul>
   </li>
   <li>Software Development Kit (SDK)</li>
