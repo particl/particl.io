@@ -46,8 +46,8 @@ section.exchange-group {
       .box { box-shadow: 0 3px 20px rgba($black, 0.15); }
       .logo img { opacity: 1; filter: saturate(100%); }
       .tag {
-        &.crypto { background: darken($color, 5%); }
-        &.fiat { background: $info; }
+        &.crypto { color: $secondary; }
+        &.fiat { color: $tertiary; }
       }
     }
     .logo {
@@ -68,9 +68,8 @@ section.exchange-group {
     }
     .tag {
       @extend %tfx;
-      font-size: 0.7rem; font-weight: 500; color: $white;
-      background: rgba($text-muted, 0.3); border-radius: 4px;
-      display: block; margin: 0 auto 0.2rem; padding: 0.1rem 0.4rem;
+      font-size: 0.7rem; font-weight: 500; color: lighten($text-muted, 30%);
+      display: block; margin: 0 auto 0.2rem;
       @include break(s) { display: inline-block; margin: 0 auto; }
     }
   }

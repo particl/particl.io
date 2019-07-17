@@ -2,29 +2,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% if page.title %}{{ page.title | escape }} ∘ Particl.io{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }} | Particl.io • Blockchain Privacy & Marketplace{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
   <!-- open:graph -->
   <meta property="og:title" content="Particl.io • Privacy-focused Decentralized Applications" /> 
   <meta property="og:description" content="Particl provides a decentralized privacy platform with a suite of tools to enhance your online privacy • Private currency • Decentralized Marketplace • Crypto agnostic" /> 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/" /> 
   <meta property="og:image" content="/assets/img/particl-opengraph-sharing.png" />
+
   <!-- favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicons/apple-touch-icon.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicons/favicon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicons/favicon-16x16.png" | relative_url }}">
-  <link rel="manifest" href="{{ "/assets/img/favicons/manifest.json" | relative_url }}">
-  <link rel="mask-icon" href="{{ "/assets/img/favicons/safari-pinned-tab.svg" | relative_url }}" color="#03e8b0">
-  <link rel="shortcut icon" href="{{ "/assets/img/favicons/favicon.ico" | relative_url }}">
-  <meta name="msapplication-config" content="{{ "/assets/img/favicons/browserconfig.xml" | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicons/apple-touch-icon.png?v=2" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicons/favicon-32x32.png?v=2" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicons/favicon-16x16.png?v=2" | relative_url }}">
+  <link rel="manifest" href="{{ "/assets/img/favicons/site.webmanifest?v=2" | relative_url }}">
+  <link rel="mask-icon" href="{{ "/assets/img/favicons/safari-pinned-tab.svg?v=2" | relative_url }}" color="#03e8b0">
+  <link rel="shortcut icon" href="{{ "/assets/img/favicons/favicon.ico?v=2" | relative_url }}">
+  <meta name="msapplication-config" content="{{ "/assets/img/favicons/browserconfig.xml?v=2" | relative_url }}">
+  <meta name="msapplication-TileColor" content="#46d593">
   <meta name="theme-color" content="#212727">
+
   <meta name="author" content="Martin Allien <martin@particl.io> (https://allien.work)">
-  <meta name="wot-verification" content="ec725cb978b636515980"/> 
+  <meta name="wot-verification" content="ec725cb978b636515980"/>
+
   <!-- styles & scripts -->
   <link rel="stylesheet" href="{{ "/assets/css/particl-io.css" | relative_url }}?{{site.time | date: '%s%N'}}">
+
   <!-- Transifex live -->
   <script type="text/javascript"> window.liveSettings = {api_key: "afa5f6e06c9d4a51ae6d1e2fdfbdfe76"}; </script>
   <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
 </head>

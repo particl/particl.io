@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+{% assign today = site.time | date: '%Y-%m-%d' %}
+
+<section class="page-title centered">
+	<div class="row">
+		<div class="column">
+      <h1 class="title">Particl Events</h1>
+      <p class="large">
+        Overview of conferences and meet-ups either hosted or attended<br>
+        by Particl and the community &ndash; a great way to get in touch!
+      </p>
+      <small>Updated April 9, 2019</small>
+		</div>
+	</div>
+</section><!-- .page-title -->
+
+
+<section class="events">
+
+	<div class="row">
+		<div class="column">
+      <h2 class="title">Upcoming events</h2>
+
+      <div class="upcoming event-items small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+      {% assign upcoming_events = site.events | where_exp: "event", "event.ends >= today" | sort: "starts" %}
+      {% for event in upcoming_events %}
+
+        <div class="item">
+          <div class="box">
+            <a class="image" href="{{ event.url }}">
+              <img src="img/{{ event.image }}" alt="{{ event.title }}">
+            </a>
+            <h3 class="title">
+              <div class="event-tag">{{ event.type }}</div>
+              <a href="{{ event.url }}">{{ event.title }}</a>
+            </h3>
+            <div class="meta">
+              <div class="location">{{ event.location }}</div>
+              <div class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</div>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <p class="large">Sorry, no upcoming events are planned at this time</p>        
+      {% endfor %}
+      </div><!-- .event-items -->
+
+      <h2 class="title">Past events</h2>
+
+      <div class="past event-items small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+      {% assign past_events = site.events | where_exp: "event", "event.ends < today" | sort: "starts" | reverse %}
+      {% for event in past_events %}
+
+        <div class="item">
+          <a href="{{ event.url }}" class="event-item">
+            <h3 class="title">{{ event.title }}<span class="event-tag">{{ event.type }}</span></h3>
+            <p class="meta">
+              <span class="date">{{ event.starts | date: '%-d %b' }} &ndash; {{ event.ends | date: '%-d %b %Y' }}</span> |
+              <span class="location">{{ event.location }}</span>
+            </p>
+          </a>
+        </div>
+
+      {% endfor %}
+      </div><!-- .event-items -->
+
+		</div><!-- .column -->
+	</div><!-- .row -->
+</section><!-- .events -->
+
+{% include particl-desktop.html %}

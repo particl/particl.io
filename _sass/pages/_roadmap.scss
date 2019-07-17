@@ -25,16 +25,8 @@ section.roadmap {
       background: #ddd;
       padding: 0.2rem 1rem; margin-bottom: 0.4rem;
       border-radius: 99px;
-      color: white;
-      &.planned { background: #ccc; }
-      &.in-progress {
-        background: none;
-        box-shadow: 0 0 0 1px $color;
-        color: darken($color, 4%);
-      }
-      &.completed { background: $color; }
+      color: $white;
     }
-
     // network tag
     &.network {
       color: rgba(34,39,39,0.5);
@@ -45,6 +37,23 @@ section.roadmap {
         margin-right: 2px;
       }
     }
+  }
+
+  .in-progress {
+    .status.tag { background: $color; }
+  }
+
+  .planned {
+    .status.tag { background: #ccc; }
+  }
+
+  .completed {
+    .status.tag { background: $secondary; }
+    a {
+      color: $secondary;
+      &:hover, &:focus { color: darken($secondary, 5%); }
+    }
+    code { background: rgba($secondary, 0.1); color: darken($secondary, 10%); }
   }
 
   .title {

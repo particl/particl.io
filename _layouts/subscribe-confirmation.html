@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="page-title centered">
+  <div class="row">
+    <div class="column">
+
+      <i class="ico big ico-check"></i>
+
+      {% if page.url == "/subscribe-successful/" %}
+      <h1 class="title">Welcome aboard!</h1>
+      <p class="large">You are now successfully subscribed to Particl's latest news.<br>Glad to have you!</a></p>
+      {% endif %}
+
+      {% if page.url == "/unsubscribe-successful/" %}
+      <h1 class="title">Sorry to see you go</h1>
+      <p class="large">We have successfully unsubscribed you from our newsletters.<br>Be sure to keep up with or other channels to stay up-to-date!</a></p>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section class="cta">
+  <a href="/downloads/" class="full button">Download &amp; Explore</a>
+  <a href="/part-exchanges/" class="hollow button">Buy PART on Exchanges</a>
+</section>
+
+{% include particl-desktop.html %}

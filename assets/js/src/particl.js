@@ -87,10 +87,18 @@ $( document ).ready(function() {
 	});
 
 
+	/* ------------ POP-UPS (https://dimsemenov.com/plugins/magnific-popup/documentation.html) ------------ */
+
+	// Homepage > Capture subscribe
+	$('.popup-ajax').magnificPopup({
+		type: 'ajax'
+	});
+
+
 	/* ------------ COUNTDOWN ------------ */
 
 	$(function(){
-		var countdownTo = moment.tz("2018-05-31 17:00", "Etc/UTC"); // <== UTC time of release
+		var countdownTo = moment.tz("2019-07-16 12:00", "Etc/UTC"); // <== UTC time of release
 
 		$('#clock').countdown(countdownTo.toDate())
 		.on('update.countdown', function(event) {
@@ -102,7 +110,7 @@ $( document ).ready(function() {
 			$(this).html(event.strftime(full)); // <== 'hours' or 'full'
 		})
 		.on('finish.countdown', function(event) {
-			$(this).html('<div class="finished"><strong>Particl Market</strong> (alpha) released! &ndash; <a href="https://particl.news/particl-marketplace-alpha-released-and-available-for-testing-3240739f7509">Read announcement</a> & <a href="https://github.com/particl/particl-desktop/releases">Download now</a></div>')
+			$(this).html('<div class="finished"><strong>Particl network hardforked</strong> &ndash; RingCT (Anon transactions) and Bulletproofs now live!<br><small>If you haven\'t already, please upgrade all your nodes!</small>')
 		});
 	});
 
