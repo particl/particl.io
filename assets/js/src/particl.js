@@ -98,7 +98,7 @@ $( document ).ready(function() {
 	/* ------------ COUNTDOWN ------------ */
 
 	$(function(){
-		var countdownTo = moment.tz("2019-07-16 12:00", "Etc/UTC"); // <== UTC time of release
+		var countdownTo = moment.tz("2019-08-12 12:00", "Etc/UTC"); // <== UTC time of release
 
 		$('#clock').countdown(countdownTo.toDate())
 		.on('update.countdown', function(event) {
