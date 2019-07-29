@@ -135,8 +135,8 @@ section {
         margin-bottom: 1rem;
         @include break(large) { margin: 0; }
         img {
-          width: 100%; max-width: 20rem; margin: 1rem auto; display: block;
-          @include break(large) { width: 70%; max-width: none; }
+          width: 100%; max-width: 20rem; margin: 1rem auto; padding: 0 2rem; display: block;
+          @include break(large) { width: 70%; padding: 0; max-width: none; }
           @include break(l) { margin: 0 auto; }
         }
       }
@@ -244,6 +244,9 @@ section {
       }
     }
     &.seller {
+      .item:hover {
+        .icon { box-shadow: 0 0 0 5px rgba($secondary, 0.15); }
+      }
       .icon { border-color: $secondary; color: $secondary; }
       ul.fancy {
         .ico { color: $secondary; }
