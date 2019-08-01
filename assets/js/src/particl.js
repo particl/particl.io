@@ -110,7 +110,7 @@ $( document ).ready(function() {
 			$(this).html(event.strftime(full)); // <== 'hours' or 'full'
 		})
 		.on('finish.countdown', function(event) {
-			$(this).html('<div class="finished"><strong>Particl network hardforked</strong> &ndash; RingCT (Anon transactions) and Bulletproofs now live!<br><small>If you haven\'t already, please upgrade all your nodes!</small>')
+			$(this).html('<div class="finished"><strong>The Particl Open Marketplace is now available</strong><br><a href="/downloads/">Download it here</a> and get started today!')
 		});
 	});
 
