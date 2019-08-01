@@ -1,0 +1,49 @@
+.bounty-levels {
+  padding: 3.09rem 0;
+  .item {
+    .content {
+      @include box-shadow(0 4px 25px 0 rgba(0, 0, 0, 0.06));
+      @include border-radius(10px);
+      background-color: $white;
+      margin: 0.7rem 0; padding: 2.438rem 2.563rem;
+      h3 { margin: 0 0 1.313rem; }
+      p { margin: 0; }
+    }
+  }
+  p.small {
+    margin-top: 2.2rem;
+  }
+}
+
+.how-to-report {
+  background: mix($bg, $bg-muted, 80%);
+  .critical {
+    a:not(.button) {
+      color: $alert;
+      &:hover, &:focus { color: darken($alert, 15%); }
+    }
+  }
+  .non-critical {
+    a:not(.button) {
+      color: $secondary;
+      &:hover, &:focus { color: darken($secondary, 15%); }
+    }
+  }
+  .box {
+    @include box-shadow(0 4px 25px 0 rgba(0, 0, 0, 0.06));
+    @include border-radius(10px);
+    background-color: $white;
+    margin: 1.7rem 0 0; padding: 2.4rem 2.5rem 2rem;
+    text-align: center;
+    h3 { margin-top: 0; }
+  }
+  .report-buttons {
+    margin-top: 2rem;
+    text-align: center;
+    .button { margin-bottom: 0.5rem; }
+  }
+}
+
+.fine-print {
+  background: mix($bg, $bg-muted, 80%);
+}
