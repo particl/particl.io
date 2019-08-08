@@ -22,7 +22,7 @@ $scroll-line: 1.9rem;
         display: block; width: 100%; max-width: 24rem; margin: -2rem auto 0;
         @include break(m) { margin: -4rem auto 0; }
         @include break(large) { margin: 0; }
-        @include break(l) { margin: -2rem 0 0; }
+        @include break(l) { margin: -5rem 0 -4rem; max-width: none; }
       }
     }
     .video-wrap {
@@ -101,8 +101,8 @@ section {
         display: block; float: left; width: 40%;
         margin: -3rem 0 -6rem; padding: 0 3rem 0 0;
       }
-      @include break(xl) { margin: -4.5rem 0 -6rem; }
-      img { pointer-events: none; }
+      @include break(xl) { margin: -6rem 0; }
+      img { pointer-events: none; width: 100%; }
     }
     .text {
       @include break(l) {
