@@ -10,6 +10,15 @@
   @include break(m) {
     padding-top: 60px;
   }
+  .tag {
+    display: inline-block;
+    padding: 0.1rem 0.7rem;
+    margin-bottom: 1.2rem;
+    background: $tertiary;
+    font-size: 0.75rem;
+    color: white;
+    text-transform: uppercase;
+  }
   .count-title {
     font-size: 18px;
     font-weight: 500;
