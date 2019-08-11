@@ -269,7 +269,7 @@ section#features {
 .community-channels {
   text-align: center;
   padding: 3.4rem 0 2.7rem;
-  background: $black !important;
+  background: $black;
   @include break(large) { padding: 4rem 0; }
   .title {
     margin: 1.75rem 2rem 2.7rem;
@@ -289,6 +289,15 @@ section#features {
       font-size: 115%; line-height: 1;
       position: relative; top: 1px;
     }
+  }
+
+  // reused on /marketplace page
+  &.market-page {
+    padding: 2.5rem 1rem;
+    background: lighten($black, 5%);
+    .title { margin: 0; }
+    p { color: $white; line-height: 1.4; margin: 1rem 0 1.5rem; }
+    .button { width: 9rem; }
   }
 }
 
