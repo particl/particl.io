@@ -215,8 +215,8 @@ button, .button { // default, outline-to-full buttons
   font-size: 0.9rem; font-weight: 700; color: $color;
   &::after { content: none !important; }
   &:hover, &:focus {
-    background: darken($primary, 7%); 
-    border-color: darken($primary, 5%); 
+    background: darken($primary, 10%); 
+    border-color: darken($primary, 10%); 
     color: $white;
   }
   &.full { // full buttons
@@ -224,8 +224,8 @@ button, .button { // default, outline-to-full buttons
     border-color: darken($color, 2%);
     color: $white;
     &:hover, &:focus {
-      background: darken($color, 5%);
-      border-color: darken($color, 5%);
+      background: darken($color, 10%);
+      border-color: darken($color, 10%);
     }
   }
   &.hollow { // outline buttons only

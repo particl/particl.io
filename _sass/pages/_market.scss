@@ -184,7 +184,7 @@ section {
     .buyer {
       background: url("/assets/img/market/buyer-bg.jpg") no-repeat $color; background-size: cover;
       &:hover, &:focus {
-        //background: darken($color, 3%);
+        background-position: 50% 7%;
         .arrow {
           @include break(large) { left: 2.2rem; }
         }
@@ -199,7 +199,9 @@ section {
     }
     .seller {
       background: url("/assets/img/market/seller-bg.jpg") no-repeat $secondary; background-size: cover;
-      //&:hover, &:focus { background: darken($secondary, 5%); }
+      &:hover, &:focus {
+        background-position: 50% 7%;
+      }
       @include break(large) { text-align: left; }
     }
   }
