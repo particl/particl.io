@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 8 July 2019</small>
+      <small>Updated 13 August 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -23,15 +23,16 @@ layout: default
           <h2 class="title">Recently completed</h2>
           
 <ul>
-  <li>Particl Marketplace (alpha, testnet)
+  <li>Particl Marketplace
     <ul>
-      <li>Removal of flagged items from users listing page</li>
+      <li><strong>Open Marketplace (beta) released on mainnet</strong></li>
       <li>OMP Library integration
         <ul>
-          <li>Blind escrow integration</li>
+          <li>Anon escrow integration</li>
         </ul>
       </li>
       <li>Updating/enhancements to automated tests running in the background</li>
+      <li>Added longer retention on free SMSG</li>
       <li>Bug fixes</li>
     </ul>
   </li>
@@ -39,50 +40,64 @@ layout: default
     <ul>
       <li>Buy flow
         <ul>
-          <li>Enhanced the error message to indicate to the user that they do need a blind balance in order to complete the buyflow steps</li>
-          <li>Buyer's contact details can now be optionally provided to Seller (as it is needed by many carriers)</li>
-          <li>Additional step added</li>
+          <li>Extended the timeout duration during checkout</li>
         </ul>
       </li>
       <li>UI
         <ul>
-          <li>Terms and Conditions will now appear in the main window</li>
-          <li>Top bar: added an overview of spendable Blind balance (for Marketplace transactions)</li>
-          <li>PART amounts are now displayed with 8 decimal places</li>
-          <li>Popup notifications for buy and sell orders are now combined</li>
+          <li>Added hide-able page titles</li>
+          <li>Pre-release version determination updated to display warning</li>
         </ul>
       </li>
       <li>Listings
         <ul>
-          <li>Removal of flagged items from users listing page</li>
-          <li>Added a filter to view flagged Listings only</li>
-          <li>A listings expiry time is now visible on the listing</li>
+          <li>Sellers currently have the option of posting listings for duration varying between 1 day and 1 week</li>
+          <li>Added support for free shipping (shipping with a value of 0)</li>
         </ul>
       </li>
       <li>Overview
         <ul>
-          <li>Updated balance breakdown to per-type (Public, Blind, Anon) and per-state (Total, Spendable, Staking, Pending)</li>
+          <li>The spendable balance shown in the top bar of the application, when viewing a market related page, now displays the spendable Anon balance (was previously the spendable Blind balance)</li>
+          <li>The "Spendable" and "Locked" balances displayed on the Overview page now includes a summary of all balances</li>
         </ul>
       </li>
-      <li>Send
+      <li>History
         <ul>
-          <li>Blind "Available balance" now shows spendable (instead of total Blind balance)</li>
+          <li>The transaction table replaces the "Balance Transfer" label with an indication of what the balance conversion was for (eg: "Converted -> Blind")</li>
+        </ul>
+      </li>
+      <li>Orders
+        <ul>
+          <li>Added text to the help sections on the 'Orders' tab of the buy and sell pages to indicate to users that their wallets need to be unlocked in order to process buy flow messages (only applies if the wallet is encrypted)</li>
+        </ul>
+      </li>
+      <li>Proposals
+        <ul>
+          <li>Proposals will now be visible for 7 days</li>
+          <li>A new error modal has been added to the Proposal creation flow indicating that an error has occurred, similar to the listing item creation error modal (replaces a toast style error message popup)</li>
         </ul>
       </li>
       <li>Bug fixes</li>
     </ul>
   </li>
-  <li>Particl Copay (awaiting release)
+  <li>Particl Copay
     <ul>
       <li>Cold Staking on Application</li>
     </ul>
   </li>
   <li>Particl Core
     <ul>
-      <li>Release of 0.18.0.11 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.0.11" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.0.12 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.0.12" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.1.0 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.0" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.1.1 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.1" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.1.2 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.2" target="_blank">release notes</a>)</li>
     </ul>
   </li>
-  <li>RingCT implementation</li>
+  <li>Third Party Integration
+    <ul>
+      <li>Trezor integration</li>
+    </ul>
+  </li>
 </ul>
 
         </div><!-- .completed -->
@@ -91,11 +106,17 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
+  <li>Particl Marketplace
+    <ul>
+      <li>Public comments on listings</li>
+    </ul>
+  </li>
   <li>Particl Desktop
     <ul>
       <li>Product imports from 3rd party markets (awaiting testing)</li>
       <li>Indicator for new listings, while browsing the listings (awaiting testing)</li>
       <li>Category filter: expand and collapse sub-categories</li>
+      <li>Comments/reviews on Listings</li>
     </ul>
   </li>
 </ul>
@@ -107,7 +128,7 @@ layout: default
 
 <ul>
   <li>
-    Particl Marketplace (alpha, testnet)
+    Particl Marketplace
     <ul>
       <li>Market Management</li>
     </ul>
@@ -115,12 +136,14 @@ layout: default
   <li>
     Particl Desktop
     <ul>
-      <li>Bug fixes</li>
-    </ul>
-  </li>
-  <li>Third Party Integration
-    <ul>
-      <li>Trezor integration</li>
+      <li>Translations
+        <ul>
+          <li>Adding translation framework</li>
+          <li>Wallet, loading screen, multi-wallet, modal, installer, core-ui and market translations</li>
+          <li>Adding Languages to environments</li>
+        </ul>
+      </li>
+      <li>Bug fixes and enhancements</li>
     </ul>
   </li>
 </ul>
@@ -131,11 +154,9 @@ layout: default
           <h2 class="title">Upcoming features</h2>
 
 <ul>
-  <li>Particl Marketplace (beta)
+  <li>Particl Marketplace
     <ul>
       <li>Quantity Management</li>
-      <li>Translations</li>
-      <li>Comments/reviews on Listings</li>
     </ul>
   </li>
   <li>Software Development Kit (SDK)</li>
