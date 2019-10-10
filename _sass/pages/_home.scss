@@ -1,5 +1,5 @@
 #page {
-  margin-top: 3.4rem; // offset sticky header
+  margin-top: 3rem; // offset sticky header
 }
 
 /* --------------------------------------------- *\
@@ -69,7 +69,7 @@
       }
     }
   }
-
+/*
   // GUI teaser slider
   .intro-features {
     display: none;
@@ -105,11 +105,11 @@
       }
     }
   }
-
+*/
   // ------- ↑ original GUI intro ↑ ------- //
 
   // ------- ↓ marketing capture intro ↓ ------- //
-
+/*
   .capture {
     margin-top: 4rem;
     @include break(large) { margin-top: 5rem; }
@@ -144,9 +144,43 @@
       }
     }
   }
+*/
+  // ------- ↑ marketing capture intro ↑ ------- //
+
+  // ------- ↓ clean intro (v3) ↓ ------- //
+
+  &.clean {
+    // more breathable negative space everywhere
+    padding: 4rem 0 1rem;
+    @include break(large) { padding: 7rem 0 1rem; }
+    @include break(xl) { padding: 9rem 0; text-align: left; }
+    @include break-from(1450px) { padding: 11rem 0; }
+    @include break-from(1950px) { padding: 13rem 0; }
+    .text {
+      margin-bottom: 3rem;
+      @include break(large) { margin-bottom: 7rem; }
+      @include break(xl) { margin-bottom: 0; padding-top: 3.2rem; }
+      .header-title {
+        .subtitle {
+          font-size: 1rem; line-height: 1.65;
+          @include break(large) { font-size: 1.2rem; }
+        }
+      }
+      .intro-buttons {
+        margin: 0;
+        @include break(xl) { text-align: left; }
+        .button {
+          width: 170px;
+          @include break(xl) { width: auto; padding: 0.19rem 2.3rem; }
+        }
+      }
+    }
+    .images {}
+  }
+
+  // ------- ↑ clean intro (v3) ↑ ------- //
 }
 
-// ------- ↑ marketing capture intro ↑ ------- //
 
 
 
