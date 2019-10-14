@@ -175,7 +175,6 @@
         }
       }
     }
-    .images {}
   }
 
   // ------- ↑ clean intro (v3) ↑ ------- //
@@ -310,11 +309,11 @@ section#features {
 
 
 /* --------------------------------------------- *\
-      About
+      About ("Key points")
 \* --------------------------------------------- */
 
 #about {
-  padding: 8.373rem 0rem;
+  padding: 8.373rem 0;
   @include before_md { padding: 0px; }
 
   h5 {
@@ -323,7 +322,7 @@ section#features {
   }
 
   h2 {
-    margin: 0rem 0rem 1.063rem;
+    margin: 0 0 1.063rem;
     max-width: 425px;
     width: 100%;
   }
@@ -345,16 +344,22 @@ section#features {
     }
   }
 
-  img {
+
+/* --------------------------------------------- *\
+      Key points
+\* --------------------------------------------- */
+
+  img,
+  .illustration {
     width: 100%;
     max-width: 360px;
-    @include break(l) { max-width: 490px; }
+    @include break(l) { max-width: 540px; margin: -3rem 0; }
   }
 
   hr {
     color: $hr-color;
-    margin: 5rem 0rem;
-    @include before_md() { margin: 3rem 0rem; }
+    margin: 5rem 0;
+    @include before_md() { margin: 3rem 0; }
   }
 
   @include before_md() {
@@ -382,7 +387,7 @@ section.download-promo {
   }
   h2 {
     color: $white;
-    margin: 0 0rem 1rem;
+    margin: 0 0 1rem;
   }
   p {
     margin-bottom: 2.125rem;
