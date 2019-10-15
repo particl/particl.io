@@ -121,6 +121,7 @@ $( document ).ready(function() {
 		offset: 200,
 		duration: 600,
 		delay: 100,
+		disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
 	});
 
 
