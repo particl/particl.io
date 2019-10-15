@@ -1,4 +1,4 @@
-/*! particl.io v1.0 | Author: Martin Allien <martin@particl.io> */
+/*! particl.io v2.0 | Author: Martin Allien <martin@particl.io> */
 
 /*
   GULP TAKS OVERVIEW
@@ -98,6 +98,7 @@ gulp.task('scripts', function (cb) {
       paths.js + 'moment.min.js', // countdown-related
       paths.js + 'moment-timezone-with-data-2012-2022.min.js', // countdown-related
       paths.js + 'jquery.magnific-popup.min.js', // pop-ups
+      paths.js + 'aos.js', // AnimateOnScroll
       paths.js + 'particl.js',
     ]),
     sourcemaps.init(),
