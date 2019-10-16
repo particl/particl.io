@@ -224,18 +224,12 @@ section.news {
 
 section.intro-text {
   background: $black;
-  padding: 3rem 0.5rem;
-  @include break(m) { padding: 3rem 1rem; }
-  @include break(large) { padding: 3rem 1rem 3.5rem; }
+  padding: 2rem 0.5rem;
+  @include break(m) { padding: 2rem 1rem; }
   & > .row { max-width: 55rem; }
-  .title {
-    color: $color;
-    margin: 0 0 0.5rem;
-  }
   p {
     @extend p.large;
     color: $white;
-    &:last-of-type { margin-bottom: 0; }
   }
 }
 
@@ -252,9 +246,9 @@ section#features {
     padding: 2rem 0 6rem;
   }
   .claim-title {
-    text-align: center; font-weight: 500; line-height: 1.45;
+    text-align: center; font-weight: 700; line-height: 1.45;
     width: 100%; max-width: 50rem;
-    margin: 4rem auto 0;
+    margin: 2rem auto 0;
     padding: 0 2rem;
     .highlight {
       font-weight: 700;
@@ -271,15 +265,20 @@ section#features {
 
 .community-channels {
   text-align: center;
-  padding: 3.4rem 0 2.7rem;
+  padding: 3.4rem 0 1.7rem;
   background: $black;
-  @include break(large) { padding: 4rem 0; }
+  @include break(large) { padding: 3rem 0; }
+  .join-img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
   .title {
-    margin: 1.75rem 2rem 2.7rem;
+    margin: 1.2rem 2rem 0.7rem;
     color: $white; line-height: 1.35;
   }
   p {
-    color: $white;
+    color: $white; font-size: 0.9rem; line-height: 1.6;
+    margin-bottom: 2rem;
   }
   .button {
     font-size: 0.83rem; font-weight: 700;
@@ -377,7 +376,7 @@ section#features {
 section.download-promo {
   background-color: $black;
   padding: 3.3rem 0 0.5rem;
-  @include break(large) { padding: 3.3rem 0 1.5rem; }
+  @include break(large) { padding: 3.3rem 0 2.5rem; }
   @include before_md {
     padding: 0px;
     & > .row {
@@ -448,8 +447,8 @@ section.download-promo {
     .desc {
       font-size: 0.813rem; line-height: 1.77;
       margin-bottom: 1.1rem;
-      @include break(large) { height: 6rem; }
-      @include break-from(1450px) { height: 6.3rem; }
+      @include break(large) { height: 5rem; }
+      @include break-from(1450px) { height: 5.3rem; }
     }
   }
 }
