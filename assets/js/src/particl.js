@@ -115,4 +115,14 @@ $( document ).ready(function() {
 	});
 
 
+	/* ------------ AnimateOnScroll (https://github.com/michalsnik/aos/tree/v2) ------------ */
+
+	AOS.init({
+		offset: 200,
+		duration: 600,
+		delay: 100,
+		disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+	});
+
+
 });
