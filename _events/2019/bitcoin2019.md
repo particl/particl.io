@@ -2,7 +2,7 @@
 title: Bitcoin2019
 type: conference
 link: https://www.bitcoin2019conference.com/
-image: 2019-bitcoin2019.jpeg
+image: 2019/bitcoin2019.jpeg
 starts: '2019-06-25'
 starts_time:
 ends: '2019-06-26'

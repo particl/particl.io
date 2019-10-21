@@ -2,7 +2,7 @@
 title: Johannesburg Blockchain Conference
 type: conference
 link: https://www.eventbrite.com/e/johannesburg-blockchain-conference-tickets-46397903378
-image: 2018-johannesburg-blockchain-conference.jpeg
+image: 2018/johannesburg-blockchain-conference.jpeg
 starts: '2018-07-27'
 starts_time:
 ends: '2018-07-27'

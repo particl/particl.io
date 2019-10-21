@@ -2,7 +2,7 @@
 title: Particl in São Paulo, Brazil
 type: meet-up
 link: https://www.meetup.com/Particl-Traveling-Meetups/events/254988636/
-image: 2018-brazil-meetup.jpeg
+image: 2018/brazil-meetup.jpeg
 starts: '2018-10-05'
 starts_time: '19:00'
 ends: '2018-10-05'

@@ -2,7 +2,7 @@
 title: Magical Crypto Conference
 type: conference
 link: https://magicalcryptoconference.com/
-image: 2019-magical-crypto-conference.jpg
+image: 2019/magical-crypto-conference.jpg
 starts: '2019-05-11'
 starts_time:
 ends: '2019-05-12'

@@ -2,7 +2,7 @@
 title: Particl in Prague
 type: meet-up
 link: https://www.meetup.com/Particl-Traveling-Meetups/events/251907435/
-image: 2018-meetup-prague.jpeg
+image: 2018/meetup-prague.jpeg
 starts: '2018-06-28'
 starts_time: '19:00'
 ends: '2018-06-28'

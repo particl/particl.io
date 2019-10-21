@@ -2,7 +2,7 @@
 title: Manila Crypto Debates - You don't need a Blockchain
 type: debate
 link: https://www.meetup.com/DecentralizeTodayPhilippines/events/258372064/
-image: 2019-manila-crypto-debate.jpeg
+image: 2019/manila-crypto-debate.jpeg
 starts: '2019-02-13'
 starts_time: '18:30'
 ends: '2019-02-13'

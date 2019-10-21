@@ -2,7 +2,7 @@
 title: Particl in Coinhouse, Paris
 type: meet-up
 link: https://www.meetup.com/fr-FR/LMDB-CH/events/258656626/
-image: 2019-paris-coinhouse.jpeg
+image: 2019/paris-coinhouse.jpeg
 starts: '2019-02-21'
 starts_time: '19:00'
 ends: '2019-02-21'

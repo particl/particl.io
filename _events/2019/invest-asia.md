@@ -2,7 +2,7 @@
 title: invest:asia
 type: conference
 link: https://www.coindesk.com/events/asia-2019
-image: 2019-invest-asia.jpg
+image: 2019/invest-asia.jpg
 starts: '2019-09-11'
 starts_time:
 ends: '2019-09-12'

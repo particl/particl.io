@@ -2,7 +2,7 @@
 title: Manila Blockchain Christmas Fair
 type: meet-up
 link: https://www.meetup.com/DecentralizeTodayPhilippines/events/256492831/
-image: 2018-manila-xmas-meetup.jpg
+image: 2018/manila-xmas-meetup.jpg
 starts: '2018-12-14'
 starts_time: '18:30'
 ends: '2018-12-14'

@@ -2,7 +2,7 @@
 title: Hacker's Congress Paralelní Polis
 type: conference
 link: https://opt-out.hcpp.cz/
-image: 2019-hcpp.jpg
+image: 2019/hcpp.jpg
 starts: '2019-10-03'
 starts_time:
 ends: '2019-10-05'

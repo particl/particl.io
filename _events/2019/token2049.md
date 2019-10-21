@@ -2,7 +2,7 @@
 title: TOKEN2049
 type: conference
 link: https://www.token2049.com/
-image: 2019-token2049.jpeg
+image: 2019/token2049.jpeg
 starts: '2019-03-13'
 starts_time:
 ends: '2019-03-14'
