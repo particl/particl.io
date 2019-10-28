@@ -71,6 +71,12 @@ section.version-list {
     max-width: 379px;
     width: 100%;
   }
+  .tag { // download format/platform (zip/deb/rpm..)
+    font-size: 80%; color: lighten($text-muted, 20%);
+    font-weight: 400; text-transform: uppercase;
+    border: 1px solid lighten($text-muted, 20%); border-radius: 4px;
+    padding: 0 4px; margin-left: 2px;
+  }
 }
 
 .last-hr-copay {
