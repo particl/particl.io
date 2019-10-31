@@ -7,7 +7,7 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 27 September 2019</small>
+      <small>Updated 31 October 2019</small>
     </div>
 	</div>
 </section><!-- #page-title -->
@@ -23,43 +23,59 @@ layout: default
           <h2 class="title">Recently completed</h2>
           
 <ul>
-  <li>Particl Marketplace
+  <!--li>Particl Marketplace
     <ul>
       <li>The API has been updated with additional commands (accessible via the command console in the desktop application)</li>
       <li>Listings with their images are now properly removed from the marketplace</li>
       <li>Bug fixes</li>
     </ul>
-  </li>
+  </li-->
   <li>Particl Desktop
     <ul>
-      <li>UI
+      <li>Buy flow
         <ul>
-          <li>An Open Marketplace enabled wallet now displays a shopping cart icon in multiwallet sidebar</li>
-          <li>Layouts for the add Listing page, as well as the details information in the listing details window, have been updated</li>
-          <li>Improvement made to the text to indicate when no listings are available</li>
-          <li>Testnet wallets (when running on mainnet) are now no longer displayed on the wallet selection sidebar</li>
-          <li>Added the ability to select how long the wallet should be unlocked for</li>
+          <li>Enabling a user to cancel a bid</li>
         </ul>
       </li>
-      <li>Listings
+      <li>Orders
+        <ul>
+          <li>Each buy and sell page now have a badge count next to the orders tab</li>
+          <li>The orders tab is set as the default view on the sell and buy pages</li>
+        </ul>
+      </li>
+      <li>Settings
+        <ul>
+          <li>Added wallet-specific settings</li>
+          <li>Added global, application settings</li>
+          <li>Reworked daemon startup (and related auth value extraction)</li>
+          <li>Refactored loading and switching of wallets</li>
+        </ul>
+      </li>
+      <li>Wallet
+        <ul>
+          <li>The last selected wallet is now loaded when a user starts the application up (not the default wallet)</li>
+        </ul>
+      </li>
+      <li>UI
+        <ul>
+          <li>Comment notifications: Seller receives a notification when a comment is made on their listing; Buyer receives a notification when there is a reply on their comments</li>
+          <li>Minor Tweaks</li>
+        </ul>
+      </li>
+      <!--li>Listings
         <ul>
           <li>The refresh button on the listings page now indicates that new listings have arrived</li>
           <li>Inclusion of the first iteration of the Public Comments (Q&A)</li>
           <li>Product import functionality has been added</li>
         </ul>
-      </li>
-      <li>Buy flow
+      </li-->
+      <li>Bug fixes
         <ul>
-          <li>Allow for a pre-defined reason to be selected when a bid request is being rejected</li>
+          <li>Console window's command parsing</li>
+          <li>Count of orders pending user attention</li>
+          <li>Transaction notification not running after switching to a different wallet</li>
         </ul>
       </li>
-      <li>Orders
-        <ul>
-          <li>The order ID value, is now available for each order item</li>
-        </ul>
-      </li>
-      <li>Terms and Conditions have been updated</li>
-      <li>Bug fixes</li>
     </ul>
   </li>
   <!--li>Particl Copay
@@ -69,8 +85,7 @@ layout: default
   </li-->
   <li>Particl Core
     <ul>
-      <li>Release of 0.18.1.3 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.3" target="_blank">release notes</a>)</li>
-      <li>Release of 0.18.1.4 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.4" target="_blank">release notes</a>)</li>
+      <li>Release of 0.18.1.5 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.5" target="_blank">release notes</a>)</li>
     </ul>
   </li>
   <!--li>Third Party Integration
@@ -86,16 +101,22 @@ layout: default
           <h2 class="title">Waiting for review</h2>
 
 <ul>
-  <!--li>Particl Marketplace
+  <li>Particl Marketplace
     <ul>
-      <li>xxx</li>
+      <li>Market Management
+        <ul>
+          <li>Switching between Marketplaces</li>
+          <li>Market DB migrations (v0.3)</li>
+          <li>Market Startup and Category changes</li>
+        </ul>
+      </li>
     </ul>
-  </li-->
-  <li>Particl Desktop
+  </li>
+  <!--li>Particl Desktop
     <ul>
       <li>Enabling a user to cancel a bid</li>
     </ul>
-  </li>
+  </li-->
 </ul>
 
         </div><!-- .reviewed -->
@@ -107,14 +128,21 @@ layout: default
   <li>
     Particl Marketplace
     <ul>
-      <li>Market Management</li>
+      <li>Market Management
+        <ul>
+          <li>Blacklisting of Market Public keys</li>
+          <li>Create Wallets/Profiles/Identities</li>
+          <li>Add Identity as part of the ActionRequest overriding/setting the active wallet</li>
+          <li>Escrow release funds to Blind instead of Anon</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>
     Particl Desktop
     <ul>
-      <li>Settings</li>
-      <li>Bug fixes and enhancements</li>
+      <li>Secret feature :)</li>
+      <li>Bug fixes</li>
     </ul>
   </li>
   <li>
@@ -131,12 +159,16 @@ layout: default
           <h2 class="title">Upcoming features</h2>
 
 <ul>
+  <!--li>Particl Desktop
+    <ul>
+      <li>Market Management</li>
+    </ul>
+  </li-->
   <li>Particl Marketplace
     <ul>
       <li>Quantity Management</li>
     </ul>
   </li>
-  <!--li>Software Development Kit (SDK)</li-->
 </ul>
 
         </div><!-- .upcoming -->
