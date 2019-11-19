@@ -9,7 +9,7 @@ ends: '2019-11-22'
 ends_time:
 location: Helsinki, Finland
 particl_presence: booth
-team_presence: ['juha', 'gerlof']
+team_presence: ['juha', 'gerlof', 'gloria']
 advisor_presence: []
 invitation: https://particl.news/particl-world-tour-2019-f6e3d3c7e09c
 report: 
