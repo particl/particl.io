@@ -10,7 +10,7 @@ ends_time:
 location: Helsinki, Finland
 particl_presence: booth
 team_presence: ['juha', 'gerlof', 'gloria']
-advisor_presence: []
+advisor_presence: ['kapil-amarasinghe']
 invitation: https://particl.news/particl-world-tour-2019-f6e3d3c7e09c
 report: 
 ---
