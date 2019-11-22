@@ -3,49 +3,37 @@
 /*
   GULP TAKS OVERVIEW
   ----
-  * gulp - one-time compilation of everything
-  * gulp watch - continuous compilation of SCSS, JS etc. + starts local server with live refresh (browser code injecting)
+  * gulp - continuous compilation of SCSS, JS etc. + starts local server with live refresh (browser code injecting)
 */
 
 'use strict';
 
 /* ------------------------------------ *\
-    Includes
+    Modules
 \* ------------------------------------ */
 
-var gulp = require('gulp');
-// Pump - https://github.com/mafintosh/pump
-var pump = require('pump');
-// Sass autocompile - https://github.com/dlmanning/gulp-sass
-var sass = require('gulp-sass');
-// CSS Autoprefixer - https://github.com/sindresorhus/gulp-autoprefixer
-var autoprefixer = require('gulp-autoprefixer');
-// Concat ("merge JS") - https://github.com/contra/gulp-concat 
-var concat = require('gulp-concat');
-// JS Uglyfy - https://www.npmjs.com/package/gulp-uglify
-var uglify = require('gulp-uglify');
-// BrowserSync - https://www.browsersync.io
-var browserSync = require('browser-sync').create();
-// Sourcemaps - https://github.com/gulp-sourcemaps/gulp-sourcemaps
-var sourcemaps = require('gulp-sourcemaps');
-// SVGO - https://www.npmjs.com/package/gulp-svgmin
-var svgmin = require('gulp-svgmin');
-// Iconfont - https://github.com/nfroidure/gulp-iconfont
-var iconfont = require('gulp-iconfont');
-// Iconfont CSS - https://github.com/backflip/gulp-iconfont-css
-var iconfontCss = require('gulp-iconfont-css');
+// Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
+const { src, dest, watch, series, parallel } = require('gulp');
+// Importing all the Gulp-related packages we want to use
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const svgmin = require('gulp-svgmin');
+const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
 
 
 /* ------------------------------------ *\
-    Variables
+    Variables etc.
 \* ------------------------------------ */
 
-var fontName = 'icons';
+sass.compiler = require('node-sass');
 
-
-/* ------------------------------------ *\
-    Paths
-\* ------------------------------------ */
+const server = browserSync.create();
+const fontName = 'icons';
 
 const paths = {
   template: '*.html',
@@ -65,148 +53,102 @@ const paths = {
 
 /* ------------------------------------ *\
     Tasks
+    Gulp 3 => 4 guides:
+      - https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
+      - https://coder-coder.com/gulp-4-walk-through/
+      - https://github.com/gulpjs/gulp/blob/master/docs/recipes/minimal-browsersync-setup-with-gulp4.md
 \* ------------------------------------ */
 
-// Compile Sass to CSS (and minify) + feed updates to BrowserSync
-gulp.task('sass', function (cb) {
-  pump([
-    gulp.src('./_sass/particl-io.scss'),
-    sourcemaps.init(),
-    sass({outputStyle: 'compressed'}).on('error', sass.logError),
-    autoprefixer({
-      browsers: ['> 0.01%'], // https://github.com/ai/browserslist#queries
-      cascade: false
-    }),
-    sourcemaps.write(''),
-    gulp.dest(paths.css),
-    gulp.dest('./_site/assets/css'),
-    browserSync.reload({
-      stream: true
-    }),
-  ], cb );
-});
+function styles(){
+  return src([paths.scss], {base: '.'})
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({cascade: false}))
+    .pipe(sourcemaps.write(''))
+    .pipe(dest(paths.css)
+    .pipe(browserSync.stream())
+  );
+}
 
 
-// Concatenate JavaScript and uglify
-gulp.task('scripts', function (cb) {
-  pump([
-    gulp.src([
-      paths.js + 'jquery-1.11.2.min.js',
-      paths.js + 'modernizr.min.js',
-      paths.js + 'owl.carousel.min.js',
-      paths.js + 'jquery.countdown.min.js', // http://hilios.github.io/jQuery.countdown/
-      paths.js + 'moment.min.js', // countdown-related
-      paths.js + 'moment-timezone-with-data-2012-2022.min.js', // countdown-related
-      paths.js + 'jquery.magnific-popup.min.js', // pop-ups
-      paths.js + 'aos.js', // AnimateOnScroll
-      paths.js + 'particl.js',
-    ]),
-    sourcemaps.init(),
-    concat('all.js'),
-    uglify(),
-    sourcemaps.write(''),
-    gulp.dest(paths.js_out),
-    gulp.dest('./_site/assets/js'),
-    browserSync.reload({
-      stream: true
-    }),
-  ], cb );
-});
+function scripts(){
+  return src([
+    paths.js + 'jquery-1.11.2.min.js',
+    paths.js + 'modernizr.min.js',
+    paths.js + 'owl.carousel.min.js',
+    paths.js + 'jquery.countdown.min.js', // http://hilios.github.io/jQuery.countdown/
+    paths.js + 'moment.min.js', // countdown-related
+    paths.js + 'moment-timezone-with-data-2012-2022.min.js', // countdown-related
+    paths.js + 'jquery.magnific-popup.min.js', // pop-ups
+    paths.js + 'aos.js', // AnimateOnScroll
+    paths.js + 'particl.js',
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write(''))
+    .pipe(dest(paths.js_out)
+    .pipe(browserSync.stream())
+  );
+}
 
-/*
-gulp.task('jekyll-build', function (done) {
-    browserSync.notify('Building Jekyll');
-    return cp.spawn(jekyll, ['build'], {stdio: 'inherit'}).on('close', done);
-});
-
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
-});
-*/
-
-// Launch BrowserSync server
-gulp.task('browserSync', function() { // , ['jekyll-build']
-  browserSync.init({
-    server: {
-      baseDir: '_site/',
-      index: 'index.html'
-    },
-  })
-});
-
-gulp.task('browserSync_clean', function() {
-  browserSync.init({
-    server: {
-      baseDir: '_site/',
-      index: 'index.html'
-    },
-  })
-});
-
-
-// Optimize SVGs
-gulp.task('optimize', function (cb) {
-  console.log('-- Optimizing SVG files');
-  pump([
-    gulp.src(paths.ico_input),
-    svgmin(),
-    gulp.dest(paths.ico_output),
-  ], cb );
-});
-
-
-// Generate iconfont from SVG icons
-gulp.task('webfont', ['optimize'], function (cb) {
-  console.log('-- Generating webfont');
-  pump([
-    gulp.src(paths.ico_input),
-    iconfontCss({
+function icons(){
+  return src([paths.ico_input])
+    .pipe(svgmin())
+    .pipe(dest(paths.ico_output))
+    .pipe(iconfontCss({
       fontName: fontName,
       fontPath: '/assets/fonts/',
       targetPath: '../../_sass/_icons.scss',
       cssClass: 'ico'
-    }),
-    iconfont({
+    }))
+    .pipe(iconfont({
       fontName: fontName,
       prependUnicode: true,
       formats: ['ttf', 'eot', 'woff', 'woff2'],
       normalize: true,
       fontHeight: 1001,
-      descent: 140,
-     }),
-    gulp.dest(paths.font_output),
-  ], cb );
-});
+      descent: 140
+    }))
+    .pipe(dest(paths.font_output))
+    .pipe(browserSync.stream())
+  ;
+}
 
 
-// Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () { // , 'jekyll-rebuild'
-//gulp.task('watch', ['sass', 'scripts'], function () {
-  //gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md'], ['jekyll-rebuild']);
-  gulp.watch(paths.scss, ['sass']);
-  gulp.watch(paths.js_in, ['scripts']);
-  gulp.watch(paths.ico_input, ['webfont']);
-  gulp.watch(paths.template, browserSync.reload); 
-});
+// BrowserSync - start server
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: '_site/',
+      index: 'index.html'
+    }
+  });
+  done();
+}
 
-// Watch for Sass/JS changes and compile + BrowserSync
-gulp.task('watch-sass', ['sass'], function () {
-  gulp.watch(paths.scss, ['sass']);
-});
+// BrowserSync - reload page
+function reload(done) {
+  server.reload();
+  done();
+}
 
-// Without Jekyll compiling
-gulp.task('watch_clean', ['browserSync_clean', 'sass', 'scripts'], function () {
-//gulp.task('watch', ['sass', 'scripts'], function () {
-  gulp.watch(paths.scss, ['sass']);
-  gulp.watch(paths.js_in, ['scripts']);
-  gulp.watch(paths.ico_input, ['webfont']);
-  gulp.watch(paths.template, browserSync.reload); 
-});
+// Watch task
+function watcher(){
+  watch([
+    paths.scss,
+    paths.js_in,
+    paths.template
+  ],
+    parallel(
+      styles,
+      scripts,
+      reload
+    )
+  );
+}
 
-// Manual build (Sass compiling, JS concat/uglify)
-gulp.task('build', ['sass', 'scripts', 'webfont'], function (){
-  console.log('-- Building files');
-});
 
-gulp.task('default', ['build'], function (){
-});
+// Default task
+exports.default = series( parallel(styles, scripts, serve), watcher );
+exports.webfont = series( icons );
