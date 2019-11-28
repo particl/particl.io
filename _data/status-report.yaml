@@ -1,0 +1,129 @@
+updated: "28 November 2019"
+
+
+recently-completed:
+
+  - for: Particl Marketplace
+    tasks:
+      - c: Market Management
+        sub:
+        - t: Market DB migrations (Ver 0.3)
+        - t: Market Startup and Category changes
+      - c: Fixed expired listing items being deleted incorrectly
+
+  - for: Particl Desktop
+    tasks:
+      - c: Buy Flow
+        sub:
+        - t: The cancelling of a bid has been extended to include the buyer's Escrow Pending (the buyer's payment) step
+      - c: UI
+        sub:
+        - t: The Buy menu label has been changed to Purchases
+        - t: The filter state in the buy flow has been updated from Escrow Locked' to Escrow Pending
+        - t: Status descriptions in the buyflow related to the Escrow step have been updated to reflect when the escrow is actually locked, and when it is still pending
+      - c: Exchange Bot integration
+      - c: Bug fixes
+        sub:
+        - t: Testnet wallets on mainnet are now correctly hidden on Windows OS
+        - t: Sending of public balance funds to a private address was previously creating a public transaction
+        - t: Fixed an issue in which the Awaiting status of a published template would change to Unpublished if the user restarted the application and viewed the template status before any confirmations on the listing fee transaction had been made
+        - t: Added signing of electron-based builds to cater for changes in macOS
+      - c: Console Modal
+        sub:
+        - t: Listing statistics have been added to the marketplace 
+
+  - for: Particl Core
+    tasks:
+      - c: Release of 0.18.1.6 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.6">release notes</a>)
+
+#  - for: Particl Copay
+#    tasks:
+#      - c: xxx
+#        sub:
+#        - t: xxx
+
+
+awaiting-review:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Market Management
+      sub:
+      - t: Switching between Marketplaces
+
+#  - for: Particl Desktop
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Copay
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+
+in-development:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Market Management
+      sub:
+      - t: Blacklisting of Market Public keys
+      - t: Create Wallets/Profiles/Identities
+      - t: Add Identity as part of the ActionRequest overriding/setting the active wallet
+      - t: Escrow release funds to Blind instead of Anon
+
+  - for: Particl Desktop
+    tasks:
+    - c: Bug Fixes
+    - c: UI
+      sub:
+      - t: Refactoring of the Desktop to cater for Market Management changes
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+  - for: Particl Copay
+    tasks:
+    - c: Update bitcore repos to new unified repository
+      sub:
+      - t: BWS integration updates
+
+
+upcoming-features:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Quantity Management
+#      sub:
+#      - t: xxx
+
+
+  - for: Particl Desktop
+    tasks:
+    - c: Market Management
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Copay
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx

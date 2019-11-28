@@ -7,12 +7,16 @@ layout: default
 		<div class="column">
       <h1 class="title">Particl Project<br />Status Report</h1>
       <p class="large">For general overview of Particl Project's goals visit <a href="/roadmap/">Project Roadmap</a></p>
-      <small>Updated 31 October 2019</small>
+      <small>Updated {{ site.data.status-report.updated }}</small>
     </div>
 	</div>
 </section><!-- #page-title -->
 
 <hr>
+
+{% comment %}
+---- For updates, edit `_data/status-report.yaml` file ----
+{% endcomment %}
 
 <section class="status-report">
 	<div class="row">
@@ -21,156 +25,98 @@ layout: default
 
         <div class="part completed">
           <h2 class="title">Recently completed</h2>
-          
-<ul>
-  <!--li>Particl Marketplace
-    <ul>
-      <li>The API has been updated with additional commands (accessible via the command console in the desktop application)</li>
-      <li>Listings with their images are now properly removed from the marketplace</li>
-      <li>Bug fixes</li>
-    </ul>
-  </li-->
-  <li>Particl Desktop
-    <ul>
-      <li>Buy flow
-        <ul>
-          <li>Enabling a user to cancel a bid</li>
-        </ul>
-      </li>
-      <li>Orders
-        <ul>
-          <li>Each buy and sell page now have a badge count next to the orders tab</li>
-          <li>The orders tab is set as the default view on the sell and buy pages</li>
-        </ul>
-      </li>
-      <li>Settings
-        <ul>
-          <li>Added wallet-specific settings</li>
-          <li>Added global, application settings</li>
-          <li>Reworked daemon startup (and related auth value extraction)</li>
-          <li>Refactored loading and switching of wallets</li>
-        </ul>
-      </li>
-      <li>Wallet
-        <ul>
-          <li>The last selected wallet is now loaded when a user starts the application up (not the default wallet)</li>
-        </ul>
-      </li>
-      <li>UI
-        <ul>
-          <li>Comment notifications: Seller receives a notification when a comment is made on their listing; Buyer receives a notification when there is a reply on their comments</li>
-          <li>Minor Tweaks</li>
-        </ul>
-      </li>
-      <!--li>Listings
-        <ul>
-          <li>The refresh button on the listings page now indicates that new listings have arrived</li>
-          <li>Inclusion of the first iteration of the Public Comments (Q&A)</li>
-          <li>Product import functionality has been added</li>
-        </ul>
-      </li-->
-      <li>Bug fixes
-        <ul>
-          <li>Console window's command parsing</li>
-          <li>Count of orders pending user attention</li>
-          <li>Transaction notification not running after switching to a different wallet</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <!--li>Particl Copay
-    <ul>
-      <li>xxx</li>
-    </ul>
-  </li-->
-  <li>Particl Core
-    <ul>
-      <li>Release of 0.18.1.5 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.5" target="_blank">release notes</a>)</li>
-    </ul>
-  </li>
-  <!--li>Third Party Integration
-    <ul>
-      <li>Trezor integration</li>
-    </ul>
-  </li-->
-</ul>
 
+          <ul>
+            {% for completed in site.data.status-report.recently-completed %}
+            <li>
+              {{ completed.for }}
+              <ul>
+                {% for task in completed.tasks %}
+                <li>
+                  {{ task.c }}
+                  <ul>
+                    {% for subtask in task.sub %}
+                    <li>{{ subtask.t }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
         </div><!-- .completed -->
+
 
         <div class="part reviewed">
           <h2 class="title">Waiting for review</h2>
-
-<ul>
-  <li>Particl Marketplace
-    <ul>
-      <li>Market Management
-        <ul>
-          <li>Switching between Marketplaces</li>
-          <li>Market DB migrations (v0.3)</li>
-          <li>Market Startup and Category changes</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <!--li>Particl Desktop
-    <ul>
-      <li>Enabling a user to cancel a bid</li>
-    </ul>
-  </li-->
-</ul>
-
+          <ul>
+            {% for awaiting in site.data.status-report.awaiting-review %}
+            <li>
+              {{ awaiting.for }}
+              <ul>
+                {% for task in awaiting.tasks %}
+                <li>
+                  {{ task.c }}
+                  <ul>
+                    {% for subtask in task.sub %}
+                    <li>{{ subtask.t }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
         </div><!-- .reviewed -->
+
 
         <div class="part in-development">
           <h2 class="title">In development</h2>
-
-<ul>
-  <li>
-    Particl Marketplace
-    <ul>
-      <li>Market Management
-        <ul>
-          <li>Blacklisting of Market Public keys</li>
-          <li>Create Wallets/Profiles/Identities</li>
-          <li>Add Identity as part of the ActionRequest overriding/setting the active wallet</li>
-          <li>Escrow release funds to Blind instead of Anon</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    Particl Desktop
-    <ul>
-      <li>Secret feature :)</li>
-      <li>Bug fixes</li>
-    </ul>
-  </li>
-  <li>
-    Particl Copay
-    <ul>
-      <li>Maintenance</li>
-    </ul>
-  </li>
-</ul>
-
+          <ul>
+            {% for development in site.data.status-report.in-development %}
+            <li>
+              {{ development.for }}
+              <ul>
+                {% for task in development.tasks %}
+                <li>
+                  {{ task.c }}
+                  <ul>
+                    {% for subtask in task.sub %}
+                    <li>{{ subtask.t }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
         </div><!-- .in-development -->
+
 
         <div class="part upcoming">
           <h2 class="title">Upcoming features</h2>
-
-<ul>
-  <!--li>Particl Desktop
-    <ul>
-      <li>Market Management</li>
-    </ul>
-  </li-->
-  <li>Particl Marketplace
-    <ul>
-      <li>Quantity Management</li>
-    </ul>
-  </li>
-</ul>
-
+          <ul>
+            {% for upcoming in site.data.status-report.upcoming-features %}
+            <li>
+              {{ upcoming.for }}
+              <ul>
+                {% for task in upcoming.tasks %}
+                <li>
+                  {{ task.c }}
+                  <ul>
+                    {% for subtask in task.sub %}
+                    <li>{{ subtask.t }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
         </div><!-- .upcoming -->
 
       </div>
