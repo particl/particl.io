@@ -1,44 +1,37 @@
-updated: "28 November 2019"
+updated: "3 January 2020"
 
 
 recently-completed:
 
   - for: Particl Marketplace
     tasks:
-      - c: Market Management
-        sub:
-        - t: Market DB migrations (Ver 0.3)
-        - t: Market Startup and Category changes
-      - c: Fixed expired listing items being deleted incorrectly
+      - c: Prevent Deletion of expired listings in cart
+#        sub:
+#        - t: xxx
 
   - for: Particl Desktop
     tasks:
-      - c: Buy Flow
-        sub:
-        - t: The cancelling of a bid has been extended to include the buyer's Escrow Pending (the buyer's payment) step
-      - c: UI
-        sub:
-        - t: The Buy menu label has been changed to Purchases
-        - t: The filter state in the buy flow has been updated from Escrow Locked' to Escrow Pending
-        - t: Status descriptions in the buyflow related to the Escrow step have been updated to reflect when the escrow is actually locked, and when it is still pending
-      - c: Exchange Bot integration
+      - c: Startup and Shutdown updates
       - c: Bug fixes
         sub:
-        - t: Testnet wallets on mainnet are now correctly hidden on Windows OS
-        - t: Sending of public balance funds to a private address was previously creating a public transaction
-        - t: Fixed an issue in which the Awaiting status of a published template would change to Unpublished if the user restarted the application and viewed the template status before any confirmations on the listing fee transaction had been made
-        - t: Added signing of electron-based builds to cater for changes in macOS
-      - c: Console Modal
-        sub:
-        - t: Listing statistics have been added to the marketplace 
+        - t: Removed the initial lengthy delay in displaying cart items
+        - t: Newly created wallets are switched to correctly after creation
+        - t: Testnet and mainnet versions of the application are now properly separated
+        - t: A single state application instance has been introduced
+        - t: Resolved bug where on large numbers of not all imports were uploading
+        - t: Rounding issue from CSV to JSON bug
+        - t: Clear warning when importing and there is not enough funds
+        - t: Status messages on startup and switching between wallets for better startup status tracking
+        - t: Closing modal during shutdown
+        - t: Fixed the regression with Particl Core cookie files
 
-  - for: Particl Core
-    tasks:
-      - c: Release of 0.18.1.6 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.6">release notes</a>)
-
-#  - for: Particl Copay
+#  - for: Particl Core
 #    tasks:
-#      - c: xxx
+#      - c: Release of 0.18.1.6 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.6">release notes</a>)
+
+  - for: Particl Copay
+    tasks:
+      - c: Updated with latest unified repository changes
 #        sub:
 #        - t: xxx
 
@@ -49,7 +42,14 @@ awaiting-review:
     tasks:
     - c: Market Management
       sub:
-      - t: Switching between Marketplaces
+      - t: Seller should be a separate element in the posted ListingItem
+      - t: Use correct Identity.address when sending ActionMessages
+      - t: Use separate pub/sub keys
+      - t: Create Wallets/Identities as needed
+      - t: Command/service layer - Add Identity as part of the ActionRequest overriding/setting the active wallet for CoreRpcService
+      - t: Market types - Open market/storefront support
+      - t: Profile and Market add/remove - Identity support
+      - t: Market default command - Set the default Market for Profile
 
 #  - for: Particl Desktop
 #    tasks:
@@ -77,16 +77,16 @@ in-development:
     - c: Market Management
       sub:
       - t: Blacklisting of Market Public keys
-      - t: Create Wallets/Profiles/Identities
-      - t: Add Identity as part of the ActionRequest overriding/setting the active wallet
-      - t: Escrow release funds to Blind instead of Anon
+      - t: Market flag command
 
   - for: Particl Desktop
     tasks:
     - c: Bug Fixes
-    - c: UI
+    - c: Market Management
       sub:
-      - t: Refactoring of the Desktop to cater for Market Management changes
+      - t: Implement ZMQ configuration for daemon startup
+      - t: Implement an application state store
+      - t: Update the loading screen to occur only on application launch
 
 #  - for: Particl Core
 #    tasks:
@@ -96,9 +96,10 @@ in-development:
 
   - for: Particl Copay
     tasks:
-    - c: Update bitcore repos to new unified repository
-      sub:
-      - t: BWS integration updates
+    - c: Error with installing latest bitcore wallet client
+    - c: End to end testing
+#      sub:
+#      - t: 
 
 
 upcoming-features:
