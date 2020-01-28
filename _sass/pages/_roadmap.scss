@@ -47,15 +47,6 @@ section.roadmap {
     .status.tag { background: #ccc; }
   }
 
-  .completed {
-    .status.tag { background: $secondary; }
-    a {
-      color: $secondary;
-      &:hover, &:focus { color: darken($secondary, 5%); }
-    }
-    code { background: rgba($secondary, 0.1); color: darken($secondary, 10%); }
-  }
-
   .title {
     line-height: 30px;
     margin-top: 0.6rem;
@@ -67,6 +58,51 @@ section.roadmap {
       color: rgba(34,39,39,0.6);
       font-size: 0.813rem;
       margin-bottom: 1rem;
+    }
+  }
+
+  // NEW completed items (via <details>)
+  .completed-items {
+    padding: 0 0 3rem;
+    h2 + p.large {
+      margin: -2.5rem 0 2rem;
+    }
+    .year { margin: 3rem 0 1.5rem; }
+
+    // completed item
+    .item {
+      margin-bottom: 0.5rem; padding-left: 1.7rem;
+      position: relative;
+      &[open] {
+        summary {
+          .ico-check { color: $secondary; }
+        }
+      }
+      // clickable header
+      summary {
+        outline: none; cursor: pointer;
+        padding: 0.3rem 0;
+        border-bottom: 1px solid transparent;
+        &:focus, &:hover {
+          strong { text-decoration: underline; }
+          .tag { color: $text-muted; }
+        }
+        .ico-check { color: rgba($text-muted, 0.5); margin: 0 0.3rem 0 -1.6rem; }
+        .tag {
+          font-size: 0.8rem; color: rgba($text-muted, 0.7);
+          display: block; margin: 0.15rem 0 0 0;
+          @include break(l) { float: right; }
+        }
+      }
+      // details
+      .desc {
+        background: $bg-muted; border-radius: 4px;
+        padding: 0.1rem 1.2rem; margin: 0.8rem 0 2rem;
+        a {
+          color: $text;
+          &:focus, &:hover { text-decoration: underline; }
+        }
+      }
     }
   }
 
