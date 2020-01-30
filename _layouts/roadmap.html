@@ -7,7 +7,7 @@ layout: default
     <div class="column">
       <h1 class="title">Particl Project<br />Roadmap</h1>
       <p class="large">For more details on the Particl project’s development status, visit our <a href="/status-report/">Status Report</a> page.</p>
-      <small>Updated 12 August 2019</small>
+      <small>Updated January 30, 2020</small>
     </div>
   </div>
 </section>
@@ -18,7 +18,7 @@ layout: default
   <div class="row">
     <div class="column">
 
-      <h2>Upcoming features</h2>
+      <h2>Upcoming features <a href="#completed" class="hollow secondary button skip-to-completed">Skip to Completed</a></h2>
       
       <div class="roadmap-items small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 
@@ -27,7 +27,7 @@ layout: default
         <div class="item in-progress">
           <div class="tags" data-aos="fade">
             <span class="status tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
+            <span class="network tag">New feature</span>
           </div>
           <h4 class="title">Trezor Wallet Integration</h4>
           <div class="desc">
@@ -38,51 +38,19 @@ layout: default
         <div class="item in-progress">
           <div class="tags" data-aos="fade">
             <span class="status tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
+            <span class="network tag">New feature</span>
           </div>
-          <h4 class="title">Market: Market Management</h4>
+          <h4 class="title">Market: Market Management <small>(Infinite markets)</small></h4>
           <div class="desc">
-            <p>An upcoming Particl Open Marketplace tool that allows any user to add and remove user markets to their Particl Desktop client. User markets are markets created by users that are not enabled by default through the main interface of the Open Marketplace. These markets can only be accessed by users who possess their specific Market Keys.</p>
-          </div>
-        </div>
-
-        <div class="item in-progress">
-          <div class="tags" data-aos="fade">
-            <span class="status tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
-          </div>
-          <h4 class="title">Market: Inventory Management</h4>
-          <div class="desc">
-            <p>An upcoming Particl Open Marketplace tool that allows sellers to easily manage large inventories from Particl Desktop. This tool also enables sellers to set up quantities and easily list items without having to manually post them one by one. This is ideal for large scale sellers.</p>
-          </div>
-        </div>
-        
-        <div class="item in-progress">
-          <div class="tags" data-aos="fade">
-            <span class="status tag">In Progress</span>
-            <span class="network tag">Mainnet</span>
-          </div>
-          <h4 class="title">Software Development Kit (SDK)</h4>
-          <div class="desc">
-            <p>Particl’s SDK will provide any developer with the required tools and environment to easily start contributing to the Particl network by either creating their own decentralized applications or improving already-existing products such as Particl Marketplace or Particl Desktop by adding to them new features.</p>
-          </div>
-        </div>
-
-        <div class="item in-progress">
-          <div class="tags" data-aos="fade">
-            <span class="status tag">In Progress</span>
-            <!--span class="network tag">Testnet</span-->
-          </div>
-          <h4 class="title">Community Fund Vote</h4>
-          <div class="desc">
-            <p>There is currently a leftover from the Community Initiative of ~33,000 PART which is entirely owned by the community. As these funds are simply held by the Particl Foundation and not owned by it, a consensus among the community must be reached in order to move or utilize those funds. Proposal voting rounds will be initiated as soon as the Project Governance mechanism hits mainnet!</p>
+            <p>Create or join an infinite number of markets and seller storefronts on the Particl network, each one being accessible from Particl Desktop. Simply connect to a market by entering its Market ID in the Market Browser.</p>
+            <p>Allows sellers to set up a personalized environment where they can sell their products. Ideal for established brands and/or communities. A market/storefront’s access code (Market ID) can be published on the seller’s website to prove ownership of a certain market and its content.</p>
           </div>
         </div>
 
         <div class="item in-progress">
           <div class="tags" data-aos="fade">
             <span class="status tag">In progress</span>
-            <span class="network tag">Testnet/Mainnet</span>
+            <span class="network tag">New feature</span>
           </div>
           <h4 class="title">Lightning Network</h4>
           <div class="desc">
@@ -92,24 +60,10 @@ layout: default
         
         <!-- ======[  Planned  ]====== -->
 
-        {% comment %}
         <div class="item planned">
           <div class="tags" data-aos="fade">
             <span class="status tag">Planned</span>
-            <span class="network tag">Testnet</span>
-          </div>
-          <h4 class="title">Seller Reputation</h4>
-          <div class="desc">
-            <p>How do you protect against sybil attacks and gaming of reputation in a privacy focused marketplace?</p>
-            <p>This is a big question that requires some serious R&D. Everything is 10&times; harder when applying privacy to it. Reputation is important in ecommerce. The development and research teams will spend a lot of time flushing out the importance and risks of reputation in a privacy focused marketplace.</p>
-          </div>
-        </div>
-        {% endcomment %}
-
-        <div class="item planned">
-          <div class="tags" data-aos="fade">
-            <span class="status tag">Planned</span>
-            <span class="network tag">Testnet/Mainnet</span>
+            <span class="network tag">Improvement</span>
           </div>
           <h4 class="title">ZMQ for MP Messages</h4>
           <div class="desc">
@@ -120,7 +74,7 @@ layout: default
         <div class="item planned">
           <div class="tags" data-aos="fade">
             <span class="status tag">Planned</span>
-            <span class="network tag">Testnet/Mainnet</span>
+            <span class="network tag">Improvement</span>
           </div>
           <h4 class="title">Blind Lightning</h4>
           <div class="desc">
@@ -128,10 +82,419 @@ layout: default
           </div>
         </div>
 
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Identity management <small>(Custom identities)</small></h4>
+          <div class="desc">
+            <p>Create and manage an infinite number of seller identities through the use of user profiles. Each market and storefront created by a seller can be associated with any identity. Identities under the same user profile cannot be associated and tied together.</p>
+            <p>Allows sellers to create multiple shops, markets, and listings without creating any sort of association between each of them. Alternatively, Identity Management can be used to link multiple markets or storefronts to the same seller so that he can benefit from the reputation he’s gained selling on Particl.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Listing fee reduction</h4>
+          <div class="desc">
+            <p>Reduces the costs associated with listing an item on Particl’s marketplace (estimated fee reduction: <strong>80%+</strong>).</p>
+            <p>Allows sellers to list items at a much lower cost. Ideal for sellers looking to list larger inventories without breaking the bank.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Adjustable escrow rate</h4>
+          <div class="desc">
+            <p>Makes the escrow system’s required security deposits adjustable.</p>
+            <p>Allows the security deposits required by the escrow system to be adjustable and not be set at 100% of the item’s value all the time. Enables a more customizable environment that can cater to a wider variety of industries.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Optionally disable Escrow</h4>
+          <div class="desc">
+            <p>Makes Particl’s double deposit MAD escrow system an opt-out option for sellers.</p>
+            <p>Allows sellers to make Particl’s double deposit MAD escrow system entirely optional. Ideal for established sellers with a past reputation who may not need escrow as their customer base already trusts them. Eliminates a major obstacle to adoption for a certain type of vendors and use-cases, and also paves the way for automated digital deliveries.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Better public comments notifications</h4>
+          <div class="desc">
+            <p>Notifications indicating to the seller which listing has received a question, comment, or feedback from a user.</p>
+            <p>The client currently doesn’t indicate which listing has received a question in any practical way. This can get bothersome quickly for sellers with many listed items that are receiving many different questions. This roadmap item fixes that issue by clearly indicating which listing has received a comment.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Improved listing browsing and searching</h4>
+          <div class="desc">
+            <p>Improves the behavior of the listing explorer to give users better tools to filter and sort listings as well as get more accurate results out of their searches.</p>
+            <p>This particular item is a collection of many smaller items related to the browsing and searching of listings on Particl Desktop. It includes better searches, filters, tags, a sorting mechanism, and many other smaller improvements. This item is likely to be implemented in phases at different points in time.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Inventory, quantity, filter, and attribute management</h4>
+          <div class="desc">
+            <p>Lets sellers manage inventory quantities and product attributes (i.e. clothing size, color, fabric, etc).</p>
+            <p>Allows sellers to manage their inventories much more easily. It also allows them to better describe and announce their products by creating/using custom attributes such as product size, duration, colour, etc. These attributes act as filters when browsing the marketplace.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Reputation system</h4>
+          <div class="desc">
+            <p>Gives buyers the ability to rate sellers after completing a full transaction flow.</p>
+            <p>Reputation gives more information to buyers so they can make better-informed shopping decisions. It also keeps sellers in check. The reputation system also ties in closely with Identity Management as sellers could carry their reputation over different markets or storefronts.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Share a listing online (URL)</h4>
+          <div class="desc">
+            <p>Makes listings able to be shared online using an URL.</p>
+            <p>Allows sellers to be able to promote their listings online by sharing them through different platforms (i.e. Twitter, official website, newsletters, etc).</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Automated digital delivery</h4>
+          <div class="desc">
+            <p>Fully integrated digital item delivery system that enables sellers to list digital products without having to host the content outside Particl Desktop.</p>
+            <p>Digital items are a huge use-case for decentralized marketplaces. This roadmap item intends on bringing forward an integrated way for sellers to easily sell digital items on Particl Desktop. Then, by combining this roadmap item with “Optional escrow”, that will eventually allow for automated digital deliveries.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Alternative cryptocurrency payment options</h4>
+          <div class="desc">
+            <p>Allows people to top up their Particl account with other cryptocurrencies.</p>
+            <p>Integrating more payment options allows Particl’s marketplace to reach more crypto communities and give a use-case to many more individuals. It also helps the entire ecosystem as a whole by providing an easy way to spend cryptocurrencies without leaving a trace or paying third-party fees.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Development SDK</h4>
+          <div class="desc">
+            <p>Allows businesses, projects, and developers to integrate and build on top of the Particl protocol.</p>
+            <p>Development SDK allows to further decentralize the development process of the Particl ecosystem and gives businesses the necessary tools to easily integrate some of the components of the Particl network through APIs and developer tools. This is a critical part of making Particl a truly open financial system and will make it easier for projects to leverage some of Particl’s components.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Add “cash-out” functionality to the Exchange Module</h4>
+          <div class="desc">
+            <p>Allows users to cash-out of PART right from the client by using the existing Exchange Module the other way around.</p>
+            <p>Sellers need to sell PART to pay for business expenses that cannot be paid (yet) using PART. These can include shipping, supply orders, packaging materials, rent, salaries, partners, etc. While it is possible to sell PART on exchanges, integrating that process into Particl Desktop will only make users’ life easier and more convenient.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Private auctions and other sales types</h4>
+          <div class="desc">
+            <p>Provides the ability for sellers to list items under different listing types such as eBay-like auctions, wanted items, penny auctions, etc.</p>
+            <p>Auctions of physical or digital items is a big use-case for decentralized marketplaces. They are desirable for many types of products including NFTs, collectibles, art, etc. There is currently no decentralized marketplace offering auctions for physical items, yet Particl’s marketplace protocol already contains most of the code required to allow for it.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Invoices</h4>
+          <div class="desc">
+            <p>Adds an invoicing system and/or order data export tool to give users more information about their sales and/or purchases made on Particl.</p>
+            <p>Invoices allow sellers to better report taxes, store sales/customer information, and track business flow. It also allows buyers to keep track of their purchases. While there is already a few information available for each order that’s initiated, this roadmap item seeks to give users better and more complete tools than what’s currently available.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Secure sales analytics</h4>
+          <div class="desc">
+            <p>Analytics to be displayed on the seller’s overview or analytics tab. Gives more information about a seller’s entire set of activities on Particl’s marketplace.</p>
+            <p>Secure analytics allow sellers to get a better overview of their business and sales data and allows them to make better-informed decisions. Such data can be the number of total sales, number of sales per item, number of sales per category, timelines/charts, trends, etc. These pieces of data should be secure and only available at the client-level, and only to the seller itself.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Escrow negotiation and resolutions</h4>
+          <div class="desc">
+            <p>Lets users with funds locked into an escrow contract to be able to negociate its terms and modify them when both buyer and seller agree on a resolution. Includes partial refunds, reships, cancellation, etc.</p>
+            <p>Negotiating terms when there is a dispute is a valuable tool. Communications could come in the form of pre-defined messages and issued resolutions could include partial refunds, reships, or cancellation of the escrow entirely. There are many cases where escrow terms might need to be changed. It gives users more confidence in the whole process by making it more flexible.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Shipping management</h4>
+          <div class="desc">
+            <p>Adds more shipping options for sellers to better price and localize shipments.</p>
+            <p>Sellers need more ways to separate their shipping options, especially when offering shipping through different carriers, to different countries, and when providing different shipping methods (express, priority, regular, next day, etc). A shipping management tool could also add the ability for buyers to combine shipping for multiple items sold by the same seller, although that will likely be implemented in phases at different points in time.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Display prices in other currencies</h4>
+          <div class="desc">
+            <p>Allows buyers to display listing prices in alternative currencies other than PART (i.e. BTC, USD, EUR, etc).</p>
+            <p>Currently, prices are only displayable in PART which might not be friendly or familiar to a lot of people. This roadmap item allows users to select how they want to see listing prices.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Price pegging</h4>
+          <div class="desc">
+            <p>Allows sellers to determine the price of an item based on other currencies (i.e. BTC, USD, EUR, etc).</p>
+            <p>Currently, listing prices can only be set in PART which might not be friendly or familiar to a lot of people. This roadmap item allows sellers to price their products in different currencies other than PART, for example in USD or BTC. The product payment still settles in PART, but the exact required number of PART coins for a particular order is calculated when the buyer first places his bid.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Particl Desktop translations</h4>
+          <div class="desc">
+            <p>Lets users change the language displayed on Particl Desktop (i.e. French, German, Dutch, etc).</p>
+            <p>More language support makes Particl’s marketplace more likely to be adopted by communities and groups who do not necessarily speak English fluently. Increases Particl’s potential reach with international communities and the “unbanked world”.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: UPC import support</h4>
+          <div class="desc">
+            <p>Allows sellers to enter EANs, UPCs, ISBNs or ASINs to import product data and classifications from standardized sources.</p>
+            <p>Better standardization of how sellers communicate vital information about their products. It allows buyers to easily see exactly what they're about to buy and make better-informed decision as UPC information can be cross-verified from multiple sources. It has become a standard feature in many traditional marketplaces and is a functionality that’s now generally expected by large-scale online sellers.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Improved listing/delisting mechanism</h4>
+          <div class="desc">
+            <p>Easier listing management by providing more options to sellers such as automatic relisting, delisting options, etc. </p>
+            <p>Manually relisting listings can be a tedious task, even with the Product Import feature. This roadmap item allows sellers to automate the relisting of listings so that they don’t have to manually log in every time they expire. It also introduces the ability for a seller to delete listings.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Shipping label printing</h4>
+          <div class="desc">
+            <p>Integrated shipping label printing system.</p>
+            <p>Manually writing addresses is a time-consuming process, especially for large-scale vendors who process many orders a day. Having a way to automate the printing of shipping labels, from Particl Desktop or through an order exporting function, will save sellers a ton of time.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Export/import a marketplace account</h4>
+          <div class="desc">
+            <p>Enables buyers and sellers alike to easily export their “account” information and import it into another client.</p>
+            <p>Sellers may want to be able to track sales, process orders, and do other eCommerce related actions while "on the go". They may also want to sell using multiple computers and instances of Particl Desktop. Easily exporting and importing accounts on different devices will provide that ability and allow them to be more efficient and quicker to act for their customers. That roadmap item also applies to “buyer accounts”.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Featured listing spots</h4>
+          <div class="desc">
+            <p>Allows sellers to promote their listings, for a fee, and have them show up in “featured” listing spots.</p>
+            <p>Sellers may want to invest in their own business by giving their listings more exposure. It is the same mentality behind the concept of paying for advertisements. This new feature will allow sellers to do just that, for a fee.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Market: Custom categories</h4>
+          <div class="desc">
+            <p>Allows sellers to create categories for their market or storefront.</p>
+            <p>Some sellers may be selling items or services that don’t fit within any of the default marketplace categories. This roadmap item adds the ability to create new categories and integrate them into a seller’s market.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Bot framework</h4>
+          <div class="desc">
+            <p>Advanced SMSG bot functions and ability to integrate your own bot on Particl Desktop.</p>
+            <p>Particl Desktop currently has an SMSG bot browser, but its functions are purposely limited for its early version. This roadmap item extends its capabilities by allowing anyone to create and add their own bot to the browser. This item is expected to be closely associated with the SDK toolkit.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Marketplace webhooks</h4>
+          <div class="desc">
+            <p>Adds webhook functionality to the marketplace for better interactivity with third-party applications.</p>
+            <p>Webhooks are a user-defined HTTP callback that can trigger calls to an API when a certain event happens. This will allow the marketplace to interact more directly with third-party applications (i.e. when a seller receives a new bid, it could call a marketplace API to flash your living room lights, interact with other eCommerce system that you’re running to reserve the item, send a “new order” notification on Telegram or by email, and etc).</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Clean data</h4>
+          <div class="desc">
+            <p>Adds a section where it is possible to delete data (personal and not).</p>
+            <p>Privacy feature. It is needed for people that wants to only keep some data on their computer. This will also be helpful to clean data for big sellers on marketplace.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Messaging system</h4>
+          <div class="desc">
+            <p>Allows users to communicate with each other.</p>
+            <p>Enables communication between users for various reasons whether it is marketplace-related or not. Communication methods will likely come in different forms and be implemented in phases at different points in time.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Market: Fiat payment options</h4>
+          <div class="desc">
+            <p>Allows national currencies (i.e. USD, EUR, ZAR, etc) to be used to top up Particl accounts.</p>
+            <p>Users may want to use national currencies rather than cryptocurrencies to top up their Particl accounts. This roadmap item uses the same Exchange Module as the integration of Bitcoin payments on Particl Desktop, but instead connects to a fiat gateway. This is a major requirement for attracting mainstream users.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">New feature</span>
+          </div>
+          <h4 class="title">Web/mobile gateway</h4>
+          <div class="desc">
+            <p>Access Particl’s marketplace from the web or a mobile application.</p>
+            <p>Downloading a client may be fine for most Particl users and participants of niche industries, but it’s not a good user experience for people and businesses who use the more traditional online marketplaces to buy and sell online. Making a web/mobile gateway for Particl will dramatically and instantly extend Particl’s reach and potential user base.</p>
+          </div>
+        </div>
+
+        <div class="item planned">
+          <div class="tags" data-aos="fade">
+            <span class="status tag">Planned</span>
+            <span class="network tag">Improvement</span>
+          </div>
+          <h4 class="title">Alternative DSN integration (i.e. IPFS)</h4>
+          <div class="desc">
+            <p>Integrate other DSNs such as IPFS to offer options other than SMSG.</p>
+            <p>SMSG is very private and “scalable enough” for the short to mid-term, but it might reach scalability issues when massive numbers of users start using the marketplace. For this reason, the OMP Library, the underlying protocol of the marketplace, has been designed so that other DSNs can be integrated. The first implementation of an alternative DSN is expected to be the offloading of marketplace images on the IPFS network while SMSG would still be the underlying DSN that powers the marketplace.</p>
+          </div>
+        </div>
+
       </div>
 
+
       <div class="completed-items medium-8 large-7 medium-centered large-centered columns">
-        <h2>Completed features</h2>
+        <h2 id="completed">Completed features</h2>
         <p class="large">Click on a feature to read more:</p>
   
         <h3 class="year">2019</h3>

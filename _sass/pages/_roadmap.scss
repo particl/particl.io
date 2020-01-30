@@ -1,5 +1,11 @@
 section.roadmap {
   padding-left: 0; padding-right: 0;
+
+  .skip-to-completed.button {
+    font-size: 0.7rem;
+    margin-left: 0.5rem; padding: 0.25rem 0.7rem;
+    position: relative; top: -0.2rem;
+  }
   
   // blocks of roadmap updates/features
   .roadmap-items {
@@ -31,11 +37,6 @@ section.roadmap {
     &.network {
       color: rgba(34,39,39,0.5);
       @include break(s) { margin-left: 0.8rem; }
-      &::before {
-        content: "@";
-        color: rgba(34,39,39,0.3);
-        margin-right: 2px;
-      }
     }
   }
 
