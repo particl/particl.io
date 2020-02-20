@@ -6,6 +6,38 @@ section.general-press {
   padding: 5.813rem 0 3.5rem;
 }
 
+// partners & press mentions
+.partners-press {
+  text-align: center;
+  display: none;
+  @include break(m) { display: block; /* margin-top: 6rem; */ }
+  /*@include break(large) { margin-top: 7rem; }*/
+  .logos {
+    a.item { display: inline-block; }
+    .logo {
+      @extend .tfx;
+      width: auto; height: 2.3rem;
+      margin: 0 0.8rem;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.5;
+      @include break(large) { height: 2.6rem; margin: 0 0.9rem; }
+      &:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    }
+  }
+  .title { // titles at logos (Partners/Press)
+    font-size: 0.75rem; color: darken($bg-muted, 35%);
+    text-transform: uppercase; text-align: center;
+    letter-spacing: 0;
+    margin: 0 0 1rem;
+    @include break(l) { font-size: 0.7rem; }
+    @include break(xl) { font-size: 0.83rem; }
+  }
+}
 
 .press-items {
 

@@ -6,6 +6,7 @@
 @import 'owl-carousel/owl.carousel.scss';
 @import 'owl-carousel/owl.theme.default.scss';
 @import 'plugins/_magnific-popup';
+@import 'plugins/aos'; // AnimateOnScroll
 
 @import '_config';
 @import '_brickst';
@@ -28,7 +29,9 @@
 
 @import 'pages/_home';
 @import 'pages/_why_particl';
+@import 'pages/_bug-bounties';
 @import 'pages/_about_us';
+@import 'pages/_market';
 @import 'pages/_careers';
 @import 'pages/_roadmap';
 @import 'pages/_status_report';
@@ -115,14 +118,13 @@ p {
   color: $general-op-7;
   font-family: $font;
   letter-spacing: -0.1px;
-  &.large {
-    font-size: 0.9375rem;  
-    line-height: 1.87;
-  }
-  &.small {
-    font-size: 0.8125rem;      
-    line-height: 1.77;
-  }
+  &.large { font-size: 0.9375rem; line-height: 1.87; }
+  &.small { font-size: 0.8125rem; line-height: 1.77; }
+}
+
+ul, ol {
+  &.large { color: $general-op-7; font-size: 0.9375rem; line-height: 1.87; }
+  &.small { color: $general-op-7; font-size: 0.8125rem; line-height: 1.77; }
 }
 
 a {
@@ -181,6 +183,10 @@ small {
 	font-size: 70%; color: lighten($text-muted, 20%); line-height: 1.4;
 }
 
+.video-container {
+  text-align: left;
+}
+
 // Forms
 form {
 	margin: 1.5rem 0;
@@ -210,8 +216,8 @@ button, .button { // default, outline-to-full buttons
   font-size: 0.9rem; font-weight: 700; color: $color;
   &::after { content: none !important; }
   &:hover, &:focus {
-    background: darken($primary, 7%); 
-    border-color: darken($primary, 5%); 
+    background: darken($primary, 10%); 
+    border-color: darken($primary, 10%); 
     color: $white;
   }
   &.full { // full buttons
@@ -219,8 +225,8 @@ button, .button { // default, outline-to-full buttons
     border-color: darken($color, 2%);
     color: $white;
     &:hover, &:focus {
-      background: darken($color, 5%);
-      border-color: darken($color, 5%);
+      background: darken($color, 10%);
+      border-color: darken($color, 10%);
     }
   }
   &.hollow { // outline buttons only
@@ -231,6 +237,17 @@ button, .button { // default, outline-to-full buttons
     }
   }
   // color variations
+  &.secondary {
+    border-color: rgba($secondary, 0.6); color: $secondary;
+    &:hover, &:focus { background: darken($secondary, 7%); border-color: darken($secondary, 5%); }
+    &.full {
+      background: darken($secondary, 2%); border-color: darken($secondary, 2%); color: $white;
+      &:hover, &:focus { background: darken($secondary, 12%); border-color: darken($secondary, 12%); }
+    }
+    &.hollow {
+      &:hover, &:focus { color: darken($secondary, 5%); border-color: darken($secondary, 5%); background: transparent; }
+    }
+  }
   &.alert {
     border-color: rgba($alert, 0.6); color: $alert;
     &:hover, &:focus { background: darken($alert, 7%); border-color: darken($alert, 5%); }
@@ -242,10 +259,20 @@ button, .button { // default, outline-to-full buttons
       &:hover, &:focus { color: darken($alert, 5%); border-color: darken($alert, 5%); background: transparent; }
     }
   }
-  // size variations
-  &.large {
-    font-size: 1.1rem; padding: 0.675rem 1.95rem;
+  &.secondary {
+    border-color: rgba($secondary, 0.6); color: $secondary;
+    &:hover, &:focus { background: darken($secondary, 7%); border-color: darken($secondary, 5%); }
+    &.full {
+      background: darken($secondary, 2%); border-color: darken($secondary, 2%); color: $white;
+      &:hover, &:focus { background: darken($secondary, 12%); border-color: darken($secondary, 12%); }
+    }
+    &.hollow {
+      &:hover, &:focus { color: darken($secondary, 5%); border-color: darken($secondary, 5%); background: transparent; }
+    }
   }
+  // size variations
+  &.small { font-size: 0.825rem; padding: 0.4rem 1.2rem; }
+  &.large { font-size: 1.1rem; padding: 0.675rem 1.95rem; }
   // icons in buttons
   i.ico { margin-right: 0.3rem; }
 }
@@ -297,6 +324,10 @@ button, .button { // default, outline-to-full buttons
   }
   .subtitle {
     font-size: 1.2rem; line-height: 1.3; color: darken($color, 5%);
+  }
+  #sib-captcha {
+    display: inline-block; margin: 1rem auto 0;
+    text-align: center;
   }
 }
 

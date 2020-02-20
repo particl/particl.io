@@ -1,0 +1,130 @@
+updated: "3 January 2020"
+
+
+recently-completed:
+
+  - for: Particl Marketplace
+    tasks:
+      - c: Prevent Deletion of expired listings in cart
+#        sub:
+#        - t: xxx
+
+  - for: Particl Desktop
+    tasks:
+      - c: Startup and Shutdown updates
+      - c: Bug fixes
+        sub:
+        - t: Removed the initial lengthy delay in displaying cart items
+        - t: Newly created wallets are switched to correctly after creation
+        - t: Testnet and mainnet versions of the application are now properly separated
+        - t: A single state application instance has been introduced
+        - t: Resolved bug where on large numbers of not all imports were uploading
+        - t: Rounding issue from CSV to JSON bug
+        - t: Clear warning when importing and there is not enough funds
+        - t: Status messages on startup and switching between wallets for better startup status tracking
+        - t: Closing modal during shutdown
+        - t: Fixed the regression with Particl Core cookie files
+
+#  - for: Particl Core
+#    tasks:
+#      - c: Release of 0.18.1.6 (<a href="https://github.com/particl/particl-core/releases/tag/v0.18.1.6">release notes</a>)
+
+  - for: Particl Copay
+    tasks:
+      - c: Updated with latest unified repository changes
+#        sub:
+#        - t: xxx
+
+
+awaiting-review:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Market Management
+      sub:
+      - t: Seller should be a separate element in the posted ListingItem
+      - t: Use correct Identity.address when sending ActionMessages
+      - t: Use separate pub/sub keys
+      - t: Create Wallets/Identities as needed
+      - t: Command/service layer - Add Identity as part of the ActionRequest overriding/setting the active wallet for CoreRpcService
+      - t: Market types - Open market/storefront support
+      - t: Profile and Market add/remove - Identity support
+      - t: Market default command - Set the default Market for Profile
+
+#  - for: Particl Desktop
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Copay
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+
+in-development:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Market Management
+      sub:
+      - t: Blacklisting of Market Public keys
+      - t: Market flag command
+
+  - for: Particl Desktop
+    tasks:
+    - c: Bug Fixes
+    - c: Market Management
+      sub:
+      - t: Implement ZMQ configuration for daemon startup
+      - t: Implement an application state store
+      - t: Update the loading screen to occur only on application launch
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+  - for: Particl Copay
+    tasks:
+    - c: Error with installing latest bitcore wallet client
+    - c: End to end testing
+#      sub:
+#      - t: 
+
+
+upcoming-features:
+
+  - for: Particl Marketplace
+    tasks:
+    - c: Quantity Management
+#      sub:
+#      - t: xxx
+
+
+  - for: Particl Desktop
+    tasks:
+    - c: Market Management
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Core
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx
+
+#  - for: Particl Copay
+#    tasks:
+#    - c: xxx
+#      sub:
+#      - t: xxx

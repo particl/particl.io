@@ -1,0 +1,407 @@
+$scroll-line: 1.9rem;
+
+#intro.market-page {
+  @include break(m) { padding-bottom: 6rem; }
+  .header-title {
+    max-width: 50rem;
+  }
+
+  // Market > Buy/Sell intro section
+  &.subpage {
+    text-align: left;
+    padding-bottom: 0;
+    overflow: hidden;
+    border-bottom: 1px solid $bg-muted;
+    .header-title {
+      max-width: 32rem; margin: 0;
+      @include break(large) { margin: 0 0 5rem; }
+    }
+    .illustration {
+      margin-bottom: 2rem;
+      img {
+        display: block; width: 100%; max-width: 24rem; margin: -2rem auto 0;
+        @include break(m) { margin: -4rem auto 0; }
+        @include break(large) { margin: 0; }
+        @include break(l) { margin: -5rem 0 -4rem; max-width: none; }
+      }
+    }
+    .video-wrap {
+      margin: 2rem auto 0; max-width: 55rem;
+      .video-container { padding-bottom: 53.2%; } // offset non-standard aspect ratio
+    }
+  }
+
+  // vertically scrolling text in page title
+  .scroller {
+    text-align: center; font-weight: 500; line-height: ($scroll-line - 0.01rem);
+    overflow: hidden;
+    position: relative; top: 0.55rem;
+    display: block; height: $scroll-line;
+    @include break(m) {
+      display: inline-block; margin-left: 0.8rem;
+      text-align: left;
+    }
+    .scrolling {
+      position: relative;
+      animation: text-scroller 10s; animation-iteration-count: infinite;
+      margin: 0;
+    }
+    &.market {
+      .ico { margin-right: 0.6rem; }
+      .ico-anon,
+      .ico-cog { color: $tertiary; }
+      .ico-lock,
+      .ico-smiley { color: $secondary; }
+      .ico-stake,
+      .ico-thumb-up { color: $primary; }
+    }
+  }
+
+  // intro buttons
+  .intro-buttons {
+    .button {
+      margin-bottom: 0.5rem;
+      & + .button { margin-bottom: 0; }
+    }
+  }
+
+  // video
+  .video-wrap {
+    max-width: 60rem; margin: 4rem auto 0;
+    box-shadow: 0 2px 10px $bg-muted;
+    .window-titlebar {
+      @include gradient(darken($bg-muted, 4%), darken($bg-muted, 10%));
+      font-size: 0.8rem; text-align: center; font-weight: 500;
+      text-transform: uppercase; color: rgba($text-muted, 0.6);
+      padding: 0.25rem 1rem;
+      border-top-left-radius: ($border-radius * 2); border-top-right-radius: ($border-radius * 2);
+    }
+    .video-container { margin: 0; padding-bottom: 53.2%; } // offset non-standard aspect ratio}
+  }
+
+}
+
+
+section {
+
+  // about MP
+  &.about-market {
+    padding: 3rem 0;
+    background: $black;
+    position: relative;
+    .arrow {
+      border: 1rem solid transparent; border-bottom-color: $black;
+      width: 0; height: 0;
+      position: absolute; top: -2rem;
+      left: 50%; transform: translateX(-50%);
+    }
+    .illustration {
+      display: none;
+      @include break(l) {
+        display: block; float: left; width: 40%;
+        margin: -3rem 0 -6rem; padding: 0 3rem 0 0;
+      }
+      @include break(xl) { margin: -6rem 0; }
+      img { pointer-events: none; width: 100%; }
+    }
+    .text {
+      @include break(l) {
+        width: 60%;
+      }
+    }
+    .title {
+      color: $color; font-size: 1rem; text-transform: uppercase;
+      font-weight: 500; letter-spacing: 0; line-height: 1.4;
+      margin: 0 0 1.2rem;
+    }
+    p {
+      color: $white; font-size: 0.813rem; line-height: 1.77;
+      margin: 0.5rem 0;
+    }
+  }
+
+  // MP features
+  &.market-features {
+    text-align: center;
+    @include break(large) { text-align: left; }
+    .section-title {
+      margin: 0 0 1rem; text-align: center;
+      @include break(l) { margin: 0 0 2rem; }
+    }
+    .feature {
+      padding: 2rem 0;
+      @include break(large) { padding: 4rem 0; }
+      .illustration {
+        margin-bottom: 1rem;
+        @include break(large) { margin: 0; }
+        img {
+          width: 100%; max-width: 20rem; margin: 1rem auto; padding: 0 2rem; display: block;
+          @include break(large) { width: 70%; padding: 0; max-width: none; }
+          @include break(l) { margin: 0 auto; }
+        }
+      }
+      .text {
+        .title {
+          margin: 0;
+        }
+        .tag {
+          font-size: 50%; text-transform: uppercase; line-height: 1.1rem;
+          font-weight: 500; letter-spacing: 0; color: white;
+          background: $secondary; border-radius: 4px;
+          display: inline-block; padding: 0 0.4rem; margin-left: 0.4rem;
+          position: relative; top: -3px;
+        }
+      }
+    }
+  }
+
+  // Buyer/seller blocks
+  &.buyer-seller {
+    background: rgba($bg-muted, 0.3);
+    padding-bottom: 0;
+    .section-title {
+      text-align: center; font-weight: 400; line-height: 1.5; color: $text-muted;
+      strong { display: block; font-weight: 700; color: $text; }
+    }
+    .buyer,
+    .seller {
+      @extend %tfx;
+      color: $white; font-weight: 700; font-size: 1.2rem;
+      padding: 2rem 2.5rem;
+      position: relative;
+      &:hover {
+        .arrow { right: 2.2rem; border-color: rgba($white, 0.6); }
+      }
+      @include break(large) { padding: 3.5rem 4rem; font-size: 1.3rem; }
+      .arrow {
+        @extend %tfx;
+        width: 1.2rem; height: 1.2rem;
+        border-top: 3px solid rgba($white, 0.4); border-right: 3px solid rgba($white, 0.4);
+        transform: rotate(45deg); position: absolute; right: 2.5rem; top: 2.1rem;
+        @include break(large) { top: 3.6rem; }
+      }
+    }
+    .buyer {
+      background: url("/assets/img/market/buyer-bg.jpg") no-repeat $color; background-size: cover;
+      &:hover, &:focus {
+        background-position: 50% 7%;
+        .arrow {
+          @include break(large) { left: 2.2rem; }
+        }
+      }
+      @include break(large) { text-align: right; }
+      .arrow {
+        @include break(large) {
+          right: auto; left: 2.5rem;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .seller {
+      background: url("/assets/img/market/seller-bg.jpg") no-repeat $secondary; background-size: cover;
+      &:hover, &:focus {
+        background-position: 50% 7%;
+      }
+      @include break(large) { text-align: left; }
+    }
+  }
+
+
+  // Market > Buy/sell features
+  &.buy-sell-features {
+    .item {
+      @extend %clearfix;
+      margin-top: 1rem; margin-bottom: 1rem;
+      &:hover {
+        .icon {
+          box-shadow: 0 0 0 5px rgba($color, 0.15);
+        }
+      }
+    }
+    $icon-size: 2.6rem;
+    .icon {
+      @extend %tfx;
+      width: $icon-size; height: $icon-size;
+      display: block; float: left; margin-top: -0.5rem;
+      border: 1px solid $color; border-radius: 50%; box-shadow: 0 0 transparent;
+      line-height: ($icon-size - 0.1rem); color: $color; text-align: center;
+    }
+    .text {
+      float: left; width: calc(100% - #{$icon-size}); padding-left: 1.2rem;
+    }
+    .title {
+      font-size: 1.1rem; line-height: 1.3; letter-spacing: 0;
+      margin: 0 0 0.8rem;
+    }
+    p {
+      font-size: 0.825rem; line-height: 1.6;
+    }
+    ul.fancy {
+      margin: 0; padding: 0;
+      list-style: none;
+      .ico { color: $color; margin-right: 0.4rem; }
+      li {
+        font-size: 0.825rem; line-height: 1.6; color: $text-muted;
+        margin-bottom: 0.2rem;
+      }
+    }
+    &.seller {
+      .item:hover {
+        .icon { box-shadow: 0 0 0 5px rgba($secondary, 0.15); }
+      }
+      .icon { border-color: $secondary; color: $secondary; }
+      ul.fancy {
+        .ico { color: $secondary; }
+      }
+    }
+  }
+
+  // Market > Buy/sell subscribe
+  &.market-subscribe {
+    background: $black;
+    text-align: center;
+    position: relative;
+    padding: 3.5rem 0 3rem;
+    .arrow {
+      border: 0.8rem solid transparent; border-top-color: darken($bg, 2.5%);
+      width: 0; height: 0;
+      position: absolute; top: -3.5rem;
+      left: 50%; transform: translateX(-50%);
+    }
+    .title {
+      color: $white; font-size: 1.25rem; line-height: 1.4;
+      margin: 0 0 1rem;
+    }
+    p {
+      font-size: 0.825rem; line-height: 1.6; color: $white-op-6;
+    }
+    .button {
+      margin-top: 1rem;
+      .ico { margin-right: 0.5rem; }
+    }
+  }
+
+  // Market > Buy/sell get started
+  &.market-get-started {
+    background: darken($bg, 2.5%);
+    h2.title {
+      font-size: 1.8rem; line-height: 1.4;
+      margin: 0 0 2rem;
+      small {
+        display: block; margin-bottom: 0.1rem;
+        color: $black-op-5; text-transform: uppercase;
+        font-size: 0.75rem; font-weight: 500; letter-spacing: 0;
+      }
+    }
+    .timeline {
+      @include break(xl) {
+        @include gradientH($secondary, $color);
+        position: absolute; top: 1.1rem; right: -1rem; left: 2.5rem;
+        display: block; height: 2px;
+        overflow: hidden;
+      }
+    }
+    .step {
+      margin: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      @include break(large) { text-align: left; }
+      .number {
+        display: block; width: 2.3rem; height: 2.3rem; margin: 0 auto;
+        border-radius: 50%;
+        line-height: 2.35rem; color: $white;
+        text-align: center; font-weight: 700;
+        position: relative; z-index: 1;
+        @include break(large) { margin: 0; }
+      }
+      h3.title {
+        margin: 0.7rem 0 0;
+        font-size: 1.2rem;
+        @include break(large) { margin: 1.7rem 0 0; }
+      }
+      p { font-size: 0.825rem; line-height: 1.6; }
+      .button { margin-top: 0.7rem; }
+      &.first {
+        .number { background: $secondary; }
+        .timeline { @include gradientH($secondary, mix($color, $secondary, 33%)); }
+        a {
+          color: $secondary;
+          &:hover, &:focus { color: darken($secondary, 7%); }
+          &.button {
+            border-color: $secondary;
+            &:hover, &:focus { border-color: darken($secondary, 7%); }
+          }
+        }
+      }
+      &.second {
+        .number { background: mix($color, $secondary, 33%); }
+        .timeline { @include gradientH(mix($color, $secondary, 33%), mix($color, $secondary, 66%)); }
+        a {
+          color: mix($color, $secondary, 33%);
+          &:hover, &:focus { color: darken(mix($color, $secondary, 33%), 7%); }
+          &.button {
+            border-color: mix($color, $secondary, 33%);
+            &:hover, &:focus { border-color: darken(mix($color, $secondary, 33%), 7%); }
+          }
+        }
+      }
+      &.third {
+        .number { background: mix($color, $secondary, 67%); }
+        .timeline { @include gradientH(mix($color, $secondary, 66%), $color); }
+        a {
+          color: mix($color, $secondary, 67%);
+          &:hover, &:focus { color: darken(mix($color, $secondary, 67%), 7%); }
+          &.button {
+            border-color: mix($color, $secondary, 67%);
+            &:hover, &:focus { border-color: darken(mix($color, $secondary, 67%), 7%); }
+          }
+        }
+      }
+      &.fourth {
+        .number {
+          background: $color;
+          position: relative;
+          &::after {
+            @extend %tfx;
+            content: "";
+            display: block; width: 1.55rem; height: 1.55rem;
+            border-radius: 50%; border: 0.4rem solid rgba($color, 0.6);
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;
+            animation: pulse 2s; animation-iteration-count: infinite;
+          }
+        }
+        a {
+          color: $color;
+          &:hover, &:focus { color: darken($color, 7%); }
+          &.button {
+            border-color: $color;
+            &:hover, &:focus { border-color: darken($color, 7%); }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@keyframes text-scroller {
+  0% { top: 0; }
+  10% { top: 0; }
+  17% { top: -($scroll-line); }
+  27% { top: -($scroll-line); }
+  33% { top: -($scroll-line * 2); }
+  43% { top: -($scroll-line * 2); }
+  50% { top: -($scroll-line * 3); }
+  60% { top: -($scroll-line * 3); }
+  66% { top: -($scroll-line * 4); }
+  76% { top: -($scroll-line * 4); }
+  83% { top: -($scroll-line * 5); }
+  93% { top: -($scroll-line * 5); }
+  99% { top: 0; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.7); opacity: 0; }
+}

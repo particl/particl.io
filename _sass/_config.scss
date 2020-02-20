@@ -1,7 +1,9 @@
+@import '_mixins';
+
 // Main settings
 
 $debug: false; // enabled debug/dev mode (CSS reponnsivity helper)
-$showCountdown: true; // show/hide countdown
+$showCountdown: false; // show/hide countdown
 
 // Colors
 $color: #45D492; // PART turquoise
@@ -65,3 +67,12 @@ $section-bg1: #fefefe;
 $hr-color: #f4f4f4;
 
 $part-token-bg: #fafafa;
+
+
+// UI
+
+%box {
+   background: $white; border-radius: ($border-radius * 2);
+   box-shadow: 0 3px 20px rgba($black, 0.06);
+   padding: 1.4rem 1.6rem; margin: 0 0 1.5rem;
+ }

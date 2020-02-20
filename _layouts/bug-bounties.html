@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+<section class="page-title centered">
+	<div class="row">
+		<div class="large-8 large-centered column">
+      <h1 class="title">Bug Bounty Program</h1>
+      <p class="large">
+        Particl is a security and privacy oriented project looking into restoring the balance of privacy back to the users and keeping them safe from exploits. As such, this permanent bug bounty is put in place in order to encourage the responsible disclosure of any bug or vulnerability contained within the Particl code and reward those who find them.
+      </p>
+		</div>
+	</div>
+</section><!-- .page-title -->
+
+<hr />
+
+<section class="bounty-levels row">
+  <div class="column">
+    <h2 class="text-center header-line-height" data-aos="fade-down">Bug Bounty Rewards</h2>
+    <div class="small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-aos="fade-up">
+
+      <div class="item">
+        <div class="content">
+          <h3>$1500</h3><p class="small">A bug or flaw that leads to the deanonymization of Particl users</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <h3>$750</h3><p class="small">A flaw in the protocol that allows for theft or loss of funds</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <h3>$500</h3><p class="small">A bug in the reference client that leads to consensus issues</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <h3>$250</h3><p class="small">A bug which causes data corruption or loss</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <h3>$100</h3><p class="small">A bug which causes the application to crash</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <h3>$50</h3><p class="small">Other non-harmless bugs</p>
+        </div>
+      </div>
+
+    </div><!-- .block-grid -->
+    <p class="small text-center">
+      Bounties will be paid out for bugs found in the master branch of the official GitHub repositories.<br>Bounties are paid out in Particl (PART), at the 3-day average of each to a fixed US Dollar value.
+    </p>
+  </div>
+</section>
+
+<hr>
+
+<section class="how-to-report">
+  <h2 class="text-center header-line-height">How to report a bug</h2>
+  <div class="row">
+    <div class="large-10 large-centered columns text-center">
+      <p class="large">
+        While not mandatory, it is recommended to use Particl's disclosure <a href="/assets/core.particl.io_pub.asc" title="core.particl.io_pub.asc (52D98BD159DFAF40)">PGP key</a> to encrypt messages when disclosing bugs.<br>
+        Do not post the issue on GitHub or anywhere else until the issue has been resolved.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="critical medium-6 large-6 columns">
+      <div class="box" data-aos="fade-right">
+        <h3>Critical bugs</h3>
+        <p class="large">
+          Critical bugs are required to be disclosed using Particl's disclosure PGP key and reported to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;core&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;">core&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;</a>
+        </p>
+        <p class="report-buttons">
+          <a href="/assets/core.particl.io_pub.asc" title="core.particl.io_pub.asc (52D98BD159DFAF40)" class="hollow alert button">Download PGP key</a>
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;core&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;" class="full alert button">Submit critical bug</a>
+        </p>
+      </div>
+    </div>
+    <div class="non-critical medium-6 large-6 columns">
+      <div class="box" data-aos="fade-left">
+        <h3>Non-critical bugs</h3>
+        <p class="large">
+          Contact the developers privately by sending an e-mail to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;bounties&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;">bounties&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;</a> with the details of the issue
+        </p>
+        <p class="report-buttons">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;bounties&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;" class="full secondary button">Submit non-critical bug</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section class="what-doesnt-qualify">
+  <div class="row">
+		<div class="columns">
+      <h2 class="text-center header-line-height">What doesn’t qualify as a bug</h2>
+		</div>
+  </div>
+	<div class="row">
+		<div class="part large-6 columns">
+			<ul class="large">
+        <li>Bugs found on third-party/community websites, software or services that are not due to an improper configuration issue specific to the Particl code. Please submit any potential issue to the maintainers of that website or providers of that service.</li>
+        <li>Vulnerabilities which are too broad or not documented properly (i.e. do not include a specific example relevant to a Particl-controlled piece of code).</li>
+        <li>Bugs or issues with a third-party site, software, or service that Particl uses, which are not due to an improper configuration issue specific to the Particl code. Please submit any potential issue to the maintainers of that site or providers of that service.</li>
+        <li>Bugs and errors found in software/code that is not live or still under development.</li>
+      </ul>
+		</div>
+
+		<div class="part large-6 columns">
+			<ul class="large">
+        <li>Usability issues.</li>
+        <li>Anything requiring social engineering.</li>
+        <li>CSRF that doesn’t affect the victim.</li>
+        <li>The presence of unnecessary files, e.g. for backups, when these files do not expose any sensitive information.</li>
+        <li>Anything that is the result of an automated Nessus/PCI scans (too general).</li>
+        <li>Bugs that have received mainstream tech media or community attention before the date of the disclosure.</li>
+        <li>Upstream bugs that have already received media coverage such as bugs on the Bitcoin codebase itself. The Particl team constantly monitors upstream code and bug disclosures. Regardless, you are still encouraged to disclose any upstream bug you may know.</li>
+      </ul>
+		</div>
+	</div>
+</section>
+
+<hr />
+
+<section class="fine-print">
+  <div class="row">
+		<div class="large-10 large-centered column">
+      <h2 class="text-center header-line-height">The fine print</h2>
+      <ul class="small">
+        <li>A bounty will only be awarded to the first person who reports a bug, unless two or more people report the same bug at approximately the same time, in which case the bounty may be split between them.</li>
+        <li>If the same bug appears in multiple locations it will normally only receive a single bounty.</li>
+        <li>Reports of security-related bugs are not eligible for bounties if the bugs are publicly disclosed prior to being fixed.</li>
+        <li>Bugs need to be disclosed to the Particl team prior to receiving the bounty payment. The Particl team will not award a bounty payment upfront before knowing all details.</li>
+        <li>Only bugs contained within the <a href="https://github.com/particl/particl-core">Particl Core</a> and <a href="https://github.com/particl/particl-market">Particl Market</a> repositories, as well as contained within any Particl wallet (<a href="https://github.com/particl/particl-desktop">Desktop</a>, <a href="https://github.com/particl/particl-core">Core</a>, <a href="https://github.com/particl/copay">Copay</a>) can qualify for bounty payment.</li>
+        <li>Known upstream bugs, such as a bug in the <a href="https://github.com/bitcoin/bitcoin">Bitcoin</a> codebase itself or in one of the libraries used by Particl, do not qualify for bounty payment.</li>
+        <li>The issue must be described in enough details to address it.</li>
+        <li>Only the discoverer of a bug is eligible for the associated bounty.</li>
+        <li>All bounty claims need to be assessed individually on a case by case basis.</li>
+        <li>Bounties will be confirmed and awarded within 10 days of their assessment by the Particl team.</li>
+        <li>Inquiries on bounty status may be sent to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;bounties&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;">bounties&#64;&#112;&#97;&#114;&#116;&#105;&#99;&#108;&#46;&#105;&#111;</a>.</li>
+        <li>Bounties will not be awarded if it is illegal to do so.</li>
+        <li>The classification of bugs, values of bounties, and conditions under which bounties are paid are subject to change without notice.</li>
+        <li>The Particl team has sole discretion to determine whether a bug report qualifies for a bounty and for which bounty it qualifies.</li>
+      </ul>
+		</div>
+  </div>
+</section>
+
+{% include particl-desktop.html %}
+
+{% include dive-deeper.html %}

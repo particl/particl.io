@@ -29,150 +29,598 @@
 	content: "\E002";
 }
 
-.ico-android:before {
+.ico-add-account:before {
 	content: "\E003";
 }
 
-.ico-bitcoin:before {
+.ico-airplane:before {
 	content: "\E004";
 }
 
-.ico-cart:before {
+.ico-alert:before {
 	content: "\E005";
 }
 
-.ico-chat:before {
+.ico-android:before {
 	content: "\E006";
 }
 
-.ico-check:before {
+.ico-anon:before {
 	content: "\E007";
 }
 
-.ico-cross:before {
+.ico-archive:before {
 	content: "\E008";
 }
 
-.ico-cryptocurrency-particl:before {
+.ico-arrow-down:before {
 	content: "\E009";
 }
 
-.ico-discord:before {
+.ico-arrow-left:before {
 	content: "\E00A";
 }
 
-.ico-exchange-both:before {
+.ico-arrow-right:before {
 	content: "\E00B";
 }
 
-.ico-exchange-left:before {
+.ico-arrow-up:before {
 	content: "\E00C";
 }
 
-.ico-exchange-right:before {
+.ico-attach:before {
 	content: "\E00D";
 }
 
-.ico-facebook:before {
+.ico-bag-buy:before {
 	content: "\E00E";
 }
 
-.ico-github:before {
+.ico-bag-sell:before {
 	content: "\E00F";
 }
 
-.ico-instagram:before {
+.ico-bag:before {
 	content: "\E010";
 }
 
-.ico-lightbulb:before {
+.ico-bitcoin:before {
 	content: "\E011";
 }
 
-.ico-linkedin:before {
+.ico-bitcointalk:before {
 	content: "\E012";
 }
 
-.ico-linux:before {
+.ico-blind:before {
 	content: "\E013";
 }
 
-.ico-lock:before {
+.ico-bug:before {
 	content: "\E014";
 }
 
-.ico-macos:before {
+.ico-cart:before {
 	content: "\E015";
 }
 
-.ico-mastodon:before {
+.ico-chat-discussion:before {
 	content: "\E016";
 }
 
-.ico-medium:before {
+.ico-chat:before {
 	content: "\E017";
 }
 
-.ico-menu-close:before {
+.ico-check-alt:before {
 	content: "\E018";
 }
 
-.ico-menu-open:before {
+.ico-check-in-a-box:before {
 	content: "\E019";
 }
 
-.ico-nodes:before {
+.ico-check:before {
 	content: "\E01A";
 }
 
-.ico-person:before {
+.ico-circle-alert:before {
 	content: "\E01B";
 }
 
-.ico-privacy:before {
+.ico-circle-check:before {
 	content: "\E01C";
 }
 
-.ico-progress:before {
+.ico-circle-info-2:before {
 	content: "\E01D";
 }
 
-.ico-reddit:before {
+.ico-circle-info:before {
 	content: "\E01E";
 }
 
-.ico-riot:before {
+.ico-circle-minus:before {
 	content: "\E01F";
 }
 
-.ico-slack:before {
+.ico-circle-plus:before {
 	content: "\E020";
 }
 
-.ico-swap:before {
+.ico-circle-question:before {
 	content: "\E021";
 }
 
-.ico-telegram:before {
+.ico-circle-remove:before {
 	content: "\E022";
 }
 
-.ico-twitter:before {
+.ico-circle-user-2:before {
 	content: "\E023";
 }
 
-.ico-upcoming:before {
+.ico-circle-user:before {
 	content: "\E024";
 }
 
-.ico-wikipedia:before {
+.ico-clear-all:before {
 	content: "\E025";
 }
 
-.ico-win:before {
+.ico-cog:before {
 	content: "\E026";
 }
 
-.ico-youtube:before {
+.ico-console-window:before {
 	content: "\E027";
+}
+
+.ico-console:before {
+	content: "\E028";
+}
+
+.ico-copy:before {
+	content: "\E029";
+}
+
+.ico-cross:before {
+	content: "\E02A";
+}
+
+.ico-cryptocurrency-bitcoin:before {
+	content: "\E02B";
+}
+
+.ico-cryptocurrency-particl:before {
+	content: "\E02C";
+}
+
+.ico-currency-dollar:before {
+	content: "\E02D";
+}
+
+.ico-currency-euro:before {
+	content: "\E02E";
+}
+
+.ico-currency-pound:before {
+	content: "\E02F";
+}
+
+.ico-currency-yen:before {
+	content: "\E030";
+}
+
+.ico-dapps:before {
+	content: "\E031";
+}
+
+.ico-date:before {
+	content: "\E032";
+}
+
+.ico-discord:before {
+	content: "\E033";
+}
+
+.ico-display:before {
+	content: "\E034";
+}
+
+.ico-document:before {
+	content: "\E035";
+}
+
+.ico-error:before {
+	content: "\E036";
+}
+
+.ico-exchange-both:before {
+	content: "\E037";
+}
+
+.ico-exchange-left:before {
+	content: "\E038";
+}
+
+.ico-exchange-right:before {
+	content: "\E039";
+}
+
+.ico-facebook:before {
+	content: "\E03A";
+}
+
+.ico-filter-2:before {
+	content: "\E03B";
+}
+
+.ico-filter:before {
+	content: "\E03C";
+}
+
+.ico-flag:before {
+	content: "\E03D";
+}
+
+.ico-flash:before {
+	content: "\E03E";
+}
+
+.ico-github:before {
+	content: "\E03F";
+}
+
+.ico-globe:before {
+	content: "\E040";
+}
+
+.ico-google:before {
+	content: "\E041";
+}
+
+.ico-hamburger:before {
+	content: "\E042";
+}
+
+.ico-handshake:before {
+	content: "\E043";
+}
+
+.ico-heart-outline-add:before {
+	content: "\E044";
+}
+
+.ico-heart-outline-remove:before {
+	content: "\E045";
+}
+
+.ico-heart-outline:before {
+	content: "\E046";
+}
+
+.ico-heart:before {
+	content: "\E047";
+}
+
+.ico-image-upload:before {
+	content: "\E048";
+}
+
+.ico-info:before {
+	content: "\E049";
+}
+
+.ico-instagram:before {
+	content: "\E04A";
+}
+
+.ico-label:before {
+	content: "\E04B";
+}
+
+.ico-lightbulb:before {
+	content: "\E04C";
+}
+
+.ico-lightning:before {
+	content: "\E04D";
+}
+
+.ico-linkedin:before {
+	content: "\E04E";
+}
+
+.ico-linux-fedora:before {
+	content: "\E04F";
+}
+
+.ico-linux-ubuntu:before {
+	content: "\E050";
+}
+
+.ico-linux:before {
+	content: "\E051";
+}
+
+.ico-listings:before {
+	content: "\E052";
+}
+
+.ico-lock-open:before {
+	content: "\E053";
+}
+
+.ico-lock:before {
+	content: "\E054";
+}
+
+.ico-macos:before {
+	content: "\E055";
+}
+
+.ico-mastodon:before {
+	content: "\E056";
+}
+
+.ico-medium:before {
+	content: "\E057";
+}
+
+.ico-menu-close:before {
+	content: "\E058";
+}
+
+.ico-menu-open:before {
+	content: "\E059";
+}
+
+.ico-minus:before {
+	content: "\E05A";
+}
+
+.ico-next-double:before {
+	content: "\E05B";
+}
+
+.ico-next-single:before {
+	content: "\E05C";
+}
+
+.ico-nodes:before {
+	content: "\E05D";
+}
+
+.ico-notification-bell:before {
+	content: "\E05E";
+}
+
+.ico-notification-speaker:before {
+	content: "\E05F";
+}
+
+.ico-overview:before {
+	content: "\E060";
+}
+
+.ico-past:before {
+	content: "\E061";
+}
+
+.ico-pen-1:before {
+	content: "\E062";
+}
+
+.ico-pen-2:before {
+	content: "\E063";
+}
+
+.ico-people:before {
+	content: "\E064";
+}
+
+.ico-person-add:before {
+	content: "\E065";
+}
+
+.ico-person-check:before {
+	content: "\E066";
+}
+
+.ico-person-edit:before {
+	content: "\E067";
+}
+
+.ico-person-heart:before {
+	content: "\E068";
+}
+
+.ico-person-remove:before {
+	content: "\E069";
+}
+
+.ico-person:before {
+	content: "\E06A";
+}
+
+.ico-plus:before {
+	content: "\E06B";
+}
+
+.ico-preferences:before {
+	content: "\E06C";
+}
+
+.ico-previous-double:before {
+	content: "\E06D";
+}
+
+.ico-previous-single:before {
+	content: "\E06E";
+}
+
+.ico-print:before {
+	content: "\E06F";
+}
+
+.ico-privacy:before {
+	content: "\E070";
+}
+
+.ico-progress:before {
+	content: "\E071";
+}
+
+.ico-proposals:before {
+	content: "\E072";
+}
+
+.ico-public:before {
+	content: "\E073";
+}
+
+.ico-qr:before {
+	content: "\E074";
+}
+
+.ico-receive:before {
+	content: "\E075";
+}
+
+.ico-reddit:before {
+	content: "\E076";
+}
+
+.ico-refresh:before {
+	content: "\E077";
+}
+
+.ico-riot:before {
+	content: "\E078";
+}
+
+.ico-rocket:before {
+	content: "\E079";
+}
+
+.ico-search:before {
+	content: "\E07A";
+}
+
+.ico-select:before {
+	content: "\E07B";
+}
+
+.ico-send:before {
+	content: "\E07C";
+}
+
+.ico-ship:before {
+	content: "\E07D";
+}
+
+.ico-slack:before {
+	content: "\E07E";
+}
+
+.ico-small-cross:before {
+	content: "\E07F";
+}
+
+.ico-small-minus:before {
+	content: "\E080";
+}
+
+.ico-small-plus:before {
+	content: "\E081";
+}
+
+.ico-smiley:before {
+	content: "\E082";
+}
+
+.ico-snowflake:before {
+	content: "\E083";
+}
+
+.ico-stake:before {
+	content: "\E084";
+}
+
+.ico-support-help:before {
+	content: "\E085";
+}
+
+.ico-swap:before {
+	content: "\E086";
+}
+
+.ico-telegram:before {
+	content: "\E087";
+}
+
+.ico-thumb-down:before {
+	content: "\E088";
+}
+
+.ico-thumb-up:before {
+	content: "\E089";
+}
+
+.ico-tool:before {
+	content: "\E08A";
+}
+
+.ico-transfer:before {
+	content: "\E08B";
+}
+
+.ico-triangle-down:before {
+	content: "\E08C";
+}
+
+.ico-triangle-left:before {
+	content: "\E08D";
+}
+
+.ico-triangle-right:before {
+	content: "\E08E";
+}
+
+.ico-triangle-up:before {
+	content: "\E08F";
+}
+
+.ico-truck:before {
+	content: "\E090";
+}
+
+.ico-twitter:before {
+	content: "\E091";
+}
+
+.ico-upcoming:before {
+	content: "\E092";
+}
+
+.ico-wikipedia:before {
+	content: "\E093";
+}
+
+.ico-win:before {
+	content: "\E094";
+}
+
+.ico-youtube:before {
+	content: "\E095";
+}
+
+.ico-zoom-in:before {
+	content: "\E096";
+}
+
+.ico-zoom-out:before {
+	content: "\E097";
 }

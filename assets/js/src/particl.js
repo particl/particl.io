@@ -98,7 +98,7 @@ $( document ).ready(function() {
 	/* ------------ COUNTDOWN ------------ */
 
 	$(function(){
-		var countdownTo = moment.tz("2019-07-16 12:00", "Etc/UTC"); // <== UTC time of release
+		var countdownTo = moment.tz("2019-08-12 12:00", "Etc/UTC"); // <== UTC time of release
 
 		$('#clock').countdown(countdownTo.toDate())
 		.on('update.countdown', function(event) {
@@ -110,8 +110,18 @@ $( document ).ready(function() {
 			$(this).html(event.strftime(full)); // <== 'hours' or 'full'
 		})
 		.on('finish.countdown', function(event) {
-			$(this).html('<div class="finished"><strong>Particl network hardforked</strong> &ndash; RingCT (Anon transactions) and Bulletproofs now live!<br><small>If you haven\'t already, please upgrade all your nodes!</small>')
+			$(this).html('<div class="finished"><strong>The Particl Open Marketplace is now available</strong><br><a href="/downloads/">Download it here</a> and get started today!')
 		});
+	});
+
+
+	/* ------------ AnimateOnScroll (https://github.com/michalsnik/aos/tree/v2) ------------ */
+
+	AOS.init({
+		offset: 200,
+		duration: 600,
+		delay: 100,
+		disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
 	});
 
 
