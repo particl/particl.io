@@ -88,6 +88,9 @@ section.roadmap {
           strong { text-decoration: underline; }
           .tag { color: $text-muted; }
         }
+        &::-webkit-details-marker {
+          color: transparent;
+        }
         .ico-check { color: rgba($text-muted, 0.5); margin: 0 0.3rem 0 -1.6rem; }
         .tag {
           font-size: 0.8rem; color: rgba($text-muted, 0.7);
