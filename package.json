@@ -20,11 +20,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "^3.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
-    "n": "^6.1.2",
+    "n": "^6.5.1",
     "pump": "^3.0.0",
     "ruby": "^0.6.1"
   },
