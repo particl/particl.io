@@ -1,5 +1,5 @@
 ---
 layout: whitepapers
-title: Whitepapers
-permalink: /whitepapers/
+title: Docs & Whitepapers
+permalink: /docs-whitepapers/
 ---
