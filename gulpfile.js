@@ -44,7 +44,7 @@ const paths = {
   scss: './_sass/*.scss',
   css: './assets/css',
   styles: {
-    input: './_sass/*.scss',
+    input: './_sass/**/*.scss',
     output: './assets/css'
   },
   // JS

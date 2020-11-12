@@ -373,6 +373,31 @@ section#features {
   }
 }
 
+section.partners {
+  background: $part-token-bg;
+  text-align: center;
+  .logos {
+    margin: -0.2rem 0;
+  }
+  .item {
+    display: inline-block;
+    img {
+      @extend .tfx;
+      width: auto; height: 2.7rem;
+      margin: 0.2rem 0.8rem;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.5;
+      @include break(large) { height: 3rem; margin: 0.7rem 1.2rem; }
+      &:hover {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    }
+  }
+}
+
 section.download-promo {
   background-color: $black;
   padding: 3.3rem 0 0.5rem;
