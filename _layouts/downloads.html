@@ -373,7 +373,7 @@ function get_core_version(response) {
       ver_num = version.substring(1), // strip the leading "v" (=> "1.1.0")
       // generate OS links
       core_link = "https://github.com/particl/particl-core/releases/download/",
-      win64_exe = core_link + version + "/particl-" + ver_num + "-win64-setup-unsigned.exe",
+      win64_exe = core_link + version + "/particl-" + ver_num + "-win64-setup.exe",
           win64 = core_link + version + "/particl-" + ver_num + "-win64.zip",
         linux64 = core_link + version + "/particl-" + ver_num + "-x86_64-linux-gnu.tar.gz",
       linux_arm = core_link + version + "/particl-" + ver_num + "-arm-linux-gnueabihf.tar.gz",
