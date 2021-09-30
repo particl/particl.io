@@ -7,7 +7,7 @@ layout: default
     <div class="large-5 columns">
       <h1 class="title">Downloads</h1>
       <p class="large">
-        Particl Desktop is our flagship product and is the best application to begin using PART. All available and in-development features are bundled in Desktop.
+        Particl Desktop is our flagship product and is the best application to begin using PART.
       </p>
     </div>
   </div>
@@ -22,37 +22,43 @@ layout: default
 		</div>
 		<div class="large-8 columns">
 			<h5 class="lead2" id="particl-desktop-version"></h5>
-			<h2>Particl Desktop <small>(with Open Marketplace)</small></h2>
+			<h2>Particl Desktop <small>(with Marketplace)</small></h2>
 			<p class="large">
-        Particl Desktop is Particl’s main GUI wallet. It’s beautiful and feature-rich client, recommended for most users.
+        Particl Desktop is Particl’s main GUI wallet and includes the Particl Marketplace as well as the Particl governance tools. It’s a beautiful and feature-rich client, recommended for most users.
       </p>
       <ul class="guides">
         <li><a href="https://academy.particl.io" target="_blank" class="center link-small-dark">Documentation and user guides.</a></li>
         <li><a href="https://github.com/particl/particl-desktop/releases/latest" target="_blank" class="center link-small-dark">All releases on GitHub</a></li>
       </ul>
-			<div class="version-list-links">
+	<div class="version-list-links">
         <a id="desktop-win-exe" target="_blank" class="link">
           <i class="ico ico-win"></i>Windows <span class="tag">exe</span>
-        </a>
-        <a id="desktop-linux-deb" target="_blank" class="link">
-          <i class="ico ico-linux-ubuntu"></i>Ubuntu &amp; Debian Linux <span class="tag">deb</span>
-        </a>
-        <a id="desktop-mac-dmg" target="_blank" class="link">
+        </a> 
+	<a id="desktop-mac-dmg" target="_blank" class="link">
           <i class="ico ico-macos"></i>macOS <span class="tag">dmg</span>
         </a>
-				<a id="desktop-win64" target="_blank" class="link">
+	<a id="desktop-linux-deb" target="_blank" class="link">
+          <i class="ico ico-linux-ubuntu"></i>Linux <span class="tag">deb</span>
+        </a>
+	<a id="desktop-win64" target="_blank" class="link">
           <i class="ico ico-win"></i>Windows <span class="tag">zip</span>
         </a>
-        <a id="desktop-linux-rpm" target="_blank" class="link">
-          <i class="ico ico-linux-fedora"></i>Fedora Linux <span class="tag">rpm</span>
-        </a>
-        <a id="desktop-mac" target="_blank" class="link">
+	<a id="desktop-mac" target="_blank" class="link">
           <i class="ico ico-macos"></i>macOS <span class="tag">zip</span>
         </a>
-				<a id="desktop-linux64" target="_blank" class="link">
-          <i class="ico ico-linux"></i>Linux <span class="tag">tar.gz</span>
+        <a id="desktop-linux-rpm" target="_blank" class="link">
+          <i class="ico ico-linux-fedora"></i>Linux <span class="tag">rpm</span>
         </a>
-        <a id="desktop-source" target="_blank" class="link">
+	<a id="desktop-win32-exe" target="_blank" class="link">
+          <i class="ico ico-win"></i>Windows 32-bit <span class="tag">exe</span>
+        </a> 
+	<a id="desktop-linux64" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux <span class="tag">zip</span>
+        </a>
+	<a id="desktop-linux-AppImage" target="_blank" class="link">
+          <i class="ico ico-linux"></i>Linux <span class="tag">AppImage</span>
+        </a>
+	<a id="desktop-source" target="_blank" class="link">
           <i class="ico ico-github"></i>Source code <span class="tag">zip</span>
         </a>
       </div>
@@ -72,7 +78,7 @@ layout: default
 			<h5 class="lead2" id="particl-core-version"></h5>
 			<h2>Particl Core (Qt) <small>(with Ledger wallet support)</small></h2>
 			<p class="large">
-				Particl Qt is suitable for everyone and highly recommended for beginners, as it's feature-rich, user-friendly and easy to setup. Download latest release, double-click Particl executable (in <code>bin/</code> directory) and you're done.
+				Particl Qt is an optional wallet for Particl, as it's feature-rich, user-friendly and easy to setup. Download latest release, double-click Particl executable (in <code>bin/</code> directory) and you're done.
       </p>
       <ul class="guides">
         <li><a href="https://particl.wiki/tutorial/ledger" target="_blank" class="center link-small-dark">Ledger hardware wallet setup guide</a></li>
@@ -141,7 +147,7 @@ layout: default
 			<h5 class="lead2" id="particl-copay-version"></h5>
 			<h2>Particl Copay</h2>
 			<p class="large">
-				Copay is a secure multi-coin wallet for Particl and Bitcoin, supporting desktop and mobile devices.
+				Copay is a secure stand-alone wallet for Particl Coin, supporting desktop and mobile devices.
 			</p>
       <div class="version-list-links">
         <a href="https://play.google.com/store/apps/details?id=io.particl.copay" target="_blank" class="link">
@@ -337,9 +343,11 @@ function get_desktop_version(response) {
       core_link = "https://github.com/particl/particl-desktop/releases/download/",
           win64 = core_link + version + "/particl-desktop-" + ver_num + "-win-x64.zip",
         win_exe = core_link + version + "/particl-desktop-" + ver_num + "-win.exe",
+        win32_exe = core_link + version + "/particl-desktop-" + ver_num + "-win-ia32.exe",
         linux64 = core_link + version + "/particl-desktop-" + ver_num + "-linux-x64.zip",
       linux_deb = core_link + version + "/particl-desktop-" + ver_num + "-linux-amd64.deb",
       linux_rpm = core_link + version + "/particl-desktop-" + ver_num + "-linux-x86_64.rpm",
+      linux_AppImage = core_link + version + "/particl-desktop-" + ver_num + "-linux-x86_64.AppImage",
             mac = core_link + version + "/particl-desktop-" + ver_num + "-mac.zip",
         mac_dmg = core_link + version + "/particl-desktop-" + ver_num + "-mac.dmg",
          source = "https://github.com/particl/particl-desktop/archive/" + version + ".zip",
@@ -351,9 +359,11 @@ function get_desktop_version(response) {
   // Insert links for latest downloads
   $('#desktop-win64').attr("href", win64);
   $('#desktop-win-exe').attr("href", win_exe);
+  $('#desktop-win32-exe').attr("href", win32_exe);
   $('#desktop-linux64').attr("href", linux64);
   $('#desktop-linux-deb').attr("href", linux_deb);
   $('#desktop-linux-rpm').attr("href", linux_rpm);
+  $('#desktop-linux-AppImage').attr("href", linux_AppImage);
   $('#desktop-mac').attr("href", mac);
   $('#desktop-mac-dmg').attr("href", mac_dmg);
   $('#desktop-source').attr("href", source);
